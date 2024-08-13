@@ -7,19 +7,20 @@ class AppColors {
     {
       50: Color(0xffF6FAF3),
       100: Color(0xFFe2f0d9),
-      200: Color(0xFFc6e0b3),
-      300: Color(0xFFa9d18e),
-      400: Color(0xFF8dc168),
-      500: Color(0xFF70b242),
-      600: Color(0xFF5a8e35),
-      700: Color(0xFF436b28),
-      800: Color(0xFF2d471a),
-      900: Color(0xFF16240d),
+      200: Color(0xffb3e0c8),
+      300: Color(0xff8ed1ab),
+      400: Color(0xff68c192),
+      500: Color(0xFF0E9771),
+      600: Color(0xff358e5c),
+      700: Color(0xff286b51),
+      800: Color(0xff1a4736),
+      900: Color(0xff0d2417),
     },
   );
 
-  static const Color primary = Color(0xFF70B242);
-  static const Color secondary = Color(0xFF0D0961);
+  static const Color primary = Color(0xFF0E9771);
+  static const Color primary10 = Color(0xFF1BC8B6);
+  static const Color primary20 = Color(0xC080F2CE);
 
   //-------------------------------------------
 
