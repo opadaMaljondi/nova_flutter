@@ -3,6 +3,7 @@ abstract class AppAssets {
   static const String rootImages = "assets/images";
   static const String image = "$rootImages/image.jpg";
   static const String logo = "$rootImages/logo.png";
+  static const String estate = "$rootImages/estate.png";
   static const String registration = "$rootImages/registration.png";
   static const String onBoardingBackground = "$rootImages/on_boarding_background.png";
   static const String onBoardingPage1 = "$rootImages/on_boarding_page1.png";
@@ -56,12 +57,16 @@ abstract class AppAssets {
   static const String verification = "$rootSVGIcons/verification.svg";
   static const String verifyIdentity = "$rootSVGIcons/verify_identity.svg";
   static const String profile = "$rootSVGIcons/profile.svg";
-  static const String withdrawalAccounts = "$rootSVGIcons/withdrawal_accounts.svg";
-  static const String whitelistedCountries = "$rootSVGIcons/whitelisted_countries.svg";
+  static const String name = "$rootSVGIcons/name.svg";
   static const String english = "$rootSVGIcons/english.svg";
   static const String arabic = "$rootSVGIcons/arabic.svg";
-  static const String turkey = "$rootSVGIcons/turkey.svg";
-  static const String key = "$rootSVGIcons/key.svg";
+  static const String password = "$rootSVGIcons/password.svg";
+  static const String phone = "$rootSVGIcons/phone.svg";
+  static const String signIn = "$rootSVGIcons/sign_in.svg";
+  static const String signUp = "$rootSVGIcons/sign_up.svg";
+  static const String client = "$rootSVGIcons/client.svg";
+  static const String office = "$rootSVGIcons/office.svg";
+  static const String ellipse = "$rootSVGIcons/ellipse.svg";
 
   //-------------------------------------------
 

@@ -3,6 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/services/caching_service.dart';
+import 'package:real_state/features/auth/presentation/screens/onboarding_screen.dart';
+import 'package:real_state/features/auth/presentation/screens/sign_in_screen.dart';
+import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:real_state/features/main/presentation/screens/main_screen.dart';
 import 'package:real_state/injection_container.dart';
 
@@ -14,11 +17,11 @@ class RouterService {
     String initialLocation = _cacheService.getData<String>(
           key: AppKeys.initialLocationRoute,
         ) ??
-        AppRoutes.mainScreen;
+        AppRoutes.onBoardingScreen;
     router = GoRouter(
       routes: [
         //-------------------------------------------
-        // Main Routes
+        // Main Screens
         //-------------------------------------------
         GoRoute(
           path: AppRoutes.mainScreen,
@@ -28,6 +31,49 @@ class RouterService {
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        //-------------------------------------------
+        // Authentication Screens
+        //-------------------------------------------
+        GoRoute(
+          path: AppRoutes.onBoardingScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const OnboardingScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.signInScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const SignInScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.signUpScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const SignUpScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
+              return SlideTransition(
+                position: animation.drive(tween),
                 child: child,
               );
             },

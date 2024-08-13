@@ -1,3 +1,4 @@
+import 'package:country_picker/country_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,6 +19,7 @@ void main() async {
     EasyLocalization(
       supportedLocales: const [Locale('en'), Locale('ar'), Locale('tr')],
       path: 'assets/translations',
+      startLocale: const Locale('en'),
       fallbackLocale: const Locale('en'),
       assetLoader: const CodegenLoader(),
       child: const MyApp(),
@@ -66,7 +68,10 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             return MaterialApp.router(
               title: 'APC PRIME',
-              localizationsDelegates: context.localizationDelegates,
+              localizationsDelegates: [
+                ...context.localizationDelegates,
+                CountryLocalizations.delegate,
+              ],
               supportedLocales: context.supportedLocales,
               locale: context.locale,
               debugShowCheckedModeBanner: false,

@@ -1,7 +1,6 @@
-import 'package:real_state/core/constants/app_colors.dart';
-import 'package:flutter/cupertino.dart' show CupertinoIcons;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/constants/app_colors.dart';
 
 class PrimaryTextField extends StatefulWidget {
   final String? labelText;
@@ -15,6 +14,7 @@ class PrimaryTextField extends StatefulWidget {
   final Color fillColor;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
+  final Widget? labelIcon;
   final TextInputType inputType;
   final TextEditingController? controller;
   final TextInputAction textInputAction;
@@ -37,6 +37,7 @@ class PrimaryTextField extends StatefulWidget {
     this.validator,
     this.suffixIcon,
     this.prefixIcon,
+    this.labelIcon,
     this.textInputAction = TextInputAction.next,
     this.fillColor = AppColors.black30,
     this.autofocus = false,
@@ -60,10 +61,23 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (widget.labelText != null) ...[
-            Text(
-              widget.labelText!,
-              style: const TextStyle(
-                fontSize: 14,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
+              child: Row(
+                children: [
+                  if (widget.labelIcon != null) ...[
+                    widget.labelIcon!,
+                    SizedBox(
+                      width: 10.w,
+                    ),
+                  ],
+                  Text(
+                    widget.labelText!,
+                    style: const TextStyle(
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(
@@ -95,7 +109,9 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             onFieldSubmitted: widget.onFieldSubmitted,
             decoration: InputDecoration(
               hintText: widget.hintText,
-              hintStyle: Theme.of(context).textTheme.bodyLarge,
+              hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: AppColors.mainGray,
+                  ),
               filled: true,
               fillColor: widget.fillColor,
               errorMaxLines: 3,
@@ -110,32 +126,32 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                           },
                           icon: isVisibleText
                               ? const Icon(
-                                  CupertinoIcons.lock_slash,
+                                  Icons.visibility,
                                   color: AppColors.gray,
                                 )
                               : const Icon(
-                                  CupertinoIcons.lock,
+                                  Icons.visibility_off,
                                   color: AppColors.gray,
                                 ),
                         )
                       : null),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
+                borderRadius: BorderRadius.circular(35.r),
                 borderSide: BorderSide.none,
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
+                borderRadius: BorderRadius.circular(35.r),
                 borderSide: BorderSide.none,
               ),
               errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
+                borderRadius: BorderRadius.circular(35.r),
                 borderSide: BorderSide.none,
               ),
               focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
+                borderRadius: BorderRadius.circular(35.r),
                 borderSide: BorderSide.none,
               ),
-              contentPadding: EdgeInsets.all(8.w),
+              contentPadding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 8),
             ),
             keyboardType: widget.inputType,
             obscureText: widget.isObscureText && !isVisibleText,

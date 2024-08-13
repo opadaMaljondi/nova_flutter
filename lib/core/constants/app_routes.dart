@@ -36,6 +36,7 @@ abstract class AppRoutes {
   //-------------------------------------------
   static const String onBoardingScreen = "/onBoardingScreen";
   static const String signInScreen = "/signInScreen";
+  static const String signUpScreen = "/signUpScreen";
   static const String telegramLoginScreen = "/telegramLoginScreen";
   static const String scanIdCardScreen = "/scanIdCardScreen";
   static const String addressScreen = "/addressScreen";

@@ -34,7 +34,7 @@ class PrimaryButton extends StatelessWidget {
         color: isOutlined ? Theme.of(context).canvasColor : backgroundColor,
         disabledColor: AppColors.mainGray.withOpacity(0.5),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.r),
+          borderRadius: BorderRadius.circular(35.r),
           side: isOutlined ? BorderSide(color: backgroundColor) : BorderSide.none,
         ),
         elevation: isOutlined ? 0 : null,

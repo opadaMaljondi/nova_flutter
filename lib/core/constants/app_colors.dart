@@ -20,7 +20,7 @@ class AppColors {
 
   static const Color primary = Color(0xFF0E9771);
   static const Color primary10 = Color(0xFF1BC8B6);
-  static const Color primary20 = Color(0xC080F2CE);
+  static const Color primary20 = Color(0xC0C5FBE8);
 
   //-------------------------------------------
 
@@ -32,7 +32,7 @@ class AppColors {
   //-------------------------------------------
 
   // Normal Colors
-  static const Color black = Colors.black;
+  static const Color black = Color(0xFF2E323D);
   static const Color black5 = Color(0xFF080808);
   static const Color black10 = Color(0xFF3B3B39);
   static const Color black20 = Color(0x68525250);
@@ -50,9 +50,6 @@ class AppColors {
   static const Color grayAccent = Color(0xFFDFE0E1);
 
   static const Color blue = Color(0xFF37AEE2);
-
-
-
 
 ////-------------------------------------------
 }
