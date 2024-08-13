@@ -6,11 +6,15 @@ import 'package:logger/logger.dart';
 import 'package:real_state/core/services/api_service.dart';
 import 'package:real_state/core/services/bloc_observer_service.dart';
 import 'package:real_state/core/services/caching_service.dart';
-import 'package:real_state/core/services/firebase_messaging_service.dart';
 import 'package:real_state/core/services/network_info_service.dart';
 import 'package:real_state/core/services/otp_less_service.dart';
 import 'package:real_state/core/services/router_service.dart';
 import 'package:real_state/core/services/status_showing_service.dart';
+import 'package:real_state/features/feature/data/data_sources/feature_remote_data_source.dart';
+import 'package:real_state/features/feature/data/repository/feature_repo_impl.dart';
+import 'package:real_state/features/feature/domain/repository/feature_repo.dart';
+import 'package:real_state/features/feature/domain/usecases/get_feature_use_case.dart';
+import 'package:real_state/features/feature/presentation/cubits/feature_cubit/feature_cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'features/main/data/data_sources/main_remote_data_source.dart';
@@ -26,6 +30,7 @@ abstract class InjectionContainer {
     await initCoreServices();
     await initAuthDependencies();
     await initMainDependencies();
+    await initFeatureDependencies();
   }
 
   static Future<void> initCoreServices() async {
@@ -168,5 +173,35 @@ abstract class InjectionContainer {
     // GetIt.instance.registerFactory(() => VerifyIdentityCubit());
     // GetIt.instance.registerFactory(() => ScanIdCardCubit());
     // GetIt.instance.registerFactory(() => CreateUserAddressCubit());
+  }
+
+  static Future<void> initFeatureDependencies() async {
+    /// Data Sources
+    GetIt.instance.registerLazySingleton<FeatureRemoteDataSource>(
+      () => FeatureRemoteDataSourceImpl(
+        apiService: getIt(),
+      ),
+    );
+    // GetIt.instance.registerLazySingleton<MainLocalDataSource>(
+    //   () => MainLocalDataSourceImpl(
+    //     cacheService: getIt(),
+    //   ),
+    // );
+
+    /// Repositories
+    GetIt.instance.registerLazySingleton<FeatureRepo>(
+      () => FeatureRepoImpl(
+        featureRemoteDataSource: getIt(),
+        // mainLocalDataSource: getIt(),
+      ),
+    );
+
+    /// UseCases
+    GetIt.instance.registerLazySingleton(
+      () => GetFeaturesUseCase(featureRepo: getIt()),
+    );
+
+    /// Cubits and Blocs
+    GetIt.instance.registerFactory(() => FeatureCubit());
   }
 }

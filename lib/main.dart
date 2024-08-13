@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_themes.dart';
 import 'package:real_state/core/services/router_service.dart';
 import 'package:real_state/core/translations/codegen_loader.g.dart';
-import 'package:real_state/core/translations/network_loader.dart';
 import 'package:real_state/features/main/presentation/cubits/main_cubit/main_cubit.dart';
 import 'package:real_state/injection_container.dart';
 
