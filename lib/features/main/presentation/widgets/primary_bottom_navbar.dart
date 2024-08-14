@@ -50,6 +50,7 @@ class PrimaryBottomNavbar extends StatelessWidget {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           selectedItemColor: AppColors.primary,
+          backgroundColor: AppColors.white,
           useLegacyColorScheme: true,
           items: [
             BottomNavigationBarItem(

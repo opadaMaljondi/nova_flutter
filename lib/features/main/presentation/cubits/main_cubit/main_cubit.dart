@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/enums/general_states.dart';
 import 'package:real_state/core/services/caching_service.dart';
+import 'package:real_state/features/main/presentation/screens/home_tab.dart';
 import 'package:real_state/injection_container.dart';
 
 part 'main_cubit.freezed.dart';
@@ -27,9 +28,7 @@ class MainCubit extends Cubit<MainState> {
   // User? user;
   ThemeMode currentThemeMode = ThemeMode.system;
   List<Widget> tabs = [
-    const Center(
-      child: Text('Home'),
-    ),
+    const HomeTab(),
     const Center(
       child: Text('Map'),
     ),
