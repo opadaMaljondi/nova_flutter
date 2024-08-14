@@ -27,7 +27,21 @@ class MainCubit extends Cubit<MainState> {
   // User? user;
   ThemeMode currentThemeMode = ThemeMode.system;
   List<Widget> tabs = [
-
+    const Center(
+      child: Text('Home'),
+    ),
+    const Center(
+      child: Text('Map'),
+    ),
+    const Center(
+      child: Text('Empty'),
+    ),
+    const Center(
+      child: Text('Favorite'),
+    ),
+    const Center(
+      child: Text('Menu'),
+    ),
   ];
 
   /// variables
@@ -128,14 +142,16 @@ class MainCubit extends Cubit<MainState> {
   }
 
   void changeCurrentTab(int index) {
-    _update(const MainState.loading());
-    currentTab = index;
-    mainScreenPageController.animateToPage(
-      currentTab,
-      duration: const Duration(milliseconds: 1),
-      curve: Curves.easeIn,
-    );
-    _update(const MainState.changeTabSuccess());
+    if (index != 2) {
+      _update(const MainState.loading());
+      currentTab = index;
+      mainScreenPageController.animateToPage(
+        currentTab,
+        duration: const Duration(milliseconds: 1),
+        curve: Curves.easeIn,
+      );
+      _update(const MainState.changeTabSuccess());
+    }
   }
 
   void changeCurrentPage(int index) {

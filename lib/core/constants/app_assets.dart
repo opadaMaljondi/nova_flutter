@@ -70,6 +70,10 @@ abstract class AppAssets {
   static const String client = "$rootSVGIcons/client.svg";
   static const String office = "$rootSVGIcons/office.svg";
   static const String ellipse = "$rootSVGIcons/ellipse.svg";
+  static const String home = "$rootSVGIcons/home.svg";
+  static const String map = "$rootSVGIcons/map.svg";
+  static const String favorite = "$rootSVGIcons/favorite.svg";
+  static const String menu = "$rootSVGIcons/menu.svg";
 
   //-------------------------------------------
 
