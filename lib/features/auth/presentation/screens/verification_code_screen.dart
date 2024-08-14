@@ -16,6 +16,7 @@ class VerificationCodeScreen extends StatefulWidget {
 
 class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
   bool rememberMe = false;
+  String code = '';
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +33,26 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
               SizedBox(
                 height: 25.h,
               ),
-              const VerificationCodeField(),
+              VerificationCodeField(
+                onCompleted: (verificationCode) {
+                  code = verificationCode;
+                  setState(() {});
+                },
+                onChanged: (verificationCode) {
+                  code = verificationCode;
+                  setState(() {});
+                },
+              ),
               SizedBox(
                 height: 60.h,
               ),
               PrimaryButton(
                 label: 'Continue',
-                onPressed: () {
-                  context.push(AppRoutes.resetPasswordScreen);
-                },
+                onPressed: code.length == 4
+                    ? () {
+                        context.push(AppRoutes.resetPasswordScreen);
+                      }
+                    : null,
               ),
               SizedBox(
                 height: 40.h,

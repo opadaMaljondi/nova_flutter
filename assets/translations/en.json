@@ -193,5 +193,11 @@
   "withdrawalAccounts": "Withdrawal accounts",
   "writeYourAddress": "Write your Address",
   "newTradingAccount": "New Trading Account",
-  "openNewAccount": "Open a new account"
+  "openNewAccount": "Open a new account",
+  "thereIsNoMatch": "There is no match",
+  "please": "please",
+  "pleaseEnterTheCode": "please enter the code",
+  "serverError": "Sorry, a server error occurred, the request cannot be executed at this time",
+  "offline": "Can`t connect to the internet.\\n Please check your network connection and try again later",
+  "unexpectedError": "Unexpected error. Please try again later"
 }

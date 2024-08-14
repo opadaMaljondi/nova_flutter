@@ -193,5 +193,11 @@
   "withdrawalAccounts": "حسابات السحب",
   "writeYourAddress": "اكتب عنوانك",
   "newTradingAccount": "حساب تداول جديد",
-  "openNewAccount": "فتح حساب جديد"
+  "openNewAccount": "فتح حساب جديد",
+  "thereIsNoMatch": "لا يوجد تطابق",
+  "please": "الرجاء",
+  "pleaseEnterTheCode": "الرجاء إدخال الرمز",
+  "serverError": "عذرا، حدث خطأ في الخادم، لا يمكن تنفيذ الطلب في هذا الوقت",
+  "offline": "لا يمكن الاتصال بالإنترنت.\\nيرجى التحقق من اتصال الشبكة لديك والمحاولة مرة أخرى لاحقًا",
+  "unexpectedError": "خطأ غير متوقع. يرجى المحاولة مرة أخرى لاحقًا"
 }

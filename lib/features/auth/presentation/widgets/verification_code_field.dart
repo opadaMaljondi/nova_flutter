@@ -7,7 +7,10 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 
 class VerificationCodeField extends StatelessWidget {
-  const VerificationCodeField({super.key});
+  final void Function(String verificationCode)? onCompleted;
+  final void Function(String verificationCode)? onChanged;
+
+  const VerificationCodeField({super.key, this.onCompleted, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +24,8 @@ class VerificationCodeField extends StatelessWidget {
           borderRadius: BorderRadius.circular(50.r),
         ),
         child: Pinput(
-          onCompleted: (verificationCode) {
-            // cubit.code = verificationCode;
-          },
-          onChanged: (verificationCode) {
-            // cubit.code = verificationCode;
-          },
+          onCompleted: onCompleted,
+          onChanged: onChanged,
           onTapOutside: (event) {
             FocusManager.instance.primaryFocus!.unfocus();
           },

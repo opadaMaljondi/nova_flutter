@@ -209,7 +209,13 @@ class CodegenLoader extends AssetLoader{
   "withdrawalAccounts": "حسابات السحب",
   "writeYourAddress": "اكتب عنوانك",
   "newTradingAccount": "حساب تداول جديد",
-  "openNewAccount": "فتح حساب جديد"
+  "openNewAccount": "فتح حساب جديد",
+  "thereIsNoMatch": "لا يوجد تطابق",
+  "please": "الرجاء",
+  "pleaseEnterTheCode": "الرجاء إدخال الرمز",
+  "serverError": "عذرا، حدث خطأ في الخادم، لا يمكن تنفيذ الطلب في هذا الوقت",
+  "offline": "لا يمكن الاتصال بالإنترنت.\\nيرجى التحقق من اتصال الشبكة لديك والمحاولة مرة أخرى لاحقًا",
+  "unexpectedError": "خطأ غير متوقع. يرجى المحاولة مرة أخرى لاحقًا"
 };
 static const Map<String,dynamic> en = {
   "accepted": "accepted",
@@ -406,7 +412,13 @@ static const Map<String,dynamic> en = {
   "withdrawalAccounts": "Withdrawal accounts",
   "writeYourAddress": "Write your Address",
   "newTradingAccount": "New Trading Account",
-  "openNewAccount": "Open a new account"
+  "openNewAccount": "Open a new account",
+  "thereIsNoMatch": "There is no match",
+  "please": "please",
+  "pleaseEnterTheCode": "please enter the code",
+  "serverError": "Sorry, a server error occurred, the request cannot be executed at this time",
+  "offline": "Can`t connect to the internet.\\n Please check your network connection and try again later",
+  "unexpectedError": "Unexpected error. Please try again later"
 };
 static const Map<String,dynamic> tr = {
   "accepted": "kabul edilebilir",
@@ -603,7 +615,13 @@ static const Map<String,dynamic> tr = {
   "withdrawalAccounts": "Para çekme hesapları",
   "writeYourAddress": "Adresinizi Yazın",
   "newTradingAccount": "yeni Ticaret Hesabı",
-  "openNewAccount": "Yeni bir hesap aç"
+  "openNewAccount": "Yeni bir hesap aç",
+  "thereIsNoMatch": "Eşleşme yok",
+  "please": "Lütfen",
+  "pleaseEnterTheCode": "Lütfen kodu giriniz",
+  "serverError": "Üzgünüz, bir sunucu hatası oluştu, istek şu anda yürütülemiyor",
+  "offline": "İnternete bağlanılamıyor.\\n Lütfen ağ bağlantınızı kontrol edin ve daha sonra tekrar deneyin",
+  "unexpectedError": "Beklenmeyen hata. Lütfen daha sonra tekrar deneyin"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en, "tr": tr};
 }

@@ -193,5 +193,11 @@
   "withdrawalAccounts": "Para çekme hesapları",
   "writeYourAddress": "Adresinizi Yazın",
   "newTradingAccount": "yeni Ticaret Hesabı",
-  "openNewAccount": "Yeni bir hesap aç"
+  "openNewAccount": "Yeni bir hesap aç",
+  "thereIsNoMatch": "Eşleşme yok",
+  "please": "Lütfen",
+  "pleaseEnterTheCode": "Lütfen kodu giriniz",
+  "serverError": "Üzgünüz, bir sunucu hatası oluştu, istek şu anda yürütülemiyor",
+  "offline": "İnternete bağlanılamıyor.\\n Lütfen ağ bağlantınızı kontrol edin ve daha sonra tekrar deneyin",
+  "unexpectedError": "Beklenmeyen hata. Lütfen daha sonra tekrar deneyin"
 }

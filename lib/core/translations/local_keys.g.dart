@@ -196,5 +196,11 @@ abstract class  LocaleKeys {
   static const writeYourAddress = 'writeYourAddress';
   static const newTradingAccount = 'newTradingAccount';
   static const openNewAccount = 'openNewAccount';
+  static const thereIsNoMatch = 'thereIsNoMatch';
+  static const please = 'please';
+  static const pleaseEnterTheCode = 'pleaseEnterTheCode';
+  static const serverError = 'serverError';
+  static const offline = 'offline';
+  static const unexpectedError = 'unexpectedError';
 
 }

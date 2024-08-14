@@ -78,14 +78,14 @@ abstract class RegexValidator {
   //   return null;
   // }
 
-  // static String? validateConfirmPassword(String? value, String? pass) {
-  //   if (value == null || value.isEmpty) {
-  //     return LocaleKeys.passwordConfirmationIsRequired.tr();
-  //   } else if (value != pass) {
-  //     return LocaleKeys.thereIsNoMatch.tr();
-  //   }
-  //   return null;
-  // }
+  static String? validateConfirmPassword(String? value, String? pass) {
+    if (value == null || value.isEmpty) {
+      return LocaleKeys.thisFieldIsRequired.tr();
+    } else if (value != pass) {
+      return LocaleKeys.thereIsNoMatch.tr();
+    }
+    return null;
+  }
 
   static bool startsWithEnglishChar(String value) {
     RegExp englishCharRegex = RegExp(r'^[a-zA-Z0-9٠-٩]');
