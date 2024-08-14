@@ -1,11 +1,11 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:logger/logger.dart';
 import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/services/caching_service.dart';
 import 'package:real_state/core/services/router_service.dart';
 import 'package:real_state/injection_container.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:logger/logger.dart';
 
 @pragma('vm:entry-point')
 Future<void> handleBackgroundMessage(RemoteMessage message) async {
@@ -158,13 +158,13 @@ class FirebaseMessagingService {
 
     if (message.data['type'] == 'accept_user') {
       InjectionContainer.getIt<RouterService>().router.go(
-        AppRoutes.mainScreen,
-      );
+            AppRoutes.mainScreen,
+          );
     }
     if (message.data['type'] == 'reject_user') {
-      InjectionContainer.getIt<RouterService>().router.go(
-        AppRoutes.verifyIdentityScreen,
-      );
+      // InjectionContainer.getIt<RouterService>().router.go(
+      //   AppRoutes.verifyIdentityScreen,
+      // );
     }
     _flutterLocalNotificationsPlugin.show(
       localMessage.hashCode,
@@ -248,9 +248,9 @@ class FirebaseMessagingService {
         return;
       }
       if (message.data['type'] == 'reject_user') {
-        InjectionContainer.getIt<RouterService>().router.go(
-              AppRoutes.verifyIdentityScreen,
-            );
+        // InjectionContainer.getIt<RouterService>().router.go(
+        //       AppRoutes.verifyIdentityScreen,
+        //     );
         return;
       }
     }

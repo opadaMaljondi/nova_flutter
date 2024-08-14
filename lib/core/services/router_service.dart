@@ -3,7 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/services/caching_service.dart';
+import 'package:real_state/features/auth/presentation/screens/forget_password_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/onboarding_screen.dart';
+import 'package:real_state/features/auth/presentation/screens/reset_password_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/verification_code_screen.dart';
@@ -85,6 +87,34 @@ class RouterService {
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
             child: const VerificationCodeScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
+              return SlideTransition(
+                position: animation.drive(tween),
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.resetPasswordScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const ResetPasswordScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
+              return SlideTransition(
+                position: animation.drive(tween),
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.forgetPasswordScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const ForgetPasswordScreen(),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
               return SlideTransition(

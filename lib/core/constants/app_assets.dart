@@ -65,6 +65,7 @@ abstract class AppAssets {
   static const String signIn = "$rootSVGIcons/sign_in.svg";
   static const String signUp = "$rootSVGIcons/sign_up.svg";
   static const String verificationCode = "$rootSVGIcons/verification_code.svg";
+  static const String resetPassword = "$rootSVGIcons/reset_password.svg";
   static const String line = "$rootSVGIcons/line.svg";
   static const String client = "$rootSVGIcons/client.svg";
   static const String office = "$rootSVGIcons/office.svg";

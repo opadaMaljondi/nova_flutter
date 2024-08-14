@@ -96,7 +96,9 @@ class _SignInScreenState extends State<SignInScreen> {
                       ],
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        context.push(AppRoutes.forgetPasswordScreen);
+                      },
                       borderRadius: BorderRadius.circular(5.r),
                       child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 2),

@@ -42,7 +42,8 @@ abstract class AppRoutes {
   static const String addressScreen = "/addressScreen";
   static const String approveConditionsScreen = "/approveConditionsScreen";
   static const String verificationCodeScreen = "/verificationScreen";
-  static const String verifyIdentityScreen = "/verifyIdentityScreen";
+  static const String resetPasswordScreen = "/resetPasswordScreen";
+  static const String forgetPasswordScreen = "/forgetPasswordScreen";
 
   //-------------------------------------------
   // Authentication Routes

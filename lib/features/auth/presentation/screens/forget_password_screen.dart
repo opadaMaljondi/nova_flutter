@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
+import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/auth/presentation/widgets/auth_header_section.dart';
-import 'package:real_state/features/auth/presentation/widgets/verification_code_field.dart';
 
-class VerificationCodeScreen extends StatefulWidget {
-  const VerificationCodeScreen({super.key});
+class ForgetPasswordScreen extends StatefulWidget {
+  const ForgetPasswordScreen({super.key});
 
   @override
-  State<VerificationCodeScreen> createState() => _VerificationCodeScreenState();
+  State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
 }
 
-class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
+class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   bool rememberMe = false;
 
   @override
@@ -25,31 +26,29 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
           child: Column(
             children: [
               const AuthHeaderSection(
-                title: 'Verification Code',
-                iconPath: AppAssets.verificationCode,
+                title: 'Forget Password',
+                iconPath: AppAssets.resetPassword,
                 subTitle: 'Here you can write anything related to this page.',
               ),
               SizedBox(
                 height: 25.h,
               ),
-              const VerificationCodeField(),
+              PrimaryTextField(
+                labelText: 'Phone Number',
+                inputType: TextInputType.phone,
+                labelIcon: SvgPicture.asset(AppAssets.phone),
+              ),
               SizedBox(
-                height: 60.h,
+                height: 50.h,
               ),
               PrimaryButton(
-                label: 'Continue',
+                label: 'Next',
                 onPressed: () {
-                  context.push(AppRoutes.resetPasswordScreen);
+                  context.push(AppRoutes.verificationCodeScreen);
                 },
               ),
               SizedBox(
-                height: 40.h,
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: const Text(
-                  'We will send you back within 00:30',
-                ),
+                height: 20.h,
               ),
             ],
           ),
