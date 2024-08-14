@@ -129,12 +129,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         setState(() {
                           controller.animateToPage(
                             ++currentTab,
-                            duration: const Duration(milliseconds: 600),
+                            duration: const Duration(milliseconds: 300),
                             curve: Curves.easeIn,
                           );
                         });
                       } else {
-                        context.push(AppRoutes.signInScreen);
+                        context.go(AppRoutes.signInScreen);
                         RouterService.setInitialRoute(AppRoutes.signInScreen);
                       }
                     },

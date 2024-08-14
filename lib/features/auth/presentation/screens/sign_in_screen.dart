@@ -123,7 +123,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 PrimaryButton(
                   label: 'Sign In',
                   onPressed: () {
-                    if(!signInFormKey.currentState!.validate()) return;
+                    if (!signInFormKey.currentState!.validate()) return;
                   },
                 ),
                 SizedBox(
