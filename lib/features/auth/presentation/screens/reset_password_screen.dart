@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
+import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/helpers/regex_validator.dart';
+import 'package:real_state/core/services/router_service.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/auth/presentation/widgets/auth_header_section.dart';
@@ -64,6 +67,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   label: 'Next',
                   onPressed: () {
                     if (!resetPasswordFormKey.currentState!.validate()) return;
+                    RouterService.setInitialRoute(AppRoutes.mainScreen);
+                    context.go(AppRoutes.mainScreen);
                   },
                 ),
                 SizedBox(

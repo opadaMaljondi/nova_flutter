@@ -7,6 +7,7 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/helpers/regex_validator.dart';
+import 'package:real_state/core/services/router_service.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/auth/presentation/widgets/auth_header_section.dart';
@@ -124,6 +125,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   label: 'Sign In',
                   onPressed: () {
                     if (!signInFormKey.currentState!.validate()) return;
+                    RouterService.setInitialRoute(AppRoutes.mainScreen);
+                    context.go(AppRoutes.mainScreen);
                   },
                 ),
                 SizedBox(
