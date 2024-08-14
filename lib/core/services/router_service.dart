@@ -6,6 +6,7 @@ import 'package:real_state/core/services/caching_service.dart';
 import 'package:real_state/features/auth/presentation/screens/onboarding_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dart';
+import 'package:real_state/features/auth/presentation/screens/verification_code_screen.dart';
 import 'package:real_state/features/main/presentation/screens/main_screen.dart';
 import 'package:real_state/injection_container.dart';
 
@@ -70,6 +71,20 @@ class RouterService {
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
             child: const SignUpScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
+              return SlideTransition(
+                position: animation.drive(tween),
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.verificationCodeScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const VerificationCodeScreen(),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
               return SlideTransition(

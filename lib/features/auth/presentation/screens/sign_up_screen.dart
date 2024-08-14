@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/helpers/regex_validator.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
@@ -205,7 +207,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 padding: EdgeInsets.symmetric(vertical: 30.w),
                 child: PrimaryButton(
                   label: 'Sign Up',
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push(AppRoutes.verificationCodeScreen);
+                  },
                 ),
               ),
               const OrDivider(),
@@ -222,7 +226,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       width: 10.w,
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        context.pop();
+                      },
                       borderRadius: BorderRadius.circular(5.r),
                       child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 2),
