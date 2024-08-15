@@ -1,28 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="97" viewBox="0 0 96 97">
+<svg id="Group_15161" data-name="Group 15161" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.874" height="26.225" viewBox="0 0 23.874 26.225">
   <defs>
-    <filter id="Ellipse_41" x="0" y="0" width="96" height="97" filterUnits="userSpaceOnUse">
-      <feOffset dy="1" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="6.5" result="blur"/>
-      <feFlood flood-opacity="0.02"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
     <clipPath id="clip-path">
       <rect id="Rectangle_2031" data-name="Rectangle 2031" width="23.874" height="26.225" fill="#2e3336"/>
     </clipPath>
   </defs>
-  <g id="Group_15871" data-name="Group 15871" transform="translate(19.5 18.5)">
-    <g transform="matrix(1, 0, 0, 1, -19.5, -18.5)" filter="url(#Ellipse_41)">
-      <ellipse id="Ellipse_41-2" data-name="Ellipse 41" cx="28.5" cy="29" rx="28.5" ry="29" transform="translate(19.5 18.5)" fill="#fff"/>
-    </g>
-    <g id="Group_15867" data-name="Group 15867" transform="translate(12.25 15.887)">
-      <g id="Group_15161" data-name="Group 15161" transform="translate(4.898 0)">
-        <g id="Group_15160" data-name="Group 15160" clip-path="url(#clip-path)">
-          <path id="Path_5913" data-name="Path 5913" d="M11.972,21.466c2.624,0,5.248,0,7.872,0a3.841,3.841,0,0,0,2.563-.877,3.918,3.918,0,0,0,1.467-3.144,3.814,3.814,0,0,0-.671-2.111,12.734,12.734,0,0,1-1.884-4.565A16.027,16.027,0,0,1,21.084,9a10.76,10.76,0,0,0-.762-3.418A9.006,9.006,0,0,0,15.865.9,8.868,8.868,0,0,0,11.7,0,8.872,8.872,0,0,0,6.036,2.171,9.066,9.066,0,0,0,3.6,5.441a10.018,10.018,0,0,0-.738,2.882,20.575,20.575,0,0,1-.424,3,13.763,13.763,0,0,1-1.753,4A4.294,4.294,0,0,0,.048,16.94a3.846,3.846,0,0,0,.184,1.884,3.7,3.7,0,0,0,1.48,1.943,4.089,4.089,0,0,0,2.333.7q3.963,0,7.927,0" transform="translate(0 0)" fill="#2e3336"/>
-          <path id="Path_5914" data-name="Path 5914" d="M26.15,54.557H18.008a4.56,4.56,0,0,0,3.575,2.337,4.637,4.637,0,0,0,4.567-2.337" transform="translate(-10.151 -30.699)" fill="#2e3336"/>
-        </g>
-      </g>
-      <ellipse id="Ellipse_40" data-name="Ellipse 40" cx="5.108" cy="4.644" rx="5.108" ry="4.644" transform="translate(22 8.149)" fill="#00ae97"/>
-    </g>
+  <g id="Group_15160" data-name="Group 15160" clip-path="url(#clip-path)">
+    <path id="Path_5913" data-name="Path 5913" d="M11.972,21.466c2.624,0,5.248,0,7.872,0a3.841,3.841,0,0,0,2.563-.877,3.918,3.918,0,0,0,1.467-3.144,3.814,3.814,0,0,0-.671-2.111,12.734,12.734,0,0,1-1.884-4.565A16.027,16.027,0,0,1,21.084,9a10.76,10.76,0,0,0-.762-3.418A9.006,9.006,0,0,0,15.865.9,8.868,8.868,0,0,0,11.7,0,8.872,8.872,0,0,0,6.036,2.171,9.066,9.066,0,0,0,3.6,5.441a10.018,10.018,0,0,0-.738,2.882,20.575,20.575,0,0,1-.424,3,13.763,13.763,0,0,1-1.753,4A4.294,4.294,0,0,0,.048,16.94a3.846,3.846,0,0,0,.184,1.884,3.7,3.7,0,0,0,1.48,1.943,4.089,4.089,0,0,0,2.333.7q3.963,0,7.927,0" transform="translate(0 0)" fill="#2e3336"/>
+    <path id="Path_5914" data-name="Path 5914" d="M26.15,54.557H18.008a4.56,4.56,0,0,0,3.575,2.337,4.637,4.637,0,0,0,4.567-2.337" transform="translate(-10.151 -30.699)" fill="#2e3336"/>
   </g>
 </svg>

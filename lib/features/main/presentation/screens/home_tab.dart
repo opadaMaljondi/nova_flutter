@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/widgets/primary_icon_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/main/presentation/widgets/broker_card.dart';
 import 'package:real_state/features/main/presentation/widgets/featured_properties_card.dart';
@@ -21,51 +22,73 @@ class HomeTab extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        AppAssets.profile,
-                        width: 80.w,
-                        height: 80.w,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Ahmad Nasser",
-                            style: Theme.of(context).textTheme.titleMedium,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        PrimaryIconButton(
+                          icon: SvgPicture.asset(
+                            AppAssets.profile,
                           ),
-                          Row(
-                            children: [
-                              const Icon(
-                                Icons.location_on,
-                                color: AppColors.primary,
-                                size: 15,
-                              ),
-                              Text(
-                                "Abo Daby",
-                                style: Theme.of(context).textTheme.bodySmall,
-                              ),
-                            ],
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(50.r),
+                          onPressed: () {},
+                        ),
+                        SizedBox(
+                          width: 10.w,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Ahmad Nasser",
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.location_on,
+                                  color: AppColors.primary,
+                                  size: 15,
+                                ),
+                                Text(
+                                  "Abo Daby",
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        PrimaryIconButton(
+                          icon: SvgPicture.asset(
+                            AppAssets.support,
                           ),
-                        ],
-                      )
-                    ],
-                  ),
-                  // SvgPicture.asset(
-                  //   AppAssets.support,
-                  //   width: 90.w,
-                  //   height: 90.w,
-                  // ),
-                  SvgPicture.asset(
-                    AppAssets.notifications,
-                    width: 80.w,
-                    height: 80.w,
-                  ),
-                ],
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(50.r),
+                          onPressed: () {},
+                        ),
+                        SizedBox(
+                          width: 10.w,
+                        ),
+                        PrimaryIconButton(
+                          icon: SvgPicture.asset(
+                            AppAssets.notifications,
+                          ),
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(50.r),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 10.h,
