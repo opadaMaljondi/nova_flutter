@@ -4,7 +4,12 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 
 class BrokerCard extends StatelessWidget {
-  const BrokerCard({super.key});
+  final bool isCircle;
+
+  const BrokerCard({
+    super.key,
+    required this.isCircle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +19,10 @@ class BrokerCard extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
+              decoration: BoxDecoration(
+                borderRadius: !isCircle ? BorderRadius.circular(55.r) : null,
+                shape: isCircle ? BoxShape.circle : BoxShape.rectangle,
+                image: const DecorationImage(
                   image: AssetImage(
                     AppAssets.broker,
                   ),
@@ -31,7 +37,7 @@ class BrokerCard extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.w),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "Ahmad Nas",

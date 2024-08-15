@@ -200,7 +200,9 @@ class HomeTab extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
                   itemCount: 10,
-                  itemBuilder: (context, index) => const BrokerCard(),
+                  itemBuilder: (context, index) => const BrokerCard(
+                    isCircle: true,
+                  ),
                   separatorBuilder: (BuildContext context, int index) => SizedBox(
                     width: 10.w,
                   ),

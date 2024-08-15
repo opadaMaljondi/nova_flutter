@@ -4,7 +4,8 @@ abstract class AppRoutes {
   //-------------------------------------------
   static const String mainScreen = "/";
   static const String favoriteScreen = "/favoriteScreen";
-  static const String adminTransactionsTypesScreen = "/adminTransactionsTypesScreen";
+  static const String officesScreen = "/officesScreen";
+  static const String newsScreen = "/newsScreen";
   static const String transactionsScreen = "/transactionsScreen";
   static const String transactionsHistoryScreen = "/transactionsHistoryScreen";
   static const String profileTransactionsScreen = "/profileTransactionsScreen";

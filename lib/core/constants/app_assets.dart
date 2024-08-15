@@ -84,6 +84,8 @@ abstract class AppAssets {
   static const String news = "$rootSVGIcons/news.svg";
   static const String aboutUs = "$rootSVGIcons/about_us.svg";
   static const String advisor = "$rootSVGIcons/advisor.svg";
+  static const String darkMode = "$rootSVGIcons/dark_mode.svg";
+  static const String upgradeToOffice = "$rootSVGIcons/upgrade_to_office.svg";
 
   //-------------------------------------------
 

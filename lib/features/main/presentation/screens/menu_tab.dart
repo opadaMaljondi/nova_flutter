@@ -59,7 +59,9 @@ class MenuTab extends StatelessWidget {
                     SettingCard(
                       name: 'Offices',
                       iconPath: AppAssets.offices,
-                      onTap: () {},
+                      onTap: () {
+                        context.push(AppRoutes.officesScreen);
+                      },
                     ),
                     const Divider(
                       color: AppColors.grayAccent,
@@ -67,7 +69,9 @@ class MenuTab extends StatelessWidget {
                     SettingCard(
                       name: 'Properties News',
                       iconPath: AppAssets.favorite,
-                      onTap: () {},
+                      onTap: () {
+                        // context.push(AppRoutes.newsScreen);
+                      },
                     ),
                   ],
                 ),
@@ -154,7 +158,7 @@ class MenuTab extends StatelessWidget {
                     ),
                     SettingCard(
                       name: 'Upgrade to office',
-                      iconPath: AppAssets.profile,
+                      iconPath: AppAssets.upgradeToOffice,
                       onTap: () {},
                     ),
                   ],
@@ -194,7 +198,7 @@ class MenuTab extends StatelessWidget {
                     ),
                     SettingCard(
                       name: 'Dark Mode',
-                      iconPath: AppAssets.notifications,
+                      iconPath: AppAssets.darkMode,
                       onChanged: (value) {},
                     ),
                     const Divider(
@@ -202,7 +206,7 @@ class MenuTab extends StatelessWidget {
                     ),
                     SettingCard(
                       name: 'Language',
-                      iconPath: AppAssets.notifications,
+                      iconPath: AppAssets.language,
                       onTap: () {},
                     ),
                   ],
@@ -225,7 +229,7 @@ class MenuTab extends StatelessWidget {
                   children: [
                     SettingCard(
                       name: 'Logout',
-                      iconPath: AppAssets.advisor,
+                      iconPath: AppAssets.logout,
                       color: AppColors.danger,
                       onTap: () {},
                     ),

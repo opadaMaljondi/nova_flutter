@@ -11,6 +11,8 @@ import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dar
 import 'package:real_state/features/auth/presentation/screens/verification_code_screen.dart';
 import 'package:real_state/features/main/presentation/screens/favorite_tab.dart';
 import 'package:real_state/features/main/presentation/screens/main_screen.dart';
+import 'package:real_state/features/main/presentation/screens/news_screen.dart';
+import 'package:real_state/features/main/presentation/screens/offices_screen.dart';
 import 'package:real_state/injection_container.dart';
 
 class RouterService {
@@ -45,6 +47,32 @@ class RouterService {
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
             child: const FavoriteTab(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.officesScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const OfficesScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.newsScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const NewsScreen(),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: animation,
