@@ -3,7 +3,7 @@ abstract class AppRoutes {
   // Main Routes
   //-------------------------------------------
   static const String mainScreen = "/";
-  static const String messagesNotificationsScreen = "/messagesNotificationsScreen";
+  static const String favoriteScreen = "/favoriteScreen";
   static const String adminTransactionsTypesScreen = "/adminTransactionsTypesScreen";
   static const String transactionsScreen = "/transactionsScreen";
   static const String transactionsHistoryScreen = "/transactionsHistoryScreen";

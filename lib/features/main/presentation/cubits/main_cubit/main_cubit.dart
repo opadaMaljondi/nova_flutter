@@ -7,6 +7,7 @@ import 'package:real_state/core/services/caching_service.dart';
 import 'package:real_state/features/main/presentation/screens/favorite_tab.dart';
 import 'package:real_state/features/main/presentation/screens/home_tab.dart';
 import 'package:real_state/features/main/presentation/screens/map_tab.dart';
+import 'package:real_state/features/main/presentation/screens/menu_tab.dart';
 import 'package:real_state/injection_container.dart';
 
 part 'main_cubit.freezed.dart';
@@ -36,9 +37,7 @@ class MainCubit extends Cubit<MainState> {
       child: Text('Empty'),
     ),
     const FavoriteTab(),
-    const Center(
-      child: Text('Menu'),
-    ),
+    const MenuTab(),
   ];
 
   /// variables

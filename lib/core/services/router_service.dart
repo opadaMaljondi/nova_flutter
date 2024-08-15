@@ -9,6 +9,7 @@ import 'package:real_state/features/auth/presentation/screens/reset_password_scr
 import 'package:real_state/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/verification_code_screen.dart';
+import 'package:real_state/features/main/presentation/screens/favorite_tab.dart';
 import 'package:real_state/features/main/presentation/screens/main_screen.dart';
 import 'package:real_state/injection_container.dart';
 
@@ -31,6 +32,19 @@ class RouterService {
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
             child: const MainScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.favoriteScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const FavoriteTab(),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: animation,

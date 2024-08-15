@@ -71,6 +71,7 @@ abstract class AppAssets {
   static const String line = "$rootSVGIcons/line.svg";
   static const String client = "$rootSVGIcons/client.svg";
   static const String office = "$rootSVGIcons/office.svg";
+  static const String offices = "$rootSVGIcons/offices.svg";
   static const String ellipse = "$rootSVGIcons/ellipse.svg";
   static const String home = "$rootSVGIcons/home.svg";
   static const String map = "$rootSVGIcons/map.svg";
@@ -80,6 +81,9 @@ abstract class AppAssets {
   static const String rent = "$rootSVGIcons/rent.svg";
   static const String commercial = "$rootSVGIcons/commercial.svg";
   static const String apartments = "$rootSVGIcons/department.svg";
+  static const String news = "$rootSVGIcons/news.svg";
+  static const String aboutUs = "$rootSVGIcons/about_us.svg";
+  static const String advisor = "$rootSVGIcons/advisor.svg";
 
   //-------------------------------------------
 

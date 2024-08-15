@@ -236,7 +236,7 @@ class FirebaseMessagingService {
     if (message.data.containsKey('type')) {
       if (message.data['type'] == 'message') {
         InjectionContainer.getIt<RouterService>().router.push(
-              AppRoutes.messagesNotificationsScreen,
+              AppRoutes.mainScreen,
               extra: 1,
             );
         return;
@@ -262,7 +262,7 @@ class FirebaseMessagingService {
       return;
     }
     InjectionContainer.getIt<RouterService>().router.push(
-          AppRoutes.messagesNotificationsScreen,
+          AppRoutes.mainScreen,
         );
   }
 
