@@ -4,7 +4,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/enums/general_states.dart';
 import 'package:real_state/core/services/caching_service.dart';
+import 'package:real_state/features/main/presentation/screens/favorite_tab.dart';
 import 'package:real_state/features/main/presentation/screens/home_tab.dart';
+import 'package:real_state/features/main/presentation/screens/map_tab.dart';
 import 'package:real_state/injection_container.dart';
 
 part 'main_cubit.freezed.dart';
@@ -29,15 +31,11 @@ class MainCubit extends Cubit<MainState> {
   ThemeMode currentThemeMode = ThemeMode.system;
   List<Widget> tabs = [
     const HomeTab(),
-    const Center(
-      child: Text('Map'),
-    ),
+    const MapTab(),
     const Center(
       child: Text('Empty'),
     ),
-    const Center(
-      child: Text('Favorite'),
-    ),
+    const FavoriteTab(),
     const Center(
       child: Text('Menu'),
     ),

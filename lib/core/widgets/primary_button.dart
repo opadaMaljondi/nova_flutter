@@ -1,6 +1,6 @@
-import 'package:real_state/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/constants/app_colors.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String label;
@@ -10,6 +10,7 @@ class PrimaryButton extends StatelessWidget {
   final IconData? prefixIcon;
   final bool isOutlined;
   final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
   final void Function()? onPressed;
 
   const PrimaryButton({
@@ -22,13 +23,14 @@ class PrimaryButton extends StatelessWidget {
     this.backgroundColor = AppColors.primary,
     this.labelColor = AppColors.white,
     this.padding,
+    this.margin,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      padding: padding ?? EdgeInsets.symmetric(horizontal: 25.w),
+      padding: margin ?? EdgeInsets.symmetric(horizontal: 25.w),
       child: MaterialButton(
         onPressed: onPressed,
         color: isOutlined ? Theme.of(context).canvasColor : backgroundColor,
@@ -39,7 +41,7 @@ class PrimaryButton extends StatelessWidget {
         ),
         elevation: isOutlined ? 0 : null,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
+          padding: padding ?? EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,

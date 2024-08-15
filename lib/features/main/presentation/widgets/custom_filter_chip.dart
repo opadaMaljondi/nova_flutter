@@ -1,6 +1,6 @@
-import 'package:real_state/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/constants/app_colors.dart';
 
 class CustomFilterChip extends StatelessWidget {
   final String label;
@@ -19,11 +19,14 @@ class CustomFilterChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FilterChip(
-      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 8.h),
+      padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 6.h),
       backgroundColor: isSelected ? activeColor : AppColors.white10,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(13.sp),
-        side: const BorderSide(color: AppColors.transparent),
+        borderRadius: BorderRadius.circular(20.sp),
+        side: BorderSide(
+          color: isSelected ? AppColors.transparent : AppColors.mainGray,
+          width: 1,
+        ),
       ),
       onSelected: onSelected,
       label: Text(

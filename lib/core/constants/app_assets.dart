@@ -5,6 +5,7 @@ abstract class AppAssets {
   static const String logo = "$rootImages/logo.png";
   static const String estate = "$rootImages/estate.png";
   static const String estate1 = "$rootImages/estate1.png";
+  static const String broker = "$rootImages/broker.png";
   static const String registration = "$rootImages/registration.png";
   static const String onBoardingBackground = "$rootImages/on_boarding_background.png";
   static const String onBoardingPage1 = "$rootImages/on_boarding_page1.png";

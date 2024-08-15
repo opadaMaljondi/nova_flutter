@@ -18,7 +18,7 @@ class BrokerCard extends StatelessWidget {
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: AssetImage(
-                    AppAssets.estate1,
+                    AppAssets.broker,
                   ),
                   fit: BoxFit.cover,
                 ),
