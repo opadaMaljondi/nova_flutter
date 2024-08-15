@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
-import 'package:real_state/features/main/presentation/widgets/featured_properties_card.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
+import 'package:real_state/features/main/presentation/widgets/properties_card.dart';
 
 class FavoriteTab extends StatelessWidget {
   const FavoriteTab({super.key});
@@ -34,7 +34,9 @@ class FavoriteTab extends StatelessWidget {
                   childAspectRatio: 0.62,
                 ),
                 itemCount: 10,
-                itemBuilder: (context, index) => const FeaturedPropertiesCard(),
+                itemBuilder: (context, index) => const PropertiesCard(
+                  isFavorite: true,
+                ),
               ),
             ],
           ),

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/widgets/primary_icon_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/main/presentation/widgets/broker_card.dart';
-import 'package:real_state/features/main/presentation/widgets/featured_properties_card.dart';
-import 'package:real_state/features/main/presentation/widgets/properties_news_card.dart';
+import 'package:real_state/features/main/presentation/widgets/properties_card.dart';
+import 'package:real_state/features/main/presentation/widgets/news_card.dart';
 import 'package:real_state/features/main/presentation/widgets/shortcut_button.dart';
 import 'package:real_state/features/main/presentation/widgets/title_header.dart';
 
@@ -168,7 +170,9 @@ class HomeTab extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
                   itemCount: 10,
-                  itemBuilder: (context, index) => const FeaturedPropertiesCard(),
+                  itemBuilder: (context, index) => const PropertiesCard(
+                    isFavorite: false,
+                  ),
                   separatorBuilder: (BuildContext context, int index) => SizedBox(
                     width: 10.w,
                   ),
@@ -176,7 +180,9 @@ class HomeTab extends StatelessWidget {
               ),
               TitleHeader(
                 title: "Real Estate News",
-                onTap: () {},
+                onTap: () {
+                  context.push(AppRoutes.newsScreen);
+                },
               ),
               SizedBox(
                 height: 180.h,
@@ -184,7 +190,7 @@ class HomeTab extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
                   itemCount: 10,
-                  itemBuilder: (context, index) => const FeaturedNewsCard(),
+                  itemBuilder: (context, index) => const NewsCard(),
                   separatorBuilder: (BuildContext context, int index) => SizedBox(
                     width: 10.w,
                   ),
@@ -192,7 +198,9 @@ class HomeTab extends StatelessWidget {
               ),
               TitleHeader(
                 title: "Brokers",
-                onTap: () {},
+                onTap: () {
+                  context.push(AppRoutes.officesScreen);
+                },
               ),
               SizedBox(
                 height: 200.h,

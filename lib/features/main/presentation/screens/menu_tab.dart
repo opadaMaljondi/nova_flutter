@@ -70,7 +70,7 @@ class MenuTab extends StatelessWidget {
                       name: 'Properties News',
                       iconPath: AppAssets.favorite,
                       onTap: () {
-                        // context.push(AppRoutes.newsScreen);
+                        context.push(AppRoutes.newsScreen);
                       },
                     ),
                   ],
