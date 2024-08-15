@@ -4,7 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
+import 'package:real_state/features/main/presentation/widgets/broker_card.dart';
+import 'package:real_state/features/main/presentation/widgets/featured_properties_card.dart';
+import 'package:real_state/features/main/presentation/widgets/properties_news_card.dart';
 import 'package:real_state/features/main/presentation/widgets/shortcut_button.dart';
+import 'package:real_state/features/main/presentation/widgets/title_header.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
@@ -91,38 +95,32 @@ class HomeTab extends StatelessWidget {
                   ],
                 ),
               ),
+              const TitleHeader(title: "What do you want ?"),
               SizedBox(
                 height: 10.h,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
-                child: Text(
-                  "What do you want ?",
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ShortcutButton(
                       iconPath: AppAssets.sell,
-                      label: 'sale',
+                      label: 'Sale',
                       onTap: () {
                         // showCreateAccountDialog(context, cubit);
                       },
                     ),
                     ShortcutButton(
                       iconPath: AppAssets.rent,
-                      label: 'rent',
+                      label: 'Rent',
                       onTap: () {
                         // showCreateAccountDialog(context, cubit);
                       },
                     ),
                     ShortcutButton(
                       iconPath: AppAssets.commercial,
-                      label: 'commercial',
+                      label: 'Commercial',
                       onTap: () {
                         // showCreateAccountDialog(context, cubit);
                       },
@@ -136,6 +134,57 @@ class HomeTab extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              TitleHeader(
+                title: "Featured Properties",
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 300.h,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.symmetric(horizontal: 15.w),
+                  itemCount: 10,
+                  itemBuilder: (context, index) => const FeaturedPropertiesCard(),
+                  separatorBuilder: (BuildContext context, int index) => SizedBox(
+                    width: 10.w,
+                  ),
+                ),
+              ),
+              TitleHeader(
+                title: "Real Estate News",
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 180.h,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.symmetric(horizontal: 15.w),
+                  itemCount: 10,
+                  itemBuilder: (context, index) => const FeaturedNewsCard(),
+                  separatorBuilder: (BuildContext context, int index) => SizedBox(
+                    width: 10.w,
+                  ),
+                ),
+              ),
+              TitleHeader(
+                title: "Brokers",
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 200.h,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.symmetric(horizontal: 15.w),
+                  itemCount: 10,
+                  itemBuilder: (context, index) => const BrokerCard(),
+                  separatorBuilder: (BuildContext context, int index) => SizedBox(
+                    width: 10.w,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 40.h,
               ),
             ],
           ),
