@@ -12,6 +12,7 @@ abstract class AppRoutes {
   static const String pendingTransactionDetailsScreen = "/pendingTransactionDetailsScreen";
   static const String notificationPendingTransactionDetailsScreen = "/notificationPendingTransactionDetailsScreen";
   static const String processedTransactionDetailsScreen = "/processedTransactionDetailsScreen";
+  static const String aboutUsScreen = "/aboutUsScreen";
 
   //-------------------------------------------
   // Account Routes

@@ -7,10 +7,14 @@ abstract class AppAssets {
   static const String estate1 = "$rootImages/estate1.png";
   static const String broker = "$rootImages/broker.png";
   static const String registration = "$rootImages/registration.png";
-  static const String onBoardingBackground = "$rootImages/on_boarding_background.png";
+  static const String onBoardingBackground =
+      "$rootImages/on_boarding_background.png";
   static const String onBoardingPage1 = "$rootImages/on_boarding_page1.png";
   static const String onBoardingPage2 = "$rootImages/on_boarding_page2.png";
   static const String onBoardingPage3 = "$rootImages/on_boarding_page3.png";
+  static const String asset_23x = "$rootImages/asset_23x.png";
+  static const String instgram = "$rootImages/instgram.png";
+  static const String aboutUsBackground = "$rootImages/aboutUsBackground.png";
 
   //-------------------------------------------
 
@@ -28,7 +32,8 @@ abstract class AppAssets {
   static const String hotline = "$rootSVGIcons/hotline.svg";
   static const String newAccount = "$rootSVGIcons/new_account.svg";
   static const String notifications = "$rootSVGIcons/notifications.svg";
-  static const String notificationsButton = "$rootSVGIcons/notifications_button.svg";
+  static const String notificationsButton =
+      "$rootSVGIcons/notifications_button.svg";
   static const String pending = "$rootSVGIcons/pending.svg";
   static const String setting = "$rootSVGIcons/setting.svg";
   static const String shortcuts = "$rootSVGIcons/shortcuts.svg";
@@ -37,22 +42,27 @@ abstract class AppAssets {
   static const String withdrawal = "$rootSVGIcons/withdrawal.svg";
   static const String tradingAccounts = "$rootSVGIcons/trading_accounts.svg";
   static const String wallets = "$rootSVGIcons/wallets.svg";
-  static const String transactionsHistory = "$rootSVGIcons/transactions_history.svg";
+  static const String transactionsHistory =
+      "$rootSVGIcons/transactions_history.svg";
   static const String language = "$rootSVGIcons/language.svg";
   static const String appearanceMode = "$rootSVGIcons/appearance_mode.svg";
   static const String bugs = "$rootSVGIcons/bugs.svg";
   static const String logout = "$rootSVGIcons/logout.svg";
   static const String appLogoTextPart = "$rootSVGIcons/app_logo_text_part.svg";
-  static const String appLogoTextPartDark = "$rootSVGIcons/app_logo_text_part_dark.svg";
+  static const String appLogoTextPartDark =
+      "$rootSVGIcons/app_logo_text_part_dark.svg";
   static const String appLogo = "$rootSVGIcons/app_logo.svg";
   static const String appLogoDark = "$rootSVGIcons/app_logo_dark.svg";
   static const String support = "$rootSVGIcons/support.svg";
   static const String scanCard = "$rootSVGIcons/scan_card.svg";
-  static const String scanCardFrontSide = "$rootSVGIcons/scan_card_front_side.svg";
-  static const String scanCardBackSide = "$rootSVGIcons/scan_card_back_side.svg";
+  static const String scanCardFrontSide =
+      "$rootSVGIcons/scan_card_front_side.svg";
+  static const String scanCardBackSide =
+      "$rootSVGIcons/scan_card_back_side.svg";
   static const String address = "$rootSVGIcons/address.svg";
   static const String upload = "$rootSVGIcons/upload.svg";
-  static const String approveConditions = "$rootSVGIcons/approve_conditions.svg";
+  static const String approveConditions =
+      "$rootSVGIcons/approve_conditions.svg";
   static const String frontSideIdCard = "$rootSVGIcons/front_side_id_card.svg";
   static const String backSideIdCard = "$rootSVGIcons/back_side_id_card.svg";
   static const String person = "$rootSVGIcons/person.svg";
@@ -86,14 +96,20 @@ abstract class AppAssets {
   static const String advisor = "$rootSVGIcons/advisor.svg";
   static const String darkMode = "$rootSVGIcons/dark_mode.svg";
   static const String upgradeToOffice = "$rootSVGIcons/upgrade_to_office.svg";
+  static const String blackX = "$rootSVGIcons/blackX.svg";
+  static const String facebook = "$rootSVGIcons/facebook.svg";
+  static const String telegram = "$rootSVGIcons/telegram.svg";
+  static const String whatsUp = "$rootSVGIcons/whatsUp.svg";
 
   //-------------------------------------------
 
   // SVG Images Paths
   static const String rootSVGImages = "assets/svgs/images";
   static const String logoWalletCard = "$rootSVGImages/logo_wallet_card.svg";
-  static const String ellipseWalletCard = "$rootSVGImages/ellipse_wallet_card.svg";
-  static const String ellipse2WalletCard = "$rootSVGImages/ellipse2_wallet_card.svg";
+  static const String ellipseWalletCard =
+      "$rootSVGImages/ellipse_wallet_card.svg";
+  static const String ellipse2WalletCard =
+      "$rootSVGImages/ellipse2_wallet_card.svg";
   static const String triangleLeft = "$rootSVGImages/triangle_left.svg";
   static const String triangleRight = "$rootSVGImages/triangle_right.svg";
   static const String backgroundAppbar = "$rootSVGImages/background_appbar.svg";

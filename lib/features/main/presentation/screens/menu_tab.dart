@@ -103,7 +103,9 @@ class MenuTab extends StatelessWidget {
                     SettingCard(
                       name: 'About us',
                       iconPath: AppAssets.aboutUs,
-                      onTap: () {},
+                      onTap: () {
+                        context.push(AppRoutes.aboutUsScreen);
+                      },
                     ),
                     const Divider(
                       color: AppColors.grayAccent,
