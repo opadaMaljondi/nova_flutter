@@ -12,6 +12,7 @@ class PrimaryButton extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
   final void Function()? onPressed;
+  final Color? disabledButtonColor;
 
   const PrimaryButton({
     super.key,
@@ -24,6 +25,7 @@ class PrimaryButton extends StatelessWidget {
     this.labelColor = AppColors.white,
     this.padding,
     this.margin,
+    this.disabledButtonColor,
   });
 
   @override
@@ -34,14 +36,16 @@ class PrimaryButton extends StatelessWidget {
       child: MaterialButton(
         onPressed: onPressed,
         color: isOutlined ? Theme.of(context).canvasColor : backgroundColor,
-        disabledColor: AppColors.mainGray.withOpacity(0.5),
+        disabledColor: disabledButtonColor ?? AppColors.mainGray.withOpacity(0.5),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(35.r),
-          side: isOutlined ? BorderSide(color: backgroundColor) : BorderSide.none,
+          side:
+              isOutlined ? BorderSide(color: backgroundColor) : BorderSide.none,
         ),
         elevation: isOutlined ? 0 : null,
         child: Padding(
-          padding: padding ?? EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
+          padding:
+              padding ?? EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,

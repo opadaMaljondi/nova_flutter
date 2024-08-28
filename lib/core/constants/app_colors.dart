@@ -18,7 +18,7 @@ class AppColors {
     },
   );
 
-  static const Color primary = Color(0xFF0E9771);
+  static const Color primary = Color(0xff2A8478);
   static const Color primary10 = Color(0xFF1BC8B6);
   static const Color primary20 = Color(0xC0C5FBE8);
 

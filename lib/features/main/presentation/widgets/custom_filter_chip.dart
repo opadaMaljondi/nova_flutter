@@ -7,6 +7,9 @@ class CustomFilterChip extends StatelessWidget {
   final bool isSelected;
   final Color activeColor;
   final void Function(bool)? onSelected;
+  final double? horizontalPadding;
+  final double? verticalPadding;
+
 
   const CustomFilterChip({
     super.key,
@@ -14,15 +17,20 @@ class CustomFilterChip extends StatelessWidget {
     required this.isSelected,
     required this.activeColor,
     this.onSelected,
+    this.horizontalPadding,
+    this.verticalPadding,
   });
 
   @override
   Widget build(BuildContext context) {
     return FilterChip(
-      padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 6.h),
+      padding: EdgeInsets.symmetric(
+        horizontal: horizontalPadding ?? 30.w,
+        vertical: verticalPadding ?? 6.h,
+      ),
       backgroundColor: isSelected ? activeColor : AppColors.white10,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.sp),
+        borderRadius: BorderRadius.circular(20.r),
         side: BorderSide(
           color: isSelected ? AppColors.transparent : AppColors.mainGray,
           width: 1,

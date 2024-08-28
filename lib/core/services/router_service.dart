@@ -11,6 +11,7 @@ import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dar
 import 'package:real_state/features/auth/presentation/screens/verification_code_screen.dart';
 import 'package:real_state/features/main/presentation/screens/about_us.dart';
 import 'package:real_state/features/main/presentation/screens/favorite_tab.dart';
+import 'package:real_state/features/main/presentation/screens/filter_screen.dart';
 import 'package:real_state/features/main/presentation/screens/main_screen.dart';
 import 'package:real_state/features/main/presentation/screens/news_screen.dart';
 import 'package:real_state/features/main/presentation/screens/offices_screen.dart';
@@ -192,6 +193,20 @@ class RouterService {
             },
           ),
         ),
+        GoRoute(
+          path: AppRoutes.filterShapeScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const FilterScreen(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
       ],
       initialLocation: initialLocation,
     );
@@ -204,4 +219,3 @@ class RouterService {
     );
   }
 }
-     

@@ -114,8 +114,17 @@ class HomeTab extends StatelessWidget {
                     SizedBox(
                       width: 10.w,
                     ),
-                    SvgPicture.asset(
-                      AppAssets.filters,
+                    GestureDetector(
+                      onTap: () {
+                        GoRouter.of(context).push(
+                          AppRoutes.filterShapeScreen,
+                        );
+                      },
+                      child: SvgPicture.asset(
+                        width: 50.w,
+                        height: 50.h,
+                        AppAssets.filters,
+                      ),
                     ),
                   ],
                 ),
@@ -173,7 +182,8 @@ class HomeTab extends StatelessWidget {
                   itemBuilder: (context, index) => const PropertiesCard(
                     isFavorite: false,
                   ),
-                  separatorBuilder: (BuildContext context, int index) => SizedBox(
+                  separatorBuilder: (BuildContext context, int index) =>
+                      SizedBox(
                     width: 10.w,
                   ),
                 ),
@@ -191,7 +201,8 @@ class HomeTab extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
                   itemCount: 10,
                   itemBuilder: (context, index) => const NewsCard(),
-                  separatorBuilder: (BuildContext context, int index) => SizedBox(
+                  separatorBuilder: (BuildContext context, int index) =>
+                      SizedBox(
                     width: 10.w,
                   ),
                 ),
@@ -211,7 +222,8 @@ class HomeTab extends StatelessWidget {
                   itemBuilder: (context, index) => const BrokerCard(
                     isCircle: true,
                   ),
-                  separatorBuilder: (BuildContext context, int index) => SizedBox(
+                  separatorBuilder: (BuildContext context, int index) =>
+                      SizedBox(
                     width: 10.w,
                   ),
                 ),
