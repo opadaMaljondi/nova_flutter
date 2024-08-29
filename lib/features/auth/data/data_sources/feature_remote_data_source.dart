@@ -16,14 +16,17 @@ class FeatureRemoteDataSourceImpl extends FeatureRemoteDataSource {
   @override
   Future<List<FeatureModel>> getFeatures() async {
     try {
-      InjectionContainer.getIt<Logger>().i("Start `getFeatures` in |FeatureRemoteDataSourceImpl|");
+      InjectionContainer.getIt<Logger>()
+          .i("Start `getFeatures` in |FeatureRemoteDataSourceImpl|");
 
       Map<String, dynamic> mapData = await apiService.get(
-        subUrl: AppEndpoints.uploadIDCardImages,
+        subUrl: AppEndpoints.getUser,
       );
-      final featureModels = mapData['data'].map((e) => FeatureModel.fromJson(e)).toList();
+      final featureModels =
+          mapData['data'].map((e) => FeatureModel.fromJson(e)).toList();
 
-      InjectionContainer.getIt<Logger>().w("End `getFeatures` in |FeatureRemoteDataSourceImpl|");
+      InjectionContainer.getIt<Logger>()
+          .w("End `getFeatures` in |FeatureRemoteDataSourceImpl|");
       return Future.value(featureModels);
     } catch (e, s) {
       InjectionContainer.getIt<Logger>().e(

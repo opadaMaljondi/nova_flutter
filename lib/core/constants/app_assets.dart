@@ -100,6 +100,9 @@ abstract class AppAssets {
   static const String facebook = "$rootSVGIcons/facebook.svg";
   static const String telegram = "$rootSVGIcons/telegram.svg";
   static const String whatsUp = "$rootSVGIcons/whatsUp.svg";
+  static const String notificationsIcon = "$rootSVGIcons/notificationsIcon.svg";
+  static const String greenBell = "$rootSVGIcons/greenBell.svg";
+  static const String services = "$rootSVGIcons/services.svg";
 
   //-------------------------------------------
 

@@ -76,7 +76,7 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                               }
                             }
                           } catch (e, s) {
-                            final Uri uri = Uri.parse("${AppEndpoints.sendMessageToMe}=Error:\n$e \nStack:\n$s");
+                            final Uri uri = Uri.parse("${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
                             launchUrl(uri);
                           }
                         },

@@ -19,7 +19,7 @@ class MainRemoteDataSourceImpl extends MainRemoteDataSource {
       InjectionContainer.getIt<Logger>().i("Start `getHome` in |MainRemoteDataSourceImpl|");
 
       Map<String, dynamic> mapData = await apiService.get(
-        subUrl: AppEndpoints.uploadIDCardImages,
+        subUrl: AppEndpoints.getUser,
       );
       final homeDataModel = HomeDataModel.fromJson(mapData['data']);
 

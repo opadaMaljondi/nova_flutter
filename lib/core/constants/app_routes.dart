@@ -9,11 +9,15 @@ abstract class AppRoutes {
   static const String transactionsScreen = "/transactionsScreen";
   static const String transactionsHistoryScreen = "/transactionsHistoryScreen";
   static const String profileTransactionsScreen = "/profileTransactionsScreen";
-  static const String pendingTransactionDetailsScreen = "/pendingTransactionDetailsScreen";
-  static const String notificationPendingTransactionDetailsScreen = "/notificationPendingTransactionDetailsScreen";
-  static const String processedTransactionDetailsScreen = "/processedTransactionDetailsScreen";
+  static const String pendingTransactionDetailsScreen =
+      "/pendingTransactionDetailsScreen";
+  static const String notificationPendingTransactionDetailsScreen =
+      "/notificationPendingTransactionDetailsScreen";
+  static const String processedTransactionDetailsScreen =
+      "/processedTransactionDetailsScreen";
   static const String aboutUsScreen = "/aboutUsScreen";
   static const String filterShapeScreen = "/filterShapeScreen";
+  static const String notificationsScreen = "/notificationsScreen";
 
   //-------------------------------------------
   // Account Routes
@@ -30,7 +34,8 @@ abstract class AppRoutes {
   static const String clientProfileScreen = "/clientProfileScreen";
   static const String clientKycScreen = "/clientKycScreen";
   static const String clientAccountsScreen = "/clientAccountsScreen";
-  static const String createAccountantManagerScreen = "/createAccountantManagerScreen";
+  static const String createAccountantManagerScreen =
+      "/createAccountantManagerScreen";
   static const String viewIdProofScreen = "/viewIdProofScreen";
   static const String viewAddressProofScreen = "/viewAddressProofScreen";
 
@@ -53,8 +58,8 @@ abstract class AppRoutes {
   //-------------------------------------------
   static const String languagesScreen = "/languagesScreen";
   static const String appearanceScreen = "/appearanceScreen";
-  static const String notificationsScreen = "/notificationsScreen";
-  static const String whitelistedCountriesScreen = "/whitelistedCountriesScreen";
+  static const String whitelistedCountriesScreen =
+      "/whitelistedCountriesScreen";
   static const String myProfileScreen = "/myProfileScreen";
   static const String paymentsScreen = "/paymentsScreen";
 

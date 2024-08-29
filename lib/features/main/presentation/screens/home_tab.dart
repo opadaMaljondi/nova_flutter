@@ -85,7 +85,10 @@ class HomeTab extends StatelessWidget {
                           ),
                           color: AppColors.white,
                           borderRadius: BorderRadius.circular(50.r),
-                          onPressed: () {},
+                          onPressed: () {
+                            GoRouter.of(context)
+                                .push(AppRoutes.notificationsScreen);
+                          },
                         ),
                       ],
                     ),

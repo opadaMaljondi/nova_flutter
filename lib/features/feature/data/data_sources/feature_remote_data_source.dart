@@ -19,7 +19,7 @@ class FeatureRemoteDataSourceImpl extends FeatureRemoteDataSource {
       InjectionContainer.getIt<Logger>().i("Start `getFeatures` in |FeatureRemoteDataSourceImpl|");
 
       Map<String, dynamic> mapData = await apiService.get(
-        subUrl: AppEndpoints.uploadIDCardImages,
+        subUrl: AppEndpoints.getUser,
       );
       final featureModels = mapData['data'].map((e) => FeatureModel.fromJson(e)).toList();
 

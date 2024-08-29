@@ -14,6 +14,7 @@ import 'package:real_state/features/main/presentation/screens/favorite_tab.dart'
 import 'package:real_state/features/main/presentation/screens/filter_screen.dart';
 import 'package:real_state/features/main/presentation/screens/main_screen.dart';
 import 'package:real_state/features/main/presentation/screens/news_screen.dart';
+import 'package:real_state/features/main/presentation/screens/notifications_screen.dart';
 import 'package:real_state/features/main/presentation/screens/offices_screen.dart';
 import 'package:real_state/injection_container.dart';
 
@@ -198,6 +199,20 @@ class RouterService {
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
             child: const FilterScreen(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.notificationsScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const NotificationsScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               return FadeTransition(

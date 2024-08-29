@@ -7,7 +7,7 @@ abstract class AppThemes {
   static ThemeData themeEnglish = ThemeData(
     fontFamily: 'Switzer',
     primaryColor: AppColors.materialPrimary,
-    scaffoldBackgroundColor: AppColors.white20,
+    scaffoldBackgroundColor: const Color.fromRGBO(243, 243, 243, 1),
     splashColor: AppColors.materialPrimary.shade200,
     canvasColor: AppColors.white,
     iconTheme: const IconThemeData(
