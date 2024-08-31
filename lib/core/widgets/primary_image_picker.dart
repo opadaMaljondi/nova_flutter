@@ -85,7 +85,7 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                   ),
                 );
               },
-              icon: Container(
+              child: Container(
                 padding: EdgeInsets.symmetric(vertical: 15.h),
                 decoration: BoxDecoration(
                   color: widget.backgroundColor,

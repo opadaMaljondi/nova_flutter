@@ -13,6 +13,7 @@ class PrimaryButton extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final void Function()? onPressed;
   final Color? disabledButtonColor;
+  final TextStyle? style;
 
   const PrimaryButton({
     super.key,
@@ -26,6 +27,7 @@ class PrimaryButton extends StatelessWidget {
     this.padding,
     this.margin,
     this.disabledButtonColor,
+    this.style,
   });
 
   @override
@@ -36,7 +38,8 @@ class PrimaryButton extends StatelessWidget {
       child: MaterialButton(
         onPressed: onPressed,
         color: isOutlined ? Theme.of(context).canvasColor : backgroundColor,
-        disabledColor: disabledButtonColor ?? AppColors.mainGray.withOpacity(0.5),
+        disabledColor:
+            disabledButtonColor ?? AppColors.mainGray.withOpacity(0.5),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(35.r),
           side:
@@ -58,10 +61,11 @@ class PrimaryButton extends StatelessWidget {
               ],
               Text(
                 label,
-                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      color: labelColor,
-                      fontWeight: FontWeight.w400,
-                    ),
+                style: style ??
+                    Theme.of(context).textTheme.bodyLarge!.copyWith(
+                          color: labelColor,
+                          fontWeight: FontWeight.w400,
+                        ),
               ),
             ],
           ),

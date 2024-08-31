@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PrimaryIconButton extends StatelessWidget {
-  final Widget icon;
+  final Widget child;
   final Color? color;
   final Color? splashColor;
   final EdgeInsetsGeometry? padding;
@@ -11,7 +11,7 @@ class PrimaryIconButton extends StatelessWidget {
   final void Function()? onPressed;
 
   const PrimaryIconButton({
-    required this.icon,
+    required this.child,
     this.color,
     this.splashColor,
     this.onPressed,
@@ -38,7 +38,7 @@ class PrimaryIconButton extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: borderRadius ?? BorderRadius.circular(5.r),
             ),
-            child: icon,
+            child: child,
           ),
         ),
       ),

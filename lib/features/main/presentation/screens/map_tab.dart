@@ -61,7 +61,7 @@ class _MapTabState extends State<MapTab> {
                         Padding(
                           padding: EdgeInsets.only(bottom: 5.h),
                           child: PrimaryIconButton(
-                            icon: const Icon(
+                            child: const Icon(
                               Icons.search,
                               color: AppColors.white,
                             ),

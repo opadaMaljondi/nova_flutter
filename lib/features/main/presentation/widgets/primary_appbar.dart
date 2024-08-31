@@ -17,7 +17,7 @@ class PrimaryAppbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           PrimaryIconButton(
-            icon: Icon(
+            child: Icon(
               Icons.arrow_back_ios_rounded,
               color: !context.canPop() ? AppColors.transparent : null,
             ),
@@ -35,7 +35,7 @@ class PrimaryAppbar extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium,
           ),
           const PrimaryIconButton(
-            icon: Icon(
+            child: Icon(
               Icons.arrow_back_ios_rounded,
               color: AppColors.transparent,
             ),

@@ -90,7 +90,7 @@ class PrimaryBottomNavbar extends StatelessWidget {
               icon: Padding(
                 padding: EdgeInsets.only(top: 10.h, bottom: 5),
                 child: SvgPicture.asset(
-                  AppAssets.favorite,
+                  AppAssets.services,
                   height: 25.w,
                   color: currentTab == 3 ? AppColors.primary : AppColors.mainGray,
                 ),

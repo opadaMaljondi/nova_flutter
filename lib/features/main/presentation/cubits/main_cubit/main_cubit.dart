@@ -4,10 +4,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/enums/general_states.dart';
 import 'package:real_state/core/services/caching_service.dart';
-import 'package:real_state/features/main/presentation/screens/favorite_tab.dart';
 import 'package:real_state/features/main/presentation/screens/home_tab.dart';
 import 'package:real_state/features/main/presentation/screens/map_tab.dart';
 import 'package:real_state/features/main/presentation/screens/menu_tab.dart';
+import 'package:real_state/features/main/presentation/screens/services_tab.dart';
 import 'package:real_state/injection_container.dart';
 
 part 'main_cubit.freezed.dart';
@@ -36,7 +36,7 @@ class MainCubit extends Cubit<MainState> {
     const Center(
       child: Text('Empty'),
     ),
-    const FavoriteTab(),
+    const ServicesTab(),
     const MenuTab(),
   ];
 
@@ -48,7 +48,8 @@ class MainCubit extends Cubit<MainState> {
 
   void initMain() {
     // if (isInitMain) return;
-    final accessToken = InjectionContainer.getIt<CacheService>().getData<String>(
+    final accessToken =
+        InjectionContainer.getIt<CacheService>().getData<String>(
       key: AppKeys.accessToken,
     );
     InjectionContainer.getIt<CacheService>().getData<String>(

@@ -32,7 +32,7 @@ class HomeTab extends StatelessWidget {
                     Row(
                       children: [
                         PrimaryIconButton(
-                          icon: SvgPicture.asset(
+                          child: SvgPicture.asset(
                             AppAssets.profile,
                           ),
                           color: AppColors.white,
@@ -69,7 +69,7 @@ class HomeTab extends StatelessWidget {
                     Row(
                       children: [
                         PrimaryIconButton(
-                          icon: SvgPicture.asset(
+                          child: SvgPicture.asset(
                             AppAssets.support,
                           ),
                           color: AppColors.white,
@@ -80,7 +80,7 @@ class HomeTab extends StatelessWidget {
                           width: 10.w,
                         ),
                         PrimaryIconButton(
-                          icon: SvgPicture.asset(
+                          child: SvgPicture.asset(
                             AppAssets.notifications,
                           ),
                           color: AppColors.white,
@@ -174,7 +174,9 @@ class HomeTab extends StatelessWidget {
               ),
               TitleHeader(
                 title: "Featured Properties",
-                onTap: () {},
+                onTap: () {
+                  GoRouter.of(context).push(AppRoutes.featuredPropertiesScreen);
+                },
               ),
               SizedBox(
                 height: 300.h,

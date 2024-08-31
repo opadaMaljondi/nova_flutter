@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/features/main/presentation/widgets/news_card.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 
@@ -41,7 +43,8 @@ class NewsScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  separatorBuilder: (BuildContext context, int index) => SizedBox(
+                  separatorBuilder: (BuildContext context, int index) =>
+                      SizedBox(
                     width: 10.w,
                   ),
                 ),
@@ -56,7 +59,12 @@ class NewsScreen extends StatelessWidget {
                   bottom: 40.h,
                 ),
                 itemCount: 10,
-                itemBuilder: (context, index) => const NewsCard(),
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () {
+                    context.push(AppRoutes.realEstateScreen);
+                  },
+                  child: const NewsCard(),
+                ),
                 separatorBuilder: (BuildContext context, int index) => SizedBox(
                   height: 15.h,
                 ),

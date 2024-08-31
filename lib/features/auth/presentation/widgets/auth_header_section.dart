@@ -27,7 +27,7 @@ class AuthHeaderSection extends StatelessWidget {
             left: context.locale.languageCode != 'ar' ? 20.w : null,
             right: context.locale.languageCode == 'ar' ? 20.w : null,
             child: PrimaryIconButton(
-              icon: const Icon(
+              child: const Icon(
                 Icons.arrow_back_ios_rounded,
               ),
               onPressed: () {

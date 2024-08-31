@@ -105,7 +105,7 @@ class PropertiesCard extends StatelessWidget {
             top: 10.h,
             left: 10.h,
             child: PrimaryIconButton(
-              icon: SvgPicture.asset(
+              child: SvgPicture.asset(
                 AppAssets.favorite,
                 height: 20.h,
                 width: 20.h,

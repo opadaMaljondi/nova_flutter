@@ -32,7 +32,7 @@ class PrimaryDetailsAppbar extends StatelessWidget {
             child: Row(
               children: [
                 PrimaryIconButton(
-                  icon: const Icon(
+                  child: const Icon(
                     Icons.arrow_back_ios_new,
                     color: AppColors.primary,
                   ),
@@ -49,7 +49,7 @@ class PrimaryDetailsAppbar extends StatelessWidget {
                   ),
                 ),
                 const PrimaryIconButton(
-                  icon: Icon(
+                  child: Icon(
                     Icons.arrow_back_ios_new,
                     color: AppColors.transparent,
                   ),

@@ -21,7 +21,7 @@ class PrimaryDialogSourceImagePicker extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
-                icon: Icon(
+                child: Icon(
                   Icons.image_outlined,
                   size: 35.w,
                   color: AppColors.primary,
@@ -40,7 +40,7 @@ class PrimaryDialogSourceImagePicker extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
-                icon: Icon(
+                child: Icon(
                   Icons.camera_alt_outlined,
                   size: 35.w,
                   color: AppColors.primary,
@@ -59,7 +59,7 @@ class PrimaryDialogSourceImagePicker extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
-                icon: Icon(
+                child: Icon(
                   Icons.attachment_outlined,
                   size: 35.w,
                   color: AppColors.primary,

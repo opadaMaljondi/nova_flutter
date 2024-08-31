@@ -103,6 +103,15 @@ abstract class AppAssets {
   static const String notificationsIcon = "$rootSVGIcons/notificationsIcon.svg";
   static const String greenBell = "$rootSVGIcons/greenBell.svg";
   static const String services = "$rootSVGIcons/services.svg";
+  static const String customLocationOn = "$rootSVGIcons/customLocationOn.svg";
+  static const String greenEmail = "$rootSVGIcons/greenEmail.svg";
+  static const String greenFacebook = "$rootSVGIcons/greenFacebook.svg";
+  static const String greenInstegram = "$rootSVGIcons/greenInstegram.svg";
+  static const String greenPhone = "$rootSVGIcons/greenPhone.svg";
+  static const String greenTelegram = "$rootSVGIcons/greenTelegram.svg";
+  static const String greenWebsite = "$rootSVGIcons/greenWebsite.svg";
+  static const String greenWhatesup = "$rootSVGIcons/greenWhatesup.svg";
+  static const String greenX = "$rootSVGIcons/greenX.svg";
 
   //-------------------------------------------
 

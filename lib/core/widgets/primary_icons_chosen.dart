@@ -31,7 +31,7 @@ class PrimaryIconsChosen extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
-                icon: Icon(
+                child: Icon(
                   firstIcon,
                   size: 35.w,
                   color: AppColors.primary,
@@ -50,7 +50,7 @@ class PrimaryIconsChosen extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
-                icon: Icon(
+                child: Icon(
                   secondIcon,
                   size: 35.w,
                   color: AppColors.primary,
