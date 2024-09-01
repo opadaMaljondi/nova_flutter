@@ -10,19 +10,21 @@ class EngineeringCompaniesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const PrimaryAppbar(
-              title: "Engineering companies",
-            ),
-            Divider(
-              thickness: 1,
-              color: AppColors.mainGray,
-              height: 30.h,
-            ),
-            const EngineeringCompaniesLits(),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const PrimaryAppbar(
+                title: "Engineering companies",
+              ),
+              Divider(
+                thickness: 1,
+                color: AppColors.mainGray,
+                height: 30.h,
+              ),
+              const EngineeringCompaniesLits(),
+            ],
+          ),
         ),
       ),
     );

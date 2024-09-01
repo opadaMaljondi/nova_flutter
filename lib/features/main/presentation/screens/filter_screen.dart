@@ -14,93 +14,103 @@ class FilterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const PrimaryAppbar(
-              title: 'filter',
-            ),
-            Divider(
-              thickness: 1,
-              color: AppColors.mainGray,
-              height: 30.h,
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            const SaleRentButtons(),
-            SizedBox(
-              height: 40.h,
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.only(start: 20.w),
-              child: Text(
-                'Write',
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: AppColors.black5,
-                    ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const PrimaryAppbar(
+                title: 'filter',
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            SizedBox(
-              height: 123.h,
-              child: const WriteListView(),
-            ),
-            SizedBox(
-              height: 35.h,
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.only(start: 20.w),
-              child: Text(
-                'Ranges from to',
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: AppColors.black5,
-                    ),
+              Divider(
+                thickness: 1,
+                color: AppColors.mainGray,
+                height: 30.h,
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            const MoneyRangeSlider(),
-            SizedBox(
-              height: 30.h,
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.only(start: 20.w),
-              child: Text(
-                'date',
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: AppColors.black5,
-                    ),
+              SizedBox(
+                height: 20.h,
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            const DropDownDatPicker(),
-            SizedBox(
-              height: 120.h,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: PrimaryButton(
-                    label: 'Back',
-                  ),
+              const SaleRentButtons(),
+              SizedBox(
+                height: 40.h,
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.only(start: 20.w),
+                child: Text(
+                  'Write',
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: AppColors.black5,
+                      ),
                 ),
-                Expanded(
-                  child: PrimaryButton(
-                    label: 'Application',
-                    disabledButtonColor: AppColors.primary,
-                  ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              SizedBox(
+                height: 123.h,
+                child: const WriteListView(),
+              ),
+              SizedBox(
+                height: 35.h,
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.only(start: 20.w),
+                child: Text(
+                  'Ranges from to',
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: AppColors.black5,
+                      ),
                 ),
-              ],
-            ),
-          ],
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              const MoneyRangeSlider(),
+              SizedBox(
+                height: 30.h,
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.only(start: 20.w),
+                child: Text(
+                  'date',
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: AppColors.black5,
+                      ),
+                ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              const DropDownDatPicker(),
+              SizedBox(
+                height: 120.h,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Expanded(
+                      child: PrimaryButton(
+                        margin: EdgeInsets.zero,
+                        label: 'Back',
+                      ),
+                    ),
+                    SizedBox(
+                      width: 16.w,
+                    ),
+                    const Expanded(
+                      child: PrimaryButton(
+                        label: 'Application',
+                        margin: EdgeInsets.zero,
+                        disabledButtonColor: AppColors.primary,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

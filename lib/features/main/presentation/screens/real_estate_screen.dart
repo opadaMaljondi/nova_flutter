@@ -13,51 +13,53 @@ class RealEstateScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const PrimaryAppbar(
-              title: 'Real estate',
-            ),
-            Divider(
-              thickness: 1,
-              color: AppColors.mainGray,
-              height: 30.h,
-            ),
-            SizedBox(
-              height: 18.h,
-            ),
-            const RealEstateHeader(),
-            SizedBox(
-              height: 10.h,
-            ),
-            const ReviewArticles(),
-            SizedBox(
-              height: 18.h,
-            ),
-            const RealEstateAdvertising(),
-            SizedBox(
-              height: 35.h,
-            ),
-            const RentAproperty(),
-            SizedBox(
-              height: 35.h,
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.only(
-                start: 21.w,
-                end: 13.w,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const PrimaryAppbar(
+                title: 'Real estate',
               ),
-              child: Text(
-                'Ultimately, the choice between renting and selling a property should align with your financial goals and personal circumstances, taking into account current market conditions',
-                style: Theme.of(context).textTheme.bodyLarge,
+              Divider(
+                thickness: 1,
+                color: AppColors.mainGray,
+                height: 30.h,
               ),
-            ),
-            SizedBox(
-              height: 40.h,
-            ),
-          ],
+              SizedBox(
+                height: 18.h,
+              ),
+              const RealEstateHeader(),
+              SizedBox(
+                height: 10.h,
+              ),
+              const ReviewArticles(),
+              SizedBox(
+                height: 18.h,
+              ),
+              const RealEstateAdvertising(),
+              SizedBox(
+                height: 35.h,
+              ),
+              const RentAproperty(),
+              SizedBox(
+                height: 35.h,
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.only(
+                  start: 21.w,
+                  end: 13.w,
+                ),
+                child: Text(
+                  'Ultimately, the choice between renting and selling a property should align with your financial goals and personal circumstances, taking into account current market conditions',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ),
+              SizedBox(
+                height: 40.h,
+              ),
+            ],
+          ),
         ),
       ),
     );
