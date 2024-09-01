@@ -24,6 +24,7 @@ abstract class AppRoutes {
   static const String comapanyInfoScreen = "/comapanyInfoScreen";
   static const String featuredPropertiesScreen = "/featuredPropertiesScreen";
   static const String realEstateScreen = "/realEstateScreen";
+  static const String propertiesDetails = "/propertiesDetails";
 
   //-------------------------------------------
   // Account Routes

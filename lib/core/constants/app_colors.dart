@@ -18,7 +18,6 @@ class AppColors {
     },
   );
 
-
   static const Color primary = Color(0xff2A8478);
   static const Color primary10 = Color(0xFF1BC8B6);
   static const Color primary20 = Color(0xC0C5FBE8);
@@ -39,8 +38,6 @@ class AppColors {
   static const Color black20 = Color(0x68525250);
   static const Color black30 = Color(0x26B7B7B7);
 
-
-
   static const Color white = Colors.white;
   static const Color white10 = Color(0xFFFCFCFC);
   static const Color white20 = Color(0xFFF3F3F3);
@@ -49,6 +46,7 @@ class AppColors {
 
   static const Color grayDark = Color(0xFF0F3833);
   static const Color gray = Color(0xFF727E96);
+  static const Color lightGrey = Color(0xFFEFF2F3);
   static const MaterialColor mainGray = Colors.grey;
   static const Color grayAccent = Color(0xFFDFE0E1);
 

@@ -19,6 +19,7 @@ import 'package:real_state/features/main/presentation/screens/main_screen.dart';
 import 'package:real_state/features/main/presentation/screens/news_screen.dart';
 import 'package:real_state/features/main/presentation/screens/notifications_screen.dart';
 import 'package:real_state/features/main/presentation/screens/offices_screen.dart';
+import 'package:real_state/features/main/presentation/screens/properties_details.dart';
 import 'package:real_state/features/main/presentation/screens/real_estate_screen.dart';
 import 'package:real_state/features/main/presentation/screens/services_tab.dart';
 import 'package:real_state/injection_container.dart';
@@ -288,6 +289,20 @@ class RouterService {
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
             child: const RealEstateScreen(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.propertiesDetails,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const PropertiesDetails(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               return FadeTransition(

@@ -184,8 +184,13 @@ class HomeTab extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
                   itemCount: 10,
-                  itemBuilder: (context, index) => const PropertiesCard(
-                    isFavorite: false,
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () {
+                      context.push(AppRoutes.propertiesDetails);
+                    },
+                    child: const PropertiesCard(
+                      isFavorite: false,
+                    ),
                   ),
                   separatorBuilder: (BuildContext context, int index) =>
                       SizedBox(

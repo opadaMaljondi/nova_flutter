@@ -15,6 +15,7 @@ abstract class AppAssets {
   static const String asset_23x = "$rootImages/asset_23x.png";
   static const String instgram = "$rootImages/instgram.png";
   static const String aboutUsBackground = "$rootImages/aboutUsBackground.png";
+  static const String youtube = "$rootImages/youtube.png";
 
   //-------------------------------------------
 
@@ -112,6 +113,21 @@ abstract class AppAssets {
   static const String greenWebsite = "$rootSVGIcons/greenWebsite.svg";
   static const String greenWhatesup = "$rootSVGIcons/greenWhatesup.svg";
   static const String greenX = "$rootSVGIcons/greenX.svg";
+  static const String conectArepresentitve =
+      "$rootSVGIcons/conectArepresentitve.svg";
+  static const String conectSupport = "$rootSVGIcons/conectSupport.svg";
+  static const String engineeringCompanies =
+      "$rootSVGIcons/engineeringCompanies.svg";
+  static const String investmentAdvisor = "$rootSVGIcons/investmentAdvisor.svg";
+  static const String legalAdvisor = "$rootSVGIcons/legalAdvisor.svg";
+  static const String propertyMaintenance =
+      "$rootSVGIcons/propertyMaintenance.svg";
+  static const String realEstateConsultant =
+      "$rootSVGIcons/realEstateConsultant.svg";
+  static const String realEstateCompanies = "$rootSVGIcons/greenChat.svg";
+  static const String greenChat = "$rootSVGIcons/greenChat.svg";
+  static const String greenDownload = "$rootSVGIcons/greenDownload.svg";
+  static const String greenPdf = "$rootSVGIcons/greenPdf.svg";
 
   //-------------------------------------------
 
