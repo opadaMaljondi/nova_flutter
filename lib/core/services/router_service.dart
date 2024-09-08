@@ -10,6 +10,7 @@ import 'package:real_state/features/auth/presentation/screens/sign_in_screen.dar
 import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/verification_code_screen.dart';
 import 'package:real_state/features/main/presentation/screens/about_us.dart';
+import 'package:real_state/features/main/presentation/screens/add_property_screen.dart';
 import 'package:real_state/features/main/presentation/screens/company_info_screen.dart';
 import 'package:real_state/features/main/presentation/screens/engineering_companies_screen.dart';
 import 'package:real_state/features/main/presentation/screens/favorite_tab.dart';
@@ -22,6 +23,7 @@ import 'package:real_state/features/main/presentation/screens/offices_screen.dar
 import 'package:real_state/features/main/presentation/screens/properties_details.dart';
 import 'package:real_state/features/main/presentation/screens/real_estate_screen.dart';
 import 'package:real_state/features/main/presentation/screens/services_tab.dart';
+import 'package:real_state/features/main/presentation/screens/trader_details_screen.dart';
 import 'package:real_state/injection_container.dart';
 
 class RouterService {
@@ -303,6 +305,34 @@ class RouterService {
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
             child: const PropertiesDetails(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.addPropertyScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const AddPropertyScreen(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.traderDetailsScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const TraderDetailsScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               return FadeTransition(

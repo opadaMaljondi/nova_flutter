@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 
@@ -22,6 +23,9 @@ class PrimaryTextField extends StatefulWidget {
   final EdgeInsetsGeometry? padding;
   final void Function()? onTap;
   final void Function(String)? onFieldSubmitted;
+  final int? maxLines;
+  final int? minLines;
+  final TextStyle? hintStyle;
 
   const PrimaryTextField({
     super.key,
@@ -44,6 +48,8 @@ class PrimaryTextField extends StatefulWidget {
     this.hintText,
     this.padding,
     this.onFieldSubmitted,
+    this.maxLines,
+    this.minLines, this.hintStyle,
   });
 
   @override
@@ -96,6 +102,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             //                 : TextDirection.rtl
             //             : TextDirection.ltr
             //         : TextDirection.ltr,
+
             controller: widget.controller,
             onTap: widget.onTap,
             textInputAction: widget.textInputAction,
@@ -109,7 +116,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             onFieldSubmitted: widget.onFieldSubmitted,
             decoration: InputDecoration(
               hintText: widget.hintText,
-              hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+              hintStyle: widget.hintStyle ?? Theme.of(context).textTheme.bodySmall!.copyWith(
                     color: AppColors.mainGray,
                   ),
               filled: true,
@@ -151,12 +158,13 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                 borderRadius: BorderRadius.circular(35.r),
                 borderSide: BorderSide.none,
               ),
-              contentPadding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 8),
+              contentPadding:
+                  EdgeInsets.symmetric(horizontal: 25.w, vertical: 8),
             ),
             keyboardType: widget.inputType,
             obscureText: widget.isObscureText && !isVisibleText,
-            maxLines: widget.isTextArea ? 4 : 1,
-            minLines: widget.isTextArea ? 3 : 1,
+            maxLines: widget.maxLines ?? (widget.isTextArea ? 4 : 1),
+            minLines: widget.minLines ?? (widget.isTextArea ? 4 : 1),
             readOnly: widget.readOnly || widget.onTap != null,
             enabled: widget.isEnabled,
           ),

@@ -9,7 +9,9 @@ class CustomFilterChip extends StatelessWidget {
   final void Function(bool)? onSelected;
   final double? horizontalPadding;
   final double? verticalPadding;
-
+  final BorderRadiusGeometry? borderRadius;
+  final Color borderSideColor;
+  final double borderWidth;
 
   const CustomFilterChip({
     super.key,
@@ -19,6 +21,9 @@ class CustomFilterChip extends StatelessWidget {
     this.onSelected,
     this.horizontalPadding,
     this.verticalPadding,
+    this.borderRadius,
+    this.borderSideColor = AppColors.mainGray,
+    this.borderWidth = 1,
   });
 
   @override
@@ -30,10 +35,10 @@ class CustomFilterChip extends StatelessWidget {
       ),
       backgroundColor: isSelected ? activeColor : AppColors.white10,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.r),
+        borderRadius: borderRadius ?? BorderRadius.circular(20.r),
         side: BorderSide(
-          color: isSelected ? AppColors.transparent : AppColors.mainGray,
-          width: 1,
+          color: isSelected ? AppColors.transparent : borderSideColor,
+          width: borderWidth,
         ),
       ),
       onSelected: onSelected,

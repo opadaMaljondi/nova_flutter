@@ -19,10 +19,15 @@ class AboutUsScreen extends StatelessWidget {
             child: Stack(
               alignment: AlignmentDirectional.bottomEnd,
               children: [
-                Opacity(
-                  opacity: .4,
-                  child: Image.asset(
-                    AppAssets.aboutUsBackground,
+                PositionedDirectional(
+                  start: 0,
+                  top: MediaQuery.sizeOf(context).height * .80,
+                  child: Opacity(
+                    opacity: .4,
+                    child: Image.asset(
+                      height: MediaQuery.sizeOf(context).height * .5,
+                      AppAssets.aboutUsBackground,
+                    ),
                   ),
                 ),
                 Column(

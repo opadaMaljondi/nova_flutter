@@ -16,6 +16,9 @@ abstract class AppAssets {
   static const String instgram = "$rootImages/instgram.png";
   static const String aboutUsBackground = "$rootImages/aboutUsBackground.png";
   static const String youtube = "$rootImages/youtube.png";
+  static const String downloadImagePng = "$rootImages/downloadImagePng.png";
+  static const String uploadImagePng = "$rootImages/uploadImagePng.png";
+  static const String panoramaImage = "$rootImages/panoramaImage.png";
 
   //-------------------------------------------
 
@@ -128,6 +131,10 @@ abstract class AppAssets {
   static const String greenChat = "$rootSVGIcons/greenChat.svg";
   static const String greenDownload = "$rootSVGIcons/greenDownload.svg";
   static const String greenPdf = "$rootSVGIcons/greenPdf.svg";
+  static const String interrogative = "$rootSVGIcons/interrogative.svg";
+  static const String uploadFile = "$rootSVGIcons/uploadFile.svg";
+  static const String messaging = "$rootSVGIcons/messaging.svg";
+  static const String verticalMenu = "$rootSVGIcons/verticalMenu.svg";
 
   //-------------------------------------------
 
@@ -141,6 +148,9 @@ abstract class AppAssets {
   static const String triangleLeft = "$rootSVGImages/triangle_left.svg";
   static const String triangleRight = "$rootSVGImages/triangle_right.svg";
   static const String backgroundAppbar = "$rootSVGImages/background_appbar.svg";
+  static const String downloadImage = "$rootSVGImages/downloadImage.svg";
+  static const String plus = "$rootSVGImages/plus.svg";
+  static const String uploadImage = "$rootSVGImages/uploadImage.svg";
 
 ////-------------------------------------------
 }

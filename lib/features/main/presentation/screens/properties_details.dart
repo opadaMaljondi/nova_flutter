@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:real_state/features/main/presentation/widgets/benefits_and_services.dart';
+import 'package:real_state/features/main/presentation/widgets/benefits_and_services_property_details.dart';
 import 'package:real_state/features/main/presentation/widgets/description.dart';
 import 'package:real_state/features/main/presentation/widgets/details.dart';
 import 'package:real_state/features/main/presentation/widgets/display_3d.dart';
@@ -19,7 +19,7 @@ class PropertiesDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea( 
+      body: SafeArea(
         child: SingleChildScrollView(
           child: Stack(
             children: [
@@ -54,7 +54,7 @@ class PropertiesDetails extends StatelessWidget {
                     SizedBox(
                       height: 22.h,
                     ),
-                    const BenefitsAndServices(),
+                    const BenefitsAndServicesPropertyDetails(),
                     SizedBox(
                       height: 22.h,
                     ),

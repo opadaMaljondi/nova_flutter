@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:image_picker/image_picker.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_endpoints.dart';
@@ -43,6 +44,15 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
     super.initState();
   }
 
+  Future<File?> pickImage(ImageSource source) async {
+    ImagePicker imagePicker = ImagePicker();
+    var pickedImage = await imagePicker.pickImage(source: source);
+    if (pickedImage != null) {
+      return File(pickedImage.path);
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -76,7 +86,8 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                               }
                             }
                           } catch (e, s) {
-                            final Uri uri = Uri.parse("${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
+                            final Uri uri = Uri.parse(
+                                "${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
                             launchUrl(uri);
                           }
                         },
@@ -84,6 +95,8 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                     ],
                   ),
                 );
+          
+          
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 15.h),

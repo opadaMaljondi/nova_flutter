@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/features/main/presentation/widgets/broker_card.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 
@@ -34,8 +36,13 @@ class OfficesScreen extends StatelessWidget {
                   childAspectRatio: 0.7,
                 ),
                 itemCount: 10,
-                itemBuilder: (context, index) => const BrokerCard(
-                  isCircle: false,
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () {
+                    GoRouter.of(context).push(AppRoutes.traderDetailsScreen);
+                  },
+                  child: const BrokerCard(
+                    isCircle: false,
+                  ),
                 ),
               ),
             ],

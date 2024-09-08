@@ -37,13 +37,16 @@ class MainScreen extends StatelessWidget {
               changeCurrentTab: context.read<MainCubit>().changeCurrentTab,
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                context.push(AppRoutes.addPropertyScreen);
+              },
               backgroundColor: AppColors.primary,
               child: const Icon(
                 Icons.add,
               ),
             ),
-            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
           ),
         );
       },

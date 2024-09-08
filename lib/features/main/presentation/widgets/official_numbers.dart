@@ -27,13 +27,13 @@ class OfficialNumbers extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  ':CEO',
+                  'CEO:',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.black,
                       ),
                 ),
                 Text(
-                  ':For advertising',
+                  'For advertising:',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.black,
                       ),
