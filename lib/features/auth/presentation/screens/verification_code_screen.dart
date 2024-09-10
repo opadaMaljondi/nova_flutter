@@ -29,6 +29,7 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                 title: 'Verification Code',
                 iconPath: AppAssets.verificationCode,
                 subTitle: 'Here you can write anything related to this page.',
+                isLargeContent: false,
               ),
               SizedBox(
                 height: 25.h,

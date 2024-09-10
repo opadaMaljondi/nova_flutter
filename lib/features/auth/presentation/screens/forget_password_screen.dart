@@ -32,6 +32,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   title: 'Forget Password',
                   iconPath: AppAssets.resetPassword,
                   subTitle: 'Here you can write anything related to this page.',
+                  isLargeContent: false,
                 ),
                 SizedBox(
                   height: 25.h,

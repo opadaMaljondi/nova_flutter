@@ -240,7 +240,9 @@ class MenuTab extends StatelessWidget {
                       name: 'Logout',
                       iconPath: AppAssets.logout,
                       color: AppColors.danger,
-                      onTap: () {},
+                      onTap: () {
+                        context.go(AppRoutes.signInScreen);
+                      },
                     ),
                   ],
                 ),

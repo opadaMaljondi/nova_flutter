@@ -9,12 +9,14 @@ class AuthHeaderSection extends StatelessWidget {
   final String title;
   final String iconPath;
   final String subTitle;
+  final bool isLargeContent;
 
   const AuthHeaderSection({
     super.key,
     required this.title,
     required this.iconPath,
     required this.subTitle,
+    this.isLargeContent = true,
   });
 
   @override
@@ -23,7 +25,7 @@ class AuthHeaderSection extends StatelessWidget {
       children: [
         if (context.canPop())
           Positioned(
-            top: 50.h,
+            top: 35.h,
             left: context.locale.languageCode != 'ar' ? 20.w : null,
             right: context.locale.languageCode == 'ar' ? 20.w : null,
             child: PrimaryIconButton(
@@ -39,16 +41,18 @@ class AuthHeaderSection extends StatelessWidget {
           ),
         Column(
           children: [
-            SizedBox(height: 50.h),
+            SizedBox(height: isLargeContent ? 35.h : 100.h),
             SvgPicture.asset(iconPath),
+            SizedBox(height: 25.h),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
+              padding: EdgeInsets.symmetric(horizontal: 30.w),
               child: Text(
                 title,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
             ),
+            SizedBox(height: 5.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Text(

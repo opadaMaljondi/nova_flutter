@@ -22,7 +22,6 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   bool isAgree = false;
-  bool isOfficeAccount = false;
   final GlobalKey<FormState> signUpFormKey = GlobalKey<FormState>();
   final TextEditingController passwordTextController = TextEditingController();
 
@@ -71,11 +70,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 25.h,
+                  height: 20.h,
                 ),
                 const PhoneNumberTextField(),
                 SizedBox(
-                  height: 25.h,
+                  height: 20.h,
                 ),
                 PrimaryTextField(
                   labelText: 'Password',
@@ -85,7 +84,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   controller: passwordTextController,
                 ),
                 SizedBox(
-                  height: 25.h,
+                  height: 20.h,
                 ),
                 PrimaryTextField(
                   labelText: 'Re-Enter Password',

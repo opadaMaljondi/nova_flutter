@@ -19,7 +19,9 @@ class OrSignInSection extends StatelessWidget {
             children: [
               Text(
                 'Have Account ?!',
-                style: Theme.of(context).textTheme.bodyMedium,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: AppColors.primary,
+                ),
               ),
               SizedBox(
                 width: 10.w,

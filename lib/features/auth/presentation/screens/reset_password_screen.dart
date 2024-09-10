@@ -34,6 +34,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   title: 'Reset Password',
                   iconPath: AppAssets.resetPassword,
                   subTitle: 'Here you can write anything related to this page.',
+                  isLargeContent: false,
                 ),
                 SizedBox(
                   height: 25.h,
