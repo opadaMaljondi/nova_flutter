@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/services/router_service.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/auth/presentation/widgets/onboarding_button.dart';
 import 'package:real_state/features/auth/presentation/widgets/onboarding_page1.dart';
 import 'package:real_state/features/auth/presentation/widgets/onboarding_page2.dart';
@@ -54,7 +56,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 left: 0,
                 right: 0,
                 child: OnboardingButton(
-                  label: currentTab == 0 ? 'Next' : 'Start',
+                  label: currentTab == 0 ? LocaleKeys.next.tr() : LocaleKeys.start.tr(),
                   onPressed: () {
                     if (currentTab == 0) {
                       setState(() {

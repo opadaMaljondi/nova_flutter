@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -5,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/helpers/regex_validator.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/auth/presentation/widgets/agree_button.dart';
@@ -34,10 +36,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             key: signUpFormKey,
             child: Column(
               children: [
-                const AuthHeaderSection(
-                  title: 'Create new account',
+                AuthHeaderSection(
+                  title: LocaleKeys.createNewAccount.tr(),
                   iconPath: AppAssets.signUp,
-                  subTitle: 'Here you can write anything related to this page.',
+                  subTitle: LocaleKeys.youCanTypeAnything.tr(),
                 ),
                 const ChoseAccountTypeSection(),
                 Padding(
@@ -47,10 +49,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: [
                       Expanded(
                         child: PrimaryTextField(
-                          labelText: 'First name',
-                          hintText: 'First name',
+                          labelText: LocaleKeys.firstName.tr(),
+                          hintText: LocaleKeys.firstName.tr(),
                           padding: EdgeInsets.zero,
-                          validator: (value) => RegexValidator.validateName(value),
+                          validator: (value) =>
+                              RegexValidator.validateName(value),
                           labelIcon: SvgPicture.asset(AppAssets.name),
                         ),
                       ),
@@ -59,10 +62,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       Expanded(
                         child: PrimaryTextField(
-                          labelText: 'Last name',
-                          hintText: 'Last name',
+                          labelText: LocaleKeys.lastName.tr(),
+                          hintText: LocaleKeys.lastName.tr(),
                           padding: EdgeInsets.zero,
-                          validator: (value) => RegexValidator.validateName(value),
+                          validator: (value) =>
+                              RegexValidator.validateName(value),
                           labelIcon: SvgPicture.asset(AppAssets.name),
                         ),
                       ),
@@ -77,7 +81,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 20.h,
                 ),
                 PrimaryTextField(
-                  labelText: 'Password',
+                  labelText:LocaleKeys.password.tr(),
                   labelIcon: SvgPicture.asset(AppAssets.password),
                   validator: (value) => RegexValidator.validateRequired(value),
                   isObscureText: true,
@@ -87,7 +91,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 20.h,
                 ),
                 PrimaryTextField(
-                  labelText: 'Re-Enter Password',
+                  labelText: LocaleKeys.confirmNewPassword.tr(),
                   labelIcon: SvgPicture.asset(AppAssets.password),
                   validator: (value) => RegexValidator.validateConfirmPassword(
                     value,
@@ -108,7 +112,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 30.w),
                   child: PrimaryButton(
-                    label: 'Sign Up',
+                    label: LocaleKeys.singUp.tr(),
                     onPressed: isAgree
                         ? () {
                             if (!signUpFormKey.currentState!.validate()) return;

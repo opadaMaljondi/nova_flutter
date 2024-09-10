@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class AgreeButton extends StatefulWidget {
   final void Function(bool isAgree)? onChange;
@@ -50,7 +52,7 @@ class _AgreeButtonState extends State<AgreeButton> {
                   ),
           ),
           Text(
-            'I Agree',
+            LocaleKeys.doAgree.tr(),
             style: TextStyle(
               fontSize: 14.sp,
             ),
@@ -61,7 +63,7 @@ class _AgreeButtonState extends State<AgreeButton> {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 2),
               child: Text(
-                'policy and conditions',
+                LocaleKeys.conitionsAndPolicy.tr(),
                 style: TextStyle(
                   fontSize: 14.sp,
                   color: AppColors.primary,

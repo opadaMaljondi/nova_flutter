@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,6 +8,7 @@ import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/helpers/regex_validator.dart';
 import 'package:real_state/core/services/router_service.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/auth/presentation/widgets/auth_header_section.dart';
@@ -31,16 +33,16 @@ class _SignInScreenState extends State<SignInScreen> {
             key: signInFormKey,
             child: Column(
               children: [
-                const AuthHeaderSection(
-                  title: 'Sign In',
-                  iconPath: AppAssets.signIn,
-                  subTitle: 'Here you can write anything related to this page.',
+                 AuthHeaderSection(
+                  title: LocaleKeys.singIn.tr(),
+                  iconPath: AppAssets.signIn.tr(),
+                  subTitle: LocaleKeys.youCanTypeAnything.tr(),
                 ),
                 SizedBox(
                   height: 25.h,
                 ),
                 PrimaryTextField(
-                  labelText: 'Phone Number',
+                  labelText: LocaleKeys.phoneNumber.tr(),
                   inputType: TextInputType.phone,
                   labelIcon: SvgPicture.asset(AppAssets.phone),
                   validator: (value) => RegexValidator.validatePhone(value),
@@ -49,14 +51,14 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 25.h,
                 ),
                 PrimaryTextField(
-                  labelText: 'Password',
+                  labelText: LocaleKeys.password.tr(),
                   labelIcon: SvgPicture.asset(AppAssets.password),
                   validator: (value) => RegexValidator.validateRequired(value),
                   isObscureText: true,
                 ),
                 const RememberMeAndForgetPasswordButton(),
                 PrimaryButton(
-                  label: 'Sign In',
+                  label: LocaleKeys.singIn.tr(),
                   onPressed: () {
                     if (!signInFormKey.currentState!.validate()) return;
                     RouterService.setInitialRoute(AppRoutes.mainScreen);
@@ -67,7 +69,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 20.h,
                 ),
                 PrimaryButton(
-                  label: 'Create new account',
+                  label: LocaleKeys.createNewAccount.tr(),
                   backgroundColor: AppColors.black,
                   onPressed: () {
                     context.push(AppRoutes.signUpScreen);

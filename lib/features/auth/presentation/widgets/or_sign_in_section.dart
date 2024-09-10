@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/auth/presentation/widgets/or_divider.dart';
 
 class OrSignInSection extends StatelessWidget {
@@ -18,10 +20,10 @@ class OrSignInSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Have Account ?!',
+                LocaleKeys.doYouHaveAnAccount.tr(),
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: AppColors.primary,
-                ),
+                      color: AppColors.primary,
+                    ),
               ),
               SizedBox(
                 width: 10.w,
@@ -34,7 +36,7 @@ class OrSignInSection extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 2),
                   child: Text(
-                    'Sign In',
+                    LocaleKeys.singIn.tr(),
                     style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           color: AppColors.primary,
                           decoration: TextDecoration.underline,

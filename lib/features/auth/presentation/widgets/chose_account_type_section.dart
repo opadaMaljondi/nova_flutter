@@ -1,14 +1,17 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/auth/presentation/widgets/account_type_card.dart';
 
 class ChoseAccountTypeSection extends StatefulWidget {
   const ChoseAccountTypeSection({super.key});
 
   @override
-  State<ChoseAccountTypeSection> createState() => _ChoseAccountTypeSectionState();
+  State<ChoseAccountTypeSection> createState() =>
+      _ChoseAccountTypeSectionState();
 }
 
 class _ChoseAccountTypeSectionState extends State<ChoseAccountTypeSection> {
@@ -29,9 +32,9 @@ class _ChoseAccountTypeSectionState extends State<ChoseAccountTypeSection> {
               SizedBox(
                 width: 10.w,
               ),
-              const Text(
-                'Chose account type',
-                style: TextStyle(
+              Text(
+                LocaleKeys.chooseYourAccount.tr(),
+                style: const TextStyle(
                   fontSize: 14,
                 ),
               ),
@@ -46,7 +49,7 @@ class _ChoseAccountTypeSectionState extends State<ChoseAccountTypeSection> {
           child: Row(
             children: [
               AccountTypeCard(
-                label: 'Office',
+                label: LocaleKeys.officeCapital.tr(),
                 iconPath: AppAssets.office,
                 isSelected: isOfficeAccount,
                 onTap: () {
@@ -59,7 +62,7 @@ class _ChoseAccountTypeSectionState extends State<ChoseAccountTypeSection> {
                 width: 10.w,
               ),
               AccountTypeCard(
-                label: 'Client',
+                label: LocaleKeys.client.tr(),
                 iconPath: AppAssets.client,
                 isSelected: !isOfficeAccount,
                 onTap: () {
