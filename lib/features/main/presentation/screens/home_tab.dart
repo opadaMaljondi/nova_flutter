@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:go_router/go_router.dart';
-import 'package:real_state/core/constants/app_assets.dart';
-import 'package:real_state/core/constants/app_colors.dart';
-import 'package:real_state/core/constants/app_routes.dart';
-import 'package:real_state/core/widgets/primary_icon_button.dart';
-import 'package:real_state/core/widgets/primary_text_field.dart';
-import 'package:real_state/features/main/presentation/widgets/broker_card.dart';
-import 'package:real_state/features/main/presentation/widgets/properties_card.dart';
-import 'package:real_state/features/main/presentation/widgets/news_card.dart';
-import 'package:real_state/features/main/presentation/widgets/shortcut_button.dart';
-import 'package:real_state/features/main/presentation/widgets/title_header.dart';
+import 'package:real_state/features/main/presentation/widgets/main/brokers_section.dart';
+import 'package:real_state/features/main/presentation/widgets/main/featured_properties_section.dart';
+import 'package:real_state/features/main/presentation/widgets/main/home_appbar.dart';
+import 'package:real_state/features/main/presentation/widgets/main/home_search_field.dart';
+import 'package:real_state/features/main/presentation/widgets/main/real_estate_news_section.dart';
+import 'package:real_state/features/main/presentation/widgets/main/what_do_you_want_section.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
@@ -24,223 +18,13 @@ class HomeTab extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        PrimaryIconButton(
-                          color: AppColors.white,
-                          borderRadius: BorderRadius.circular(50.r),
-                          onPressed: () {},
-                          child: SvgPicture.asset(
-                            AppAssets.profile,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10.w,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Ahmad Nasser",
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
-                            Row(
-                              children: [
-                                const Icon(
-                                  Icons.location_on,
-                                  color: AppColors.primary,
-                                  size: 15,
-                                ),
-                                Text(
-                                  "Abo Daby",
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        PrimaryIconButton(
-                          color: AppColors.white,
-                          borderRadius: BorderRadius.circular(50.r),
-                          onPressed: () {},
-                          child: SvgPicture.asset(
-                            AppAssets.support,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10.w,
-                        ),
-                        PrimaryIconButton(
-                          color: AppColors.white,
-                          borderRadius: BorderRadius.circular(50.r),
-                          onPressed: () {
-                            GoRouter.of(context)
-                                .push(AppRoutes.notificationsScreen);
-                          },
-                          child: SvgPicture.asset(
-                            AppAssets.notifications,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15.w),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: PrimaryTextField(
-                        hintText: 'Search',
-                        padding: EdgeInsets.zero,
-                        fillColor: AppColors.white,
-                        prefixIcon: Icon(
-                          Icons.search,
-                          size: 20.w,
-                          color: AppColors.mainGray,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.w,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        GoRouter.of(context).push(
-                          AppRoutes.filterShapeScreen,
-                        );
-                      },
-                      child: SvgPicture.asset(
-                        width: 50.w,
-                        height: 50.h,
-                        AppAssets.filters,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const TitleHeader(title: "What do you want ?"),
-              SizedBox(
-                height: 10.h,
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15.w),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ShortcutButton(
-                      iconPath: AppAssets.sell,
-                      label: 'Sale',
-                      onTap: () {
-                        // showCreateAccountDialog(context, cubit);
-                      },
-                    ),
-                    ShortcutButton(
-                      iconPath: AppAssets.rent,
-                      label: 'Rent',
-                      onTap: () {
-                        // showCreateAccountDialog(context, cubit);
-                      },
-                    ),
-                    ShortcutButton(
-                      iconPath: AppAssets.commercial,
-                      label: 'Commercial',
-                      onTap: () {
-                        // showCreateAccountDialog(context, cubit);
-                      },
-                    ),
-                    ShortcutButton(
-                      iconPath: AppAssets.apartments,
-                      label: 'Apartments',
-                      onTap: () {
-                        // showCreateAccountDialog(context, cubit);
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              TitleHeader(
-                title: "Featured Properties",
-                onTap: () {
-                  GoRouter.of(context).push(AppRoutes.featuredPropertiesScreen);
-                },
-              ),
-              SizedBox(
-                height: 300.h,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.symmetric(horizontal: 15.w),
-                  itemCount: 10,
-                  itemBuilder: (context, index) => GestureDetector(
-                    onTap: () {
-                      context.push(AppRoutes.propertiesDetails);
-                    },
-                    child: const PropertiesCard(
-                      isFavorite: false,
-                    ),
-                  ),
-                  separatorBuilder: (BuildContext context, int index) =>
-                      SizedBox(
-                    width: 10.w,
-                  ),
-                ),
-              ),
-              TitleHeader(
-                title: "Real Estate News",
-                onTap: () {
-                  context.push(AppRoutes.newsScreen);
-                },
-              ),
-              SizedBox(
-                height: 180.h,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.symmetric(horizontal: 15.w),
-                  itemCount: 10,
-                  itemBuilder: (context, index) => const NewsCard(),
-                  separatorBuilder: (BuildContext context, int index) =>
-                      SizedBox(
-                    width: 10.w,
-                  ),
-                ),
-              ),
-              TitleHeader(
-                title: "Brokers",
-                onTap: () {
-                  context.push(AppRoutes.officesScreen);
-                },
-              ),
-              SizedBox(
-                height: 200.h,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.symmetric(horizontal: 15.w),
-                  itemCount: 10,
-                  itemBuilder: (context, index) => const BrokerCard(
-                    isCircle: true,
-                  ),
-                  separatorBuilder: (BuildContext context, int index) =>
-                      SizedBox(
-                    width: 10.w,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 40.h,
-              ),
+              const HomeAppbar(),
+              const HomeSearchField(),
+              const WhatDoYouWantSection(),
+              const FeaturedPropertiesBrokersSection(),
+              const RealEstateNewsBrokersSection(),
+              const BrokersSection(),
+              SizedBox(height: 40.h),
             ],
           ),
         ),

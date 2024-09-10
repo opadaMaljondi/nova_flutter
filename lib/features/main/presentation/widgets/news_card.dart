@@ -18,7 +18,8 @@ class NewsCard extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 150.w,
+            width: 140.w,
+            margin: EdgeInsets.all(5.h),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16.sp),
               color: AppColors.primary,

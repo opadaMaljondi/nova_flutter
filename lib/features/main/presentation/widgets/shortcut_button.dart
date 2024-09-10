@@ -19,16 +19,16 @@ class ShortcutButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(10.r),
+      borderRadius: BorderRadius.circular(16.r),
       child: Column(
         children: [
           Container(
-            height: 70.h,
-            width: 70.w,
+            height: 65.h,
+            width: 65.w,
             padding: EdgeInsets.all(15.w),
             decoration: BoxDecoration(
               color: AppColors.white,
-              borderRadius: BorderRadius.circular(10.r),
+              borderRadius: BorderRadius.circular(16.r),
             ),
             child: SvgPicture.asset(iconPath),
           ),

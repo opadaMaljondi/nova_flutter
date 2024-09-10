@@ -45,8 +45,7 @@ class MainScreen extends StatelessWidget {
                 Icons.add,
               ),
             ),
-            floatingActionButtonLocation:
-                FloatingActionButtonLocation.centerDocked,
+            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
           ),
         );
       },
