@@ -11,7 +11,11 @@ import 'package:real_state/features/main/presentation/screens/services_tab.dart'
 import 'package:real_state/injection_container.dart';
 
 part 'main_cubit.freezed.dart';
+
 part 'main_state.dart';
+
+
+int filterIndex=0 ;
 
 class MainCubit extends Cubit<MainState> {
   MainCubit() : super(const MainState.initial()) {
@@ -40,11 +44,14 @@ class MainCubit extends Cubit<MainState> {
     const MenuTab(),
   ];
 
+  List<String> FilterTypes = ['All', 'Rented', 'Not Rented', 'For Sale','Not For Sale'];
+
   /// variables
   bool isInitMain = false;
   int currentTab = 0;
   double totalBalance = 0;
   String title = '';
+
 
   void initMain() {
     // if (isInitMain) return;
@@ -167,9 +174,16 @@ class MainCubit extends Cubit<MainState> {
     _update(const MainState.changeTabSuccess());
   }
 
+  selectFilter(int id) {
+    _update(const MainState.loading());
+     filterIndex = id;
+    _update(const MainState.changeTabSuccess());
+  }
   void _update(MainState state) {
     if (!isClosed) {
       emit(state);
     }
   }
+
+
 }

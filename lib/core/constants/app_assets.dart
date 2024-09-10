@@ -21,6 +21,7 @@ abstract class AppAssets {
 
   // SVG Icons Paths
   static const String rootSVGIcons = "assets/svgs/icons";
+  static const String editProfle = "$rootSVGIcons/edit.svg";
   static const String facebookLogo = "$rootSVGIcons/facebook_logo.svg";
   static const String googleLogo = "$rootSVGIcons/google_logo.svg";
   static const String appleLogo = "$rootSVGIcons/apple_logo.svg";
@@ -75,6 +76,11 @@ abstract class AppAssets {
   static const String arabic = "$rootSVGIcons/arabic.svg";
   static const String password = "$rootSVGIcons/password.svg";
   static const String phone = "$rootSVGIcons/phone.svg";
+  static const String location = "$rootSVGIcons/location.svg";
+  static const String calender = "$rootSVGIcons/calender.svg";
+  static const String dolar = "$rootSVGIcons/dolar.svg";
+  static const String camera = "$rootSVGIcons/camera.svg";
+  static const String rentHome = "$rootSVGIcons/rentHome.svg";
   static const String signIn = "$rootSVGIcons/sign_in.svg";
   static const String signUp = "$rootSVGIcons/sign_up.svg";
   static const String verificationCode = "$rootSVGIcons/verification_code.svg";
