@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,6 +7,7 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/helpers/regex_validator.dart';
 import 'package:real_state/core/services/router_service.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/auth/presentation/widgets/auth_header_section.dart';
@@ -30,17 +32,17 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             key: resetPasswordFormKey,
             child: Column(
               children: [
-                const AuthHeaderSection(
-                  title: 'Reset Password',
+                AuthHeaderSection(
+                  title: LocaleKeys.changePasword.tr(),
                   iconPath: AppAssets.resetPassword,
-                  subTitle: 'Here you can write anything related to this page.',
+                  subTitle: LocaleKeys.youCanTypeAnything.tr(),
                   isLargeContent: false,
                 ),
                 SizedBox(
                   height: 25.h,
                 ),
                 PrimaryTextField(
-                  labelText: 'New Password',
+                  labelText: LocaleKeys.newPassword.tr(),
                   labelIcon: SvgPicture.asset(AppAssets.password),
                   validator: (value) => RegexValidator.validateRequired(value),
                   isObscureText: true,
@@ -50,7 +52,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   height: 25.h,
                 ),
                 PrimaryTextField(
-                  labelText: 'Re-Enter New Password',
+                  labelText: LocaleKeys.confirmNewPassword.tr(),
                   labelIcon: SvgPicture.asset(AppAssets.password),
                   isObscureText: true,
                   validator: (value) => RegexValidator.validateConfirmPassword(
@@ -65,7 +67,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   height: 60.h,
                 ),
                 PrimaryButton(
-                  label: 'Next',
+                  label: LocaleKeys.next.tr(),
                   onPressed: () {
                     if (!resetPasswordFormKey.currentState!.validate()) return;
                     RouterService.setInitialRoute(AppRoutes.mainScreen);

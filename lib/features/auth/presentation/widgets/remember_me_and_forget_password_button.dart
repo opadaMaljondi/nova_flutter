@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class RememberMeAndForgetPasswordButton extends StatefulWidget {
   const RememberMeAndForgetPasswordButton({super.key});
@@ -57,7 +59,7 @@ class _RememberMeAndForgetPasswordButtonState extends State<RememberMeAndForgetP
                           ),
                   ),
                   Text(
-                    'remember password',
+                   LocaleKeys.rememberPassord.tr(),
                     style: TextStyle(
                       fontSize: 12.sp,
                     ),
@@ -72,7 +74,7 @@ class _RememberMeAndForgetPasswordButtonState extends State<RememberMeAndForgetP
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 2),
                   child: Text(
-                    'forget password?',
+                LocaleKeys.forgotPassword.tr(),
                     style: TextStyle(fontSize: 12.sp, decoration: TextDecoration.underline),
                   ),
                 ),
