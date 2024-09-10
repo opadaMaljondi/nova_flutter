@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 
@@ -49,7 +48,8 @@ class PrimaryTextField extends StatefulWidget {
     this.padding,
     this.onFieldSubmitted,
     this.maxLines,
-    this.minLines, this.hintStyle,
+    this.minLines,
+    this.hintStyle,
   });
 
   @override
@@ -116,9 +116,10 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
             onFieldSubmitted: widget.onFieldSubmitted,
             decoration: InputDecoration(
               hintText: widget.hintText,
-              hintStyle: widget.hintStyle ?? Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: AppColors.mainGray,
-                  ),
+              hintStyle: widget.hintStyle ??
+                  Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: AppColors.mainGray,
+                      ),
               filled: true,
               fillColor: widget.fillColor,
               errorMaxLines: 3,
@@ -158,8 +159,7 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                 borderRadius: BorderRadius.circular(35.r),
                 borderSide: BorderSide.none,
               ),
-              contentPadding:
-                  EdgeInsets.symmetric(horizontal: 25.w, vertical: 8),
+              contentPadding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 8),
             ),
             keyboardType: widget.inputType,
             obscureText: widget.isObscureText && !isVisibleText,

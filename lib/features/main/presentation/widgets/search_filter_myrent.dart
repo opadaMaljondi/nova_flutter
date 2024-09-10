@@ -1,6 +1,3 @@
-
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,18 +11,15 @@ class SearchFilterMyRent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Row(
+    return Row(
       children: [
         Expanded(
           flex: 1,
-          child:
-
-          SvgPicture.asset(
+          child: SvgPicture.asset(
             width: 50.w,
             height: 50.h,
             AppAssets.filters,
           ),
-
         ),
         Expanded(
             flex: 4,

@@ -105,15 +105,15 @@ class PropertiesCard extends StatelessWidget {
             top: 10.h,
             left: 10.h,
             child: PrimaryIconButton(
+              color: isFavorite ? AppColors.danger.withOpacity(0.5) : AppColors.gray.withOpacity(0.5),
+              borderRadius: BorderRadius.circular(50.r),
+              onPressed: () {},
               child: SvgPicture.asset(
                 AppAssets.favorite,
                 height: 20.h,
                 width: 20.h,
                 color: AppColors.white.withOpacity(0.7),
               ),
-              color: isFavorite ? AppColors.danger.withOpacity(0.5) : AppColors.gray.withOpacity(0.5),
-              borderRadius: BorderRadius.circular(50.r),
-              onPressed: () {},
             ),
           ),
         ],

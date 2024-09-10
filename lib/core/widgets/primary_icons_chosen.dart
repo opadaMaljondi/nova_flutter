@@ -31,13 +31,13 @@ class PrimaryIconsChosen extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
+                onPressed: onFirstIconPressed,
+                padding: EdgeInsets.all(30.w),
                 child: Icon(
                   firstIcon,
                   size: 35.w,
                   color: AppColors.primary,
                 ),
-                onPressed: onFirstIconPressed,
-                padding: EdgeInsets.all(30.w),
               ),
               SizedBox(
                 height: 8.h,
@@ -50,13 +50,13 @@ class PrimaryIconsChosen extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
+                onPressed: onSecondIconPressed,
+                padding: EdgeInsets.all(30.w),
                 child: Icon(
                   secondIcon,
                   size: 35.w,
                   color: AppColors.primary,
                 ),
-                onPressed: onSecondIconPressed,
-                padding: EdgeInsets.all(30.w),
               ),
               SizedBox(
                 height: 8.h,

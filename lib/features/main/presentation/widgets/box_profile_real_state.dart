@@ -1,6 +1,3 @@
-
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,10 +10,8 @@ class BoxProfileRealState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      decoration: BoxDecoration(
-          color: AppColors.white,
-          borderRadius: BorderRadius.circular(20.r)),
+    return Container(
+      decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(20.r)),
       padding: const EdgeInsets.symmetric(
         vertical: 10,
         horizontal: 10,
@@ -38,20 +33,16 @@ class BoxProfileRealState extends StatelessWidget {
                   Text(
                     'For sale',
                     textAlign: TextAlign.center,
-                    style:
-                    Theme.of(context).textTheme.bodyLarge,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   SizedBox(
                     height: 15.h,
                   ),
                   Text('7',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineLarge!
-                          .copyWith(
-                        color: AppColors.black,
-                      ))
+                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                            color: AppColors.black,
+                          ))
                 ],
               ),
             ),
@@ -72,20 +63,16 @@ class BoxProfileRealState extends StatelessWidget {
                   Text(
                     'for rent',
                     textAlign: TextAlign.center,
-                    style:
-                    Theme.of(context).textTheme.bodyLarge,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   SizedBox(
                     height: 15.h,
                   ),
                   Text('7',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineLarge!
-                          .copyWith(
-                        color: AppColors.black,
-                      ))
+                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                            color: AppColors.black,
+                          ))
                 ],
               ),
             ),
@@ -106,8 +93,7 @@ class BoxProfileRealState extends StatelessWidget {
                   Text(
                     'Rented',
                     textAlign: TextAlign.center,
-                    style:
-                    Theme.of(context).textTheme.bodyLarge,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   SizedBox(
                     height: 15.h,
@@ -115,10 +101,7 @@ class BoxProfileRealState extends StatelessWidget {
                   Text(
                     '7',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineLarge!
-                        .copyWith(color: AppColors.black),
+                    style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: AppColors.black),
                   )
                 ],
               ),

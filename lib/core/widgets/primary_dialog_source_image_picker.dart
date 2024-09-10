@@ -21,13 +21,13 @@ class PrimaryDialogSourceImagePicker extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
+                onPressed: () => onSourceImagePicked(ImageSource.gallery),
+                padding: EdgeInsets.all(10.w),
                 child: Icon(
                   Icons.image_outlined,
                   size: 35.w,
                   color: AppColors.primary,
                 ),
-                onPressed: () => onSourceImagePicked(ImageSource.gallery),
-                padding: EdgeInsets.all(10.w),
               ),
               SizedBox(
                 height: 8.h,
@@ -40,13 +40,13 @@ class PrimaryDialogSourceImagePicker extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
+                onPressed: () => onSourceImagePicked(ImageSource.camera),
+                padding: EdgeInsets.all(10.w),
                 child: Icon(
                   Icons.camera_alt_outlined,
                   size: 35.w,
                   color: AppColors.primary,
                 ),
-                onPressed: () => onSourceImagePicked(ImageSource.camera),
-                padding: EdgeInsets.all(10.w),
               ),
               SizedBox(
                 height: 8.h,
@@ -61,13 +61,13 @@ class PrimaryDialogSourceImagePicker extends StatelessWidget {
           Column(
             children: [
               PrimaryIconButton(
+                onPressed: () => onSourceImagePicked(null),
+                padding: EdgeInsets.all(10.w),
                 child: Icon(
                   Icons.attachment_outlined,
                   size: 35.w,
                   color: AppColors.primary,
                 ),
-                onPressed: () => onSourceImagePicked(null),
-                padding: EdgeInsets.all(10.w),
               ),
               SizedBox(
                 height: 8.h,

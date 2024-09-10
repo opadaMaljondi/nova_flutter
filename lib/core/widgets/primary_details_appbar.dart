@@ -32,12 +32,12 @@ class PrimaryDetailsAppbar extends StatelessWidget {
             child: Row(
               children: [
                 PrimaryIconButton(
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  onPressed: () => context.pop(),
                   child: const Icon(
                     Icons.arrow_back_ios_new,
                     color: AppColors.primary,
                   ),
-                  color: Theme.of(context).scaffoldBackgroundColor,
-                  onPressed: () => context.pop(),
                 ),
                 Expanded(
                   child: Text(

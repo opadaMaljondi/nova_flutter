@@ -32,12 +32,12 @@ class HomeTab extends StatelessWidget {
                     Row(
                       children: [
                         PrimaryIconButton(
-                          child: SvgPicture.asset(
-                            AppAssets.profile,
-                          ),
                           color: AppColors.white,
                           borderRadius: BorderRadius.circular(50.r),
                           onPressed: () {},
+                          child: SvgPicture.asset(
+                            AppAssets.profile,
+                          ),
                         ),
                         SizedBox(
                           width: 10.w,
@@ -69,26 +69,26 @@ class HomeTab extends StatelessWidget {
                     Row(
                       children: [
                         PrimaryIconButton(
-                          child: SvgPicture.asset(
-                            AppAssets.support,
-                          ),
                           color: AppColors.white,
                           borderRadius: BorderRadius.circular(50.r),
                           onPressed: () {},
+                          child: SvgPicture.asset(
+                            AppAssets.support,
+                          ),
                         ),
                         SizedBox(
                           width: 10.w,
                         ),
                         PrimaryIconButton(
-                          child: SvgPicture.asset(
-                            AppAssets.notifications,
-                          ),
                           color: AppColors.white,
                           borderRadius: BorderRadius.circular(50.r),
                           onPressed: () {
                             GoRouter.of(context)
                                 .push(AppRoutes.notificationsScreen);
                           },
+                          child: SvgPicture.asset(
+                            AppAssets.notifications,
+                          ),
                         ),
                       ],
                     ),

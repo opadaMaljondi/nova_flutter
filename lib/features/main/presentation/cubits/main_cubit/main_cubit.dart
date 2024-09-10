@@ -44,7 +44,7 @@ class MainCubit extends Cubit<MainState> {
     const MenuTab(),
   ];
 
-  List<String> FilterTypes = ['All', 'Rented', 'Not Rented', 'For Sale','Not For Sale'];
+  List<String> filterTypes = ['All', 'Rented', 'Not Rented', 'For Sale','Not For Sale'];
 
   /// variables
   bool isInitMain = false;

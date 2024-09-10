@@ -1,8 +1,10 @@
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/rendering.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_endpoints.dart';
@@ -10,16 +12,7 @@ import 'package:real_state/core/helpers/pickers.dart';
 import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_dialog.dart';
 import 'package:real_state/core/widgets/primary_dialog_source_image_picker.dart';
-import 'package:real_state/core/widgets/primary_icon_button.dart';
-import 'package:real_state/core/widgets/primary_text_button.dart';
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import '../constants/app_strings.dart';
 
 class PrimaryImagePicker extends StatefulWidget {
   final void Function(File? file)? onImagePick;
@@ -28,7 +21,6 @@ class PrimaryImagePicker extends StatefulWidget {
 
   const PrimaryImagePicker({
     super.key,
-
     this.onImagePick,
     this.initialFile,
   });
@@ -58,7 +50,6 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
               alignment: Alignment.center,
               clipBehavior: Clip.hardEdge,
               children: [
-
                 const CircleAvatar(
                   backgroundColor: AppColors.white,
                   radius: 70,
@@ -90,8 +81,7 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                                     }
                                   }
                                 } catch (e, s) {
-                                  final Uri uri = Uri.parse(
-                                      "${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
+                                  final Uri uri = Uri.parse("${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
                                   launchUrl(uri);
                                 }
                               },
@@ -110,12 +100,11 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
             Stack(
               clipBehavior: Clip.hardEdge,
               children: [
-
                 CircleAvatar(
                   backgroundColor: AppColors.white,
                   radius: 70,
-                  backgroundImage:FileImage(file!) ,
-                 // child: Image.file(file!),
+                  backgroundImage: FileImage(file!),
+                  // child: Image.file(file!),
                   // backgroundImage:,
                 ),
                 Positioned(
@@ -145,8 +134,7 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                                     }
                                   }
                                 } catch (e, s) {
-                                  final Uri uri = Uri.parse(
-                                      "${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
+                                  final Uri uri = Uri.parse("${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
                                   launchUrl(uri);
                                 }
                               },

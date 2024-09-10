@@ -61,13 +61,13 @@ class _MapTabState extends State<MapTab> {
                         Padding(
                           padding: EdgeInsets.only(bottom: 5.h),
                           child: PrimaryIconButton(
+                            color: AppColors.primary,
+                            borderRadius: BorderRadius.circular(15.r),
+                            onPressed: () {},
                             child: const Icon(
                               Icons.search,
                               color: AppColors.white,
                             ),
-                            color: AppColors.primary,
-                            borderRadius: BorderRadius.circular(15.r),
-                            onPressed: () {},
                           ),
                         ),
                       ],

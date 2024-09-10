@@ -7,8 +7,7 @@ abstract class AppAssets {
   static const String estate1 = "$rootImages/estate1.png";
   static const String broker = "$rootImages/broker.png";
   static const String registration = "$rootImages/registration.png";
-  static const String onBoardingBackground =
-      "$rootImages/on_boarding_background.png";
+  static const String onBoardingBackground = "$rootImages/on_boarding_background.png";
   static const String onBoardingPage1 = "$rootImages/on_boarding_page1.png";
   static const String onBoardingPage2 = "$rootImages/on_boarding_page2.png";
   static const String onBoardingPage3 = "$rootImages/on_boarding_page3.png";
@@ -38,8 +37,7 @@ abstract class AppAssets {
   static const String hotline = "$rootSVGIcons/hotline.svg";
   static const String newAccount = "$rootSVGIcons/new_account.svg";
   static const String notifications = "$rootSVGIcons/notifications.svg";
-  static const String notificationsButton =
-      "$rootSVGIcons/notifications_button.svg";
+  static const String notificationsButton = "$rootSVGIcons/notifications_button.svg";
   static const String pending = "$rootSVGIcons/pending.svg";
   static const String setting = "$rootSVGIcons/setting.svg";
   static const String shortcuts = "$rootSVGIcons/shortcuts.svg";
@@ -48,27 +46,22 @@ abstract class AppAssets {
   static const String withdrawal = "$rootSVGIcons/withdrawal.svg";
   static const String tradingAccounts = "$rootSVGIcons/trading_accounts.svg";
   static const String wallets = "$rootSVGIcons/wallets.svg";
-  static const String transactionsHistory =
-      "$rootSVGIcons/transactions_history.svg";
+  static const String transactionsHistory = "$rootSVGIcons/transactions_history.svg";
   static const String language = "$rootSVGIcons/language.svg";
   static const String appearanceMode = "$rootSVGIcons/appearance_mode.svg";
   static const String bugs = "$rootSVGIcons/bugs.svg";
   static const String logout = "$rootSVGIcons/logout.svg";
   static const String appLogoTextPart = "$rootSVGIcons/app_logo_text_part.svg";
-  static const String appLogoTextPartDark =
-      "$rootSVGIcons/app_logo_text_part_dark.svg";
+  static const String appLogoTextPartDark = "$rootSVGIcons/app_logo_text_part_dark.svg";
   static const String appLogo = "$rootSVGIcons/app_logo.svg";
   static const String appLogoDark = "$rootSVGIcons/app_logo_dark.svg";
   static const String support = "$rootSVGIcons/support.svg";
   static const String scanCard = "$rootSVGIcons/scan_card.svg";
-  static const String scanCardFrontSide =
-      "$rootSVGIcons/scan_card_front_side.svg";
-  static const String scanCardBackSide =
-      "$rootSVGIcons/scan_card_back_side.svg";
+  static const String scanCardFrontSide = "$rootSVGIcons/scan_card_front_side.svg";
+  static const String scanCardBackSide = "$rootSVGIcons/scan_card_back_side.svg";
   static const String address = "$rootSVGIcons/address.svg";
   static const String upload = "$rootSVGIcons/upload.svg";
-  static const String approveConditions =
-      "$rootSVGIcons/approve_conditions.svg";
+  static const String approveConditions = "$rootSVGIcons/approve_conditions.svg";
   static const String frontSideIdCard = "$rootSVGIcons/front_side_id_card.svg";
   static const String backSideIdCard = "$rootSVGIcons/back_side_id_card.svg";
   static const String person = "$rootSVGIcons/person.svg";
@@ -123,19 +116,14 @@ abstract class AppAssets {
   static const String greenWebsite = "$rootSVGIcons/greenWebsite.svg";
   static const String greenWhatesup = "$rootSVGIcons/greenWhatesup.svg";
   static const String greenX = "$rootSVGIcons/greenX.svg";
-  static const String conectArepresentitve =
-      "$rootSVGIcons/conectArepresentitve.svg";
+  static const String conectArepresentitve = "$rootSVGIcons/conectArepresentitve.svg";
   static const String conectSupport = "$rootSVGIcons/conectSupport.svg";
-  static const String engineeringCompanies =
-      "$rootSVGIcons/engineeringCompanies.svg";
+  static const String engineeringCompanies = "$rootSVGIcons/engineeringCompanies.svg";
   static const String investmentAdvisor = "$rootSVGIcons/investmentAdvisor.svg";
   static const String legalAdvisor = "$rootSVGIcons/legalAdvisor.svg";
-  static const String propertyMaintenance =
-      "$rootSVGIcons/propertyMaintenance.svg";
-  static const String realEstateConsultant =
-      "$rootSVGIcons/realEstateConsultant.svg";
-  static const String realEstateCompanies =
-      "$rootSVGIcons/realEstateCompanies.svg";
+  static const String propertyMaintenance = "$rootSVGIcons/propertyMaintenance.svg";
+  static const String realEstateConsultant = "$rootSVGIcons/realEstateConsultant.svg";
+  static const String realEstateCompanies = "$rootSVGIcons/realEstateCompanies.svg";
   static const String greenChat = "$rootSVGIcons/greenChat.svg";
   static const String greenDownload = "$rootSVGIcons/greenDownload.svg";
   static const String greenPdf = "$rootSVGIcons/greenPdf.svg";
@@ -151,10 +139,8 @@ abstract class AppAssets {
   // SVG Images Paths
   static const String rootSVGImages = "assets/svgs/images";
   static const String logoWalletCard = "$rootSVGImages/logo_wallet_card.svg";
-  static const String ellipseWalletCard =
-      "$rootSVGImages/ellipse_wallet_card.svg";
-  static const String ellipse2WalletCard =
-      "$rootSVGImages/ellipse2_wallet_card.svg";
+  static const String ellipseWalletCard = "$rootSVGImages/ellipse_wallet_card.svg";
+  static const String ellipse2WalletCard = "$rootSVGImages/ellipse2_wallet_card.svg";
   static const String triangleLeft = "$rootSVGImages/triangle_left.svg";
   static const String triangleRight = "$rootSVGImages/triangle_right.svg";
   static const String backgroundAppbar = "$rootSVGImages/background_appbar.svg";

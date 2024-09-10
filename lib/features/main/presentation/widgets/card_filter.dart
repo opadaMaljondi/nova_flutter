@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,9 +15,8 @@ class CardFilter extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 7),
       height: 170.h,
-      decoration: BoxDecoration(
-          color: AppColors.white, borderRadius: BorderRadius.circular(10.r)),
-      padding:  EdgeInsets.all(10.h),
+      decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(10.r)),
+      padding: EdgeInsets.all(10.h),
       child: Row(
         children: [
           Expanded(
@@ -89,11 +89,9 @@ class CardFilter extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Container(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 2, horizontal: 6),
-                          decoration: BoxDecoration(
-                              color: AppColors.grayAccent,
-                              borderRadius: BorderRadius.circular(20)),
+                          padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 6),
+                          decoration:
+                              BoxDecoration(color: AppColors.grayAccent, borderRadius: BorderRadius.circular(20)),
                           child: Text(
                             '  Not ٌRented',
                             style: Theme.of(context).textTheme.titleSmall,
