@@ -23,7 +23,7 @@ class ProfileHeader extends StatelessWidget {
             left: 0.w,
             right: 0.w,
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 40.h, horizontal: 30.w),
+              padding: EdgeInsets.symmetric(vertical: 25.h, horizontal: 30.w),
               decoration: BoxDecoration(
                 color: AppColors.materialPrimary,
                 gradient: LinearGradient(

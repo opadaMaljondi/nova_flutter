@@ -22,7 +22,9 @@ class HomeAppbar extends StatelessWidget {
               PrimaryIconButton(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(50.r),
-                onPressed: () {},
+                onPressed: () {
+                  context.push(AppRoutes.profileScreen);
+                },
                 child: SvgPicture.asset(
                   AppAssets.profile,
                 ),
@@ -71,7 +73,7 @@ class HomeAppbar extends StatelessWidget {
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(50.r),
                 onPressed: () {
-                  GoRouter.of(context).push(AppRoutes.notificationsScreen);
+                  context.push(AppRoutes.notificationsScreen);
                 },
                 child: SvgPicture.asset(
                   AppAssets.notifications,
