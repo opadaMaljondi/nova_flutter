@@ -255,10 +255,10 @@ class FirebaseMessagingService {
       }
     }
     if (message.data.containsKey('requestHashId')) {
-      InjectionContainer.getIt<RouterService>().router.push(
-            AppRoutes.notificationPendingTransactionDetailsScreen,
-            extra: message.data['requestHashId'],
-          );
+      // InjectionContainer.getIt<RouterService>().router.push(
+      //       AppRoutes.notificationPendingTransactionDetailsScreen,
+      //       extra: message.data['requestHashId'],
+      //     );
       return;
     }
     InjectionContainer.getIt<RouterService>().router.push(
