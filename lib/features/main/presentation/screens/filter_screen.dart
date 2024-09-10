@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/features/main/presentation/widgets/drop_down_date_picker.dart';
@@ -23,7 +24,7 @@ class FilterScreen extends StatelessWidget {
                 title: 'filter',
               ),
               Divider(
-                thickness: 1,
+                thickness: 0.3,
                 color: AppColors.mainGray,
                 height: 30.h,
               ),
@@ -83,27 +84,28 @@ class FilterScreen extends StatelessWidget {
               ),
               const DropDownDatPicker(),
               SizedBox(
-                height: 120.h,
+                height: 100.h,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Expanded(
+                    Expanded(
                       child: PrimaryButton(
                         margin: EdgeInsets.zero,
                         label: 'Back',
+                        onPressed: () => context.pop(),
                       ),
                     ),
                     SizedBox(
                       width: 16.w,
                     ),
-                    const Expanded(
+                    Expanded(
                       child: PrimaryButton(
                         label: 'Application',
                         margin: EdgeInsets.zero,
-                        disabledButtonColor: AppColors.primary,
+                        onPressed: () => context.pop(),
                       ),
                     ),
                   ],

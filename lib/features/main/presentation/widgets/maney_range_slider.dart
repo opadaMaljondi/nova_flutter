@@ -37,15 +37,13 @@ class _MoneyRangeSliderState extends State<MoneyRangeSlider> {
           children: [
             Text(
               "$lowerValue \$",
-              style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                    fontSize: 24,
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: AppColors.gray,
                   ),
             ),
             Text(
               "$higherValue \$",
-              style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                    fontSize: 24,
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: AppColors.gray,
                   ),
             ),

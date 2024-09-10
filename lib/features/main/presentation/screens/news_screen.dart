@@ -20,7 +20,7 @@ class NewsScreen extends StatelessWidget {
             children: [
               const PrimaryAppbar(title: 'Properties News'),
               Divider(
-                thickness: 1,
+                thickness: 0.3,
                 color: AppColors.mainGray,
                 height: 30.h,
               ),

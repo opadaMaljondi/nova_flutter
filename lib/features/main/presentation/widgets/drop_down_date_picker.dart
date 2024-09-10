@@ -14,7 +14,6 @@ class DropDownDatPicker extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
       child: DropdownDatePicker(
-        width: 5.w,
         icon: Icon(
           Icons.keyboard_arrow_down_rounded,
           size: 24.sp,
@@ -25,13 +24,20 @@ class DropDownDatPicker extends StatelessWidget {
         hintMonth: '10',
         hintYear: '2024',
         dayFlex: 2,
-        monthFlex: 2,
+        monthFlex: 4,
         yearFlex: 3,
         hintTextStyle: Theme.of(context).textTheme.titleMedium,
         inputDecoration: InputDecoration(
           fillColor: AppColors.grayAccent,
           filled: true,
+          contentPadding: EdgeInsets.symmetric(vertical: 15.h,horizontal: 5.w),
           enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(27.r),
+            borderSide: const BorderSide(
+              color: AppColors.grayAccent,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(27.r),
             borderSide: const BorderSide(
               color: AppColors.grayAccent,

@@ -20,7 +20,7 @@ class EngineeringCompaniesScreen extends StatelessWidget {
                 title: "Engineering companies",
               ),
               Divider(
-                thickness: 1,
+                thickness: 0.3,
                 color: AppColors.mainGray,
                 height: 30.h,
               ),

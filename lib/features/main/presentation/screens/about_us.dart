@@ -37,7 +37,7 @@ class AboutUsScreen extends StatelessWidget {
                       title: 'Who Are We',
                     ),
                     Divider(
-                      thickness: 1,
+                      thickness: 0.3,
                       color: AppColors.mainGray,
                       height: 30.h,
                     ),
