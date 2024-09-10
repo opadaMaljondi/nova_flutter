@@ -21,8 +21,13 @@ class MenuTab extends StatelessWidget {
                 height: 25.h,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 12.h),
-                margin: EdgeInsets.symmetric(horizontal: 20.w),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 15.w,
+                  vertical: 24.h,
+                ),
+                margin: EdgeInsets.symmetric(
+                  horizontal: 20.w,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.vertical(
                     top: Radius.circular(25.r),
@@ -68,7 +73,7 @@ class MenuTab extends StatelessWidget {
                     ),
                     SettingCard(
                       name: 'Properties News',
-                      iconPath: AppAssets.favorite,
+                      iconPath: AppAssets.reatStateNews,
                       onTap: () {
                         context.push(AppRoutes.newsScreen);
                       },

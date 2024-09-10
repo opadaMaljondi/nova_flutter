@@ -15,8 +15,7 @@ class EngineeringCompaniesLits extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: 16.w,
-        vertical: 22.h,
-      ),
+      ).copyWith(bottom: 22.h),
       child: ListView.separated(
         padding: EdgeInsets.zero,
         shrinkWrap: true,
@@ -47,9 +46,6 @@ class EngineeringCompaniesLits extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 13.h,
-                  ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16.r),
                     child: Image.asset(

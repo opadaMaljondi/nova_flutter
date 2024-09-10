@@ -32,7 +32,7 @@ class PropertiesDetails extends StatelessWidget {
                 ),
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                  color: Color(0xffEEF1F3),
+                  color: Colors.white,
                   borderRadius: BorderRadiusDirectional.only(
                     topEnd: Radius.circular(30),
                     topStart: Radius.circular(30),

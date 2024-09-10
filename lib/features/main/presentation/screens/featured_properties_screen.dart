@@ -64,6 +64,9 @@ class FeaturedPropertiesScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 27.h,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.w),
                 child: GridView.builder(
@@ -74,7 +77,7 @@ class FeaturedPropertiesScreen extends StatelessWidget {
                     crossAxisCount: 2,
                     crossAxisSpacing: 10.w,
                     mainAxisSpacing: 11.h,
-                    childAspectRatio: 1 / 2,
+                    childAspectRatio: 180 / 300,
                   ),
                   itemBuilder: (context, index) {
                     return const PropertiesCard(isFavorite: true);

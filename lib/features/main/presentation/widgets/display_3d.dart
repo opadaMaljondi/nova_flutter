@@ -1,9 +1,39 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:photo_view/photo_view.dart';
 import 'package:real_state/core/constants/app_assets.dart';
+import 'package:sensors_plus/sensors_plus.dart';
 
-class Display3D extends StatelessWidget {
+class Display3D extends StatefulWidget {
   const Display3D({super.key});
+
+  @override
+  State<Display3D> createState() => _Display3DState();
+}
+
+class _Display3DState extends State<Display3D> {
+  double xOffset = 0.0;
+  double yOffset = 0.0;
+  StreamSubscription? accelerometerSubscription;
+
+  @override
+  void initState() {
+    super.initState();
+    accelerometerSubscription =
+        accelerometerEventStream().listen((AccelerometerEvent event) {
+      setState(() {
+        xOffset = event.x * 40.w;
+        // yOffset = event.y * 40;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    accelerometerSubscription?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +48,25 @@ class Display3D extends StatelessWidget {
           height: 9.h,
         ),
         ClipRRect(
-          borderRadius: BorderRadius.circular(10.r),
-          child: Image.asset(
+          borderRadius: BorderRadius.circular(16.r),
+          child: SizedBox(
             height: 480.h,
             width: double.infinity,
-            fit: BoxFit.fill,
-            AppAssets.estate1,
+            child: Transform.translate(
+              offset: Offset(xOffset, yOffset),
+              child: PhotoView(
+                basePosition: Alignment.center,
+                minScale: PhotoViewComputedScale.covered,
+                maxScale: PhotoViewComputedScale.covered,
+                initialScale: PhotoViewComputedScale.contained,
+                backgroundDecoration: const BoxDecoration(
+                  color: Colors.white,
+                ),
+                imageProvider: const AssetImage(
+                  AppAssets.river,
+                ),
+              ),
+            ),
           ),
         ),
       ],

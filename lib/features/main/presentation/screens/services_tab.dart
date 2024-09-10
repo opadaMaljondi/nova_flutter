@@ -18,35 +18,39 @@ class _ServicesTabState extends State<ServicesTab> {
   List<PairEntity> items = [
     PairEntity(
       text1: AppAssets.engineeringCompanies,
-      text2: 'Engineering\ncompanies',
+      text2: 'Engineering companies',
     ),
     PairEntity(
       text1: AppAssets.realEstateCompanies,
-      text2: 'Real estat\ncompanies',
+      text2: 'Real estat companies',
     ),
     PairEntity(
       text1: AppAssets.conectArepresentitve,
-      text2: 'Contact a\nrepresentative',
+      text2: 'Contact a representative',
     ),
     PairEntity(
       text1: AppAssets.conectSupport,
-      text2: 'Contact\nsupport',
+      text2: 'Contact support',
     ),
     PairEntity(
       text1: AppAssets.legalAdvisor,
-      text2: 'Legal\nadvisor',
+      text2: 'Legal advisor',
     ),
     PairEntity(
       text1: AppAssets.realEstateConsultant,
-      text2: 'Real estate\nconsultant',
+      text2: 'Real estate consultant',
     ),
     PairEntity(
       text1: AppAssets.investmentAdvisor,
-      text2: 'Investment\ndvisor',
+      text2: 'Investment dvisor',
     ),
     PairEntity(
       text1: AppAssets.propertyMaintenance,
-      text2: 'Property\nmaintenance',
+      text2: 'Property maintenance',
+    ),
+    PairEntity(
+      text1: AppAssets.managenent,
+      text2: 'Management',
     ),
   ];
 
@@ -64,7 +68,7 @@ class _ServicesTabState extends State<ServicesTab> {
           mainAxisSpacing: 11.h,
           childAspectRatio: 1,
         ),
-        itemCount: 8,
+        itemCount: items.length,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
@@ -91,13 +95,17 @@ class _ServicesTabState extends State<ServicesTab> {
                   SizedBox(
                     height: 16.h,
                   ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      items[index].text2,
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                            color: AppColors.primary,
-                          ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.w),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        items[index].text2,
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              color: AppColors.primary,
+                            ),
+                      ),
                     ),
                   )
                 ],
