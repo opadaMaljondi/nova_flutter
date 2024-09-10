@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:logger/logger.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
@@ -11,6 +10,7 @@ import 'package:real_state/core/services/router_service.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/auth/presentation/widgets/auth_header_section.dart';
+import 'package:real_state/features/auth/presentation/widgets/remember_me_and_forget_password_button.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -20,7 +20,6 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  bool rememberMe = false;
   final GlobalKey<FormState> signInFormKey = GlobalKey<FormState>();
 
   @override
@@ -55,72 +54,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   validator: (value) => RegexValidator.validateRequired(value),
                   isObscureText: true,
                 ),
-                SizedBox(
-                  height: 10.h,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              rememberMe = !rememberMe;
-                              Logger().w(rememberMe);
-                              setState(() {});
-                            },
-                            borderRadius: BorderRadius.circular(50),
-                            child: rememberMe
-                                ? Radio(
-                                    value: 'selected',
-                                    groupValue: 'selected',
-                                    onChanged: null,
-                                    visualDensity: VisualDensity.compact,
-                                    fillColor: WidgetStateProperty.resolveWith(
-                                      (states) {
-                                        if (states.contains(WidgetState.selected)) {
-                                          return AppColors.primary;
-                                        }
-                                        return AppColors.primary;
-                                      },
-                                    ),
-                                  )
-                                : const Radio(
-                                    value: 'not selected',
-                                    groupValue: 'selected',
-                                    visualDensity: VisualDensity.compact,
-                                    onChanged: null,
-                                  ),
-                          ),
-                          Text(
-                            'remember password',
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                            ),
-                          ),
-                        ],
-                      ),
-                      InkWell(
-                        onTap: () {
-                          context.push(AppRoutes.forgetPasswordScreen);
-                        },
-                        borderRadius: BorderRadius.circular(5.r),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 2),
-                          child: Text(
-                            'forget password?',
-                            style: TextStyle(fontSize: 12.sp, decoration: TextDecoration.underline),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 60.h,
-                ),
+                const RememberMeAndForgetPasswordButton(),
                 PrimaryButton(
                   label: 'Sign In',
                   onPressed: () {
