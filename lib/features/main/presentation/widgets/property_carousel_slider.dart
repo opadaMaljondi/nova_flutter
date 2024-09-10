@@ -19,9 +19,9 @@ class _PropertyCarouselSliderState extends State<PropertyCarouselSlider> {
   late CarouselSliderController controller;
   List<String> items = [
     AppAssets.estate1,
-    AppAssets.estate,
+    AppAssets.onboarding1,
     AppAssets.estate1,
-    AppAssets.estate,
+    AppAssets.onboarding1,
     AppAssets.estate1,
   ];
 

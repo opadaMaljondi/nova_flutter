@@ -49,7 +49,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Positioned(
                         bottom: 0,
                         child: Image.asset(
-                          AppAssets.estate,
+                          AppAssets.onboarding1,
+                          width: 1.sw,
                         ),
                       ),
                       Column(
@@ -87,7 +88,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Positioned(
                         bottom: 0,
                         child: Image.asset(
-                          AppAssets.estate,
+                          AppAssets.onboarding2,
+                          width: 1.sw,
                         ),
                       ),
                       Column(

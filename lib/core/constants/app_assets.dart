@@ -3,7 +3,8 @@ abstract class AppAssets {
   static const String rootImages = "assets/images";
   static const String image = "$rootImages/image.jpg";
   static const String logo = "$rootImages/logo.png";
-  static const String estate = "$rootImages/estate.png";
+  static const String onboarding1 = "$rootImages/onboarding1.png";
+  static const String onboarding2 = "$rootImages/onboarding2.png";
   static const String estate1 = "$rootImages/estate1.png";
   static const String broker = "$rootImages/broker.png";
   static const String registration = "$rootImages/registration.png";
