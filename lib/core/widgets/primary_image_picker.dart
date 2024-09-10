@@ -4,6 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
@@ -50,9 +51,13 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
               alignment: Alignment.center,
               clipBehavior: Clip.hardEdge,
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   backgroundColor: AppColors.white,
                   radius: 70,
+                  child: SvgPicture.asset(
+                    AppAssets.office,
+                    height: 70.w,
+                  ),
                 ),
                 Positioned(
                   bottom: 0.h,
@@ -104,8 +109,6 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                   backgroundColor: AppColors.white,
                   radius: 70,
                   backgroundImage: FileImage(file!),
-                  // child: Image.file(file!),
-                  // backgroundImage:,
                 ),
                 Positioned(
                   bottom: 0.h,
@@ -149,38 +152,6 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                 )
               ],
             )
-          // Center(
-          //   child: FittedBox(
-          //     child: Container(
-          //       //width: 320.w,
-          //       margin: EdgeInsets.only(top: 10.h),
-          //       padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 15.w),
-          //       decoration: BoxDecoration(
-          //         borderRadius: BorderRadius.circular(8.r),
-          //         border: Border.all(
-          //           width: 1,
-          //           color: AppColors.black10,
-          //         ),
-          //       ),
-          //       child: Row(
-          //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //         children: [
-          //
-          //           // PrimaryTextButton(
-          //           //   label: LocaleKeys.delete.tr(),
-          //           //   labelColor: AppColors.danger,
-          //           //   onPressed: () {
-          //           //     setState(() {
-          //           //       file = null;
-          //           //       widget.onImagePick?.call(file);
-          //           //     });
-          //           //   },
-          //           // ),
-          //         ],
-          //       ),
-          //     ),
-          //   ),
-          // )
         ],
       ),
     );

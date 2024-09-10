@@ -6,10 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/features/main/presentation/widgets/profile_header.dart';
+import 'package:real_state/features/main/presentation/widgets/title_header.dart';
 
 import '../../../../core/constants/app_routes.dart';
-import '../../../../core/widgets/primary_icon_button.dart';
-import '../../../../core/widgets/primary_image_picker.dart';
 import '../widgets/box_profile_real_state.dart';
 import '../widgets/properties_card.dart';
 
@@ -18,62 +18,25 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            Stack(alignment: Alignment.center, children: [
-              Positioned(
-                top: -15.h,
-                left: -110.w,
-                right: -110.w,
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 15.w),
-                  decoration: BoxDecoration(
-                      color: AppColors.materialPrimary,
-                      gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-                        AppColors.materialPrimary.shade400.withOpacity(0.6),
-                        AppColors.materialPrimary.shade700.withOpacity(0.9),
-                      ])),
-                  height: 200.h,
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          PrimaryIconButton(
-                            color: AppColors.white,
-                            onPressed: () => context.pop(),
-                            child: Icon(
-                              Icons.arrow_back_ios_rounded,
-                              color: !context.canPop() ? AppColors.transparent : null,
-                            ),
-                          ),
-                          SvgPicture.asset(AppAssets.editProfle),
-                        ],
-                      )
-                    ],
-                  ),
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const ProfileHeader(),
+              Container(
+                decoration: BoxDecoration(
+                  color: AppColors.white20,
+                  borderRadius: BorderRadius.circular(20.r),
                 ),
-              ),
-              Positioned(
-                top: 150.h,
-                left: 0,
-                right: 0,
-                child: Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10.w,
-                    vertical: 5.h,
-                  ),
-                  decoration: BoxDecoration(color: AppColors.white20, borderRadius: BorderRadius.circular(20.r)),
-                  child: Column(children: [
-                    SizedBox(
-                      height: 100.h,
-                    ),
+                child: Column(
+                  children: [
                     Text(
                       'User Name',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: AppColors.black),
+                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                            color: AppColors.black,
+                          ),
                     ),
                     SizedBox(
                       height: 25.h,
@@ -83,7 +46,7 @@ class ProfileScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           SvgPicture.asset(
-                            AppAssets.phone,
+                            AppAssets.location,
                             color: AppColors.black,
                           ),
                           Text(
@@ -108,11 +71,11 @@ class ProfileScreen extends StatelessWidget {
                       height: 15.h,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      padding: EdgeInsets.symmetric(horizontal: 20.w),
                       child: Row(
                         children: [
                           SvgPicture.asset(
-                            AppAssets.location,
+                            AppAssets.phone,
                             fit: BoxFit.fill,
                             color: AppColors.black,
                           ),
@@ -133,57 +96,38 @@ class ProfileScreen extends StatelessWidget {
                       height: 15.h,
                     ),
                     const BoxProfileRealState(),
-                    SizedBox(
-                      height: 15.h,
+                    TitleHeader(
+                      title: "My Real State",
+                      onTap: () => context.push(AppRoutes.myRealStateScreen),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'My Real State',
-                            style: Theme.of(context).textTheme.titleSmall,
-                          ),
-                          InkWell(
-                            onTap: () => context.push(AppRoutes.myRealStateScreen),
-                            child: Text(
-                              'show List',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleSmall!
-                                  .copyWith(color: AppColors.materialPrimary.shade700),
-                            ),
-                          ),
-                        ],
+                    GridView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      padding: EdgeInsets.symmetric(horizontal: 15.w),
+                      shrinkWrap: true,
+                      itemCount: 10,
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 10,
+                        childAspectRatio: 0.6,
+                        crossAxisSpacing: 15,
                       ),
-                    ),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    SizedBox(
-                      height: 600.h,
-                      child: GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: 4,
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2, mainAxisSpacing: 10, childAspectRatio: 0.6, crossAxisSpacing: 15),
-                        itemBuilder: (context, index) => GestureDetector(
-                          onTap: () {
-                            context.push(AppRoutes.propertiesDetails);
-                          },
-                          child: const PropertiesCard(
-                            isFavorite: false,
-                          ),
+                      itemBuilder: (context, index) => GestureDetector(
+                        onTap: () {
+                          context.push(AppRoutes.propertiesDetails);
+                        },
+                        child: const PropertiesCard(
+                          isFavorite: false,
                         ),
                       ),
                     ),
-                  ]),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                  ],
                 ),
               ),
-              Positioned(top: 75.h, child: const PrimaryImagePicker()),
-            ]),
-          ],
+            ],
+          ),
         ),
       ),
     );

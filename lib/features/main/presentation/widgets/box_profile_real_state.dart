@@ -11,7 +11,11 @@ class BoxProfileRealState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(20.r)),
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(20.r),
+      ),
+      margin: EdgeInsets.symmetric(horizontal: 20.w),
       padding: const EdgeInsets.symmetric(
         vertical: 10,
         horizontal: 10,
@@ -47,8 +51,11 @@ class BoxProfileRealState extends StatelessWidget {
               ),
             ),
             VerticalDivider(
-              color: AppColors.black,
-              thickness: 2.w,
+              color: AppColors.gray,
+              thickness: 1.w,
+              width: 0,
+              endIndent: 10.h,
+              indent: 10.h,
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 10.h),
@@ -77,8 +84,11 @@ class BoxProfileRealState extends StatelessWidget {
               ),
             ),
             VerticalDivider(
-              color: AppColors.black,
-              thickness: 2.w,
+              color: AppColors.gray,
+              thickness: 1.w,
+              width: 0,
+              endIndent: 10.h,
+              indent: 10.h,
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 10.h),
