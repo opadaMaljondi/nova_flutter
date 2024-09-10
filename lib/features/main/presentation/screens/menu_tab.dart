@@ -22,7 +22,7 @@ class MenuTab extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.symmetric(
-                  horizontal: 15.w,
+                  horizontal: 20.w,
                   vertical: 24.h,
                 ),
                 margin: EdgeInsets.symmetric(

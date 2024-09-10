@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
-import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
+import 'package:real_state/features/main/presentation/widgets/service_card.dart';
 
 class ServicesTab extends StatefulWidget {
   const ServicesTab({super.key});
@@ -14,42 +13,42 @@ class ServicesTab extends StatefulWidget {
 }
 
 class _ServicesTabState extends State<ServicesTab> {
-  List<PairEntity> items = [
-    PairEntity(
-      text1: AppAssets.engineeringCompanies,
-      text2: 'Engineering companies',
+  List<ServiceDataCard> items = [
+    ServiceDataCard(
+      title: 'Engineering companies',
+      iconPath: AppAssets.engineeringCompanies,
     ),
-    PairEntity(
-      text1: AppAssets.realEstateCompanies,
-      text2: 'Real estat companies',
+    ServiceDataCard(
+      title: 'Real estat companies',
+      iconPath: AppAssets.realEstateCompanies,
     ),
-    PairEntity(
-      text1: AppAssets.conectArepresentitve,
-      text2: 'Contact a representative',
+    ServiceDataCard(
+      title: 'Contact a representative',
+      iconPath: AppAssets.conectArepresentitve,
     ),
-    PairEntity(
-      text1: AppAssets.contactSupport,
-      text2: 'Contact support',
+    ServiceDataCard(
+      title: 'Contact support',
+      iconPath: AppAssets.contactSupport,
     ),
-    PairEntity(
-      text1: AppAssets.legalAdvisor,
-      text2: 'Legal advisor',
+    ServiceDataCard(
+      title: 'Legal advisor',
+      iconPath: AppAssets.legalAdvisor,
     ),
-    PairEntity(
-      text1: AppAssets.realEstateConsultant,
-      text2: 'Real estate consultant',
+    ServiceDataCard(
+      title: 'Real estate consultant',
+      iconPath: AppAssets.realEstateConsultant,
     ),
-    PairEntity(
-      text1: AppAssets.investmentAdvisor,
-      text2: 'Investment dvisor',
+    ServiceDataCard(
+      title: 'Investment dvisor',
+      iconPath: AppAssets.investmentAdvisor,
     ),
-    PairEntity(
-      text1: AppAssets.propertyMaintenance,
-      text2: 'Property maintenance',
+    ServiceDataCard(
+      title: 'Property maintenance',
+      iconPath: AppAssets.propertyMaintenance,
     ),
-    PairEntity(
-      text1: AppAssets.management,
-      text2: 'Management',
+    ServiceDataCard(
+      title: 'Management',
+      iconPath: AppAssets.management,
     ),
   ];
 
@@ -58,56 +57,25 @@ class _ServicesTabState extends State<ServicesTab> {
     return Scaffold(
       body: GridView.builder(
         padding: EdgeInsetsDirectional.symmetric(
-          vertical: 48.h,
-          horizontal: 16.w,
+          vertical: 50.h,
+          horizontal: 20.w,
         ),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          crossAxisSpacing: 11.w,
-          mainAxisSpacing: 11.h,
-          childAspectRatio: 1,
+          crossAxisSpacing: 10.w,
+          mainAxisSpacing: 10.h,
+          childAspectRatio: 0.9,
         ),
         itemCount: items.length,
         itemBuilder: (context, index) {
-          return GestureDetector(
+          return ServiceCard(
+            title: items[index].title,
+            iconPath: items[index].iconPath,
             onTap: () {
-              GoRouter.of(context).push(
-                index == 0 ? AppRoutes.ebgineeringComapniesscreen : AppRoutes.aboutUsScreen,
-              );
+              if (index == 0 || index == 1) {
+                context.push(AppRoutes.ebgineeringComapniesscreen);
+              }
             },
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(13.r),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    width: 65.w,
-                    height: 65.h,
-                    fit: BoxFit.fill,
-                    items[index].text1,
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.w),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        items[index].text2,
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: AppColors.primary,
-                            ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
           );
         },
       ),
@@ -115,9 +83,12 @@ class _ServicesTabState extends State<ServicesTab> {
   }
 }
 
-class PairEntity {
-  final String text1;
-  final String text2;
+class ServiceDataCard {
+  final String title;
+  final String iconPath;
 
-  PairEntity({required this.text1, required this.text2});
+  ServiceDataCard({
+    required this.title,
+    required this.iconPath,
+  });
 }
