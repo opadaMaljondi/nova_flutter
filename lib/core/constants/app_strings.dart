@@ -35,5 +35,7 @@ class AppStrings {
   static const String passwordConfirmationIsRequired = "Password confirmation is required";
   static const String thereIsNoMatch = "There is no match";
 
-////-------------------------------------------
+////-------------------------------------------uploadProfileImage
+  static const String uploadProfileImage = "uploadProfileImage";
+
 }

@@ -17,12 +17,14 @@ import 'package:real_state/features/main/presentation/screens/favorite_tab.dart'
 import 'package:real_state/features/main/presentation/screens/featured_properties_screen.dart';
 import 'package:real_state/features/main/presentation/screens/filter_screen.dart';
 import 'package:real_state/features/main/presentation/screens/main_screen.dart';
+import 'package:real_state/features/main/presentation/screens/my_real_state_screen.dart';
 import 'package:real_state/features/main/presentation/screens/news_screen.dart';
 import 'package:real_state/features/main/presentation/screens/notifications_screen.dart';
 import 'package:real_state/features/main/presentation/screens/offices_screen.dart';
 import 'package:real_state/features/main/presentation/screens/properties_details.dart';
 import 'package:real_state/features/main/presentation/screens/real_estate_screen.dart';
 import 'package:real_state/features/main/presentation/screens/services_tab.dart';
+import 'package:real_state/features/main/presentation/screens/profile_screen.dart';
 import 'package:real_state/features/main/presentation/screens/trader_details_screen.dart';
 import 'package:real_state/injection_container.dart';
 
@@ -180,6 +182,34 @@ class RouterService {
             child: const ForgetPasswordScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
+              final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
+              return SlideTransition(
+                position: animation.drive(tween),
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.profileScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const ProfileScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
+              return SlideTransition(
+                position: animation.drive(tween),
+                child: child,
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: AppRoutes.myRealStateScreen,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            key: state.pageKey,
+            child: const MyRealStateScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
               final tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
               return SlideTransition(
                 position: animation.drive(tween),

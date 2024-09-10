@@ -71,6 +71,11 @@ abstract class AppRoutes {
       "/whitelistedCountriesScreen";
   static const String myProfileScreen = "/myProfileScreen";
   static const String paymentsScreen = "/paymentsScreen";
+  //-------------------------------------------
+  // menu Routes
+  //-------------------------------------------
+  static const String profileScreen = "/profileScreen";
+  static const String myRealStateScreen = "/myRealStateScreen";
 
 ////-------------------------------------------
 }

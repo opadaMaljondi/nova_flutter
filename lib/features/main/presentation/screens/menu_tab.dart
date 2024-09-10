@@ -158,7 +158,9 @@ class MenuTab extends StatelessWidget {
                     SettingCard(
                       name: 'My Account',
                       iconPath: AppAssets.profile,
-                      onTap: () {},
+                      onTap: () {
+                       context.push(AppRoutes.profileScreen);
+                      },
                     ),
                     const Divider(
                       color: AppColors.grayAccent,
