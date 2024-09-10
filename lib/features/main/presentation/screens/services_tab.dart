@@ -29,7 +29,7 @@ class _ServicesTabState extends State<ServicesTab> {
       text2: 'Contact a representative',
     ),
     PairEntity(
-      text1: AppAssets.conectSupport,
+      text1: AppAssets.contactSupport,
       text2: 'Contact support',
     ),
     PairEntity(
@@ -49,7 +49,7 @@ class _ServicesTabState extends State<ServicesTab> {
       text2: 'Property maintenance',
     ),
     PairEntity(
-      text1: AppAssets.managenent,
+      text1: AppAssets.management,
       text2: 'Management',
     ),
   ];

@@ -101,7 +101,7 @@ class ContactInfo extends StatelessWidget {
                     child: SvgPicture.asset(
                       height: 34.h,
                       width: 33.w,
-                      AppAssets.greenWhatesup,
+                      AppAssets.greenWhatsapp,
                     ),
                   ),
                   GestureDetector(
@@ -115,7 +115,7 @@ class ContactInfo extends StatelessWidget {
                     child: SvgPicture.asset(
                       height: 34.h,
                       width: 33.w,
-                      AppAssets.greenInstegram,
+                      AppAssets.greenInstagram,
                     ),
                   ),
                   GestureDetector(

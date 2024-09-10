@@ -73,7 +73,7 @@ class MenuTab extends StatelessWidget {
                     ),
                     SettingCard(
                       name: 'Properties News',
-                      iconPath: AppAssets.reatStateNews,
+                      iconPath: AppAssets.realStateNews,
                       onTap: () {
                         context.push(AppRoutes.newsScreen);
                       },

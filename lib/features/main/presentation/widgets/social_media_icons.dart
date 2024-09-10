@@ -45,7 +45,7 @@ class SocialMediaIcons extends StatelessWidget {
                 child: Image.asset(
                   height: 34.h,
                   width: 33.w,
-                  AppAssets.instgram,
+                  AppAssets.instagram,
                 ),
               ),
               GestureDetector(
