@@ -1,30 +1,21 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/enums/general_states.dart';
-import 'package:real_state/core/services/caching_service.dart';
 import 'package:real_state/features/main/presentation/screens/home_tab.dart';
 import 'package:real_state/features/main/presentation/screens/map_tab.dart';
 import 'package:real_state/features/main/presentation/screens/menu_tab.dart';
 import 'package:real_state/features/main/presentation/screens/services_tab.dart';
-import 'package:real_state/injection_container.dart';
 
 part 'main_cubit.freezed.dart';
-
 part 'main_state.dart';
 
-
-int filterIndex=0 ;
+int filterIndex = 0;
 
 class MainCubit extends Cubit<MainState> {
-  MainCubit() : super(const MainState.initial()) {
-    initMain();
-  }
+  MainCubit() : super(const MainState.initial());
 
   /// Use Cases
-  // final GetUserUseCase getUserUseCase = InjectionContainer.getIt();
-  // final LogoutUseCase logoutUseCase = InjectionContainer.getIt();
   GeneralStates generalState = GeneralStates.init;
 
   /// Controllers
@@ -32,7 +23,6 @@ class MainCubit extends Cubit<MainState> {
   final PageController mainScreenPageController = PageController();
 
   /// Data
-  // User? user;
   ThemeMode currentThemeMode = ThemeMode.system;
   List<Widget> tabs = [
     const HomeTab(),
@@ -44,106 +34,10 @@ class MainCubit extends Cubit<MainState> {
     const MenuTab(),
   ];
 
-  List<String> filterTypes = ['All', 'Rented', 'Not Rented', 'For Sale','Not For Sale'];
+  List<String> filterTypes = ['All', 'Rented', 'Not Rented', 'For Sale', 'Not For Sale'];
 
   /// variables
-  bool isInitMain = false;
   int currentTab = 0;
-  double totalBalance = 0;
-  String title = '';
-
-
-  void initMain() {
-    // if (isInitMain) return;
-    final accessToken =
-        InjectionContainer.getIt<CacheService>().getData<String>(
-      key: AppKeys.accessToken,
-    );
-    InjectionContainer.getIt<CacheService>().getData<String>(
-      key: AppKeys.refreshToken,
-    );
-    final themeMode = InjectionContainer.getIt<CacheService>().getData<String>(
-      key: AppKeys.currentThemeMode,
-    );
-    if (themeMode != null) {
-      currentThemeMode = themeMode == 'dark' ? ThemeMode.dark : ThemeMode.light;
-    }
-    if (accessToken != null) {
-      getUser();
-    }
-    // isInitMain = true;
-  }
-
-  Future<void> getUser() async {
-    // InjectionContainer.getIt<Logger>().i("Start `getUser` in |MainCubit|");
-    // generalState = GeneralStates.loading;
-    // _update(const MainState.loading());
-    // final result = await getUserUseCase();
-    // result.fold(
-    //   (l) {
-    //     // generalState = StateManagerService.getStateFromFailure(l);
-    //     _update(MainState.error(l.message));
-    //   },
-    //   (user) {
-    //     generalState = GeneralStates.success;
-    //     this.user = user;
-    //     if (user != null) {
-    //       if (user.status == UserStatus.active) {
-    //         if (user.role == UserRole.admin) {
-    //           tabs = [
-    //             const AdminHomeTab(),
-    //             const ClientsTab(),
-    //             const ActivitiesTab(),
-    //             const AdminTransactionsTab(),
-    //             const SettingsTab(),
-    //           ];
-    //         } else {
-    //           tabs = [
-    //             const ClientHomeTab(),
-    //             const AccountsTab(),
-    //             const HotlineTab(),
-    //             const ClientTransactionsTab(),
-    //             const SettingsTab(),
-    //           ];
-    //           title = '#${user.id ?? LocaleKeys.nothing.tr()} ${user.firstName ?? ''} ${user.lastName ?? ''}';
-    //         }
-    //       } else {
-    //         InjectionContainer.getIt<RouterService>().router.go(
-    //               AppRoutes.verifyIdentityScreen,
-    //             );
-    //       }
-    //     }
-    //     currentTab = 0;
-    //     _update(MainState.loaded(user));
-    //   },
-    // );
-    // InjectionContainer.getIt<Logger>().w(
-    //   "End `getUser` in |MainCubit| General State:$generalState role:${user?.id}",
-    // );
-  }
-
-  Future<void> logout() async {
-    // InjectionContainer.getIt<Logger>().i("Start `logout` in |MainCubit|");
-    // _update(const MainState.loading());
-    // generalState = GeneralStates.loading;
-    // var result = await logoutUseCase();
-    // result.fold(
-    //   (l) {
-    //     generalState = StateManagerService.getStateFromFailure(l);
-    //     currentTab = 0;
-    //     _update(MainState.error(l.message));
-    //   },
-    //   (r) {
-    //     _update(const MainState.logoutSuccess());
-    //     generalState = GeneralStates.success;
-    //     currentTab = 0;
-    //     RouterService.setInitialRoute(AppRoutes.signInScreen);
-    //   },
-    // );
-    // InjectionContainer.getIt<Logger>().w(
-    //   "End `logout` in |MainCubit| General State:$generalState",
-    // );
-  }
 
   void changeCurrentTab(int index) {
     if (index != 2) {
@@ -164,26 +58,15 @@ class MainCubit extends Cubit<MainState> {
     _update(const MainState.changeTabSuccess());
   }
 
-  void enableDarkMode(bool isDarkMode) {
+  selectFilter(int id) {
     _update(const MainState.loading());
-    InjectionContainer.getIt<CacheService>().setData(
-      key: AppKeys.currentThemeMode,
-      value: isDarkMode ? 'dark' : 'light',
-    );
-    currentThemeMode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
+    filterIndex = id;
     _update(const MainState.changeTabSuccess());
   }
 
-  selectFilter(int id) {
-    _update(const MainState.loading());
-     filterIndex = id;
-    _update(const MainState.changeTabSuccess());
-  }
   void _update(MainState state) {
     if (!isClosed) {
       emit(state);
     }
   }
-
-
 }

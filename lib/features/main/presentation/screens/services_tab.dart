@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
-import 'package:real_state/features/main/domain/entities/services_entity.dart';
 
 class ServicesTab extends StatefulWidget {
   const ServicesTab({super.key});
@@ -73,9 +72,7 @@ class _ServicesTabState extends State<ServicesTab> {
           return GestureDetector(
             onTap: () {
               GoRouter.of(context).push(
-                index == 0
-                    ? AppRoutes.ebgineeringComapniesscreen
-                    : AppRoutes.aboutUsScreen,
+                index == 0 ? AppRoutes.ebgineeringComapniesscreen : AppRoutes.aboutUsScreen,
               );
             },
             child: Container(
@@ -116,4 +113,11 @@ class _ServicesTabState extends State<ServicesTab> {
       ),
     );
   }
+}
+
+class PairEntity {
+  final String text1;
+  final String text2;
+
+  PairEntity({required this.text1, required this.text2});
 }
