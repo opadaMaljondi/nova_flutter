@@ -7,12 +7,13 @@ class ReviewArticles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: EdgeInsetsDirectional.only(start: 21.w),
           child: Text(
             'Review articles',
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
         SizedBox(
@@ -25,7 +26,7 @@ class ReviewArticles extends StatelessWidget {
           ),
           child: Text(
             'Real estate prices are constantly rising in a new global phenomenon. Real estate prices are constantly rising in a new global phenomenon. Real estate prices are constantly rising in a new global phenomenon',
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
       ],

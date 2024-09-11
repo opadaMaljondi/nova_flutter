@@ -7,8 +7,8 @@ import 'package:real_state/features/main/presentation/widgets/real_estate_header
 import 'package:real_state/features/main/presentation/widgets/rent_a_property.dart';
 import 'package:real_state/features/main/presentation/widgets/review_articles.dart';
 
-class RealEstateScreen extends StatelessWidget {
-  const RealEstateScreen({super.key});
+class NewsDetailsScreen extends StatelessWidget {
+  const NewsDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +26,9 @@ class RealEstateScreen extends StatelessWidget {
                 color: AppColors.mainGray,
                 height: 30.h,
               ),
-              SizedBox(
-                height: 18.h,
-              ),
               const RealEstateHeader(),
               SizedBox(
-                height: 10.h,
+                height: 20.h,
               ),
               const ReviewArticles(),
               SizedBox(
@@ -52,7 +49,7 @@ class RealEstateScreen extends StatelessWidget {
                 ),
                 child: Text(
                   'Ultimately, the choice between renting and selling a property should align with your financial goals and personal circumstances, taking into account current market conditions',
-                  style: Theme.of(context).textTheme.bodyLarge,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
               SizedBox(

@@ -22,7 +22,7 @@ import 'package:real_state/features/main/presentation/screens/news_screen.dart';
 import 'package:real_state/features/main/presentation/screens/notifications_screen.dart';
 import 'package:real_state/features/main/presentation/screens/offices_screen.dart';
 import 'package:real_state/features/main/presentation/screens/properties_details.dart';
-import 'package:real_state/features/main/presentation/screens/real_estate_screen.dart';
+import 'package:real_state/features/main/presentation/screens/news_details_screen.dart';
 import 'package:real_state/features/main/presentation/screens/services_tab.dart';
 import 'package:real_state/features/main/presentation/screens/profile_screen.dart';
 import 'package:real_state/features/main/presentation/screens/trader_details_screen.dart';
@@ -320,7 +320,7 @@ class RouterService {
           path: AppRoutes.realEstateScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child: const RealEstateScreen(),
+            child: const NewsDetailsScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               return FadeTransition(
