@@ -1,8 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 import 'package:real_state/features/main/presentation/widgets/properties_card.dart';
+
+import '../../../../core/translations/local_keys.g.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
@@ -15,7 +18,7 @@ class FavoriteScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const PrimaryAppbar(title: 'Favorite'),
+               PrimaryAppbar(title: LocaleKeys.favorites.tr()),
               Divider(
                 thickness: 0.3,
                 color: AppColors.mainGray,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_assets.dart';
@@ -5,6 +6,8 @@ import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/features/main/presentation/widgets/official_numbers.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 import 'package:real_state/features/main/presentation/widgets/social_media_icons.dart';
+
+import '../../../../core/translations/local_keys.g.dart';
 
 class AboutUsScreen extends StatelessWidget {
   const AboutUsScreen({super.key});
@@ -33,8 +36,8 @@ class AboutUsScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const PrimaryAppbar(
-                      title: 'Who Are We',
+                    PrimaryAppbar(
+                      title: LocaleKeys.WhoAreWe.tr(),
                     ),
                     Divider(
                       thickness: 0.3,
@@ -50,26 +53,15 @@ class AboutUsScreen extends StatelessWidget {
                       AppAssets.logo,
                     ),
                     SizedBox(
-                      height: 40.h,
+                      height: 30.h,
                     ),
                     Text(
-                      'Hey, you',
+                      LocaleKeys.titleAbouteUs.tr(),
+                      textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            height: 1.7.h,
                             color: AppColors.materialPrimary.shade700,
                           ),
-                    ),
-                    SizedBox(
-                      height: 16.h,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 30.w),
-                      child: Text(
-                        'In the distinguished world of real estate',
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              color: AppColors.materialPrimary.shade700,
-                            ),
-                        textAlign: TextAlign.center,
-                      ),
                     ),
                     SizedBox(
                       height: 20.h,
@@ -77,7 +69,7 @@ class AboutUsScreen extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 30.w),
                       child: Text(
-                        'Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page You can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Related to this page',
+                        LocaleKeys.subTitleAboutUs.tr(),
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                               color: AppColors.black,
                             ),

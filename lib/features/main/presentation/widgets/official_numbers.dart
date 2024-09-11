@@ -1,6 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+
+import '../../../../core/translations/local_keys.g.dart';
 
 class OfficialNumbers extends StatelessWidget {
   const OfficialNumbers({
@@ -12,7 +15,7 @@ class OfficialNumbers extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Official numbers',
+          LocaleKeys.officialNumbers.tr(),
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 color: AppColors.materialPrimary.shade700,
               ),
@@ -27,13 +30,13 @@ class OfficialNumbers extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'CEO:',
+                  LocaleKeys.Ceo.tr(),
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.black,
                       ),
                 ),
                 Text(
-                  'For advertising:',
+                  LocaleKeys.forAdvertising.tr(),
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.black,
                       ),
