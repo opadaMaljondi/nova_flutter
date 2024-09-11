@@ -9,7 +9,7 @@ import 'package:real_state/features/auth/presentation/screens/reset_password_scr
 import 'package:real_state/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/verification_code_screen.dart';
-import 'package:real_state/features/main/presentation/screens/about_us.dart';
+import 'package:real_state/features/main/presentation/screens/about_us_screen.dart';
 import 'package:real_state/features/main/presentation/screens/add_property_screen.dart';
 import 'package:real_state/features/main/presentation/screens/company_info_screen.dart';
 import 'package:real_state/features/main/presentation/screens/engineering_companies_screen.dart';

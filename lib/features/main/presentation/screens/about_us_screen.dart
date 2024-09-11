@@ -21,11 +21,11 @@ class AboutUsScreen extends StatelessWidget {
               children: [
                 PositionedDirectional(
                   start: 0,
-                  top: MediaQuery.sizeOf(context).height * .80,
+                  top: 0.8.sh,
                   child: Opacity(
-                    opacity: .4,
+                    opacity: 0.4,
                     child: Image.asset(
-                      height: MediaQuery.sizeOf(context).height * .5,
+                      height: 0.5.sh,
                       AppAssets.aboutUsBackground,
                     ),
                   ),
@@ -45,8 +45,8 @@ class AboutUsScreen extends StatelessWidget {
                       height: 40.h,
                     ),
                     Image.asset(
-                      width: 123.w,
-                      height: 93.h,
+                      width: 125.w,
+                      height: 95.h,
                       AppAssets.logo,
                     ),
                     SizedBox(
