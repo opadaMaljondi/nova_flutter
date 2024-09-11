@@ -14,7 +14,6 @@ part 'main_cubit.freezed.dart';
 
 part 'main_state.dart';
 
-int filterIndex = 0;
 
 class MainCubit extends Cubit<MainState> {
   MainCubit() : super(const MainState.initial());
@@ -49,6 +48,7 @@ class MainCubit extends Cubit<MainState> {
 
   /// variables
   int currentTab = 0;
+  int filterIndex = 0;
 
   void changeCurrentTab(int index) {
     if (index != 2) {

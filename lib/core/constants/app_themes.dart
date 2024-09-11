@@ -8,7 +8,7 @@ abstract class AppThemes {
     fontFamily: 'Switzer',
     primaryColor: AppColors.materialPrimary,
     scaffoldBackgroundColor: const Color.fromRGBO(243, 243, 243, 1),
-    splashColor: AppColors.black10,
+    splashColor: AppColors.materialPrimary.shade200,
     canvasColor: AppColors.white,
     iconTheme: const IconThemeData(
       color: AppColors.black10,

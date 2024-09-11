@@ -15,7 +15,10 @@ class CardFilter extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 7),
       height: 170.h,
-      decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(10.r)),
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(10.r),
+      ),
       padding: EdgeInsets.all(10.h),
       child: Row(
         children: [
@@ -25,83 +28,94 @@ class CardFilter extends StatelessWidget {
                 children: [
                   Expanded(
                     child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10.r),
-                        child: Image.asset(
-                          AppAssets.estate1,
-                          fit: BoxFit.fitHeight,
-                        )),
+                      borderRadius: BorderRadius.circular(10.r),
+                      child: Image.asset(
+                        AppAssets.estate1,
+                        fit: BoxFit.fitHeight,
+                      ),
+                    ),
                   ),
                 ],
               )),
           Expanded(
-              flex: 3,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 14.w,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      'ٌRoland Apartment',
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                    SizedBox(
-                      height: 4.h,
-                    ),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          AppAssets.location,
-                          color: AppColors.primary,
-                        ),
-                        Text(
-                          '  City-Street',
-                          style: Theme.of(context).textTheme.titleSmall,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          AppAssets.dolar,
-                          color: AppColors.primary,
-                        ),
-                        Text(
-                          '  2024/9/1',
-                          style: Theme.of(context).textTheme.titleSmall,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          AppAssets.calender,
-                          color: AppColors.primary,
-                        ),
-                        Text(
-                          '  1500',
-                          style: Theme.of(context).textTheme.titleSmall,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 6),
-                          decoration:
-                              BoxDecoration(color: AppColors.grayAccent, borderRadius: BorderRadius.circular(20)),
-                          child: Text(
-                            '  Not ٌRented',
-                            style: Theme.of(context).textTheme.titleSmall,
+            flex: 3,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 15.w,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'ٌRoland Apartment',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      SizedBox(
+                        height: 4.h,
+                      ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppAssets.location,
+                            color: AppColors.primary,
                           ),
-                        ),
-                      ],
+                          Text(
+                            '  City-Street',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppAssets.dolar,
+                            color: AppColors.primary,
+                          ),
+                          Text(
+                            '  2024/9/1',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppAssets.calender,
+                            color: AppColors.primary,
+                          ),
+                          Text(
+                            '  1500',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 10.w),
+                      decoration: BoxDecoration(
+                        color: AppColors.white20,
+                        borderRadius: BorderRadius.circular(20.r),
+                      ),
+                      child: Text(
+                        'Not Rented',
+                        style: Theme.of(context).textTheme.titleSmall,
+                      ),
                     ),
                   ],
                 ),
-              )),
+              ],
+            ),
+          ),
         ],
       ),
     );

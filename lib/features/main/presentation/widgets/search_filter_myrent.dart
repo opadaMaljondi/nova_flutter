@@ -13,20 +13,17 @@ class SearchFilterMyRent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          flex: 1,
-          child: SvgPicture.asset(
-            width: 50.w,
-            height: 50.h,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 15.w),
+      child: Row(
+        children: [
+          SvgPicture.asset(
             AppAssets.filters,
           ),
-        ),
-        Expanded(
-            flex: 4,
+          SizedBox(width: 5.w,),
+          Expanded(
             child: PrimaryTextField(
-              hintText:   LocaleKeys.search.tr(),
+              hintText: LocaleKeys.search.tr(),
               padding: EdgeInsets.zero,
               fillColor: AppColors.white,
               prefixIcon: Icon(
@@ -34,8 +31,10 @@ class SearchFilterMyRent extends StatelessWidget {
                 size: 20.w,
                 color: AppColors.mainGray,
               ),
-            ))
-      ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
