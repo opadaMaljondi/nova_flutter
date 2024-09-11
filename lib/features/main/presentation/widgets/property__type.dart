@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/expanded_chip_filter.dart';
 
 class PropertyType extends StatefulWidget {
@@ -20,15 +22,15 @@ class _PropertyTypeState extends State<PropertyType> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Property type',
+            LocaleKeys.propertyType.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(
             height: 12.h,
           ),
           ExpandedChipFilter(
-            label1: "sale",
-            label2: 'Rent',
+            label1: LocaleKeys.saleCapital.tr(),
+            label2: LocaleKeys.rentCapital.tr(),
             isSelected1: isSelected1,
             isSelected2: isSelected2,
             onTap1: () {

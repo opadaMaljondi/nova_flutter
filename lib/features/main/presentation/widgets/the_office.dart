@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class TheOffice extends StatelessWidget {
   const TheOffice({super.key});
@@ -13,7 +15,7 @@ class TheOffice extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'The office',
+          LocaleKeys.theOffice.tr(),
           style: Theme.of(context).textTheme.titleSmall,
         ),
         SizedBox(

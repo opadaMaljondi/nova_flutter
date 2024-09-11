@@ -1,9 +1,11 @@
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:real_state/core/helpers/pickers.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/choose_image_from.dart';
 
 class PickImageFromGalleryOrCamera extends StatefulWidget {
@@ -38,7 +40,7 @@ class _PickImageFromGalleryOrCameraState
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'Choose image from',
+              LocaleKeys.choseImageFrom.tr(),
               style: Theme.of(context).textTheme.titleLarge,
             ),
             SizedBox(
