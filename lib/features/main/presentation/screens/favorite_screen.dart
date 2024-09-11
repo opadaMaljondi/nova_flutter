@@ -4,8 +4,8 @@ import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 import 'package:real_state/features/main/presentation/widgets/properties_card.dart';
 
-class FavoriteTab extends StatelessWidget {
-  const FavoriteTab({super.key});
+class FavoriteScreen extends StatelessWidget {
+  const FavoriteScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

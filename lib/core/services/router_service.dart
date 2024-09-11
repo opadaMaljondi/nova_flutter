@@ -13,7 +13,7 @@ import 'package:real_state/features/main/presentation/screens/about_us_screen.da
 import 'package:real_state/features/main/presentation/screens/add_property_screen.dart';
 import 'package:real_state/features/main/presentation/screens/company_info_screen.dart';
 import 'package:real_state/features/main/presentation/screens/engineering_companies_screen.dart';
-import 'package:real_state/features/main/presentation/screens/favorite_tab.dart';
+import 'package:real_state/features/main/presentation/screens/favorite_screen.dart';
 import 'package:real_state/features/main/presentation/screens/featured_properties_screen.dart';
 import 'package:real_state/features/main/presentation/screens/filter_screen.dart';
 import 'package:real_state/features/main/presentation/screens/main_screen.dart';
@@ -61,7 +61,7 @@ class RouterService {
           path: AppRoutes.favoriteScreen,
           pageBuilder: (context, state) => CustomTransitionPage(
             key: state.pageKey,
-            child: const FavoriteTab(),
+            child: const FavoriteScreen(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               return FadeTransition(
