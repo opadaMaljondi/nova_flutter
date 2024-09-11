@@ -29,7 +29,6 @@ abstract class  LocaleKeys {
   static const WhoAreWe = 'WhoAreWe';
   static const officialNumbers = 'officialNumbers';
   static const Ceo = 'Ceo';
-  static const froAdvertising = 'froAdvertising';
   static const officialWebsites = 'officialWebsites';
   static const realEstateNews = 'realEstateNews';
   static const realEstateOffice = 'realEstateOffice';
@@ -154,12 +153,24 @@ abstract class  LocaleKeys {
   static const start = 'start';
   static const singUp = 'singUp';
   static const continous = 'continous';
-  static const sing = 'sing';
   static const whatDoYouWant = 'whatDoYouWant';
   static const apartments = 'apartments';
-  static const showAll = 'showAll';
   static const borkers = 'borkers';
   static const iHaveSeenAllNotifications = 'iHaveSeenAllNotifications';
   static const saleCapital = 'saleCapital';
+  static const sing = 'sing';
+  static const forSale = 'forSale';
+  static const forRent = 'forRent';
+  static const rented = 'rented';
+  static const sold = 'sold';
+  static const notRented = 'notRented';
+  static const realstateForSale = 'realstateForSale';
+  static const realstateForRent = 'realstateForRent';
+  static const realstateRented = 'realstateRented';
+  static const myRealSate = 'myRealSate';
+  static const showAll = 'showAll';
+  static const titleAbouteUs = 'titleAbouteUs';
+  static const subTitleAboutUs = 'subTitleAboutUs';
+  static const forAdvertising = 'forAdvertising';
 
 }

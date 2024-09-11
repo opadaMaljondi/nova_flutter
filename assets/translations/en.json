@@ -27,7 +27,6 @@
   "WhoAreWe": "Who are we",
   "officialNumbers": "Official numbers",
   "Ceo": "CEO:",
-  "froAdvertising": "For advertising:",
   "officialWebsites": "Official websites",
   "realEstateNews": "Real Estate News",
   "realEstateOffice": "Real estate office",
@@ -167,5 +166,8 @@
   "realstateForRent": "Real State For Rent",
   "realstateRented": "Real State Rented",
   "myRealSate": "My Real State",
-  "showAll": "Show All"
+  "showAll": "Show All",
+  "titleAbouteUs": "Welcome to \n the world of distinguished real estate",
+  "subTitleAboutUs": "Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page",
+  "forAdvertising": "For advertising:"
 }

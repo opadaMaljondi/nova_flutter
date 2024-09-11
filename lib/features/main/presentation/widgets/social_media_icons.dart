@@ -1,8 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+
+import '../../../../core/translations/local_keys.g.dart';
 
 class SocialMediaIcons extends StatelessWidget {
   const SocialMediaIcons({
@@ -14,7 +17,7 @@ class SocialMediaIcons extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Official websites',
+          LocaleKeys.officialWebsites.tr(),
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 color: AppColors.materialPrimary.shade700,
               ),
