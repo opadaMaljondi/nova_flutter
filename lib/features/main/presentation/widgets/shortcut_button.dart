@@ -38,7 +38,7 @@ class ShortcutButton extends StatelessWidget {
           Text(
             textAlign: TextAlign.center,
             label,
-            style: Theme.of(context).textTheme.labelSmall,
+            style: Theme.of(context).textTheme.bodySmall,
           ),
         ],
       ),

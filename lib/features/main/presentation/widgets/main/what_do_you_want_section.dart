@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_assets.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/shortcut_button.dart';
 import 'package:real_state/features/main/presentation/widgets/title_header.dart';
 
@@ -11,7 +13,9 @@ class WhatDoYouWantSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const TitleHeader(title: "What do you want ?"),
+        TitleHeader(
+          title: LocaleKeys.whatDoYouWant.tr(),
+        ),
         SizedBox(
           height: 10.h,
         ),
@@ -22,22 +26,22 @@ class WhatDoYouWantSection extends StatelessWidget {
             children: [
               ShortcutButton(
                 iconPath: AppAssets.sell,
-                label: 'Sale',
+                label: LocaleKeys.sale.tr(),
                 onTap: () {},
               ),
               ShortcutButton(
                 iconPath: AppAssets.rent,
-                label: 'Rent',
+                label: LocaleKeys.rent.tr(),
                 onTap: () {},
               ),
               ShortcutButton(
                 iconPath: AppAssets.commercial,
-                label: 'Commercial',
+                label: LocaleKeys.commercial.tr(),
                 onTap: () {},
               ),
               ShortcutButton(
                 iconPath: AppAssets.apartments,
-                label: 'Apartments',
+                label: LocaleKeys.apartments,
                 onTap: () {},
               ),
             ],

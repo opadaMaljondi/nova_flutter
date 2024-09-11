@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_routes.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/service_card.dart';
 
 class ServicesTab extends StatefulWidget {
@@ -15,39 +17,39 @@ class ServicesTab extends StatefulWidget {
 class _ServicesTabState extends State<ServicesTab> {
   List<ServiceDataCard> items = [
     ServiceDataCard(
-      title: 'Engineering companies',
+      title: LocaleKeys.engineeringCompanies.tr(),
       iconPath: AppAssets.engineeringCompanies,
     ),
     ServiceDataCard(
-      title: 'Real estat companies',
+      title: LocaleKeys.realEstateCompanies.tr(),
       iconPath: AppAssets.realEstateCompanies,
     ),
     ServiceDataCard(
-      title: 'Contact a representative',
+      title: LocaleKeys.contactRepresentative.tr(),
       iconPath: AppAssets.conectArepresentitve,
     ),
     ServiceDataCard(
-      title: 'Contact support',
+      title: LocaleKeys.contactSupport.tr(),
       iconPath: AppAssets.contactSupport,
     ),
     ServiceDataCard(
-      title: 'Legal advisor',
+      title: LocaleKeys.legalAdvisor.tr(),
       iconPath: AppAssets.legalAdvisor,
     ),
     ServiceDataCard(
-      title: 'Real estate consultant',
+      title: LocaleKeys.realEstateConsultant.tr(),
       iconPath: AppAssets.realEstateConsultant,
     ),
     ServiceDataCard(
-      title: 'Investment dvisor',
+      title: LocaleKeys.investmentAdvisor.tr(),
       iconPath: AppAssets.investmentAdvisor,
     ),
     ServiceDataCard(
-      title: 'Property maintenance',
+      title: LocaleKeys.propertyMaintenance.tr(),
       iconPath: AppAssets.propertyMaintenance,
     ),
     ServiceDataCard(
-      title: 'Management',
+      title: LocaleKeys.management.tr(),
       iconPath: AppAssets.management,
     ),
   ];

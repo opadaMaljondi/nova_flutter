@@ -83,7 +83,7 @@ abstract class AppThemes {
       // Text, NavBarItems
       bodySmall: TextStyle(
         fontSize: 13.sp,
-        color: AppColors.black20,
+        color: AppColors.black10,
         fontWeight: FontWeight.w400,
       ),
       labelLarge: TextStyle(

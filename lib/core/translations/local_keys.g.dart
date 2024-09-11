@@ -56,9 +56,7 @@ abstract class  LocaleKeys {
   static const sale = 'sale';
   static const rent = 'rent';
   static const commercial = 'commercial';
-  static const residentialApartments = 'residentialApartments';
   static const featuredproperties = 'featuredproperties';
-  static const howAll = 'howAll';
   static const home = 'home';
   static const services = 'services';
   static const menu = 'menu';
@@ -157,5 +155,11 @@ abstract class  LocaleKeys {
   static const singUp = 'singUp';
   static const continous = 'continous';
   static const sing = 'sing';
+  static const whatDoYouWant = 'whatDoYouWant';
+  static const apartments = 'apartments';
+  static const showAll = 'showAll';
+  static const borkers = 'borkers';
+  static const iHaveSeenAllNotifications = 'iHaveSeenAllNotifications';
+  static const saleCapital = 'saleCapital';
 
 }

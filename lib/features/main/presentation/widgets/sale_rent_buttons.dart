@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/custom_filter_chip.dart';
 
 class SaleRentButtons extends StatefulWidget {
@@ -23,7 +25,7 @@ class _SaleRentButtonsState extends State<SaleRentButtons> {
         CustomFilterChip(
           verticalPadding: 10.h,
           horizontalPadding: 57.w,
-          label: 'Sale',
+          label: LocaleKeys.saleCapital.tr(),
           isSelected: !isRent,
           activeColor: AppColors.primary,
           onSelected: (value) {
@@ -38,7 +40,7 @@ class _SaleRentButtonsState extends State<SaleRentButtons> {
         CustomFilterChip(
           verticalPadding: 10.h,
           horizontalPadding: 57.w,
-          label: 'Rent',
+          label: LocaleKeys.rentCapital.tr(),
           isSelected: isRent,
           activeColor: AppColors.primary,
           onSelected: (value) {

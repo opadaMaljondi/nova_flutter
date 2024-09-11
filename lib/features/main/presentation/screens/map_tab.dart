@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_icon_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/main/presentation/widgets/custom_filter_chip.dart';
@@ -45,8 +47,8 @@ class _MapTabState extends State<MapTab> {
                       children: [
                         Expanded(
                           child: PrimaryTextField(
-                            labelText: 'Search in map:',
-                            hintText: 'Search',
+                            labelText: LocaleKeys.searchOnMap.tr(),
+                            hintText: LocaleKeys.search.tr(),
                             padding: EdgeInsets.zero,
                             prefixIcon: Icon(
                               Icons.search,
@@ -80,7 +82,7 @@ class _MapTabState extends State<MapTab> {
                 child: Row(
                   children: [
                     CustomFilterChip(
-                      label: 'Rent',
+                      label: LocaleKeys.rentCapital.tr(),
                       isSelected: isRent,
                       activeColor: AppColors.primary,
                       onSelected: (value) {
@@ -93,7 +95,7 @@ class _MapTabState extends State<MapTab> {
                       width: 10.w,
                     ),
                     CustomFilterChip(
-                      label: 'Sale',
+                      label: LocaleKeys.saleCapital.tr(),
                       isSelected: !isRent,
                       activeColor: AppColors.primary,
                       onSelected: (value) {

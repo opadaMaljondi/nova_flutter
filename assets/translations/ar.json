@@ -54,9 +54,7 @@
   "sale": "بيع",
   "rent": "إجار",
   "commercial": "تجاري",
-  "residentialApartments": "شقق سكنية",
   "featuredproperties": "عقارات مميزة",
-  "howAll": "اظهار الكل",
   "home": "الرئيسية",
   "services": "الخدمات",
   "menu": "المزيد",
@@ -154,5 +152,11 @@
   "start": "إبدأ",
   "singUp": "تسجيل الدخول",
   "continous": "إستمر",
-  "sing": "تسجيل الدخول"
+  "sing": "تسجيل الدخول",
+  "whatDoYouWant": "ماذا تريد ؟",
+  "apartments": "شقق سكنية",
+  "showAll": "اظهار الكل",
+  "borkers": "دلالين",
+  "iHaveSeenAllNotifications": "لقد رأيت جميع الإشعارات\n الخاصة بك تعود في وقت لاحق",
+  "saleCapital": "بيع"
 }

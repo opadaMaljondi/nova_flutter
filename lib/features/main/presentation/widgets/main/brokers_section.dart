@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_routes.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/broker_card.dart';
 import 'package:real_state/features/main/presentation/widgets/title_header.dart';
 
@@ -13,7 +15,7 @@ class BrokersSection extends StatelessWidget {
     return Column(
       children: [
         TitleHeader(
-          title: "Brokers",
+          title: LocaleKeys.borkers.tr(),
           onTap: () {
             context.push(AppRoutes.officesScreen);
           },
