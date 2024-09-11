@@ -1,8 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/features/main/presentation/widgets/setting_card.dart';
+
+import '../../../../../core/translations/local_keys.g.dart';
 
 class MenuAppearanceSection extends StatelessWidget {
   const MenuAppearanceSection({super.key});
@@ -18,21 +21,21 @@ class MenuAppearanceSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Appearance",
+                LocaleKeys.appearance.tr(),
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               SizedBox(
                 height: 5.h,
               ),
               Text(
-                "Add a description about the appearance",
+                LocaleKeys.addDescriptionOfTheAppearance.tr(),
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               SizedBox(
                 height: 15.h,
               ),
               SettingCard(
-                name: 'Notifications',
+                name: LocaleKeys.notifications.tr(),
                 iconPath: AppAssets.notifications,
                 onChanged: (value) {},
               ),
@@ -40,7 +43,7 @@ class MenuAppearanceSection extends StatelessWidget {
                 color: AppColors.grayAccent,
               ),
               SettingCard(
-                name: 'Dark Mode',
+                name: LocaleKeys.darkMode.tr(),
                 iconPath: AppAssets.darkMode,
                 onChanged: (value) {},
               ),
@@ -48,7 +51,7 @@ class MenuAppearanceSection extends StatelessWidget {
                 color: AppColors.grayAccent,
               ),
               SettingCard(
-                name: 'Language',
+                name: LocaleKeys.language.tr(),
                 iconPath: AppAssets.language,
                 onTap: () {},
               ),

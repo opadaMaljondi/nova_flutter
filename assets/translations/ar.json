@@ -152,11 +152,20 @@
   "start": "إبدأ",
   "singUp": "تسجيل الدخول",
   "continous": "إستمر",
-  "sing": "تسجيل الدخول",
   "whatDoYouWant": "ماذا تريد ؟",
   "apartments": "شقق سكنية",
-  "showAll": "اظهار الكل",
   "borkers": "دلالين",
   "iHaveSeenAllNotifications": "لقد رأيت جميع الإشعارات\n الخاصة بك تعود في وقت لاحق",
-  "saleCapital": "بيع"
+  "saleCapital": "بيع",
+  "sing": "تسجيل الدخول",
+  "forSale": "للبيع",
+  "forRent": "للاجار",
+  "rented": "مؤجر",
+  "sold": "تم البيع",
+  "notRented": "غير مؤجر",
+  "realstateForSale": "عقارات البيع",
+  "realstateForRent": "عقارات الاجار",
+  "realstateRented": "عقارات مؤجرة",
+  "myRealSate": "عقاراتي",
+  "showAll": "عرض الكل"
 }

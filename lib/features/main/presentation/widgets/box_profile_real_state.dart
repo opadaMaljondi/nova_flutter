@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
+import '../../../../core/translations/local_keys.g.dart';
 
 class BoxProfileRealState extends StatelessWidget {
   const BoxProfileRealState({super.key});
@@ -35,7 +37,7 @@ class BoxProfileRealState extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    'For sale',
+                    LocaleKeys.rented.tr(),
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
@@ -44,9 +46,10 @@ class BoxProfileRealState extends StatelessWidget {
                   ),
                   Text('7',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                            color: AppColors.black,
-                          ))
+                      style:
+                          Theme.of(context).textTheme.headlineLarge!.copyWith(
+                                color: AppColors.black,
+                              ))
                 ],
               ),
             ),
@@ -68,7 +71,7 @@ class BoxProfileRealState extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    'for rent',
+                    LocaleKeys.sale.tr(),
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
@@ -77,9 +80,10 @@ class BoxProfileRealState extends StatelessWidget {
                   ),
                   Text('7',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                            color: AppColors.black,
-                          ))
+                      style:
+                          Theme.of(context).textTheme.headlineLarge!.copyWith(
+                                color: AppColors.black,
+                              ))
                 ],
               ),
             ),
@@ -101,7 +105,7 @@ class BoxProfileRealState extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    'Rented',
+                    LocaleKeys.forSale.tr(),
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
@@ -111,7 +115,10 @@ class BoxProfileRealState extends StatelessWidget {
                   Text(
                     '7',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: AppColors.black),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineLarge!
+                        .copyWith(color: AppColors.black),
                   )
                 ],
               ),

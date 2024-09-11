@@ -168,13 +168,22 @@ class CodegenLoader extends AssetLoader{
   "start": "إبدأ",
   "singUp": "تسجيل الدخول",
   "continous": "إستمر",
-  "sing": "تسجيل الدخول",
   "whatDoYouWant": "ماذا تريد ؟",
   "apartments": "شقق سكنية",
-  "showAll": "اظهار الكل",
   "borkers": "دلالين",
   "iHaveSeenAllNotifications": "لقد رأيت جميع الإشعارات\n الخاصة بك تعود في وقت لاحق",
-  "saleCapital": "بيع"
+  "saleCapital": "بيع",
+  "sing": "تسجيل الدخول",
+  "forSale": "للبيع",
+  "forRent": "للاجار",
+  "rented": "مؤجر",
+  "sold": "تم البيع",
+  "notRented": "غير مؤجر",
+  "realstateForSale": "عقارات البيع",
+  "realstateForRent": "عقارات الاجار",
+  "realstateRented": "عقارات مؤجرة",
+  "myRealSate": "عقاراتي",
+  "showAll": "عرض الكل"
 };
 static const Map<String,dynamic> en = {
   "next": "Next",
@@ -229,7 +238,7 @@ static const Map<String,dynamic> en = {
   "logOut": "Log out",
   "search": "Search",
   "whatAreYouLooking": "what are you looking for",
-  "sale": "sale",
+  "sale": "Sale",
   "rent": "rent",
   "commercial": "commercial",
   "featuredproperties": "Featured Properties",
@@ -333,10 +342,19 @@ static const Map<String,dynamic> en = {
   "sing": "sign In",
   "whatDoYouWant": "What do you want ?",
   "apartments": "apartments",
-  "showAll": "Show all",
   "borkers": "Brokers",
   "iHaveSeenAllNotifications": "I have seen all your notifications\ncome back later",
-  "saleCapital": "Sale"
+  "saleCapital": "Sale",
+  "forSale": "For Sale",
+  "forRent": "For Rent",
+  "rented": "Rented",
+  "sold": "sold",
+  "notRented": "Not Rented",
+  "realstateForSale": "Real State For Sale",
+  "realstateForRent": "Real State For Rent",
+  "realstateRented": "Real State Rented",
+  "myRealSate": "My Real State",
+  "showAll": "Show All"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }
