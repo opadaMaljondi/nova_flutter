@@ -14,9 +14,9 @@ class TraderInfo extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          padding: EdgeInsets.all(26.r),
+          padding: EdgeInsets.all(25.r),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(21.r),
+            borderRadius: BorderRadius.circular(20.r),
             gradient: const LinearGradient(
               begin: AlignmentDirectional.topCenter,
               end: AlignmentDirectional.bottomCenter,
@@ -28,10 +28,17 @@ class TraderInfo extends StatelessWidget {
           ),
           child: Column(
             children: [
-              SvgPicture.asset(
-                height: 141.h,
-                width: 141.w,
-                AppAssets.profile,
+              Container(
+                height: 150.h,
+                width: 150.w,
+                padding: EdgeInsets.all(30.w),
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: AppColors.white,
+                ),
+                child: SvgPicture.asset(
+                  AppAssets.profile,
+                ),
               ),
               SizedBox(
                 height: 18.h,
@@ -117,10 +124,7 @@ class TraderInfo extends StatelessWidget {
                           ),
                           Text(
                             'contact',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(
+                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                                   color: AppColors.primary,
                                 ),
                           ),
@@ -152,10 +156,7 @@ class TraderInfo extends StatelessWidget {
                           ),
                           Text(
                             'Messaging',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(
+                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                                   color: AppColors.primary,
                                 ),
                           ),
