@@ -29,6 +29,7 @@ abstract class  LocaleKeys {
   static const WhoAreWe = 'WhoAreWe';
   static const officialNumbers = 'officialNumbers';
   static const Ceo = 'Ceo';
+  static const froAdvertising = 'froAdvertising';
   static const officialWebsites = 'officialWebsites';
   static const realEstateNews = 'realEstateNews';
   static const realEstateOffice = 'realEstateOffice';
@@ -153,8 +154,10 @@ abstract class  LocaleKeys {
   static const start = 'start';
   static const singUp = 'singUp';
   static const continous = 'continous';
+  static const sing = 'sing';
   static const whatDoYouWant = 'whatDoYouWant';
   static const apartments = 'apartments';
+  static const showAll = 'showAll';
   static const borkers = 'borkers';
   static const iHaveSeenAllNotifications = 'iHaveSeenAllNotifications';
   static const saleCapital = 'saleCapital';

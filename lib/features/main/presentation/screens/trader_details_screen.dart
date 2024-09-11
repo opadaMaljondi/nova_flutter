@@ -51,8 +51,9 @@ class TraderDetailsScreen extends StatelessWidget {
                     vertical: 17.h,
                   ),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.r),
-                      color: AppColors.primary.withOpacity(.1)),
+                    borderRadius: BorderRadius.circular(20.r),
+                    color: AppColors.primary.withOpacity(.1),
+                  ),
                   child: const Text(
                     'A complete description of the property owner. A complete description of the property owner. A complete description of the property owner',
                   ),
@@ -80,7 +81,7 @@ class TraderDetailsScreen extends StatelessWidget {
                     crossAxisCount: 2,
                     crossAxisSpacing: 10.w,
                     mainAxisSpacing: 11.h,
-                    childAspectRatio: 2 / 3,
+                    childAspectRatio: 0.62,
                   ),
                   itemBuilder: (context, index) {
                     return const PropertiesCard(
@@ -90,7 +91,7 @@ class TraderDetailsScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 75.h,
+                height: 25.h,
               ),
             ],
           ),

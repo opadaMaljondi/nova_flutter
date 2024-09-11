@@ -77,7 +77,7 @@ class FeaturedPropertiesScreen extends StatelessWidget {
                     crossAxisCount: 2,
                     crossAxisSpacing: 10.w,
                     mainAxisSpacing: 11.h,
-                    childAspectRatio: 180 / 300,
+                    childAspectRatio: 0.62,
                   ),
                   itemBuilder: (context, index) {
                     return const PropertiesCard(isFavorite: true);
