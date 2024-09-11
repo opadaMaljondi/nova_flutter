@@ -25,7 +25,7 @@ class AboutTheCompany extends StatelessWidget {
             vertical: 25.h,
           ),
           decoration: BoxDecoration(
-            color: AppColors.grayAccent,
+            color: AppColors.white20,
             borderRadius: BorderRadius.circular(10.r),
           ),
           child: Text(

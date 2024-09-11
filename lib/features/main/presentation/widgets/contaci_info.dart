@@ -25,7 +25,7 @@ class ContactInfo extends StatelessWidget {
           width: double.infinity,
           padding: EdgeInsets.all(30.r),
           decoration: BoxDecoration(
-            color: AppColors.grayAccent,
+            color: AppColors.white20,
             borderRadius: BorderRadius.circular(10.r),
           ),
           child: Column(
