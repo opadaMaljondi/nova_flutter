@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,6 +11,7 @@ import 'package:real_state/features/main/presentation/widgets/profile_header.dar
 import 'package:real_state/features/main/presentation/widgets/title_header.dart';
 
 import '../../../../core/constants/app_routes.dart';
+import '../../../../core/translations/local_keys.g.dart';
 import '../widgets/box_profile_real_state.dart';
 import '../widgets/properties_card.dart';
 
@@ -34,9 +36,10 @@ class ProfileScreen extends StatelessWidget {
                     Text(
                       'User Name',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                            color: AppColors.black,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineLarge!.copyWith(
+                                color: AppColors.black,
+                              ),
                     ),
                     SizedBox(
                       height: 25.h,
@@ -97,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     const BoxProfileRealState(),
                     TitleHeader(
-                      title: "My Real State",
+                      title: LocaleKeys.myRealSate.tr(),
                       onTap: () => context.push(AppRoutes.myRealStateScreen),
                     ),
                     GridView.builder(
@@ -105,7 +108,8 @@ class ProfileScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 15.w),
                       shrinkWrap: true,
                       itemCount: 10,
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         mainAxisSpacing: 10,
                         childAspectRatio: 0.6,

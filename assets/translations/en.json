@@ -51,7 +51,7 @@
   "logOut": "Log out",
   "search": "Search",
   "whatAreYouLooking": "what are you looking for",
-  "sale": "sale",
+  "sale": "Sale",
   "rent": "rent",
   "commercial": "commercial",
   "featuredproperties": "Featured Properties",
@@ -155,8 +155,17 @@
   "sing": "sign In",
   "whatDoYouWant": "What do you want ?",
   "apartments": "apartments",
-  "showAll": "Show all",
   "borkers": "Brokers",
   "iHaveSeenAllNotifications": "I have seen all your notifications\ncome back later",
-  "saleCapital": "Sale"
+  "saleCapital": "Sale",
+  "forSale": "For Sale",
+  "forRent": "For Rent",
+  "rented": "Rented",
+  "sold": "sold",
+  "notRented": "Not Rented",
+  "realstateForSale": "Real State For Sale",
+  "realstateForRent": "Real State For Rent",
+  "realstateRented": "Real State Rented",
+  "myRealSate": "My Real State",
+  "showAll": "Show All"
 }

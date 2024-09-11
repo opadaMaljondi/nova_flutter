@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -5,6 +6,8 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/features/main/presentation/widgets/setting_card.dart';
+
+import '../../../../../core/translations/local_keys.g.dart';
 
 class MenuCommunicationSection extends StatelessWidget {
   const MenuCommunicationSection({super.key});
@@ -20,21 +23,21 @@ class MenuCommunicationSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Communication",
+                LocaleKeys.communication.tr(),
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               SizedBox(
                 height: 5.h,
               ),
               Text(
-                "Add a description about the contact",
+                LocaleKeys.addDecriptionAboutContact.tr(),
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               SizedBox(
                 height: 15.h,
               ),
               SettingCard(
-                name: 'About us',
+                name: LocaleKeys.aboutUs.tr(),
                 iconPath: AppAssets.aboutUs,
                 onTap: () {
                   context.push(AppRoutes.aboutUsScreen);
@@ -44,7 +47,7 @@ class MenuCommunicationSection extends StatelessWidget {
                 color: AppColors.grayAccent,
               ),
               SettingCard(
-                name: 'Support',
+                name: LocaleKeys.contactSupport.tr(),
                 iconPath: AppAssets.support,
                 onTap: () {},
               ),
@@ -52,7 +55,7 @@ class MenuCommunicationSection extends StatelessWidget {
                 color: AppColors.grayAccent,
               ),
               SettingCard(
-                name: 'Legal Advisor',
+                name: LocaleKeys.legalAdvisor.tr(),
                 iconPath: AppAssets.advisor,
                 onTap: () {},
               ),

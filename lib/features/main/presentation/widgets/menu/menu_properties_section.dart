@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -5,6 +6,8 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/features/main/presentation/widgets/setting_card.dart';
+
+import '../../../../../core/translations/local_keys.g.dart';
 
 class MenuPropertiesSection extends StatelessWidget {
   const MenuPropertiesSection({super.key});
@@ -31,21 +34,21 @@ class MenuPropertiesSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Properties",
+                LocaleKeys.characteristics.tr(),
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               SizedBox(
                 height: 5.h,
               ),
               Text(
-                "Add words about features and characteristics",
+                LocaleKeys.addWords.tr(),
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               SizedBox(
                 height: 15.h,
               ),
               SettingCard(
-                name: 'Favorite Properties',
+                name: LocaleKeys.favorites.tr(),
                 iconPath: AppAssets.favorite,
                 onTap: () {
                   context.push(AppRoutes.favoriteScreen);
@@ -55,7 +58,7 @@ class MenuPropertiesSection extends StatelessWidget {
                 color: AppColors.grayAccent,
               ),
               SettingCard(
-                name: 'Offices',
+                name: LocaleKeys.office.tr(),
                 iconPath: AppAssets.offices,
                 onTap: () {
                   context.push(AppRoutes.officesScreen);
@@ -65,7 +68,7 @@ class MenuPropertiesSection extends StatelessWidget {
                 color: AppColors.grayAccent,
               ),
               SettingCard(
-                name: 'Properties News',
+                name: LocaleKeys.realEstateNews.tr(),
                 iconPath: AppAssets.realStateNews,
                 onTap: () {
                   context.push(AppRoutes.newsScreen);
