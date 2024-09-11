@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_button.dart';
 import 'package:real_state/features/main/presentation/widgets/drop_down_date_picker.dart';
 import 'package:real_state/features/main/presentation/widgets/maney_range_slider.dart';
@@ -19,8 +21,8 @@ class FilterScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const PrimaryAppbar(
-                title: 'filter',
+              PrimaryAppbar(
+                title: LocaleKeys.filter.tr(),
               ),
               Divider(
                 thickness: 1,
@@ -37,7 +39,7 @@ class FilterScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsetsDirectional.only(start: 20.w),
                 child: Text(
-                  'Write',
+                  LocaleKeys.type.tr(),
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.black5,
                       ),
@@ -56,7 +58,7 @@ class FilterScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsetsDirectional.only(start: 20.w),
                 child: Text(
-                  'Ranges from to',
+                  LocaleKeys.rangFromTo.tr(),
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.black5,
                       ),
@@ -72,7 +74,7 @@ class FilterScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsetsDirectional.only(start: 20.w),
                 child: Text(
-                  'date',
+                  LocaleKeys.date.tr(),
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.black5,
                       ),
@@ -90,18 +92,18 @@ class FilterScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Expanded(
+                    Expanded(
                       child: PrimaryButton(
                         margin: EdgeInsets.zero,
-                        label: 'Back',
+                        label: LocaleKeys.back.tr(),
                       ),
                     ),
                     SizedBox(
                       width: 16.w,
                     ),
-                    const Expanded(
+                    Expanded(
                       child: PrimaryButton(
-                        label: 'Application',
+                        label: LocaleKeys.apply.tr(),
                         margin: EdgeInsets.zero,
                         disabledButtonColor: AppColors.primary,
                       ),

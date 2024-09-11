@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/broker_card.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 
@@ -17,7 +19,9 @@ class OfficesScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const PrimaryAppbar(title: 'Offices'),
+              PrimaryAppbar(
+                title: LocaleKeys.borkers.tr(),
+              ),
               Divider(
                 thickness: 1,
                 color: AppColors.mainGray,

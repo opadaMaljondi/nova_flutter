@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class TitleHeader extends StatelessWidget {
   final String title;
@@ -26,7 +28,7 @@ class TitleHeader extends StatelessWidget {
             InkWell(
               onTap: onTap,
               child: Text(
-                "show all",
+                LocaleKeys.showAll.tr(),
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: AppColors.primary,
                     ),
