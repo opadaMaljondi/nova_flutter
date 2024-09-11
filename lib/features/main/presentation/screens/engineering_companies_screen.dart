@@ -27,7 +27,6 @@ class EngineeringCompaniesScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: 16.w,
-                  vertical: 22.h,
                 ),
                 child: Row(
                   children: [
@@ -35,6 +34,7 @@ class EngineeringCompaniesScreen extends StatelessWidget {
                       child: PrimaryTextField(
                         hintText: 'Search',
                         padding: EdgeInsets.zero,
+                        textInputAction: TextInputAction.search,
                         prefixIcon: Icon(
                           Icons.search,
                           size: 20.w,
@@ -60,6 +60,7 @@ class EngineeringCompaniesScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 20.h,),
               const EngineeringCompaniesLits(),
             ],
           ),
