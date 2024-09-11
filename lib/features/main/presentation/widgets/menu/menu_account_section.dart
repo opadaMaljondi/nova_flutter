@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -5,6 +6,8 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/features/main/presentation/widgets/setting_card.dart';
+
+import '../../../../../core/translations/local_keys.g.dart';
 
 class MenuAccountSection extends StatelessWidget {
   const MenuAccountSection({super.key});
@@ -20,21 +23,21 @@ class MenuAccountSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Account",
+                LocaleKeys.account.tr(),
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               SizedBox(
                 height: 5.h,
               ),
               Text(
-                "Add a description about the account",
+                LocaleKeys.addDescriptionAboutAccount.tr(),
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               SizedBox(
                 height: 15.h,
               ),
               SettingCard(
-                name: 'My Account',
+                name: LocaleKeys.myAccount.tr(),
                 iconPath: AppAssets.profile,
                 onTap: () {
                   context.push(AppRoutes.profileScreen);
@@ -44,7 +47,7 @@ class MenuAccountSection extends StatelessWidget {
                 color: AppColors.grayAccent,
               ),
               SettingCard(
-                name: 'Upgrade to office',
+                name: LocaleKeys.upgradeToOffice.tr(),
                 iconPath: AppAssets.upgradeToOffice,
                 onTap: () {},
               ),

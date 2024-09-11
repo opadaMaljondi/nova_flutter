@@ -169,7 +169,18 @@ class CodegenLoader extends AssetLoader{
   "choseImageFrom": "اختر صورة من",
   "start": "إبدأ",
   "singUp": "تسجيل الدخول",
-  "continous": "إستمر"
+  "continous": "إستمر",
+  "sing": "تسجيل الدخول",
+  "forSale": "للبيع",
+  "forRent": "للاجار",
+  "rented": "مؤجر",
+  "sold": "تم البيع",
+  "notRented": "غير مؤجر",
+  "realstateForSale": "عقارات البيع",
+  "realstateForRent": "عقارات الاجار",
+  "realstateRented": "عقارات مؤجرة",
+  "myRealSate": "عقاراتي",
+  "showAll": "عرض الكل"
 };
 static const Map<String,dynamic> en = {
   "next": "Next",
@@ -188,13 +199,13 @@ static const Map<String,dynamic> en = {
   "lastName": "Last Name",
   "doAgree": "Agree to",
   "conitionsAndPolicy": "terms and policy",
-  "changePasword": "Change password",
+  "changePasword": "Reset password",
   "newPassword": "New Password",
   "confirmNewPassword": "Confirm the new password",
   "office": "office",
   "officeCapital": "Office",
   "client": "Client",
-  "verificationCode": "verification code",
+  "verificationCode": "Verification code",
   "complete": "Complete",
   "weWillSendYou": "We will send you back within",
   "WhoAreWe": "Who are we",
@@ -224,7 +235,7 @@ static const Map<String,dynamic> en = {
   "logOut": "Log out",
   "search": "Seach",
   "whatAreYouLooking": "what are you looking for",
-  "sale": "sale",
+  "sale": "Sale",
   "rent": "rent",
   "commercial": "commercial",
   "residentialApartments": "residential apartments",
@@ -326,7 +337,18 @@ static const Map<String,dynamic> en = {
   "choseImageFrom": "choose image from",
   "start": "Start",
   "singUp": "Sing Up",
-  "continous": "Continue"
+  "continous": "Continue",
+  "sing": "sign In",
+  "forSale": "For Sale",
+  "forRent": "For Rent",
+  "rented": "Rented",
+  "sold": "sold",
+  "notRented": "Not Rented",
+  "realstateForSale": "Real State For Sale",
+  "realstateForRent": "Real State For Rent",
+  "realstateRented": "Real State Rented",
+  "myRealSate": "My Real State",
+  "showAll": "Show All"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

@@ -157,5 +157,15 @@ abstract class  LocaleKeys {
   static const singUp = 'singUp';
   static const continous = 'continous';
   static const sing = 'sing';
+  static const forSale = 'forSale';
+  static const forRent = 'forRent';
+  static const rented = 'rented';
+  static const sold = 'sold';
+  static const notRented = 'notRented';
+  static const realstateForSale = 'realstateForSale';
+  static const realstateForRent = 'realstateForRent';
+  static const realstateRented = 'realstateRented';
+  static const myRealSate = 'myRealSate';
+  static const showAll = 'showAll';
 
 }
