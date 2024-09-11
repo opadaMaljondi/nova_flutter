@@ -20,40 +20,39 @@ class EngineerinigMap extends StatelessWidget {
           height: 20.h,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SvgPicture.asset(
-              width: 33.w,
-              height: 43.h,
-              AppAssets.greenPdf,
-            ),
-            SizedBox(
-              width: 5.w,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Row(
               children: [
-                Text(
-                  'Woodland Engineering.jpeg',
-                  style: Theme.of(context).textTheme.titleSmall,
+                SvgPicture.asset(
+                  width: 33.w,
+                  height: 43.h,
+                  AppAssets.greenPdf,
                 ),
-                Text(
-                  '15 MB',
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                SizedBox(
+                  width: 8.w,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Woodland Engineering.jpeg',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                    Text(
+                      '15 MB',
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: AppColors.gray,
                       ),
+                    ),
+                  ],
                 ),
               ],
-            ),
-            const Expanded(
-              child: SizedBox(),
             ),
             SvgPicture.asset(
               width: 39.w,
               height: 39.h,
               AppAssets.greenDownload,
-            ),
-            SizedBox(
-              width: 40.w,
             ),
           ],
         ),
