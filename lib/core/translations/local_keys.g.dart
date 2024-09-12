@@ -172,5 +172,15 @@ abstract class  LocaleKeys {
   static const titleAbouteUs = 'titleAbouteUs';
   static const subTitleAboutUs = 'subTitleAboutUs';
   static const forAdvertising = 'forAdvertising';
+  static const reviewArtical = 'reviewArtical';
+  static const add = 'add';
+  static const upgradeToMerchant = 'upgradeToMerchant';
+  static const enterAservice = 'enterAservice';
+  static const uploadImage = 'uploadImage';
+  static const uploadFile = 'uploadFile';
+  static const watchTheVideo = 'watchTheVideo';
+  static const on = 'on';
+  static const youtube = 'youtube';
+  static const theOffice = 'theOffice';
 
 }

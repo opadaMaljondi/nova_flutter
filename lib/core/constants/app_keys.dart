@@ -7,4 +7,5 @@ class AppKeys {
   static const String currentThemeMode = 'currentThemeMode';
   static const String isNotificationInitialized = 'deviceToken';
   static const String deviceToken = 'deviceToken';
+  static const String language = 'deviceToken';
 }

@@ -13,8 +13,8 @@ import 'package:real_state/features/main/presentation/widgets/sale_residential_i
 import 'package:real_state/features/main/presentation/widgets/show_video_on_youtube.dart';
 import 'package:real_state/features/main/presentation/widgets/the_office.dart';
 
-class PropertiesDetails extends StatelessWidget {
-  const PropertiesDetails({super.key});
+class PropertiesDetailsScreen extends StatelessWidget {
+  const PropertiesDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

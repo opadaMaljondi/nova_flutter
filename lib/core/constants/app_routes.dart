@@ -10,13 +10,15 @@ abstract class AppRoutes {
   static const String filterShapeScreen = "/filterShapeScreen";
   static const String notificationsScreen = "/notificationsScreen";
   static const String servicesTab = "/servicesTab";
-  static const String ebgineeringComapniesscreen = "/ebgineeringComapniesscreen";
+  static const String ebgineeringComapniesscreen =
+      "/ebgineeringComapniesscreen";
   static const String comapanyInfoScreen = "/comapanyInfoScreen";
   static const String featuredPropertiesScreen = "/featuredPropertiesScreen";
   static const String realEstateScreen = "/realEstateScreen";
   static const String propertiesDetails = "/propertiesDetails";
   static const String addPropertyScreen = "/addPropertyScreen";
   static const String traderDetailsScreen = "/traderDetailsScreen";
+  static const String unKnowenScreen = "/unKnowenScreen";
 
   //-------------------------------------------
   // Authentication Routes

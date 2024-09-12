@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 import 'package:real_state/features/main/presentation/widgets/properties_card.dart';
 import 'package:real_state/features/main/presentation/widgets/trader_info.dart';
@@ -36,8 +38,8 @@ class TraderDetailsScreen extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.only(start: 16.w),
-                child: const Text(
-                  'Description',
+                child: Text(
+                  LocaleKeys.description.tr(),
                 ),
               ),
               SizedBox(
@@ -64,8 +66,8 @@ class TraderDetailsScreen extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.only(start: 16.w),
-                child: const Text(
-                  'Properties offered',
+                child: Text(
+                  LocaleKeys.propertiesOffered.tr(),
                 ),
               ),
               SizedBox(

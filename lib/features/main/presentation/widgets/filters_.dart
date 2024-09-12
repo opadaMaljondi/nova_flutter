@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/custom_filter_chip.dart';
 
 class Filters extends StatefulWidget {
@@ -31,7 +33,7 @@ class _FiltersState extends State<Filters> {
                 ),
               ),
               Text(
-                '  Filters  ',
+                '  ${LocaleKeys.filters.tr()}  ',
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                       color: AppColors.mainGray,
                     ),
@@ -76,7 +78,7 @@ class _FiltersState extends State<Filters> {
             children: [
               CustomFilterChip(
                 verticalPadding: 10.h,
-                label: 'Ignore',
+                label: LocaleKeys.ignore.tr(),
                 isSelected: false,
                 activeColor: AppColors.primary,
                 onSelected: (value) {},
@@ -86,7 +88,7 @@ class _FiltersState extends State<Filters> {
               ),
               CustomFilterChip(
                 verticalPadding: 10.h,
-                label: 'Addition',
+                label: LocaleKeys.add.tr(),
                 isSelected: true,
                 activeColor: AppColors.primary,
                 onSelected: (value) {},

@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/main/presentation/widgets/custom_filter_chip.dart';
 
@@ -15,12 +17,12 @@ class BenefitsAndServices extends StatefulWidget {
 class _BenefitsAndServicesState extends State<BenefitsAndServices> {
   late TextEditingController dialogController;
   List<String> items = [
-    'Internet',
-    'elevator',
-    'Furnished',
-    'Surveillance cameras',
-    'swimming pool',
-    'garden',
+    LocaleKeys.elevator.tr(),
+    LocaleKeys.furnished.tr(),
+    LocaleKeys.surveillanceCameras.tr(),
+    LocaleKeys.swimmingPool.tr(),
+    LocaleKeys.garden.tr(),
+    LocaleKeys.internet.tr(),
   ];
 
   @override
@@ -47,7 +49,7 @@ class _BenefitsAndServicesState extends State<BenefitsAndServices> {
                 child: Divider(color: AppColors.mainGray),
               ),
               Text(
-                '  Benefits and services  ',
+                '  ${LocaleKeys.benefitsAndServices.tr()}  ',
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                       color: AppColors.mainGray,
                     ),
@@ -107,7 +109,7 @@ class _BenefitsAndServicesState extends State<BenefitsAndServices> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                'Enter a service',
+                                LocaleKeys.enterAservice.tr(),
                                 style: Theme.of(context).textTheme.titleMedium,
                               ),
                               SizedBox(
@@ -143,7 +145,7 @@ class _BenefitsAndServicesState extends State<BenefitsAndServices> {
                                       borderRadius: BorderRadius.circular(25.r),
                                     ),
                                     child: Text(
-                                      'Add',
+                                      LocaleKeys.add.tr(),
                                       style: Theme.of(context)
                                           .textTheme
                                           .titleMedium!

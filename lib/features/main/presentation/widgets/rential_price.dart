@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class RentalPrice extends StatelessWidget {
   const RentalPrice({super.key});
@@ -11,7 +13,7 @@ class RentalPrice extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Rental price',
+          LocaleKeys.rentalPrice.tr(),
           style: Theme.of(context).textTheme.titleSmall,
         ),
         SizedBox(
@@ -36,7 +38,7 @@ class RentalPrice extends StatelessWidget {
                     ),
               ),
               Text(
-                '/  month',
+                '/  ${LocaleKeys.month.tr()}',
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       color: AppColors.mainGray,
                     ),

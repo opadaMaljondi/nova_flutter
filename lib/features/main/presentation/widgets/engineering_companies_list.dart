@@ -51,8 +51,8 @@ class EngineeringCompaniesLits extends StatelessWidget {
                     child: Image.asset(
                       height: 123.h,
                       width: double.infinity,
-                      fit: BoxFit.fill,
-                      AppAssets.estate1,
+                      fit: BoxFit.cover,
+                      AppAssets.engineeringCompanies2,
                     ),
                   ),
                   SizedBox(

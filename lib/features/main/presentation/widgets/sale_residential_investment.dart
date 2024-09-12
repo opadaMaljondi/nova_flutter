@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class SaleResidentialInestment extends StatelessWidget {
   const SaleResidentialInestment({super.key});
@@ -32,8 +34,8 @@ class SaleResidentialInestment extends StatelessWidget {
                   SizedBox(
                     width: 16.w,
                   ),
-                  const Text(
-                    'sale',
+                  Text(
+                    LocaleKeys.sale.tr(),
                   ),
                   SizedBox(
                     width: 40.w,
@@ -61,8 +63,8 @@ class SaleResidentialInestment extends StatelessWidget {
                   SizedBox(
                     width: 16.w,
                   ),
-                  const Text(
-                    'residential',
+                  Text(
+                    LocaleKeys.residential.tr(),
                   ),
                   SizedBox(
                     width: 40.w,
@@ -92,8 +94,8 @@ class SaleResidentialInestment extends StatelessWidget {
               SizedBox(
                 width: 16.w,
               ),
-              const Text(
-                'investment',
+              Text(
+                LocaleKeys.investment.tr(),
               ),
               SizedBox(
                 width: 40.w,

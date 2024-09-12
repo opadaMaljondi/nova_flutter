@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,6 +9,7 @@ import 'package:photo_view/photo_view.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/helpers/pickers.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/pick_image_from_gallery_or_camera.dart';
 import 'package:real_state/core/widgets/primary_icon_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
@@ -40,7 +42,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                 ),
               ),
               Text(
-                '  Pictures and files  ',
+                '  ${LocaleKeys.picturesAndFiles.tr()}  ',
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                       color: AppColors.mainGray,
                     ),
@@ -56,11 +58,11 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
             height: 24.h,
           ),
           Text(
-            'Pictures of the property',
+            LocaleKeys.picturesOfTheProperty.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           Text(
-            'Please add 3 or more photos',
+            LocaleKeys.pleaseAdd3OrMorePhotos.tr(),
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: AppColors.mainGray,
                 ),
@@ -97,7 +99,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
                                         Text(
-                                          'Choose image from',
+                                          LocaleKeys.choseImageFrom.tr(),
                                           style: Theme.of(context)
                                               .textTheme
                                               .titleLarge,
@@ -148,7 +150,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                                                   height: 8.h,
                                                 ),
                                                 Text(
-                                                  'Gallery',
+                                                  LocaleKeys.gallery.tr(),
                                                   style: Theme.of(context)
                                                       .textTheme
                                                       .titleMedium!
@@ -197,7 +199,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                                                   height: 8.h,
                                                 ),
                                                 Text(
-                                                  'Camera',
+                                                  LocaleKeys.camera.tr(),
                                                   style: Theme.of(context)
                                                       .textTheme
                                                       .titleMedium!
@@ -254,7 +256,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                                   height: 6.h,
                                 ),
                                 Text(
-                                  'Upload the image',
+                                  LocaleKeys.uploadImage.tr(),
                                   textAlign: TextAlign.center,
                                   style: Theme.of(context).textTheme.bodySmall,
                                 ),
@@ -288,7 +290,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
             height: 24.h,
           ),
           Text(
-            'Add a 360 degree photo',
+            LocaleKeys.add360DegreePhoto.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(
@@ -334,7 +336,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
             height: 24.h,
           ),
           Text(
-            'Engineering map',
+            LocaleKeys.engineeringMap.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(
@@ -358,7 +360,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                   width: 10.w,
                 ),
                 Text(
-                  'Upload file',
+                  LocaleKeys.uploadFile.tr(),
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         color: AppColors.primary,
                       ),
@@ -370,7 +372,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
             height: 26.h,
           ),
           Text(
-            'Video link on YouTube',
+            LocaleKeys.videoLinkOnYuTube.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(

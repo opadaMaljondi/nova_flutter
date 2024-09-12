@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_icon_button.dart';
 
 class ChooseImageFrom extends StatelessWidget {
@@ -33,7 +35,7 @@ class ChooseImageFrom extends StatelessWidget {
               height: 8.h,
             ),
             Text(
-              'Gallery',
+              LocaleKeys.gallery.tr(),
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: AppColors.primary,
                   ),
@@ -56,7 +58,7 @@ class ChooseImageFrom extends StatelessWidget {
               height: 8.h,
             ),
             Text(
-              'Camera',
+              LocaleKeys.camera.tr(),
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: AppColors.primary,
                   ),
