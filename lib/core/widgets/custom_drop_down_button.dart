@@ -31,15 +31,10 @@ class CustomDropDownButton extends StatelessWidget {
                 ),
           ),
         ),
-        icon: Transform.rotate(
-          angle: 270 * 3.1416 / 180,
-          child: const Icon(
-            Icons.arrow_back_ios_new,
-          ),
-        ),
+        icon: const Icon(Icons.keyboard_arrow_down_outlined),
         iconEnabledColor: Colors.black,
         iconDisabledColor: Colors.black,
-        iconSize: 14.sp,
+        iconSize: 24.sp,
         items: [
           DropdownMenuItem(
             child: Text(

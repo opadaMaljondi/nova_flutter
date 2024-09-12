@@ -12,6 +12,8 @@ abstract class AppAssets {
   static const String downloadImagePng = "$rootImages/downloadImagePng.png";
   static const String uploadImagePng = "$rootImages/uploadImagePng.png";
   static const String river = "$rootImages/river.jpg";
+  static const String engineeringCompanies2 =
+      "$rootImages/engineering_companies_2.png";
 
   //-------------------------------------------
 
@@ -70,14 +72,19 @@ abstract class AppAssets {
   static const String greenWebsite = "$rootSVGIcons/greenWebsite.svg";
   static const String greenWhatsapp = "$rootSVGIcons/greenWhatsapp.svg";
   static const String greenX = "$rootSVGIcons/greenX.svg";
-  static const String conectArepresentitve = "$rootSVGIcons/conectArepresentitve.svg";
+  static const String conectArepresentitve =
+      "$rootSVGIcons/conectArepresentitve.svg";
   static const String contactSupport = "$rootSVGIcons/contactSupport.svg";
-  static const String engineeringCompanies = "$rootSVGIcons/engineeringCompanies.svg";
+  static const String engineeringCompanies =
+      "$rootSVGIcons/engineeringCompanies.svg";
   static const String investmentAdvisor = "$rootSVGIcons/investmentAdvisor.svg";
   static const String legalAdvisor = "$rootSVGIcons/legalAdvisor.svg";
-  static const String propertyMaintenance = "$rootSVGIcons/propertyMaintenance.svg";
-  static const String realEstateConsultant = "$rootSVGIcons/realEstateConsultant.svg";
-  static const String realEstateCompanies = "$rootSVGIcons/realEstateCompanies.svg";
+  static const String propertyMaintenance =
+      "$rootSVGIcons/propertyMaintenance.svg";
+  static const String realEstateConsultant =
+      "$rootSVGIcons/realEstateConsultant.svg";
+  static const String realEstateCompanies =
+      "$rootSVGIcons/realEstateCompanies.svg";
   static const String greenChat = "$rootSVGIcons/greenChat.svg";
   static const String greenDownload = "$rootSVGIcons/greenDownload.svg";
   static const String greenPdf = "$rootSVGIcons/greenPdf.svg";
@@ -87,6 +94,26 @@ abstract class AppAssets {
   static const String verticalMenu = "$rootSVGIcons/verticalMenu.svg";
   static const String management = "$rootSVGIcons/management.svg";
   static const String realStateNews = "$rootSVGIcons/realStateNews.svg";
+  static const String agricultureCircleIcon =
+      "$rootSVGIcons/agriculture_circle_icon.svg";
+  static const String commericialCircleIcon =
+      "$rootSVGIcons/commericial_circle_icon.svg";
+  static const String cornerPropertyCircleIcon =
+      "$rootSVGIcons/corner_property_circle_icon.svg";
+  static const String indestrialCircleIcon =
+      "$rootSVGIcons/indestrial_circle_icon.svg";
+  static const String investmentCircleIcon =
+      "$rootSVGIcons/investment_circle_icon.svg";
+  static const String negoiableCircleIcon =
+      "$rootSVGIcons/negotiable_circle_icon.svg";
+  static const String rentCircleIcon = "$rootSVGIcons/rent_circle_icon.svg";
+  static const String saleCircleIcon = "$rootSVGIcons/sale_circle_icon.svg";
+  static const String underConstructionCircleIcon =
+      "$rootSVGIcons/under_construction_circle_icon.svg";
+  static const String yearConstruction = "$rootSVGIcons/year_construction.svg";
+  static const String youtubeIcon = "$rootSVGIcons/youtube_icon.svg";
+  static const String residentialCircleIcon =
+      "$rootSVGIcons/residential_circle_icon.svg";
 
   //-------------------------------------------
 

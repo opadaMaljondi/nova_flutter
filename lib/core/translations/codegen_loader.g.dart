@@ -27,7 +27,7 @@ class CodegenLoader extends AssetLoader{
   "chooseYourAccount": "اختر نوع حسابك",
   "firstName": "الاسم الأول",
   "or": "أو",
-  "doYouHaveAnAccount": "لديك حساب",
+  "doYouHaveAnAccount": "لديك حساب؟",
   "lastName": "الأسم الأخير",
   "doAgree": "الموافقة على",
   "conitionsAndPolicy": "الشروط والسياسة",
@@ -42,7 +42,7 @@ class CodegenLoader extends AssetLoader{
   "weWillSendYou": "سوف نرسل لك مرة أخرى في غضون ",
   "WhoAreWe": "من نحن",
   "officialNumbers": "الأرقام الرسمية",
-  "Ceo": ":المدير التنفيذي",
+  "Ceo": "المدير التنفيذي:",
   "officialWebsites": "المواقع الرسمية",
   "realEstateNews": "أخبار العقارات",
   "realEstateOffice": "دلالين",
@@ -134,7 +134,7 @@ class CodegenLoader extends AssetLoader{
   "price": "السعر",
   "monthly": "شهري",
   "dollar": "دولار",
-  "value": ": القيمة",
+  "value": "القيمة:",
   "filters": "الفلاتر",
   "ignore": "تجاهل",
   "messaging": "مراسلة",
@@ -185,7 +185,17 @@ class CodegenLoader extends AssetLoader{
   "showAll": "عرض الكل",
   "titleAbouteUs": "اهلا بك \n بعالم العقارات المتميز",
   "subTitleAboutUs": "يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة",
-  "forAdvertising": ":للإعلان"
+  "forAdvertising": "للإعلان:",
+  "reviewArtical": "مقالات المراجعة",
+  "add": "إضافة",
+  "upgradeToMerchant": "الترقية إلى حساب التاجر؟!",
+  "enterAservice": "أدخل الخدمة",
+  "uploadImage": "قم بتحميل الصورة",
+  "uploadFile": "تحميل الملف",
+  "watchTheVideo": "شاهد الفيديو",
+  "on": "على",
+  "youtube": "اليوتيوب",
+  "theOffice": "المكتب"
 };
 static const Map<String,dynamic> en = {
   "next": "Next",
@@ -200,7 +210,7 @@ static const Map<String,dynamic> en = {
   "chooseYourAccount": "Choose your account type",
   "firstName": "First Name",
   "or": "or",
-  "doYouHaveAnAccount": "Do you have an account",
+  "doYouHaveAnAccount": "Do you have an account?",
   "lastName": "Last Name",
   "doAgree": "Agree to",
   "conitionsAndPolicy": "terms and policy",
@@ -286,7 +296,7 @@ static const Map<String,dynamic> en = {
   "industrial": "industrial",
   "youCanShareOnePost": "You can share one post because you are a personal\\n account and not a merchant account.",
   "propertyType": "Property type",
-  "classifyTheProperty": "Classify the property",
+  "classifyTheProperty": "property classify",
   "sings": "Sings",
   "propertyName": "Property name",
   "propertyAddress": "Property address",
@@ -358,7 +368,17 @@ static const Map<String,dynamic> en = {
   "showAll": "Show All",
   "titleAbouteUs": "Welcome to \n the world of distinguished real estate",
   "subTitleAboutUs": "Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page",
-  "forAdvertising": "For advertising:"
+  "forAdvertising": "For advertising:",
+  "reviewArtical": "Review articles",
+  "add": "Add",
+  "upgradeToMerchant": "Upgrade to a merchant account?!",
+  "enterAservice": "Enter a service",
+  "uploadImage": "Upload the image",
+  "uploadFile": "Upload file",
+  "watchTheVideo": "Watch the video",
+  "on": "on",
+  "youtube": "youtube",
+  "theOffice": "The office"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

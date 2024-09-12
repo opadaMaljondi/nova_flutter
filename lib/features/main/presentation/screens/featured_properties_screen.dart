@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -5,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 import 'package:real_state/features/main/presentation/widgets/properties_card.dart';
@@ -19,8 +21,8 @@ class FeaturedPropertiesScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const PrimaryAppbar(
-                title: 'Featured properties',
+              PrimaryAppbar(
+                title: LocaleKeys.featuredproperties.tr(),
               ),
               Divider(
                 thickness: 0.3,
@@ -36,7 +38,7 @@ class FeaturedPropertiesScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: PrimaryTextField(
-                        hintText: 'Search',
+                        hintText: LocaleKeys.search.tr(),
                         padding: EdgeInsets.zero,
                         fillColor: AppColors.white,
                         prefixIcon: Icon(

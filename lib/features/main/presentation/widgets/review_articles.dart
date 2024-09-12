@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class ReviewArticles extends StatelessWidget {
   const ReviewArticles({super.key});
@@ -12,7 +14,7 @@ class ReviewArticles extends StatelessWidget {
         Padding(
           padding: EdgeInsetsDirectional.only(start: 21.w),
           child: Text(
-            'Review articles',
+            LocaleKeys.reviewArtical.tr(),
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),

@@ -41,7 +41,7 @@ class WhatDoYouWantSection extends StatelessWidget {
               ),
               ShortcutButton(
                 iconPath: AppAssets.apartments,
-                label: LocaleKeys.apartments,
+                label: LocaleKeys.apartments.tr(),
                 onTap: () {},
               ),
             ],

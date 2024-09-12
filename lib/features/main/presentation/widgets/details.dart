@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class Details extends StatelessWidget {
   const Details({super.key});
@@ -11,7 +13,7 @@ class Details extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Details',
+          LocaleKeys.details.tr(),
           style: Theme.of(context).textTheme.titleSmall,
         ),
         SizedBox(
@@ -31,12 +33,14 @@ class Details extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
+                flex: 2,
                 child: Text(
-                  'Property code',
+                  LocaleKeys.propertyCode.tr(),
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: Text(
                   'awaaaaasa89x',
                   style: Theme.of(context).textTheme.titleSmall,
@@ -55,12 +59,14 @@ class Details extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
+                flex: 2,
                 child: Text(
-                  'Property area',
+                  LocaleKeys.propertyArea.tr(),
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: Text(
                   '210',
                   style: Theme.of(context).textTheme.titleSmall,
@@ -79,12 +85,14 @@ class Details extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
+                flex: 2,
                 child: Text(
-                  'Number of bedrooms',
+                  LocaleKeys.numberOfBedrooms.tr(),
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: Text(
                   '8',
                   style: Theme.of(context).textTheme.titleSmall,
@@ -103,12 +111,14 @@ class Details extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
+                flex: 2,
                 child: Text(
-                  'Number of bathrooms',
+                  LocaleKeys.numberOfBathrooms.tr(),
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: Text(
                   '4',
                   style: Theme.of(context).textTheme.titleSmall,
@@ -127,12 +137,14 @@ class Details extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
+                flex: 2,
                 child: Text(
-                  'Number of floors',
+                  LocaleKeys.numberOfFloors.tr(),
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: Text(
                   '5',
                   style: Theme.of(context).textTheme.titleSmall,
@@ -151,12 +163,14 @@ class Details extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
+                flex: 2,
                 child: Text(
-                  'Car parking',
+                  LocaleKeys.carParking.tr(),
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: Text(
                   'There is',
                   style: Theme.of(context).textTheme.titleSmall,
@@ -179,12 +193,14 @@ class Details extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
+                flex: 2,
                 child: Text(
-                  'Property code',
+                  LocaleKeys.yearOfConstruction.tr(),
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: Text(
                   '2020-05-25',
                   style: Theme.of(context).textTheme.titleSmall,
