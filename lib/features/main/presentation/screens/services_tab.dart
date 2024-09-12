@@ -6,6 +6,7 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/service_card.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ServicesTab extends StatefulWidget {
   const ServicesTab({super.key});
@@ -76,6 +77,11 @@ class _ServicesTabState extends State<ServicesTab> {
             onTap: () {
               if (index == 0 || index == 1) {
                 context.push(AppRoutes.ebgineeringComapniesscreen);
+              }else{
+                final Uri uri = Uri.parse(
+                  'https://wa.me/963939754627',
+                );
+                launchUrl(uri);
               }
             },
           );

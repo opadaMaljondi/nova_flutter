@@ -7,6 +7,8 @@ import 'package:real_state/features/main/presentation/widgets/contaci_info.dart'
 import 'package:real_state/features/main/presentation/widgets/named_and_location_company.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
 
+import '../../domain/contact.dart';
+
 class CompanyDetailsScreen extends StatelessWidget {
   const CompanyDetailsScreen({super.key});
 
@@ -59,7 +61,7 @@ class CompanyDetailsScreen extends StatelessWidget {
                     SizedBox(
                       height: 25.h,
                     ),
-                    const ContactInfo(),
+                     ContactInfo(contactInfo:ContactInfoEntity() ,),
                     SizedBox(
                       height: 25.h,
                     ),
