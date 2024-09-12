@@ -348,24 +348,30 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
               color: const Color(0xffD1D8DB).withOpacity(.34),
               borderRadius: BorderRadius.circular(32.r),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  width: 25.w,
-                  height: 25.h,
-                  AppAssets.uploadFile,
+            child: Material(color: AppColors.transparent,
+              child: InkWell(splashColor: AppColors.primary.withOpacity(0.5),
+                borderRadius: BorderRadius.circular(32.r),
+                onTap: () => null,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      width: 25.w,
+                      height: 25.h,
+                      AppAssets.uploadFile,
+                    ),
+                    SizedBox(
+                      width: 10.w,
+                    ),
+                    Text(
+                      LocaleKeys.uploadFile.tr(),
+                      style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                            color: AppColors.primary,
+                          ),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  width: 10.w,
-                ),
-                Text(
-                  LocaleKeys.uploadFile.tr(),
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        color: AppColors.primary,
-                      ),
-                ),
-              ],
+              ),
             ),
           ),
           SizedBox(

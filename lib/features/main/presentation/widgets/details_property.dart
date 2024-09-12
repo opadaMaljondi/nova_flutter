@@ -9,10 +9,17 @@ import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/main/presentation/widgets/custom_counter.dart';
 import 'package:real_state/features/main/presentation/widgets/custom_filter_chip.dart';
 
-class DetailsProperty extends StatelessWidget {
+class DetailsProperty extends StatefulWidget {
   const DetailsProperty({super.key});
 
   @override
+  State<DetailsProperty> createState() => _DetailsPropertyState();
+}
+
+class _DetailsPropertyState extends State<DetailsProperty> {
+  @override
+  bool isSelected = false;
+
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -162,23 +169,32 @@ class DetailsProperty extends StatelessWidget {
             children: [
               CustomFilterChip(
                 label: LocaleKeys.modification.tr(),
-                isSelected: false,
+                isSelected: isSelected,
                 activeColor: AppColors.primary,
-                onSelected: (value) {},
+                onSelected: (value) {
+                  setState(() {
+                    isSelected = !isSelected;
+                  });
+                },
               ),
               SizedBox(
                 width: 10.w,
               ),
               CustomFilterChip(
                 label: LocaleKeys.save.tr(),
-                isSelected: true,
+                isSelected: !isSelected,
                 activeColor: AppColors.primary,
-                onSelected: (value) {},
+                onSelected: (value) {
+                  setState(() {
+                    isSelected = !isSelected;
+                  });
+                },
               ),
             ],
           ),
         ],
       ),
     );
+    ;
   }
 }

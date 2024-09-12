@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/expanded_chip_filter.dart';
 
@@ -33,8 +34,10 @@ class _PropertyClassifyState extends State<PropertyClassify> {
           ExpandedChipFilter(
             label1: LocaleKeys.commercial.tr(),
             label2: LocaleKeys.residential.tr(),
+            backgroundColor2:AppColors.blue ,backgroundColor1: AppColors.blue,
             isSelected1: isSelected1,
             isSelected2: isSelected2,
+
             onTap1: () {
               setState(() {
                 isSelected1 = true;
@@ -60,6 +63,7 @@ class _PropertyClassifyState extends State<PropertyClassify> {
             label2: LocaleKeys.industrial.tr(),
             isSelected1: isSelected3,
             isSelected2: isSelected4,
+            backgroundColor2:AppColors.blue ,backgroundColor1: AppColors.blue,
             onTap1: () {
               setState(() {
                 isSelected1 = false;
