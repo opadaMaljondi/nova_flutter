@@ -20,25 +20,32 @@ class SaleResidentialInestment extends StatelessWidget {
                 color: AppColors.lightGrey,
                 borderRadius: BorderRadius.circular(22.r),
               ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CircleAvatar(
-                    backgroundColor: AppColors.materialPrimary.shade500,
-                    child: const Icon(
-                      Icons.home,
-                    ),
+              child: Material(
+                color: AppColors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(22.r),
+                  onTap: () => null,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: AppColors.materialPrimary.shade500,
+                        child: const Icon(
+                          Icons.home,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 16.w,
+                      ),
+                      const Text(
+                        'sale',
+                      ),
+                      SizedBox(
+                        width: 40.w,
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    width: 16.w,
-                  ),
-                  const Text(
-                    'sale',
-                  ),
-                  SizedBox(
-                    width: 40.w,
-                  ),
-                ],
+                ),
               ),
             ),
             SizedBox(
@@ -49,25 +56,32 @@ class SaleResidentialInestment extends StatelessWidget {
                 color: AppColors.lightGrey,
                 borderRadius: BorderRadius.circular(22.r),
               ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CircleAvatar(
-                    backgroundColor: AppColors.materialPrimary.shade500,
-                    child: const Icon(
-                      Icons.home,
-                    ),
+              child: Material(
+                color: AppColors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(22.r),
+                  onTap: () => null,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: AppColors.materialPrimary.shade500,
+                        child: const Icon(
+                          Icons.home,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 16.w,
+                      ),
+                      const Text(
+                        'residential',
+                      ),
+                      SizedBox(
+                        width: 40.w,
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    width: 16.w,
-                  ),
-                  const Text(
-                    'residential',
-                  ),
-                  SizedBox(
-                    width: 40.w,
-                  ),
-                ],
+                ),
               ),
             ),
           ],
@@ -80,25 +94,32 @@ class SaleResidentialInestment extends StatelessWidget {
             color: AppColors.lightGrey,
             borderRadius: BorderRadius.circular(22.r),
           ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              CircleAvatar(
-                backgroundColor: AppColors.materialPrimary.shade500,
-                child: const Icon(
-                  Icons.home,
-                ),
+          child: Material(
+            color: AppColors.transparent,
+            child: InkWell(
+              onTap: () => null,
+              borderRadius: BorderRadius.circular(22.r),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  CircleAvatar(
+                    backgroundColor: AppColors.materialPrimary.shade500,
+                    child: const Icon(
+                      Icons.home,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 16.w,
+                  ),
+                  const Text(
+                    'investment',
+                  ),
+                  SizedBox(
+                    width: 40.w,
+                  ),
+                ],
               ),
-              SizedBox(
-                width: 16.w,
-              ),
-              const Text(
-                'investment',
-              ),
-              SizedBox(
-                width: 40.w,
-              ),
-            ],
+            ),
           ),
         ),
       ],

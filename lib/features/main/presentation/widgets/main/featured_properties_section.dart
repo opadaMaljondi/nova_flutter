@@ -26,13 +26,11 @@ class FeaturedPropertiesBrokersSection extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             padding: EdgeInsets.symmetric(horizontal: 15.w),
             itemCount: 10,
-            itemBuilder: (context, index) => GestureDetector(
+            itemBuilder: (context, index) => PropertiesCard(
               onTap: () {
                 context.push(AppRoutes.propertiesDetails);
               },
-              child: const PropertiesCard(
-                isFavorite: false,
-              ),
+              isFavorite: false,
             ),
             separatorBuilder: (BuildContext context, int index) => SizedBox(
               width: 10.w,

@@ -33,16 +33,22 @@ class HomeSearchField extends StatelessWidget {
           SizedBox(
             width: 10.w,
           ),
-          GestureDetector(
-            onTap: () {
-              context.push(
-                AppRoutes.filterShapeScreen,
-              );
-            },
-            child: SvgPicture.asset(
-              width: 50.w,
-              height: 50.h,
-              AppAssets.filters,
+          SizedBox(
+            height: 45,
+            width: 45,
+            child: Stack(
+              children: [
+                SvgPicture.asset(
+                  AppAssets.filters,
+                ),
+                Material(
+                  color: AppColors.transparent,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(10.r),
+                    onTap: () => context.push(AppRoutes.filterShapeScreen),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

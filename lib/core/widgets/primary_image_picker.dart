@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -62,40 +63,46 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                 Positioned(
                   bottom: 0.h,
                   right: 0.w,
-                  child: InkWell(
-                    onTap: () {
-                      showDialog(
-                        context: context,
-                        builder: (context) => PrimaryDialog(
-                          title: LocaleKeys.choseImageFrom.tr(),
-                          children: [
-                            PrimaryDialogSourceImagePicker(
-                              onSourceImagePicked: (imageSource) async {
-                                try {
-                                  context.pop();
-                                  File? file;
-                                  if (imageSource == null) {
-                                    file = await Pickers.pickFile();
-                                  } else {
-                                    file = await Pickers.pickImage(imageSource);
-                                  }
-                                  if (file != null) {
-                                    setState(() => this.file = file);
-                                    if (widget.onImagePick != null) {
-                                      widget.onImagePick!.call(file);
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(50.r),
+                    child: Material(
+                      child: InkWell(
+                        onTap: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => PrimaryDialog(
+                              title: LocaleKeys.choseImageFrom.tr(),
+                              children: [
+                                PrimaryDialogSourceImagePicker(
+                                  onSourceImagePicked: (imageSource) async {
+                                    try {
+                                      context.pop();
+                                      File? file;
+                                      if (imageSource == null) {
+                                        file = await Pickers.pickFile();
+                                      } else {
+                                        file = await Pickers.pickImage(imageSource);
+                                      }
+                                      if (file != null) {
+                                        setState(() => this.file = file);
+                                        if (widget.onImagePick != null) {
+                                          widget.onImagePick!.call(file);
+                                        }
+                                      }
+                                    } catch (e, s) {
+                                      final Uri uri = Uri.parse(
+                                          "${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
+                                      launchUrl(uri);
                                     }
-                                  }
-                                } catch (e, s) {
-                                  final Uri uri = Uri.parse("${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
-                                  launchUrl(uri);
-                                }
-                              },
+                                  },
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                      );
-                    },
-                    child: SvgPicture.asset(AppAssets.camera),
+                          );
+                        },
+                        child: SvgPicture.asset(AppAssets.camera),
+                      ),
+                    ),
                   ),
                   //
                 )
@@ -137,7 +144,8 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                                     }
                                   }
                                 } catch (e, s) {
-                                  final Uri uri = Uri.parse("${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
+                                  final Uri uri = Uri.parse(
+                                      "${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
                                   launchUrl(uri);
                                 }
                               },

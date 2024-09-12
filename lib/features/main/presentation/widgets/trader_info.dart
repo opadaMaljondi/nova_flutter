@@ -112,23 +112,35 @@ class TraderInfo extends StatelessWidget {
                           bottomStart: Radius.circular(22.r),
                         ),
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.phone,
-                            color: AppColors.primary,
+                      child: Material(
+                        color: AppColors.transparent,
+                        child: InkWell(
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(22.r),
+                              topLeft: Radius.circular(22.r)),
+                          onTap: () => null,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Icon(
+                                Icons.phone,
+                                color: AppColors.primary,
+                              ),
+                              SizedBox(
+                                width: 14.w,
+                              ),
+                              Text(
+                                'contact',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium!
+                                    .copyWith(
+                                      color: AppColors.primary,
+                                    ),
+                              ),
+                            ],
                           ),
-                          SizedBox(
-                            width: 14.w,
-                          ),
-                          Text(
-                            'contact',
-                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                  color: AppColors.primary,
-                                ),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
@@ -145,22 +157,38 @@ class TraderInfo extends StatelessWidget {
                           topEnd: Radius.circular(22.r),
                         ),
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(
-                            AppAssets.messaging,
+                      child: Material(
+                        color: AppColors.transparent,
+                        child: InkWell(
+                          onTap: () => null,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(22.r),
+                            bottomRight: Radius.circular(22.r),
                           ),
-                          SizedBox(
-                            width: 14.w,
-                          ),
-                          Text(
-                            'Messaging',
-                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                  color: AppColors.primary,
+                          child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset(
+                                  AppAssets.messaging,
                                 ),
+                                SizedBox(
+                                  width: 14.w,
+                                ),
+                                Text(
+                                  'Messaging',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium!
+                                      .copyWith(
+                                        color: AppColors.primary,
+                                      ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ),

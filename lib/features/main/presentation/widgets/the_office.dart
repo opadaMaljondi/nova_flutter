@@ -56,10 +56,25 @@ class TheOffice extends StatelessWidget {
             const Expanded(
               child: SizedBox(),
             ),
-            SvgPicture.asset(
-              height: 56.h,
-              width: 56.w,
-              AppAssets.greenChat,
+            SizedBox(
+              height: 55.h,
+              width: 55.w,
+              child: Stack(alignment: Alignment.center, children: [
+                SvgPicture.asset(
+                  width: 55.w,
+                  height: 55.h,
+                  AppAssets.greenChat,
+                ),
+                Material(
+                  color: AppColors.transparent,
+                  child: InkWell(
+                    splashColor:
+                        AppColors.materialPrimary.shade300.withOpacity(0.4),
+                    onTap: () => null,
+                    borderRadius: BorderRadius.circular(27.r),
+                  ),
+                ),
+              ]),
             ),
             SizedBox(
               width: 40.w,

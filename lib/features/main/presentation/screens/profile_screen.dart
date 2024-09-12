@@ -115,13 +115,11 @@ class ProfileScreen extends StatelessWidget {
                         childAspectRatio: 0.6,
                         crossAxisSpacing: 15,
                       ),
-                      itemBuilder: (context, index) => GestureDetector(
+                      itemBuilder: (context, index) => PropertiesCard(
                         onTap: () {
                           context.push(AppRoutes.propertiesDetails);
                         },
-                        child: const PropertiesCard(
-                          isFavorite: false,
-                        ),
+                        isFavorite: false,
                       ),
                     ),
                     SizedBox(

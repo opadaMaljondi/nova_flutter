@@ -63,12 +63,7 @@ class NewsScreen extends StatelessWidget {
                   bottom: 40.h,
                 ),
                 itemCount: 10,
-                itemBuilder: (context, index) => GestureDetector(
-                  onTap: () {
-                    context.push(AppRoutes.realEstateScreen);
-                  },
-                  child: const NewsCard(),
-                ),
+                itemBuilder: (context, index) => const NewsCard(),
                 separatorBuilder: (BuildContext context, int index) => SizedBox(
                   height: 15.h,
                 ),
