@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class BenefitsAndServicesPropertyDetails extends StatelessWidget {
   const BenefitsAndServicesPropertyDetails({super.key});
@@ -11,7 +13,7 @@ class BenefitsAndServicesPropertyDetails extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Benefits and services',
+          LocaleKeys.benefitsAndServices.tr(),
           style: Theme.of(context).textTheme.titleSmall,
         ),
         SizedBox(
@@ -29,14 +31,14 @@ class BenefitsAndServicesPropertyDetails extends StatelessWidget {
               topStart: Radius.circular(10.r),
             ),
           ),
-          child: const Row(
+          child: Row(
             children: [
               Expanded(
                 child: Text(
-                  'Internet',
+                  LocaleKeys.internet.tr(),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: SizedBox(
                   height: 30,
                   child: VerticalDivider(
@@ -46,7 +48,7 @@ class BenefitsAndServicesPropertyDetails extends StatelessWidget {
               ),
               Expanded(
                 child: Text(
-                  'elevator',
+                  LocaleKeys.elevator.tr(),
                 ),
               ),
             ],
@@ -60,14 +62,14 @@ class BenefitsAndServicesPropertyDetails extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.lightGrey.withOpacity(.38),
           ),
-          child: const Row(
+          child: Row(
             children: [
               Expanded(
                 child: Text(
-                  'Surveillance cameras',
+                  LocaleKeys.surveillanceCameras.tr(),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: SizedBox(
                   height: 30,
                   child: VerticalDivider(
@@ -77,7 +79,7 @@ class BenefitsAndServicesPropertyDetails extends StatelessWidget {
               ),
               Expanded(
                 child: Text(
-                  'swimming pool',
+                  LocaleKeys.swimmingPool.tr(),
                 ),
               ),
             ],
@@ -91,14 +93,14 @@ class BenefitsAndServicesPropertyDetails extends StatelessWidget {
           decoration: const BoxDecoration(
             color: AppColors.lightGrey,
           ),
-          child: const Row(
+          child: Row(
             children: [
               Expanded(
                 child: Text(
-                  'Furnished',
+                  LocaleKeys.furnished.tr(),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: SizedBox(
                   height: 30,
                   child: VerticalDivider(
@@ -108,7 +110,7 @@ class BenefitsAndServicesPropertyDetails extends StatelessWidget {
               ),
               Expanded(
                 child: Text(
-                  'garden',
+                  LocaleKeys.garden.tr(),
                 ),
               ),
             ],

@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/custom_drop_down_button.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 
@@ -21,7 +23,7 @@ class ThePrice extends StatelessWidget {
                 ),
               ),
               Text(
-                '  Price  ',
+                '  ${LocaleKeys.price.tr()}  ',
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                       color: AppColors.mainGray,
                     ),
@@ -38,17 +40,17 @@ class ThePrice extends StatelessWidget {
           ),
           Row(
             children: [
-              const Expanded(
+              Expanded(
                 child: CustomDropDownButton(
-                  hint: 'monthly',
+                  hint: LocaleKeys.monthly.tr(),
                 ),
               ),
               SizedBox(
                 width: 10.w,
               ),
-              const Expanded(
+              Expanded(
                 child: CustomDropDownButton(
-                  hint: 'dollar',
+                  hint: LocaleKeys.dollar.tr(),
                 ),
               ),
             ],
@@ -58,7 +60,7 @@ class ThePrice extends StatelessWidget {
           ),
           PrimaryTextField(
             padding: EdgeInsets.zero,
-            hintText: 'value :',
+            hintText: LocaleKeys.value.tr(),
             hintStyle: Theme.of(context).textTheme.bodyLarge,
             fillColor: const Color(0xffD1D8DB).withOpacity(.34),
           ),

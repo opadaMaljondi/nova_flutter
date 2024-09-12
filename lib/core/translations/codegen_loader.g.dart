@@ -43,6 +43,7 @@ class CodegenLoader extends AssetLoader{
   "WhoAreWe": "من نحن",
   "officialNumbers": "الأرقام الرسمية",
   "Ceo": ":المدير التنفيذي",
+  "froAdvertising": ":للإعلان",
   "officialWebsites": "المواقع الرسمية",
   "realEstateNews": "أخبار العقارات",
   "realEstateOffice": "دلالين",
@@ -185,7 +186,17 @@ class CodegenLoader extends AssetLoader{
   "showAll": "عرض الكل",
   "titleAbouteUs": "اهلا بك \n بعالم العقارات المتميز",
   "subTitleAboutUs": "يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة يمكنك هنا كتابة أي شيء له علاقة بهذه الصفحة",
-  "forAdvertising": ":للإعلان"
+  "forAdvertising": "للإعلان:",
+  "reviewArtical": "مقالات المراجعة",
+  "add": "إضافة",
+  "upgradeToMerchant": "الترقية إلى حساب التاجر؟!",
+  "enterAservice": "أدخل الخدمة",
+  "uploadImage": "قم بتحميل الصورة",
+  "uploadFile": "تحميل الملف",
+  "watchTheVideo": "شاهد الفيديو",
+  "on": "على",
+  "youtube": "اليوتيوب",
+  "theOffice": "المكتب"
 };
 static const Map<String,dynamic> en = {
   "next": "Next",
@@ -216,6 +227,7 @@ static const Map<String,dynamic> en = {
   "WhoAreWe": "Who are we",
   "officialNumbers": "Official numbers",
   "Ceo": "CEO:",
+  "froAdvertising": "For advertising:",
   "officialWebsites": "Official websites",
   "realEstateNews": "Real Estate News",
   "realEstateOffice": "Real estate office",
@@ -355,10 +367,7 @@ static const Map<String,dynamic> en = {
   "realstateForRent": "Real State For Rent",
   "realstateRented": "Real State Rented",
   "myRealSate": "My Real State",
-  "showAll": "Show All",
-  "titleAbouteUs": "Welcome to \n the world of distinguished real estate",
-  "subTitleAboutUs": "Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page",
-  "forAdvertising": "For advertising:"
+  "showAll": "Show All"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/expanded_chip_filter.dart';
 
 class Signs extends StatefulWidget {
@@ -22,15 +24,15 @@ class _SignsState extends State<Signs> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'signs',
+            LocaleKeys.sings.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(
             height: 12.h,
           ),
           ExpandedChipFilter(
-            label1: "commercial",
-            label2: 'residential',
+            label1: LocaleKeys.commercial.tr(),
+            label2: LocaleKeys.residential.tr(),
             isSelected1: isSelected1,
             isSelected2: isSelected2,
             onTap1: () {
@@ -54,8 +56,8 @@ class _SignsState extends State<Signs> {
             height: 8.h,
           ),
           ExpandedChipFilter(
-            label1: "agricultural",
-            label2: 'industrial',
+            label1: LocaleKeys.agricultural.tr(),
+            label2: LocaleKeys.industrial.tr(),
             isSelected1: isSelected3,
             isSelected2: isSelected4,
             onTap1: () {

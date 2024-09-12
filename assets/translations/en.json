@@ -27,6 +27,7 @@
   "WhoAreWe": "Who are we",
   "officialNumbers": "Official numbers",
   "Ceo": "CEO:",
+  "froAdvertising": "For advertising:",
   "officialWebsites": "Official websites",
   "realEstateNews": "Real Estate News",
   "realEstateOffice": "Real estate office",
@@ -169,5 +170,15 @@
   "showAll": "Show All",
   "titleAbouteUs": "Welcome to \n the world of distinguished real estate",
   "subTitleAboutUs": "Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page",
-  "forAdvertising": "For advertising:"
+  "forAdvertising": "For advertising:",
+  "reviewArtical": "Review articles",
+  "add": "Add",
+  "upgradeToMerchant": "Upgrade to a merchant account?!",
+  "enterAservice": "Enter a service",
+  "uploadImage": "Upload the image",
+  "uploadFile": "Upload file",
+  "watchTheVideo": "Watch the video",
+  "on": "on",
+  "youtube": "youtube",
+  "theOffice": "The office"
 }

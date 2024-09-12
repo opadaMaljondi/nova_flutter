@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class EngineerinigMap extends StatelessWidget {
   const EngineerinigMap({super.key});
@@ -13,32 +14,35 @@ class EngineerinigMap extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Engineering map',
+          LocaleKeys.engineeringMap.tr(),
           style: Theme.of(context).textTheme.titleSmall,
         ),
         SizedBox(
           height: 20.h,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SvgPicture.asset(
-              width: 33.w,
-              height: 43.h,
-              AppAssets.greenPdf,
-            ),
-            SizedBox(
-              width: 5.w,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Row(
               children: [
-                Text(
-                  'Woodland Engineering.jpeg',
-                  style: Theme.of(context).textTheme.titleSmall,
+                SvgPicture.asset(
+                  width: 33.w,
+                  height: 43.h,
+                  AppAssets.greenPdf,
                 ),
-                Text(
-                  '15 MB',
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                SizedBox(
+                  width: 8.w,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Woodland Engineering.jpeg',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                    Text(
+                      '15 MB',
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: AppColors.gray,
                       ),
                 ),

@@ -1,5 +1,8 @@
-import 'package:flutter/cupertino.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/features/main/presentation/widgets/notifivations_list_view_item.dart';
 
 class NotifcationsListView extends StatelessWidget {
@@ -20,7 +23,32 @@ class NotifcationsListView extends StatelessWidget {
         );
       },
       itemBuilder: (context, index) {
-        return const NotificationsListViewItem();
+        return Slidable(
+          useTextDirection: true,
+          endActionPane: ActionPane(
+            motion: const StretchMotion(),
+            extentRatio: 0.3,
+            children: [
+              SlidableAction(
+                backgroundColor: Colors.red,
+                icon: Icons.delete,
+                
+                autoClose: false,
+                borderRadius: context.locale.languageCode == 'en'
+                    ? BorderRadius.horizontal(
+                        right: Radius.circular(12.r),
+                      )
+                    : BorderRadius.horizontal(
+                        left: Radius.circular(12.r),
+                      ),
+                foregroundColor: AppColors.white,
+                label: 'Delete',
+                onPressed: (context) {},
+              ),
+            ],
+          ),
+          child: const NotificationsListViewItem(),
+        );
       },
     );
   }

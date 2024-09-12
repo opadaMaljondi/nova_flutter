@@ -78,9 +78,10 @@ class TraderInfo extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const Icon(
-                    Icons.phone,
-                    color: Colors.white,
+                  SvgPicture.asset(
+                    AppAssets.greenPhone,
+                    // ignore: deprecated_member_use
+                    color: AppColors.white,
                   ),
                   SizedBox(
                     width: 10.w,

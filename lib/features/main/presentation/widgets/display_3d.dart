@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:real_state/core/constants/app_assets.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 
 class Display3D extends StatefulWidget {
@@ -41,7 +43,7 @@ class _Display3DState extends State<Display3D> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '3D display',
+          LocaleKeys.display3D.tr(),
           style: Theme.of(context).textTheme.titleSmall,
         ),
         SizedBox(

@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 
 class PropertyInfo extends StatelessWidget {
@@ -13,7 +15,7 @@ class PropertyInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Property name',
+            LocaleKeys.propertyName.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(
@@ -27,7 +29,7 @@ class PropertyInfo extends StatelessWidget {
             height: 15.h,
           ),
           Text(
-            'Property address',
+            LocaleKeys.propertyAddress.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(
@@ -41,7 +43,7 @@ class PropertyInfo extends StatelessWidget {
             height: 15.h,
           ),
           Text(
-            'City',
+            LocaleKeys.city.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(
@@ -55,7 +57,7 @@ class PropertyInfo extends StatelessWidget {
             height: 15.h,
           ),
           Text(
-            'Description',
+            LocaleKeys.description.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(

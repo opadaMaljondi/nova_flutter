@@ -29,6 +29,7 @@ abstract class  LocaleKeys {
   static const WhoAreWe = 'WhoAreWe';
   static const officialNumbers = 'officialNumbers';
   static const Ceo = 'Ceo';
+  static const froAdvertising = 'froAdvertising';
   static const officialWebsites = 'officialWebsites';
   static const realEstateNews = 'realEstateNews';
   static const realEstateOffice = 'realEstateOffice';
@@ -172,5 +173,15 @@ abstract class  LocaleKeys {
   static const titleAbouteUs = 'titleAbouteUs';
   static const subTitleAboutUs = 'subTitleAboutUs';
   static const forAdvertising = 'forAdvertising';
+  static const reviewArtical = 'reviewArtical';
+  static const add = 'add';
+  static const upgradeToMerchant = 'upgradeToMerchant';
+  static const enterAservice = 'enterAservice';
+  static const uploadImage = 'uploadImage';
+  static const uploadFile = 'uploadFile';
+  static const watchTheVideo = 'watchTheVideo';
+  static const on = 'on';
+  static const youtube = 'youtube';
+  static const theOffice = 'theOffice';
 
 }

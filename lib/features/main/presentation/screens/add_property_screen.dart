@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/benifits_and_services.dart';
 import 'package:real_state/features/main/presentation/widgets/details_property.dart';
 import 'package:real_state/features/main/presentation/widgets/filters_.dart';
@@ -24,8 +26,8 @@ class AddPropertyScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const PrimaryAppbar(
-              title: 'addition',
+            PrimaryAppbar(
+              title: LocaleKeys.add.tr(),
             ),
             Divider(
               thickness: 0.3,
@@ -51,7 +53,7 @@ class AddPropertyScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'You can share one post because you are a personal account and not a merchant account.',
+                          LocaleKeys.youCanShareOnePost.tr(),
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         SizedBox(
@@ -60,7 +62,7 @@ class AddPropertyScreen extends StatelessWidget {
                         Align(
                           alignment: Alignment.center,
                           child: Text(
-                            'Upgrade to a merchant account?!',
+                            LocaleKeys.upgradeToMerchant.tr(),
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium!

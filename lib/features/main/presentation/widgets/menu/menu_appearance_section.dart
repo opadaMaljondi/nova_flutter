@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:logger/logger.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/features/main/presentation/widgets/setting_card.dart';
-
 import '../../../../../core/translations/local_keys.g.dart';
 
 class MenuAppearanceSection extends StatelessWidget {
@@ -53,7 +53,14 @@ class MenuAppearanceSection extends StatelessWidget {
               SettingCard(
                 name: LocaleKeys.language.tr(),
                 iconPath: AppAssets.language,
-                onTap: () {},
+                onTap: () {
+                  Logger().w(context.locale.languageCode);
+                  context.setLocale(
+                    Locale(
+                      context.locale.languageCode == 'ar' ? 'en' : 'ar',
+                    ),
+                  );
+                },
               ),
             ],
           ),

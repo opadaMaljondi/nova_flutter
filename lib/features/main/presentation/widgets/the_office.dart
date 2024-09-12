@@ -13,48 +13,50 @@ class TheOffice extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'The office',
+          LocaleKeys.theOffice.tr(),
           style: Theme.of(context).textTheme.titleSmall,
         ),
         SizedBox(
           height: 16.h,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SvgPicture.asset(
-              width: 69.w,
-              height: 69.h,
-              fit: BoxFit.fill,
-              AppAssets.profile,
-            ),
-            SizedBox(
-              width: 20.w,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Row(
               children: [
-                Text(
-                  'Ahmed Mansour',
-                  style: Theme.of(context).textTheme.titleSmall,
+                SvgPicture.asset(
+                  width: 69.w,
+                  height: 69.h,
+                  fit: BoxFit.fill,
+                  AppAssets.profile,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                SizedBox(
+                  width: 20.w,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(
-                      Icons.location_on,
-                      color: AppColors.primary,
-                      size: 16.sp,
-                    ),
                     Text(
-                      'Abu Dhabi',
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      'Ahmed Mansour',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: AppColors.primary,
+                          size: 16.sp,
+                        ),
+                        Text(
+                          'Abu Dhabi',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ],
-            ),
-            const Expanded(
-              child: SizedBox(),
             ),
             SizedBox(
               height: 55.h,
