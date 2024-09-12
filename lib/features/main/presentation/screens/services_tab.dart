@@ -89,7 +89,7 @@ class ServiceDataCard {
   final String title;
   final String iconPath;
 
-  ServiceDataCard({
+  const ServiceDataCard({
     required this.title,
     required this.iconPath,
   });

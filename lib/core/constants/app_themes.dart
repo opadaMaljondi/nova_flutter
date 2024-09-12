@@ -41,7 +41,7 @@ abstract class AppThemes {
       headlineLarge: TextStyle(
         fontSize: 28.sp,
         fontWeight: FontWeight.w700,
-        color: AppColors.black10,
+        color: AppColors.black,
       ),
       headlineMedium: TextStyle(
         fontSize: 26.sp,
