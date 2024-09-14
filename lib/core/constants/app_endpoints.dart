@@ -9,5 +9,12 @@ abstract class AppEndpoints {
   static const String getUser = "$apiVersion/users/personal-information";
   static const String refreshToken = "$apiVersion/users/personal-information";
 
+  // Companies Routes
+  static const String getCompanies =
+      "$apiVersion/user/companies?type=real_estate_companies";
+
+  // News Routes
+  static const String getNews = "$apiVersion/user/allNews";
+
 ////-------------------------------------------
 }

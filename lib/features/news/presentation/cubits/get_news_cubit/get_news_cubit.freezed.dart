@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'feature_cubit.dart';
+part of 'get_news_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,14 +15,13 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$FeatureState {
+mixin _$GetNewsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() loaded,
-    required TResult Function() changeTabSuccess,
-    required TResult Function() logoutSuccess,
+    required TResult Function() componentChanged,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -31,8 +30,7 @@ mixin _$FeatureState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? loaded,
-    TResult? Function()? changeTabSuccess,
-    TResult? Function()? logoutSuccess,
+    TResult? Function()? componentChanged,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -41,8 +39,7 @@ mixin _$FeatureState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? loaded,
-    TResult Function()? changeTabSuccess,
-    TResult Function()? logoutSuccess,
+    TResult Function()? componentChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -52,8 +49,7 @@ mixin _$FeatureState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_ChangeTabSuccess value) changeTabSuccess,
-    required TResult Function(_ComponentChanged value) logoutSuccess,
+    required TResult Function(_ComponentChanged value) componentChanged,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -62,8 +58,7 @@ mixin _$FeatureState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult? Function(_ComponentChanged value)? logoutSuccess,
+    TResult? Function(_ComponentChanged value)? componentChanged,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -72,8 +67,7 @@ mixin _$FeatureState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult Function(_ComponentChanged value)? logoutSuccess,
+    TResult Function(_ComponentChanged value)? componentChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -81,15 +75,16 @@ mixin _$FeatureState {
 }
 
 /// @nodoc
-abstract class $MainStateCopyWith<$Res> {
-  factory $MainStateCopyWith(FeatureState value, $Res Function(FeatureState) then) =
-      _$MainStateCopyWithImpl<$Res, FeatureState>;
+abstract class $GetNewsStateCopyWith<$Res> {
+  factory $GetNewsStateCopyWith(
+          GetNewsState value, $Res Function(GetNewsState) then) =
+      _$GetNewsStateCopyWithImpl<$Res, GetNewsState>;
 }
 
 /// @nodoc
-class _$MainStateCopyWithImpl<$Res, $Val extends FeatureState>
-    implements $MainStateCopyWith<$Res> {
-  _$MainStateCopyWithImpl(this._value, this._then);
+class _$GetNewsStateCopyWithImpl<$Res, $Val extends GetNewsState>
+    implements $GetNewsStateCopyWith<$Res> {
+  _$GetNewsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -106,7 +101,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$MainStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$GetNewsStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -120,7 +115,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'MainState.initial()';
+    return 'GetNewsState.initial()';
   }
 
   @override
@@ -138,8 +133,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() loaded,
-    required TResult Function() changeTabSuccess,
-    required TResult Function() logoutSuccess,
+    required TResult Function() componentChanged,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -151,8 +145,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? loaded,
-    TResult? Function()? changeTabSuccess,
-    TResult? Function()? logoutSuccess,
+    TResult? Function()? componentChanged,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -164,8 +157,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? loaded,
-    TResult Function()? changeTabSuccess,
-    TResult Function()? logoutSuccess,
+    TResult Function()? componentChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -181,8 +173,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_ChangeTabSuccess value) changeTabSuccess,
-    required TResult Function(_ComponentChanged value) logoutSuccess,
+    required TResult Function(_ComponentChanged value) componentChanged,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -194,8 +185,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult? Function(_ComponentChanged value)? logoutSuccess,
+    TResult? Function(_ComponentChanged value)? componentChanged,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -207,8 +197,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult Function(_ComponentChanged value)? logoutSuccess,
+    TResult Function(_ComponentChanged value)? componentChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -219,7 +208,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements FeatureState {
+abstract class _Initial implements GetNewsState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -232,7 +221,7 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$MainStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$GetNewsStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
@@ -246,7 +235,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'MainState.loading()';
+    return 'GetNewsState.loading()';
   }
 
   @override
@@ -264,8 +253,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() loaded,
-    required TResult Function() changeTabSuccess,
-    required TResult Function() logoutSuccess,
+    required TResult Function() componentChanged,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -277,8 +265,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? loaded,
-    TResult? Function()? changeTabSuccess,
-    TResult? Function()? logoutSuccess,
+    TResult? Function()? componentChanged,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -290,8 +277,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? loaded,
-    TResult Function()? changeTabSuccess,
-    TResult Function()? logoutSuccess,
+    TResult Function()? componentChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -307,8 +293,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_ChangeTabSuccess value) changeTabSuccess,
-    required TResult Function(_ComponentChanged value) logoutSuccess,
+    required TResult Function(_ComponentChanged value) componentChanged,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -320,8 +305,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult? Function(_ComponentChanged value)? logoutSuccess,
+    TResult? Function(_ComponentChanged value)? componentChanged,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -333,8 +317,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult Function(_ComponentChanged value)? logoutSuccess,
+    TResult Function(_ComponentChanged value)? componentChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -345,7 +328,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements FeatureState {
+abstract class _Loading implements GetNewsState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -358,7 +341,7 @@ abstract class _$$LoadedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$MainStateCopyWithImpl<$Res, _$LoadedImpl>
+    extends _$GetNewsStateCopyWithImpl<$Res, _$LoadedImpl>
     implements _$$LoadedImplCopyWith<$Res> {
   __$$LoadedImplCopyWithImpl(
       _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
@@ -372,7 +355,7 @@ class _$LoadedImpl implements _Loaded {
 
   @override
   String toString() {
-    return 'MainState.loaded()';
+    return 'GetNewsState.loaded()';
   }
 
   @override
@@ -390,8 +373,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() loaded,
-    required TResult Function() changeTabSuccess,
-    required TResult Function() logoutSuccess,
+    required TResult Function() componentChanged,
     required TResult Function(String message) error,
   }) {
     return loaded();
@@ -403,8 +385,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? loaded,
-    TResult? Function()? changeTabSuccess,
-    TResult? Function()? logoutSuccess,
+    TResult? Function()? componentChanged,
     TResult? Function(String message)? error,
   }) {
     return loaded?.call();
@@ -416,8 +397,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? loaded,
-    TResult Function()? changeTabSuccess,
-    TResult Function()? logoutSuccess,
+    TResult Function()? componentChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -433,8 +413,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_ChangeTabSuccess value) changeTabSuccess,
-    required TResult Function(_ComponentChanged value) logoutSuccess,
+    required TResult Function(_ComponentChanged value) componentChanged,
     required TResult Function(_Error value) error,
   }) {
     return loaded(this);
@@ -446,8 +425,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult? Function(_ComponentChanged value)? logoutSuccess,
+    TResult? Function(_ComponentChanged value)? componentChanged,
     TResult? Function(_Error value)? error,
   }) {
     return loaded?.call(this);
@@ -459,8 +437,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult Function(_ComponentChanged value)? logoutSuccess,
+    TResult Function(_ComponentChanged value)? componentChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -471,40 +448,40 @@ class _$LoadedImpl implements _Loaded {
   }
 }
 
-abstract class _Loaded implements FeatureState {
+abstract class _Loaded implements GetNewsState {
   const factory _Loaded() = _$LoadedImpl;
 }
 
 /// @nodoc
-abstract class _$$ChangeTabSuccessImplCopyWith<$Res> {
-  factory _$$ChangeTabSuccessImplCopyWith(_$ChangeTabSuccessImpl value,
-          $Res Function(_$ChangeTabSuccessImpl) then) =
-      __$$ChangeTabSuccessImplCopyWithImpl<$Res>;
+abstract class _$$ComponentChangedImplCopyWith<$Res> {
+  factory _$$ComponentChangedImplCopyWith(_$ComponentChangedImpl value,
+          $Res Function(_$ComponentChangedImpl) then) =
+      __$$ComponentChangedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ChangeTabSuccessImplCopyWithImpl<$Res>
-    extends _$MainStateCopyWithImpl<$Res, _$ChangeTabSuccessImpl>
-    implements _$$ChangeTabSuccessImplCopyWith<$Res> {
-  __$$ChangeTabSuccessImplCopyWithImpl(_$ChangeTabSuccessImpl _value,
-      $Res Function(_$ChangeTabSuccessImpl) _then)
+class __$$ComponentChangedImplCopyWithImpl<$Res>
+    extends _$GetNewsStateCopyWithImpl<$Res, _$ComponentChangedImpl>
+    implements _$$ComponentChangedImplCopyWith<$Res> {
+  __$$ComponentChangedImplCopyWithImpl(_$ComponentChangedImpl _value,
+      $Res Function(_$ComponentChangedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
-  const _$ChangeTabSuccessImpl();
+class _$ComponentChangedImpl implements _ComponentChanged {
+  const _$ComponentChangedImpl();
 
   @override
   String toString() {
-    return 'MainState.changeTabSuccess()';
+    return 'GetNewsState.componentChanged()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ChangeTabSuccessImpl);
+        (other.runtimeType == runtimeType && other is _$ComponentChangedImpl);
   }
 
   @override
@@ -516,11 +493,10 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() loaded,
-    required TResult Function() changeTabSuccess,
-    required TResult Function() logoutSuccess,
+    required TResult Function() componentChanged,
     required TResult Function(String message) error,
   }) {
-    return changeTabSuccess();
+    return componentChanged();
   }
 
   @override
@@ -529,11 +505,10 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? loaded,
-    TResult? Function()? changeTabSuccess,
-    TResult? Function()? logoutSuccess,
+    TResult? Function()? componentChanged,
     TResult? Function(String message)? error,
   }) {
-    return changeTabSuccess?.call();
+    return componentChanged?.call();
   }
 
   @override
@@ -542,13 +517,12 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? loaded,
-    TResult Function()? changeTabSuccess,
-    TResult Function()? logoutSuccess,
+    TResult Function()? componentChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
-    if (changeTabSuccess != null) {
-      return changeTabSuccess();
+    if (componentChanged != null) {
+      return componentChanged();
     }
     return orElse();
   }
@@ -559,11 +533,10 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_ChangeTabSuccess value) changeTabSuccess,
-    required TResult Function(_ComponentChanged value) logoutSuccess,
+    required TResult Function(_ComponentChanged value) componentChanged,
     required TResult Function(_Error value) error,
   }) {
-    return changeTabSuccess(this);
+    return componentChanged(this);
   }
 
   @override
@@ -572,11 +545,10 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult? Function(_ComponentChanged value)? logoutSuccess,
+    TResult? Function(_ComponentChanged value)? componentChanged,
     TResult? Function(_Error value)? error,
   }) {
-    return changeTabSuccess?.call(this);
+    return componentChanged?.call(this);
   }
 
   @override
@@ -585,146 +557,19 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult Function(_ComponentChanged value)? logoutSuccess,
+    TResult Function(_ComponentChanged value)? componentChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
-    if (changeTabSuccess != null) {
-      return changeTabSuccess(this);
+    if (componentChanged != null) {
+      return componentChanged(this);
     }
     return orElse();
   }
 }
 
-abstract class _ChangeTabSuccess implements FeatureState {
-  const factory _ChangeTabSuccess() = _$ChangeTabSuccessImpl;
-}
-
-/// @nodoc
-abstract class _$$LogoutSuccessImplCopyWith<$Res> {
-  factory _$$LogoutSuccessImplCopyWith(
-          _$LogoutSuccessImpl value, $Res Function(_$LogoutSuccessImpl) then) =
-      __$$LogoutSuccessImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LogoutSuccessImplCopyWithImpl<$Res>
-    extends _$MainStateCopyWithImpl<$Res, _$LogoutSuccessImpl>
-    implements _$$LogoutSuccessImplCopyWith<$Res> {
-  __$$LogoutSuccessImplCopyWithImpl(
-      _$LogoutSuccessImpl _value, $Res Function(_$LogoutSuccessImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LogoutSuccessImpl implements _ComponentChanged {
-  const _$LogoutSuccessImpl();
-
-  @override
-  String toString() {
-    return 'MainState.logoutSuccess()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LogoutSuccessImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() loaded,
-    required TResult Function() changeTabSuccess,
-    required TResult Function() logoutSuccess,
-    required TResult Function(String message) error,
-  }) {
-    return logoutSuccess();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? loaded,
-    TResult? Function()? changeTabSuccess,
-    TResult? Function()? logoutSuccess,
-    TResult? Function(String message)? error,
-  }) {
-    return logoutSuccess?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? loaded,
-    TResult Function()? changeTabSuccess,
-    TResult Function()? logoutSuccess,
-    TResult Function(String message)? error,
-    required TResult orElse(),
-  }) {
-    if (logoutSuccess != null) {
-      return logoutSuccess();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_ChangeTabSuccess value) changeTabSuccess,
-    required TResult Function(_ComponentChanged value) logoutSuccess,
-    required TResult Function(_Error value) error,
-  }) {
-    return logoutSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult? Function(_ComponentChanged value)? logoutSuccess,
-    TResult? Function(_Error value)? error,
-  }) {
-    return logoutSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult Function(_ComponentChanged value)? logoutSuccess,
-    TResult Function(_Error value)? error,
-    required TResult orElse(),
-  }) {
-    if (logoutSuccess != null) {
-      return logoutSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ComponentChanged implements FeatureState {
-  const factory _ComponentChanged() = _$LogoutSuccessImpl;
+abstract class _ComponentChanged implements GetNewsState {
+  const factory _ComponentChanged() = _$ComponentChangedImpl;
 }
 
 /// @nodoc
@@ -738,7 +583,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$MainStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$GetNewsStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
@@ -768,7 +613,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'MainState.error(message: $message)';
+    return 'GetNewsState.error(message: $message)';
   }
 
   @override
@@ -794,8 +639,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() loaded,
-    required TResult Function() changeTabSuccess,
-    required TResult Function() logoutSuccess,
+    required TResult Function() componentChanged,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -807,8 +651,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? loaded,
-    TResult? Function()? changeTabSuccess,
-    TResult? Function()? logoutSuccess,
+    TResult? Function()? componentChanged,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -820,8 +663,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? loaded,
-    TResult Function()? changeTabSuccess,
-    TResult Function()? logoutSuccess,
+    TResult Function()? componentChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -837,8 +679,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_ChangeTabSuccess value) changeTabSuccess,
-    required TResult Function(_ComponentChanged value) logoutSuccess,
+    required TResult Function(_ComponentChanged value) componentChanged,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -850,8 +691,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult? Function(_ComponentChanged value)? logoutSuccess,
+    TResult? Function(_ComponentChanged value)? componentChanged,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -863,8 +703,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_ChangeTabSuccess value)? changeTabSuccess,
-    TResult Function(_ComponentChanged value)? logoutSuccess,
+    TResult Function(_ComponentChanged value)? componentChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -875,7 +714,7 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements FeatureState {
+abstract class _Error implements GetNewsState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
