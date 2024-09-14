@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:logger/logger.dart';
 import 'package:real_state/core/enums/general_states.dart';
@@ -18,13 +17,8 @@ class GetNewsCubit extends Cubit<GetNewsState> {
   final GetNewsUseCase getNewsUseCase = InjectionContainer.getIt();
   GeneralStates generalState = GeneralStates.init;
 
-  /// Controllers
-  final TextEditingController searchTextController = TextEditingController();
-
   /// Data
   List<News> news = [];
-
-  /// variables
 
   /// functions
   Future<void> getNews() async {

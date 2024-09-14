@@ -25,7 +25,9 @@ class CompanyRepoImpl implements CompanyRepo {
       InjectionContainer.getIt<Logger>().e(
         "End `getCompanies` in |CompanyRepoImpl| Exception: ${e.runtimeType} $s",
       );
-      return Left(StateManagerService.getFailureFromException(e));
+      return Left(
+        StateManagerService.getFailureFromException(e),
+      );
     }
   }
 }

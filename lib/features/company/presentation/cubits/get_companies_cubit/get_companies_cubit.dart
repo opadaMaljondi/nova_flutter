@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:logger/logger.dart';
 import 'package:real_state/core/enums/general_states.dart';
@@ -18,13 +17,8 @@ class GetCompaniesCubit extends Cubit<GetCompaniesState> {
   final GetCompaniesUseCase getCompaniesUseCase = InjectionContainer.getIt();
   GeneralStates generalState = GeneralStates.init;
 
-  /// Controllers
-  final TextEditingController searchTextController = TextEditingController();
-
   /// Data
   List<Company> companies = [];
-
-  /// variables
 
   /// functions
   Future<void> getCompanies() async {
@@ -51,7 +45,7 @@ class GetCompaniesCubit extends Cubit<GetCompaniesState> {
       },
     );
     InjectionContainer.getIt<Logger>().w(
-      "End `getgetCompaniesFeatures` in |CompaniesCubit| General State:$generalState",
+      "End `getCompanies` in |CompaniesCubit| General State:$generalState",
     );
   }
 

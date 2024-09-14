@@ -16,5 +16,9 @@ abstract class AppEndpoints {
   // News Routes
   static const String getNews = "$apiVersion/user/allNews";
 
+  // Favorites
+  static const String addFavorite = "$apiVersion/user/addFav/";
+  static const String removeFavorite = "$apiVersion/user/addFav/";
+
 ////-------------------------------------------
 }
