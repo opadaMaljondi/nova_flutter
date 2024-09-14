@@ -26,9 +26,9 @@ abstract class  LocaleKeys {
   static const verificationCode = 'verificationCode';
   static const complete = 'complete';
   static const weWillSendYou = 'weWillSendYou';
-  static const WhoAreWe = 'WhoAreWe';
+  static const whoAreWe = 'whoAreWe';
   static const officialNumbers = 'officialNumbers';
-  static const Ceo = 'Ceo';
+  static const ceo = 'ceo';
   static const froAdvertising = 'froAdvertising';
   static const officialWebsites = 'officialWebsites';
   static const realEstateNews = 'realEstateNews';

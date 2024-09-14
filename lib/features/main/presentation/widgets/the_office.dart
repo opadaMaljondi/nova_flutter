@@ -75,7 +75,7 @@ class TheOffice extends StatelessWidget {
                   child: InkWell(
                     splashColor:
                         AppColors.materialPrimary.shade300.withOpacity(0.4),
-                    onTap: () => null,
+                    onTap: () {},
                     borderRadius: BorderRadius.circular(27.r),
                   ),
                 ),

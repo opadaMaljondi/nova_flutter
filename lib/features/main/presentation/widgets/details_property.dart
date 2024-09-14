@@ -17,9 +17,9 @@ class DetailsProperty extends StatefulWidget {
 }
 
 class _DetailsPropertyState extends State<DetailsProperty> {
-  @override
   bool isSelected = false;
 
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -35,10 +35,7 @@ class _DetailsPropertyState extends State<DetailsProperty> {
               ),
               Text(
                 '  ${LocaleKeys.details.tr()}  ',
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyLarge!
-                    .copyWith(color: AppColors.mainGray),
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColors.mainGray),
               ),
               const Expanded(
                 child: Divider(color: AppColors.mainGray),
@@ -195,6 +192,5 @@ class _DetailsPropertyState extends State<DetailsProperty> {
         ],
       ),
     );
-    ;
   }
 }

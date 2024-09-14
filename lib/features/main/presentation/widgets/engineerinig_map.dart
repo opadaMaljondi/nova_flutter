@@ -66,7 +66,7 @@ class EngineerinigMap extends StatelessWidget {
                   child: InkWell(
                     splashColor:
                         AppColors.materialPrimary.shade300.withOpacity(0.3),
-                    onTap: () => null,
+                    onTap: () {},
                     borderRadius: BorderRadius.circular(5.r),
                   ),
                 ),

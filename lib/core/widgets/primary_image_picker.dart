@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -90,8 +89,7 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                                         }
                                       }
                                     } catch (e, s) {
-                                      final Uri uri = Uri.parse(
-                                          "${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
+                                      final Uri uri = Uri.parse("${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
                                       launchUrl(uri);
                                     }
                                   },
@@ -144,8 +142,7 @@ class _PrimaryImagePickerState extends State<PrimaryImagePicker> {
                                     }
                                   }
                                 } catch (e, s) {
-                                  final Uri uri = Uri.parse(
-                                      "${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
+                                  final Uri uri = Uri.parse("${AppEndpoints.getUser}=Error:\n$e \nStack:\n$s");
                                   launchUrl(uri);
                                 }
                               },

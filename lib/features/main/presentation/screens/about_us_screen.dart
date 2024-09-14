@@ -38,7 +38,7 @@ class AboutUsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     PrimaryAppbar(
-                      title: LocaleKeys.WhoAreWe.tr(),
+                      title: LocaleKeys.whoAreWe.tr(),
                     ),
                     Divider(
                       thickness: 0.3,

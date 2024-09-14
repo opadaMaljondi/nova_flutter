@@ -29,7 +29,7 @@ class SearchFilterMyRent extends StatelessWidget {
                   color: AppColors.transparent,
                   child: InkWell(
                     borderRadius: BorderRadius.circular(10.r),
-                    onTap: () => null,
+                    onTap: () {},
                   ),
                 ),
               ],

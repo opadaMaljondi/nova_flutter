@@ -351,7 +351,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
             child: Material(color: AppColors.transparent,
               child: InkWell(splashColor: AppColors.primary.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(32.r),
-                onTap: () => null,
+                onTap: () {},
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

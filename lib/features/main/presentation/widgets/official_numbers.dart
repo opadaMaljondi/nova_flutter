@@ -30,7 +30,7 @@ class OfficialNumbers extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  LocaleKeys.Ceo.tr(),
+                  LocaleKeys.ceo.tr(),
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.black,
                       ),

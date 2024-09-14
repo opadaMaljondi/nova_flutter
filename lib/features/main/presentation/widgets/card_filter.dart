@@ -25,7 +25,7 @@ class CardFilter extends StatelessWidget {
         color: AppColors.transparent,
         child: InkWell(
           borderRadius: BorderRadius.circular(10.r),
-          onTap: () => null,
+          onTap: () {},
           child: Padding(
             padding: EdgeInsets.all(10.h),
             child: Row(

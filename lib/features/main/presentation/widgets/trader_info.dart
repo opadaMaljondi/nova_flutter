@@ -119,7 +119,7 @@ class TraderInfo extends StatelessWidget {
                           borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(22.r),
                               topLeft: Radius.circular(22.r)),
-                          onTap: () => null,
+                          onTap: () {},
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -161,13 +161,13 @@ class TraderInfo extends StatelessWidget {
                       child: Material(
                         color: AppColors.transparent,
                         child: InkWell(
-                          onTap: () => null,
+                          onTap: () {},
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(22.r),
                             bottomRight: Radius.circular(22.r),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.all(10.w),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [

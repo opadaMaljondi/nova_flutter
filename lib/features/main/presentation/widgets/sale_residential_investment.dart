@@ -24,7 +24,7 @@ class SaleResidentialInestment extends StatelessWidget {
                 color: AppColors.transparent,
                 child: InkWell(
                   borderRadius: BorderRadius.circular(22.r),
-                  onTap: () => null,
+                  onTap: () {},
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -60,7 +60,7 @@ class SaleResidentialInestment extends StatelessWidget {
                 color: AppColors.transparent,
                 child: InkWell(
                   borderRadius: BorderRadius.circular(22.r),
-                  onTap: () => null,
+                  onTap: () {},
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -97,7 +97,7 @@ class SaleResidentialInestment extends StatelessWidget {
           child: Material(
             color: AppColors.transparent,
             child: InkWell(
-              onTap: () => null,
+              onTap: () {},
               borderRadius: BorderRadius.circular(22.r),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
