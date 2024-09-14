@@ -67,7 +67,7 @@ class CodegenLoader extends AssetLoader{
   "search": "إبحث",
   "whatAreYouLooking": "ما الذي تبحث عنه؟",
   "sale": "بيع",
-  "rent": "إجار",
+  "rent": "إيجار",
   "commercial": "تجاري",
   "featuredproperties": "عقارات مميزة",
   "home": "الرئيسية",
@@ -195,7 +195,9 @@ class CodegenLoader extends AssetLoader{
   "watchTheVideo": "شاهد الفيديو",
   "on": "على",
   "youtube": "اليوتيوب",
-  "theOffice": "المكتب"
+  "theOffice": "المكتب",
+  "english": "الإنجليزية",
+  "arabic": "العربية"
 };
 static const Map<String,dynamic> en = {
   "next": "Next",
@@ -378,7 +380,9 @@ static const Map<String,dynamic> en = {
   "watchTheVideo": "Watch the video",
   "on": "on",
   "youtube": "youtube",
-  "theOffice": "The office"
+  "theOffice": "The office",
+  "english": "English",
+  "arabic": "Arabic"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

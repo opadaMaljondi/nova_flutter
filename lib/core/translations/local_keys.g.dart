@@ -182,5 +182,7 @@ abstract class  LocaleKeys {
   static const on = 'on';
   static const youtube = 'youtube';
   static const theOffice = 'theOffice';
+  static const english = 'english';
+  static const arabic = 'arabic';
 
 }

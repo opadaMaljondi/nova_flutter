@@ -19,12 +19,13 @@ class _YoutubeVideoState extends State<YoutubeVideo> {
     super.initState();
     controller = YoutubePlayerController(
       initialVideoId: YoutubePlayer.convertUrlToId(
-        'https://www.youtube.com/watch?v=SY9VHn5s91I',
+        'https://www.youtube.com/watch?v=FxfDOi5Lem0',
       )!,
       flags: const YoutubePlayerFlags(
         autoPlay: true,
         controlsVisibleAtStart: true,
         mute: false,
+        loop: false,
       ),
     );
   }
