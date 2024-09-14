@@ -26,6 +26,7 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
   File? panoramaImage;
   List<Widget> items = [];
   File? propertyImage;
+  bool isBlockEmpty = true;
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +128,10 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                                                       ImageSource.gallery,
                                                     );
                                                     if (propertyImage != null) {
-                                                      items.removeAt(index);
+                                                      if (index > 0) {
+                                                        items.removeAt(index);
+                                                      }
+                                                      isBlockEmpty = false;
                                                       items[index] = ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
@@ -139,6 +143,8 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                                                           propertyImage!,
                                                         ),
                                                       );
+                                                    } else {
+                                                      isBlockEmpty = true;
                                                     }
                                                     setState(() {
                                                       GoRouter.of(context)
@@ -177,7 +183,10 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                                                       ImageSource.camera,
                                                     );
                                                     if (propertyImage != null) {
-                                                      items[index] = ClipRRect(
+                                                      items.removeAt(index);
+
+                                                      isBlockEmpty = false;
+                                                      items.add(ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(11.r),
@@ -187,7 +196,10 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                                                           fit: BoxFit.fill,
                                                           propertyImage!,
                                                         ),
-                                                      );
+                                                      ));
+                                                    } else {
+                                                      isBlockEmpty = false;
+                                                      isBlockEmpty = true;
                                                     }
                                                     setState(() {
                                                       GoRouter.of(context)
@@ -231,40 +243,85 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
                 GestureDetector(
                   onTap: () {
                     setState(() {
-                      items.add(
-                        DottedBorder(
-                          color: AppColors.gray,
-                          dashPattern: const [6],
-                          radius: Radius.circular(11.r),
-                          borderType: BorderType.RRect,
-                          child: Container(
-                            height: 111.h,
-                            width: 111.w,
-                            padding: EdgeInsets.symmetric(horizontal: 10.w),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Transform.flip(
-                                  flipX: true,
-                                  child: Image.asset(
-                                    height: 42.h,
-                                    width: 42.w,
-                                    AppAssets.uploadImagePng,
+                      if (items.isEmpty) {
+                        items.add(
+                          DottedBorder(
+                            color: AppColors.gray,
+                            dashPattern: const [6],
+                            radius: Radius.circular(11.r),
+                            borderType: BorderType.RRect,
+                            child: Container(
+                              height: 111.h,
+                              width: 111.w,
+                              padding: EdgeInsets.symmetric(horizontal: 10.w),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Transform.flip(
+                                    flipX: true,
+                                    child: Image.asset(
+                                      height: 42.h,
+                                      width: 42.w,
+                                      AppAssets.uploadImagePng,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 6.h,
-                                ),
-                                Text(
-                                  LocaleKeys.uploadImage.tr(),
-                                  textAlign: TextAlign.center,
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                              ],
+                                  SizedBox(
+                                    height: 6.h,
+                                  ),
+                                  Text(
+                                    LocaleKeys.uploadImage.tr(),
+                                    textAlign: TextAlign.center,
+                                    style:
+                                        Theme.of(context).textTheme.bodySmall,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      );
+                        );
+                      } else {
+                        isBlockEmpty
+                            ? null
+                            : items.add(
+                                DottedBorder(
+                                  color: AppColors.gray,
+                                  dashPattern: const [6],
+                                  radius: Radius.circular(11.r),
+                                  borderType: BorderType.RRect,
+                                  child: Container(
+                                    height: 111.h,
+                                    width: 111.w,
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 10.w),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Transform.flip(
+                                          flipX: true,
+                                          child: Image.asset(
+                                            height: 42.h,
+                                            width: 42.w,
+                                            AppAssets.uploadImagePng,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 6.h,
+                                        ),
+                                        Text(
+                                          LocaleKeys.uploadImage.tr(),
+                                          textAlign: TextAlign.center,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodySmall,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              );
+                        isBlockEmpty = true;
+                      }
                     });
                   },
                   child: DottedBorder(

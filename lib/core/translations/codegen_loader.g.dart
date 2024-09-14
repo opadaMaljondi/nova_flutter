@@ -68,7 +68,7 @@ class CodegenLoader extends AssetLoader{
   "search": "إبحث",
   "whatAreYouLooking": "ما الذي تبحث عنه؟",
   "sale": "بيع",
-  "rent": "إجار",
+  "rent": "إيجار",
   "commercial": "تجاري",
   "featuredproperties": "عقارات مميزة",
   "home": "الرئيسية",
@@ -196,7 +196,9 @@ class CodegenLoader extends AssetLoader{
   "watchTheVideo": "شاهد الفيديو",
   "on": "على",
   "youtube": "اليوتيوب",
-  "theOffice": "المكتب"
+  "theOffice": "المكتب",
+  "english": "الإنجليزية",
+  "arabic": "العربية"
 };
 static const Map<String,dynamic> en = {
   "next": "Next",
@@ -367,7 +369,22 @@ static const Map<String,dynamic> en = {
   "realstateForRent": "Real State For Rent",
   "realstateRented": "Real State Rented",
   "myRealSate": "My Real State",
-  "showAll": "Show All"
+  "showAll": "Show All",
+  "titleAbouteUs": "Welcome to \n the world of distinguished real estate",
+  "subTitleAboutUs": "Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page Here you can write anything related to this page",
+  "forAdvertising": "For advertising:",
+  "reviewArtical": "Review articles",
+  "add": "Add",
+  "upgradeToMerchant": "Upgrade to a merchant account?!",
+  "enterAservice": "Enter a service",
+  "uploadImage": "Upload the image",
+  "uploadFile": "Upload file",
+  "watchTheVideo": "Watch the video",
+  "on": "on",
+  "youtube": "youtube",
+  "theOffice": "The office",
+  "english": "English",
+  "arabic": "Arabic"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }
