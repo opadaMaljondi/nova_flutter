@@ -6,6 +6,7 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/widgets/primary_icon_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeAppbar extends StatelessWidget {
   const HomeAppbar({super.key});
@@ -61,7 +62,12 @@ class HomeAppbar extends StatelessWidget {
               PrimaryIconButton(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(50.r),
-                onPressed: () {},
+                onPressed: () {
+                  final Uri uri = Uri.parse(
+                    'https://wa.me/963939754627',
+                  );
+                  launchUrl(uri);
+                },
                 child: SvgPicture.asset(
                   AppAssets.support,
                 ),

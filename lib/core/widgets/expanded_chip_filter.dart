@@ -49,7 +49,7 @@ class ExpandedChipFilter extends StatelessWidget {
                   padding: EdgeInsets.all(12.r),
                   decoration: BoxDecoration(
                     color: isSelected1 == true
-                        ? const Color(0xff3C82AA)
+                        ?  backgroundColor1
                         : Colors.white,
                     borderRadius: borderRadius ?? BorderRadius.circular(10.r),
                     border: Border.all(
@@ -80,7 +80,7 @@ class ExpandedChipFilter extends StatelessWidget {
                   padding: EdgeInsets.all(12.r),
                   decoration: BoxDecoration(
                     color: isSelected2 == true
-                        ? const Color(0xff3C82AA)
+                        ? backgroundColor2
                         : Colors.white,
                     borderRadius: borderRadius ?? BorderRadius.circular(10.r),
                     border: Border.all(

@@ -3,10 +3,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/features/main/domain/contact.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../../../../core/widgets/primary_icon_button.dart';
 
 class ContactInfo extends StatelessWidget {
-  const ContactInfo({super.key});
-
+  final ContactInfoEntity contactInfo;
+  const ContactInfo({super.key, required this.contactInfo});
+  launchLink(String link) async {
+    final Uri uri = Uri.parse(link);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -97,41 +107,57 @@ class ContactInfo extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  GestureDetector(
+                  PrimaryIconButton(
+                    color: AppColors.transparent,
+                    borderRadius: BorderRadius.circular(50.r),
+                    onPressed: () {
+                      launchLink(contactInfo.telegram!);
+                    },
                     child: SvgPicture.asset(
-                      height: 34.h,
-                      width: 33.w,
-                      AppAssets.greenWhatsapp,
-                    ),
-                  ),
-                  GestureDetector(
-                    child: SvgPicture.asset(
-                      height: 34.h,
-                      width: 33.w,
-                      AppAssets.greenTelegram,
-                    ),
-                  ),
-                  GestureDetector(
-                    child: SvgPicture.asset(
-                      height: 34.h,
-                      width: 33.w,
-                      AppAssets.greenInstagram,
-                    ),
-                  ),
-                  GestureDetector(
-                    child: SvgPicture.asset(
-                      height: 34.h,
-                      width: 33.w,
-                      AppAssets.greenFacebook,
-                    ),
-                  ),
-                  GestureDetector(
-                    child: SvgPicture.asset(
-                      height: 34.h,
-                      width: 33.w,
                       AppAssets.greenX,
                     ),
                   ),
+                  PrimaryIconButton(
+                    color: AppColors.transparent,
+                    borderRadius: BorderRadius.circular(50.r),
+                    onPressed: () {
+                      launchLink(contactInfo.telegram!);
+                    },
+                    child: SvgPicture.asset(
+                      AppAssets.greenFacebook,
+                    ),
+                  ),
+                  PrimaryIconButton(
+                    color: AppColors.transparent,
+                    borderRadius: BorderRadius.circular(50.r),
+                    onPressed: () {
+                      launchLink(contactInfo.telegram!);
+                    },
+                    child: SvgPicture.asset(
+                      AppAssets.greenInstagram,
+                    ),
+                  ),
+                  PrimaryIconButton(
+                    color: AppColors.transparent,
+                    borderRadius: BorderRadius.circular(50.r),
+                    onPressed: () {
+                      launchLink(contactInfo.telegram!);
+                    },
+                    child: SvgPicture.asset(
+                      AppAssets.greenTelegram,
+                    ),
+                  ),
+                  PrimaryIconButton(
+                    color: AppColors.transparent,
+                    borderRadius: BorderRadius.circular(50.r),
+                    onPressed: () {
+                      launchLink(contactInfo.telegram!);
+                    },
+                    child: SvgPicture.asset(
+                      AppAssets.greenWhatsapp,
+                    ),
+                  ),
+
                 ],
               ),
             ],

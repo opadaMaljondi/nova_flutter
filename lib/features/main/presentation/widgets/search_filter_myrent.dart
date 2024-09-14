@@ -17,10 +17,27 @@ class SearchFilterMyRent extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 15.w),
       child: Row(
         children: [
-          SvgPicture.asset(
-            AppAssets.filters,
+          SizedBox(
+            height: 45,
+            width: 45,
+            child: Stack(
+              children: [
+                SvgPicture.asset(
+                  AppAssets.filters,
+                ),
+                Material(
+                  color: AppColors.transparent,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(10.r),
+                    onTap: () {},
+                  ),
+                ),
+              ],
+            ),
           ),
-          SizedBox(width: 5.w,),
+          SizedBox(
+            width: 5.w,
+          ),
           Expanded(
             child: PrimaryTextField(
               hintText: LocaleKeys.search.tr(),

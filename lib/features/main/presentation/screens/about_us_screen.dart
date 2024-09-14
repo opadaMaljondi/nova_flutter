@@ -8,6 +8,7 @@ import 'package:real_state/features/main/presentation/widgets/primary_appbar.dar
 import 'package:real_state/features/main/presentation/widgets/social_media_icons.dart';
 
 import '../../../../core/translations/local_keys.g.dart';
+import '../../domain/contact.dart';
 
 class AboutUsScreen extends StatelessWidget {
   const AboutUsScreen({super.key});
@@ -37,7 +38,7 @@ class AboutUsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     PrimaryAppbar(
-                      title: LocaleKeys.WhoAreWe.tr(),
+                      title: LocaleKeys.whoAreWe.tr(),
                     ),
                     Divider(
                       thickness: 0.3,
@@ -83,7 +84,9 @@ class AboutUsScreen extends StatelessWidget {
                     SizedBox(
                       height: 50.h,
                     ),
-                    const SocialMediaIcons(),
+                    SocialMediaIcons(
+                      contactInfo: ContactInfoEntity(),
+                    ),
                     SizedBox(
                       height: 85.h,
                     ),

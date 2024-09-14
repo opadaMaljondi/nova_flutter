@@ -41,27 +41,45 @@ class MyRealStateScreen extends StatelessWidget {
                       changeTabSuccess: () => Column(
                             children: [
                               SingleChildScrollView(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
                                   children: List.generate(
                                     cubit.filterTypes.length,
-                                    (index) => InkWell(
-                                      borderRadius: BorderRadius.circular(30),
-                                      onTap: () {
-                                        context.read<MainCubit>().selectFilter(index);
-                                      },
-                                      child: Container(
-                                        margin: EdgeInsets.symmetric(horizontal: 4.w),
-                                        padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 18.w),
-                                        decoration: BoxDecoration(
-                                            color: index == cubit.filterIndex ? AppColors.primary : AppColors.white,
-                                            borderRadius: BorderRadius.circular(20.r)),
-                                        child: Text(
-                                          cubit.filterTypes[index],
-                                          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                                color: index == cubit.filterIndex ? AppColors.white : AppColors.primary,
-                                              ),
+                                    (index) => Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 4.w),
+                                      decoration: BoxDecoration(
+                                          color: index == cubit.filterIndex
+                                              ? AppColors.primary
+                                              : AppColors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(20.r)),
+                                      child: Material(
+                                        color: AppColors.transparent,
+                                        child: InkWell(
+                                          borderRadius:
+                                              BorderRadius.circular(20.r),
+                                          onTap: () =>
+                                              cubit.selectFilter(index),
+                                          child: Padding(
+                                            padding: EdgeInsets.symmetric(
+                                                vertical: 6.h,
+                                                horizontal: 18.w),
+                                            child: Text(
+                                              cubit.filterTypes[index],
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyMedium!
+                                                  .copyWith(
+                                                    color: index ==
+                                                            cubit.filterIndex
+                                                        ? AppColors.white
+                                                        : AppColors.primary,
+                                                  ),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ),

@@ -19,6 +19,8 @@ class _FiltersState extends State<Filters> {
     'Apartment',
     'City',
   ];
+  bool isSelected = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -79,9 +81,13 @@ class _FiltersState extends State<Filters> {
               CustomFilterChip(
                 verticalPadding: 10.h,
                 label: LocaleKeys.ignore.tr(),
-                isSelected: false,
+                isSelected: isSelected,
                 activeColor: AppColors.primary,
-                onSelected: (value) {},
+                onSelected: (value) {
+                  setState(() {
+                    isSelected = !isSelected;
+                  });
+                },
               ),
               SizedBox(
                 width: 10.w,
@@ -89,9 +95,13 @@ class _FiltersState extends State<Filters> {
               CustomFilterChip(
                 verticalPadding: 10.h,
                 label: LocaleKeys.add.tr(),
-                isSelected: true,
+                isSelected: !isSelected,
                 activeColor: AppColors.primary,
-                onSelected: (value) {},
+                onSelected: (value) {
+                  setState(() {
+                    isSelected = !isSelected;
+                  });
+                },
               ),
             ],
           ),

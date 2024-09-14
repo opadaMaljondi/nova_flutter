@@ -6,6 +6,7 @@ import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/features/main/presentation/widgets/setting_card.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/translations/local_keys.g.dart';
 
@@ -49,7 +50,12 @@ class MenuCommunicationSection extends StatelessWidget {
               SettingCard(
                 name: LocaleKeys.contactSupport.tr(),
                 iconPath: AppAssets.support,
-                onTap: () {},
+                onTap: () {
+                  final Uri uri = Uri.parse(
+                    'https://wa.me/963939754627',
+                  );
+                  launchUrl(uri);
+                },
               ),
               const Divider(
                 color: AppColors.grayAccent,
@@ -57,7 +63,12 @@ class MenuCommunicationSection extends StatelessWidget {
               SettingCard(
                 name: LocaleKeys.legalAdvisor.tr(),
                 iconPath: AppAssets.advisor,
-                onTap: () {},
+                onTap: () {
+                  final Uri uri = Uri.parse(
+                    'https://wa.me/963939754627',
+                  );
+                  launchUrl(uri);
+                },
               ),
             ],
           ),
@@ -69,3 +80,6 @@ class MenuCommunicationSection extends StatelessWidget {
     );
   }
 }
+
+
+

@@ -4,13 +4,26 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/translations/local_keys.g.dart';
+import '../../../../core/widgets/primary_icon_button.dart';
+import '../../domain/contact.dart';
 
 class SocialMediaIcons extends StatelessWidget {
+  final ContactInfoEntity contactInfo;
+
   const SocialMediaIcons({
     super.key,
+    required this.contactInfo,
   });
+
+  launchLink(String link) async {
+    final Uri uri = Uri.parse(link);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,38 +43,59 @@ class SocialMediaIcons extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              GestureDetector(
+              PrimaryIconButton(
+                color: AppColors.transparent,
+                borderRadius: BorderRadius.circular(50.r),
+                onPressed: () {
+                  final Uri uri = Uri.parse(
+                    'https://wa.me/963939754627',
+                  );
+                  launchUrl(uri);
+                },
                 child: SvgPicture.asset(
-                  height: 34.h,
-                  width: 33.w,
                   AppAssets.whatsUp,
                 ),
               ),
-              GestureDetector(
+              PrimaryIconButton(
+                color: AppColors.transparent,
+                borderRadius: BorderRadius.circular(50.r),
+                onPressed: () {
+                  launchLink(contactInfo.telegram!);
+                },
                 child: SvgPicture.asset(
-                  height: 34.h,
-                  width: 33.w,
                   AppAssets.telegram,
                 ),
               ),
-              GestureDetector(
-                child: Image.asset(
-                  height: 34.h,
-                  width: 33.w,
-                  AppAssets.instagram,
+              PrimaryIconButton(
+                color: AppColors.transparent,
+                borderRadius: BorderRadius.circular(50.r),
+                onPressed: () {
+                  launchLink(contactInfo.telegram!);
+                },
+                child: FittedBox(
+                  child: CircleAvatar(
+                    radius: 22.r,
+                    child: Image.asset(AppAssets.insta),
+                  ),
                 ),
               ),
-              GestureDetector(
+              PrimaryIconButton(
+                color: AppColors.transparent,
+                borderRadius: BorderRadius.circular(50.r),
+                onPressed: () {
+                  launchLink(contactInfo.telegram!);
+                },
                 child: SvgPicture.asset(
-                  height: 34.h,
-                  width: 33.w,
                   AppAssets.facebook,
                 ),
               ),
-              GestureDetector(
+              PrimaryIconButton(
+                color: AppColors.transparent,
+                borderRadius: BorderRadius.circular(50.r),
+                onPressed: () {
+                  launchLink(contactInfo.telegram!);
+                },
                 child: SvgPicture.asset(
-                  height: 34.h,
-                  width: 33.w,
                   AppAssets.blackX,
                 ),
               ),

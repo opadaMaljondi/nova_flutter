@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,31 +13,44 @@ class CustomCounter extends StatefulWidget {
 
 class _CustomCounterState extends State<CustomCounter> {
   int number = 0;
+
   @override
   Widget build(BuildContext context) {
+    bool languageIsArabic = context.locale.languageCode == 'ar';
+
     return Row(
       children: [
         Expanded(
           flex: 2,
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                number++;
-              });
-            },
-            child: Container(
-              height: 50.h,
-              decoration: BoxDecoration(
-                color: AppColors.grayMiddle,
-                borderRadius: BorderRadiusDirectional.only(
-                  bottomStart: Radius.circular(26.r),
-                  topStart: Radius.circular(26.r),
-                ),
+          child: Container(
+            height: 50.h,
+            decoration: BoxDecoration(
+              color: AppColors.grayMiddle,
+              borderRadius: BorderRadiusDirectional.only(
+                bottomStart: Radius.circular(26.r),
+                topStart: Radius.circular(26.r),
               ),
-              child: Icon(
-                CupertinoIcons.add,
-                size: 28.sp,
-                color: AppColors.gray,
+            ),
+            child: Material(
+              color: AppColors.transparent,
+              child: InkWell(
+                splashColor: AppColors.materialPrimary.shade400,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(languageIsArabic ? 0 : 26.r),
+                  bottomLeft: Radius.circular(languageIsArabic ? 0 : 26.r),
+                  bottomRight: Radius.circular(languageIsArabic ? 26.r : 0),
+                  topRight: Radius.circular(languageIsArabic ? 26.r : 0),
+                ),
+                onTap: () {
+                  setState(() {
+                    number++;
+                  });
+                },
+                child: Icon(
+                  CupertinoIcons.add,
+                  size: 28.sp,
+                  color: AppColors.gray,
+                ),
               ),
             ),
           ),
@@ -60,25 +74,34 @@ class _CustomCounterState extends State<CustomCounter> {
         ),
         Expanded(
           flex: 2,
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                number--;
-              });
-            },
-            child: Container(
-              height: 50.h,
-              decoration: BoxDecoration(
-                color: AppColors.grayMiddle,
-                borderRadius: BorderRadiusDirectional.only(
-                  topEnd: Radius.circular(26.r),
-                  bottomEnd: Radius.circular(26.r),
-                ),
+          child: Container(
+            height: 50.h,
+            decoration: BoxDecoration(
+              color: AppColors.grayMiddle,
+              borderRadius: BorderRadiusDirectional.only(
+                topEnd: Radius.circular(26.r),
+                bottomEnd: Radius.circular(26.r),
               ),
-              child: Icon(
-                CupertinoIcons.minus,
-                size: 28.sp,
-                color: AppColors.gray,
+            ),
+            child: Material(
+              color: AppColors.transparent,
+              child: InkWell(
+                onTap: () {
+                  setState(() {
+                    number--;
+                  });
+                },
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(languageIsArabic ? 26.r : 0),
+                  bottomLeft: Radius.circular(languageIsArabic ? 26.r : 0),
+                  bottomRight: Radius.circular(languageIsArabic ? 0 : 26.r),
+                  topRight: Radius.circular(languageIsArabic ? 0 : 26.r),
+                ),
+                child: Icon(
+                  CupertinoIcons.minus,
+                  size: 28.sp,
+                  color: AppColors.gray,
+                ),
               ),
             ),
           ),

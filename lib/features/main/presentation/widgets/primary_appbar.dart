@@ -25,8 +25,7 @@ class PrimaryAppbar extends StatelessWidget {
                     }
                   }
                 : null,
-            child:
-            Icon(
+            child: Icon(
               Icons.arrow_back_ios_rounded,
               color: !context.canPop() ? AppColors.transparent : null,
             ),

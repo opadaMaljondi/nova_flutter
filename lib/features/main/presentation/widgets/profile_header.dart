@@ -42,13 +42,14 @@ class ProfileHeader extends StatelessWidget {
                 children: [
                   PrimaryIconButton(
                     color: AppColors.white,
-                    onPressed: () => context.pop(),
+                    onPressed: () =>
+                        context.pop(),
                     child: Icon(
                       Icons.arrow_back_ios_rounded,
                       color: !context.canPop() ? AppColors.transparent : null,
                     ),
                   ),
-                  SvgPicture.asset(AppAssets.editProfle),
+                  SvgPicture.asset(AppAssets.editProfle)
                 ],
               ),
             ),

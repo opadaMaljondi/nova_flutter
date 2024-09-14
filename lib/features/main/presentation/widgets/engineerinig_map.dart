@@ -46,19 +46,38 @@ class EngineerinigMap extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: AppColors.gray,
                       ),
-                    ),
-                  ],
                 ),
               ],
             ),
-            SvgPicture.asset(
-              width: 39.w,
-              height: 39.h,
-              AppAssets.greenDownload,
+            const Expanded(
+              child: SizedBox(),
+            ),
+            SizedBox(
+              height: 45.h,
+              width: 45.w,
+              child: Stack(alignment: Alignment.center, children: [
+                SvgPicture.asset(
+                  width: 39.w,
+                  height: 39.h,
+                  AppAssets.greenDownload,
+                ),
+                Material(
+                  color: AppColors.transparent,
+                  child: InkWell(
+                    splashColor:
+                        AppColors.materialPrimary.shade300.withOpacity(0.3),
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(5.r),
+                  ),
+                ),
+              ]),
+            ),
+            SizedBox(
+              width: 40.w,
             ),
           ],
         ),
       ],
-    );
+    )]);
   }
 }

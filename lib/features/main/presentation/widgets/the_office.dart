@@ -4,7 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
-import 'package:real_state/core/translations/local_keys.g.dart';
+
+import '../../../../core/translations/local_keys.g.dart';
 
 class TheOffice extends StatelessWidget {
   const TheOffice({super.key});
@@ -60,10 +61,28 @@ class TheOffice extends StatelessWidget {
                 ),
               ],
             ),
-            SvgPicture.asset(
-              height: 56.h,
-              width: 56.w,
-              AppAssets.greenChat,
+            SizedBox(
+              height: 55.h,
+              width: 55.w,
+              child: Stack(alignment: Alignment.center, children: [
+                SvgPicture.asset(
+                  width: 55.w,
+                  height: 55.h,
+                  AppAssets.greenChat,
+                ),
+                Material(
+                  color: AppColors.transparent,
+                  child: InkWell(
+                    splashColor:
+                        AppColors.materialPrimary.shade300.withOpacity(0.4),
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(27.r),
+                  ),
+                ),
+              ]),
+            ),
+            SizedBox(
+              width: 40.w,
             ),
           ],
         ),

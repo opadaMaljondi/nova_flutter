@@ -1,6 +1,8 @@
 abstract class AppAssets {
   // Images Paths
+
   static const String rootImages = "assets/images";
+  static const String insta = "$rootImages/insta.png";
   static const String logo = "$rootImages/logo.png";
   static const String onboarding1 = "$rootImages/onboarding1.png";
   static const String onboarding2 = "$rootImages/onboarding2.png";

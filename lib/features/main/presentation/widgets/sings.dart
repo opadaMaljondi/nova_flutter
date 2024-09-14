@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/expanded_chip_filter.dart';
 
+import '../../../../core/constants/app_colors.dart';
+
 class Signs extends StatefulWidget {
   const Signs({super.key});
 
@@ -16,6 +18,7 @@ class _SignsState extends State<Signs> {
   bool isSelected2 = false;
   bool isSelected3 = false;
   bool isSelected4 = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -35,6 +38,8 @@ class _SignsState extends State<Signs> {
             label2: LocaleKeys.residential.tr(),
             isSelected1: isSelected1,
             isSelected2: isSelected2,
+            backgroundColor2: AppColors.primary,
+            backgroundColor1: AppColors.primary,
             onTap1: () {
               setState(() {
                 isSelected1 = true;
@@ -60,6 +65,8 @@ class _SignsState extends State<Signs> {
             label2: LocaleKeys.industrial.tr(),
             isSelected1: isSelected3,
             isSelected2: isSelected4,
+            backgroundColor2: AppColors.primary,
+            backgroundColor1: AppColors.primary,
             onTap1: () {
               setState(() {
                 isSelected1 = false;

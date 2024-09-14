@@ -90,35 +90,47 @@ class _PropertyCarouselSliderState extends State<PropertyCarouselSlider> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      controller.nextPage();
-                      setState(() {
-                        isReverse = false;
-                      });
-                    },
-                    child: CircleAvatar(
-                      backgroundColor: const Color(0xffEEF1F3).withOpacity(.75),
-                      child: const Icon(
-                        Icons.arrow_back_ios_rounded,
-                        color: AppColors.black,
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      controller.nextPage();
-                      setState(() {
-                        isReverse = true;
-                      });
-                    },
-                    child: CircleAvatar(
-                      backgroundColor: const Color(0xffEEF1F3).withOpacity(.75),
-                      child: Transform.rotate(
-                        angle: 180 * 3.1415927 / 180,
+                  Material(
+                    color: AppColors.transparent,
+                    child: InkWell(
+                      splashColor: AppColors.materialPrimary.shade600,
+                      borderRadius: BorderRadius.circular(20),
+                      onTap: () {
+                        controller.nextPage();
+                        setState(() {
+                          isReverse = false;
+                        });
+                      },
+                      child: CircleAvatar(
+                        backgroundColor:
+                            const Color(0xffEEF1F3).withOpacity(.75),
                         child: const Icon(
                           Icons.arrow_back_ios_rounded,
                           color: AppColors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Material(
+                    color: AppColors.transparent,
+                    child: InkWell(
+                      splashColor: AppColors.materialPrimary.shade600,
+                      borderRadius: BorderRadius.circular(20),
+                      onTap: () {
+                        controller.nextPage();
+                        setState(() {
+                          isReverse = true;
+                        });
+                      },
+                      child: CircleAvatar(
+                        backgroundColor:
+                            const Color(0xffEEF1F3).withOpacity(.75),
+                        child: Transform.rotate(
+                          angle: 180 * 3.1415927 / 180,
+                          child: const Icon(
+                            Icons.arrow_back_ios_rounded,
+                            color: AppColors.black,
+                          ),
                         ),
                       ),
                     ),

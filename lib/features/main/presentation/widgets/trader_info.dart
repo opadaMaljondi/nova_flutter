@@ -1,10 +1,8 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
-import 'package:real_state/core/translations/local_keys.g.dart';
 
 class TraderInfo extends StatelessWidget {
   const TraderInfo({
@@ -115,27 +113,35 @@ class TraderInfo extends StatelessWidget {
                           bottomStart: Radius.circular(22.r),
                         ),
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(
-                            AppAssets.greenPhone,
-                            // ignore: deprecated_member_use
-                            color: AppColors.primary,
+                      child: Material(
+                        color: AppColors.transparent,
+                        child: InkWell(
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(22.r),
+                              topLeft: Radius.circular(22.r)),
+                          onTap: () {},
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Icon(
+                                Icons.phone,
+                                color: AppColors.primary,
+                              ),
+                              SizedBox(
+                                width: 14.w,
+                              ),
+                              Text(
+                                'contact',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium!
+                                    .copyWith(
+                                      color: AppColors.primary,
+                                    ),
+                              ),
+                            ],
                           ),
-                          SizedBox(
-                            width: 14.w,
-                          ),
-                          Text(
-                            LocaleKeys.communication.tr(),
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(
-                                  color: AppColors.primary,
-                                ),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
@@ -152,25 +158,38 @@ class TraderInfo extends StatelessWidget {
                           topEnd: Radius.circular(22.r),
                         ),
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(
-                            AppAssets.messaging,
+                      child: Material(
+                        color: AppColors.transparent,
+                        child: InkWell(
+                          onTap: () {},
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(22.r),
+                            bottomRight: Radius.circular(22.r),
                           ),
-                          SizedBox(
-                            width: 14.w,
-                          ),
-                          Text(
-                            LocaleKeys.messaging.tr(),
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(
-                                  color: AppColors.primary,
+                          child: Padding(
+                            padding: EdgeInsets.all(10.w),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset(
+                                  AppAssets.messaging,
                                 ),
+                                SizedBox(
+                                  width: 14.w,
+                                ),
+                                Text(
+                                  'Messaging',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium!
+                                      .copyWith(
+                                        color: AppColors.primary,
+                                      ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ),

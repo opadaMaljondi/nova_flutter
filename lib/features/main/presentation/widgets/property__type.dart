@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/core/widgets/expanded_chip_filter.dart';
 
@@ -14,6 +15,7 @@ class PropertyType extends StatefulWidget {
 class _PropertyTypeState extends State<PropertyType> {
   bool isSelected1 = true;
   bool isSelected2 = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,6 +35,8 @@ class _PropertyTypeState extends State<PropertyType> {
             label2: LocaleKeys.rentCapital.tr(),
             isSelected1: isSelected1,
             isSelected2: isSelected2,
+            backgroundColor2: AppColors.materialPrimary.shade500,
+            backgroundColor1: AppColors.materialPrimary.shade500,
             onTap1: () {
               setState(() {
                 isSelected1 = true;
