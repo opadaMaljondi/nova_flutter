@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/translations/local_keys.g.dart';
 import '../../../../core/widgets/primary_icon_button.dart';
-import '../../domain/contact.dart';
+import '../../domain/entities/contact.dart';
 
 class SocialMediaIcons extends StatelessWidget {
   final ContactInfoEntity contactInfo;

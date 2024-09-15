@@ -15,12 +15,17 @@ import 'package:real_state/features/auth/data/repository/auth_repo_impl.dart';
 import 'package:real_state/features/auth/domain/repository/auth_repo.dart';
 import 'package:real_state/features/auth/domain/usecases/sign_in_with_whatsapp_use_case.dart';
 import 'package:real_state/features/auth/presentation/cubits/sign_up_cubit/sign_up_cubit.dart';
-import 'package:real_state/features/feature/data/data_sources/feature_remote_data_source.dart';
-import 'package:real_state/features/feature/data/repository/feature_repo_impl.dart';
-import 'package:real_state/features/feature/domain/repository/feature_repo.dart';
-import 'package:real_state/features/feature/domain/usecases/get_feature_use_case.dart';
-import 'package:real_state/features/feature/presentation/cubits/feature_cubit/feature_cubit.dart';
+import 'package:real_state/features/company/data/data_sources/company_remote_data_source.dart';
+import 'package:real_state/features/company/data/repository/company_repo_impl.dart';
+import 'package:real_state/features/company/domain/repository/company_repo.dart';
+import 'package:real_state/features/company/domain/usecases/get_companies_use_case.dart';
+import 'package:real_state/features/company/presentation/cubits/get_companies_cubit/get_companies_cubit.dart';
 import 'package:real_state/features/main/presentation/cubits/main_cubit/main_cubit.dart';
+import 'package:real_state/features/news/data/data_sources/news_remote_data_source.dart';
+import 'package:real_state/features/news/data/repository/feature_repo_impl.dart';
+import 'package:real_state/features/news/domain/repository/news_repo.dart';
+import 'package:real_state/features/news/domain/usecases/get_feature_use_case.dart';
+import 'package:real_state/features/news/presentation/cubits/get_news_cubit/get_news_cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class InjectionContainer {
@@ -29,7 +34,8 @@ abstract class InjectionContainer {
   static Future<void> initAppDependencies() async {
     await initCoreServices();
     await initAuthDependencies();
-    await initFeatureDependencies();
+    await initCompanyDependencies();
+    await initNewsDependencies();
   }
 
   static Future<void> initCoreServices() async {
@@ -104,27 +110,59 @@ abstract class InjectionContainer {
     GetIt.instance.registerFactory(() => SignUpCubit());
   }
 
-  static Future<void> initFeatureDependencies() async {
+  static Future<void> initCompanyDependencies() async {
     /// Data Sources
-    GetIt.instance.registerLazySingleton<FeatureRemoteDataSource>(
-      () => FeatureRemoteDataSourceImpl(
+    GetIt.instance.registerLazySingleton<CompanyRemoteDataSource>(
+      () => CompanyRemoteDataSourceImpl(
         apiService: getIt(),
       ),
     );
 
     /// Repositories
-    GetIt.instance.registerLazySingleton<FeatureRepo>(
-      () => FeatureRepoImpl(
-        featureRemoteDataSource: getIt(),
+    GetIt.instance.registerLazySingleton<CompanyRepo>(
+      () => CompanyRepoImpl(
+        companyRemoteDataSource: getIt(),
       ),
     );
 
     /// UseCases
     GetIt.instance.registerLazySingleton(
-      () => GetFeaturesUseCase(featureRepo: getIt()),
+      () => GetCompaniesUseCase(
+        companyRepo: getIt(),
+      ),
     );
 
     /// Cubits and Blocs
-    GetIt.instance.registerFactory(() => FeatureCubit());
+    GetIt.instance.registerLazySingleton(
+      () => GetCompaniesCubit(),
+    );
+  }
+
+  static Future<void> initNewsDependencies() async {
+    /// Data Sources
+    GetIt.instance.registerLazySingleton<NewsRemoteDataSource>(
+      () => NewsRemoteDataSourceImpl(
+        apiService: getIt(),
+      ),
+    );
+
+    /// Repositories
+    GetIt.instance.registerLazySingleton<NewsRepo>(
+      () => NewsRepoImpl(
+        newsRemoteDataSource: getIt(),
+      ),
+    );
+
+    /// UseCases
+    GetIt.instance.registerLazySingleton(
+      () => GetNewsUseCase(
+        newsRepo: getIt(),
+      ),
+    );
+
+    /// Cubits and Blocs
+    GetIt.instance.registerLazySingleton(
+      () => GetNewsCubit(),
+    );
   }
 }
