@@ -95,9 +95,10 @@ class ApiServiceImpl extends ApiService {
       final newHeaders = Map.of(headers);
       if (needToken) {
         newHeaders.addAll({
-          'Authorization': 'Bearer ${alternativeToken ?? cacheService.getData<String>(
-                key: AppKeys.accessToken,
-              )}'
+          'Authorization':
+              'Bearer ${alternativeToken ?? cacheService.getData<String>(
+                    key: AppKeys.accessToken,
+                  )}'
         });
       }
       final response = await client.get(
@@ -117,7 +118,8 @@ class ApiServiceImpl extends ApiService {
       if (e is UnAuthorizedException) {
         try {
           await getAccessToken();
-          InjectionContainer.getIt<Logger>().f('Restart `get` `$subUrl` |ApiServiceImpl|');
+          InjectionContainer.getIt<Logger>()
+              .f('Restart `get` `$subUrl` |ApiServiceImpl|');
           return await get(
             subUrl: subUrl,
             baseUrl: baseUrl,
@@ -173,9 +175,10 @@ class ApiServiceImpl extends ApiService {
       final newHeaders = Map.of(headers);
       if (needToken) {
         newHeaders.addAll({
-          'Authorization': 'Bearer ${alternativeToken ?? cacheService.getData<String>(
-                key: AppKeys.accessToken,
-              )}'
+          'Authorization':
+              'Bearer ${alternativeToken ?? cacheService.getData<String>(
+                    key: AppKeys.accessToken,
+                  )}'
         });
       }
       final response = await client.post(
@@ -196,7 +199,8 @@ class ApiServiceImpl extends ApiService {
       if (e is UnAuthorizedException) {
         try {
           await getAccessToken();
-          InjectionContainer.getIt<Logger>().f('Restart `post` `$subUrl` |ApiServiceImpl|');
+          InjectionContainer.getIt<Logger>()
+              .f('Restart `post` `$subUrl` |ApiServiceImpl|');
           return await post(
             subUrl: subUrl,
             baseUrl: baseUrl,
@@ -240,9 +244,10 @@ class ApiServiceImpl extends ApiService {
       final newHeaders = Map.of(headers);
       if (needToken) {
         newHeaders.addAll({
-          'Authorization': 'Bearer ${alternativeToken ?? cacheService.getData<String>(
-                key: AppKeys.accessToken,
-              )}'
+          'Authorization':
+              'Bearer ${alternativeToken ?? cacheService.getData<String>(
+                    key: AppKeys.accessToken,
+                  )}'
         });
       }
       final response = await client.put(
@@ -263,7 +268,8 @@ class ApiServiceImpl extends ApiService {
       if (e is UnAuthorizedException) {
         try {
           await getAccessToken();
-          InjectionContainer.getIt<Logger>().f('Restart `put` `$subUrl` |ApiServiceImpl|');
+          InjectionContainer.getIt<Logger>()
+              .f('Restart `put` `$subUrl` |ApiServiceImpl|');
           return await put(
             subUrl: subUrl,
             baseUrl: baseUrl,
@@ -307,9 +313,10 @@ class ApiServiceImpl extends ApiService {
       final newHeaders = Map.of(headers);
       if (needToken) {
         newHeaders.addAll({
-          'Authorization': 'Bearer ${alternativeToken ?? cacheService.getData<String>(
-                key: AppKeys.accessToken,
-              )}'
+          'Authorization':
+              'Bearer ${alternativeToken ?? cacheService.getData<String>(
+                    key: AppKeys.accessToken,
+                  )}'
         });
       }
       final response = await client.delete(
@@ -330,7 +337,8 @@ class ApiServiceImpl extends ApiService {
       if (e is UnAuthorizedException) {
         try {
           await getAccessToken();
-          InjectionContainer.getIt<Logger>().f('Restart `delete` `$subUrl` |ApiServiceImpl|');
+          InjectionContainer.getIt<Logger>()
+              .f('Restart `delete` `$subUrl` |ApiServiceImpl|');
           return await delete(
             subUrl: subUrl,
             baseUrl: baseUrl,
@@ -425,7 +433,8 @@ class ApiServiceImpl extends ApiService {
       if (e is UnAuthorizedException) {
         try {
           await getAccessToken();
-          InjectionContainer.getIt<Logger>().f('Restart `_postWithFiles` `$subUrl` |ApiServiceImpl|');
+          InjectionContainer.getIt<Logger>()
+              .f('Restart `_postWithFiles` `$subUrl` |ApiServiceImpl|');
           return await _postWithFiles(
             subUrl: subUrl,
             baseUrl: baseUrl,
@@ -449,7 +458,8 @@ class ApiServiceImpl extends ApiService {
 
   Future<Unit> getAccessToken() async {
     try {
-      InjectionContainer.getIt<Logger>().i('Start getAccessToken |ApiServiceImpl|');
+      InjectionContainer.getIt<Logger>()
+          .i('Start getAccessToken |ApiServiceImpl|');
       if (!(await networkInfo.isConnected)) {
         throw OfflineException();
       }
