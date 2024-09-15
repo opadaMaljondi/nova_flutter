@@ -24,5 +24,8 @@ abstract class AppEndpoints {
   static const String getNotifications = "$apiVersion/user/allNoti";
   static const String upgradeToBroker = "$apiVersion/user/promotionOrder";
 
+  // Brokers
+  static const String getBrokers = "$apiVersion/allUser/office/";
+
 ////-------------------------------------------
 }

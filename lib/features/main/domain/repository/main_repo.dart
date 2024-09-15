@@ -4,5 +4,4 @@ import 'package:real_state/features/main/domain/entities/notification_entity.dar
 
 abstract class MainRepo {
   Future<Either<Failure, List<Notification>>> getNotifications();
-  Future<Either<Failure, Unit>> upgradeToBroker();
 }

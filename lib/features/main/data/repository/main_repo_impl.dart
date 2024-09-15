@@ -32,25 +32,4 @@ class MainRepoImpl implements MainRepo {
       );
     }
   }
-
-  @override
-  Future<Either<Failure, Unit>> upgradeToBroker() async {
-    try {
-      InjectionContainer.getIt<Logger>().i(
-        "Start `upgradeToBroker` in |MainRepoImpl|",
-      );
-      await mainRemoteDataSourceImpl.upgradeToBroker();
-      InjectionContainer.getIt<Logger>().w(
-        "End `upgradeToBroker` in |MainRepoImpl|",
-      );
-      return const Right(unit);
-    } catch (e, s) {
-      InjectionContainer.getIt<Logger>().e(
-        "End `upgradeToBroker` in |MainRepoImpl| Exception: ${e.runtimeType} $s",
-      );
-      return Left(
-        StateManagerService.getFailureFromException(e),
-      );
-    }
-  }
 }

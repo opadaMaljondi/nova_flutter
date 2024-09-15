@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'get_news_cubit.dart';
+part of 'get_brokers_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$GetNewsState {
+mixin _$GetBrokersState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -75,16 +75,16 @@ mixin _$GetNewsState {
 }
 
 /// @nodoc
-abstract class $GetNewsStateCopyWith<$Res> {
-  factory $GetNewsStateCopyWith(
-          GetNewsState value, $Res Function(GetNewsState) then) =
-      _$GetNewsStateCopyWithImpl<$Res, GetNewsState>;
+abstract class $GetBrokersStateCopyWith<$Res> {
+  factory $GetBrokersStateCopyWith(
+          GetBrokersState value, $Res Function(GetBrokersState) then) =
+      _$GetBrokersStateCopyWithImpl<$Res, GetBrokersState>;
 }
 
 /// @nodoc
-class _$GetNewsStateCopyWithImpl<$Res, $Val extends GetNewsState>
-    implements $GetNewsStateCopyWith<$Res> {
-  _$GetNewsStateCopyWithImpl(this._value, this._then);
+class _$GetBrokersStateCopyWithImpl<$Res, $Val extends GetBrokersState>
+    implements $GetBrokersStateCopyWith<$Res> {
+  _$GetBrokersStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -101,7 +101,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$GetNewsStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$GetBrokersStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -115,7 +115,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'GetNewsState.initial()';
+    return 'GetBrokersState.initial()';
   }
 
   @override
@@ -208,7 +208,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements GetNewsState {
+abstract class _Initial implements GetBrokersState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -221,7 +221,7 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$GetNewsStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$GetBrokersStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
@@ -235,7 +235,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'GetNewsState.loading()';
+    return 'GetBrokersState.loading()';
   }
 
   @override
@@ -328,7 +328,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements GetNewsState {
+abstract class _Loading implements GetBrokersState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -341,7 +341,7 @@ abstract class _$$LoadedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$GetNewsStateCopyWithImpl<$Res, _$LoadedImpl>
+    extends _$GetBrokersStateCopyWithImpl<$Res, _$LoadedImpl>
     implements _$$LoadedImplCopyWith<$Res> {
   __$$LoadedImplCopyWithImpl(
       _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
@@ -355,7 +355,7 @@ class _$LoadedImpl implements _Loaded {
 
   @override
   String toString() {
-    return 'GetNewsState.loaded()';
+    return 'GetBrokersState.loaded()';
   }
 
   @override
@@ -448,7 +448,7 @@ class _$LoadedImpl implements _Loaded {
   }
 }
 
-abstract class _Loaded implements GetNewsState {
+abstract class _Loaded implements GetBrokersState {
   const factory _Loaded() = _$LoadedImpl;
 }
 
@@ -461,7 +461,7 @@ abstract class _$$ComponentChangedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ComponentChangedImplCopyWithImpl<$Res>
-    extends _$GetNewsStateCopyWithImpl<$Res, _$ComponentChangedImpl>
+    extends _$GetBrokersStateCopyWithImpl<$Res, _$ComponentChangedImpl>
     implements _$$ComponentChangedImplCopyWith<$Res> {
   __$$ComponentChangedImplCopyWithImpl(_$ComponentChangedImpl _value,
       $Res Function(_$ComponentChangedImpl) _then)
@@ -475,7 +475,7 @@ class _$ComponentChangedImpl implements _ComponentChanged {
 
   @override
   String toString() {
-    return 'GetNewsState.componentChanged()';
+    return 'GetBrokersState.componentChanged()';
   }
 
   @override
@@ -568,7 +568,7 @@ class _$ComponentChangedImpl implements _ComponentChanged {
   }
 }
 
-abstract class _ComponentChanged implements GetNewsState {
+abstract class _ComponentChanged implements GetBrokersState {
   const factory _ComponentChanged() = _$ComponentChangedImpl;
 }
 
@@ -583,7 +583,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$GetNewsStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$GetBrokersStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
@@ -613,7 +613,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'GetNewsState.error(message: $message)';
+    return 'GetBrokersState.error(message: $message)';
   }
 
   @override
@@ -714,7 +714,7 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements GetNewsState {
+abstract class _Error implements GetBrokersState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
