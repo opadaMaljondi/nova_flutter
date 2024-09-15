@@ -8,7 +8,7 @@ import 'package:real_state/features/main/presentation/widgets/primary_appbar.dar
 import 'package:real_state/features/main/presentation/widgets/social_media_icons.dart';
 
 import '../../../../core/translations/local_keys.g.dart';
-import '../../domain/contact.dart';
+import '../../domain/entities/contact.dart';
 
 class AboutUsScreen extends StatelessWidget {
   const AboutUsScreen({super.key});

@@ -1,4 +1,3 @@
-
 class ContactInfoEntity {
   final String? phone;
   final String? email;
@@ -10,13 +9,13 @@ class ContactInfoEntity {
   final String? twitter;
 
   ContactInfoEntity({
-     this.phone,
-     this.email,
-     this.website,
-     this.whatsapp,
-     this.telegram,
-     this.instagram,
-     this.facebook,
-     this.twitter,
+    this.phone,
+    this.email,
+    this.website,
+    this.whatsapp,
+    this.telegram,
+    this.instagram,
+    this.facebook,
+    this.twitter,
   });
 }

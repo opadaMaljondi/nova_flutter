@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_state/core/constants/app_assets.dart';
 import 'package:real_state/core/constants/app_colors.dart';
-import 'package:real_state/features/main/domain/contact.dart';
+import 'package:real_state/features/main/domain/entities/contact.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/widgets/primary_icon_button.dart';

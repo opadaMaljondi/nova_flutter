@@ -20,5 +20,9 @@ abstract class AppEndpoints {
   static const String addFavorite = "$apiVersion/user/addFav/";
   static const String removeFavorite = "$apiVersion/user/addFav/";
 
+  // Main
+  static const String getNotifications = "$apiVersion/user/allNoti";
+  static const String upgradeToBroker = "$apiVersion/user/promotionOrder";
+
 ////-------------------------------------------
 }
