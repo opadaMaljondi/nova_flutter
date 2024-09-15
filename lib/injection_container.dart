@@ -10,6 +10,11 @@ import 'package:real_state/core/services/network_info_service.dart';
 import 'package:real_state/core/services/otp_less_service.dart';
 import 'package:real_state/core/services/router_service.dart';
 import 'package:real_state/core/services/status_showing_service.dart';
+import 'package:real_state/features/auth/data/data_sources/auth_remote_data_source.dart';
+import 'package:real_state/features/auth/data/repository/auth_repo_impl.dart';
+import 'package:real_state/features/auth/domain/repository/auth_repo.dart';
+import 'package:real_state/features/auth/domain/usecases/sign_in_with_whatsapp_use_case.dart';
+import 'package:real_state/features/auth/presentation/cubits/sign_up_cubit/sign_up_cubit.dart';
 import 'package:real_state/features/feature/data/data_sources/feature_remote_data_source.dart';
 import 'package:real_state/features/feature/data/repository/feature_repo_impl.dart';
 import 'package:real_state/features/feature/domain/repository/feature_repo.dart';
@@ -23,6 +28,7 @@ abstract class InjectionContainer {
 
   static Future<void> initAppDependencies() async {
     await initCoreServices();
+    await initAuthDependencies();
     await initFeatureDependencies();
   }
 
@@ -71,6 +77,31 @@ abstract class InjectionContainer {
     );
 
     GetIt.instance.registerFactory(() => MainCubit());
+  }
+
+  static Future<void> initAuthDependencies() async {
+    /// Data Sources
+    GetIt.instance.registerLazySingleton<AuthRemoteDataSource>(
+      () => AuthRemoteDataSourceImpl(
+        apiService: getIt(),
+        otpLessService: getIt(),
+      ),
+    );
+
+    /// Repositories
+    GetIt.instance.registerLazySingleton<AuthRepo>(
+      () => AuthRepoImpl(
+        authRemoteDataSource: getIt(),
+      ),
+    );
+
+    /// UseCases
+    GetIt.instance.registerLazySingleton(
+      () => SignInWithWhatsappUseCase(authRepo: getIt()),
+    );
+
+    /// Cubits and Blocs
+    GetIt.instance.registerFactory(() => SignUpCubit());
   }
 
   static Future<void> initFeatureDependencies() async {

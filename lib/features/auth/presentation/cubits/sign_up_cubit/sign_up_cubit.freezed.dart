@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'feature_cubit.dart';
+part of 'sign_up_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$FeatureState {
+mixin _$SignUpState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -82,12 +82,12 @@ mixin _$FeatureState {
 
 /// @nodoc
 abstract class $MainStateCopyWith<$Res> {
-  factory $MainStateCopyWith(FeatureState value, $Res Function(FeatureState) then) =
-      _$MainStateCopyWithImpl<$Res, FeatureState>;
+  factory $MainStateCopyWith(SignUpState value, $Res Function(SignUpState) then) =
+      _$MainStateCopyWithImpl<$Res, SignUpState>;
 }
 
 /// @nodoc
-class _$MainStateCopyWithImpl<$Res, $Val extends FeatureState>
+class _$MainStateCopyWithImpl<$Res, $Val extends SignUpState>
     implements $MainStateCopyWith<$Res> {
   _$MainStateCopyWithImpl(this._value, this._then);
 
@@ -219,7 +219,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements FeatureState {
+abstract class _Initial implements SignUpState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -345,7 +345,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements FeatureState {
+abstract class _Loading implements SignUpState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -471,7 +471,7 @@ class _$LoadedImpl implements _Loaded {
   }
 }
 
-abstract class _Loaded implements FeatureState {
+abstract class _Loaded implements SignUpState {
   const factory _Loaded() = _$LoadedImpl;
 }
 
@@ -597,7 +597,7 @@ class _$ChangeTabSuccessImpl implements _ChangeTabSuccess {
   }
 }
 
-abstract class _ChangeTabSuccess implements FeatureState {
+abstract class _ChangeTabSuccess implements SignUpState {
   const factory _ChangeTabSuccess() = _$ChangeTabSuccessImpl;
 }
 
@@ -723,7 +723,7 @@ class _$LogoutSuccessImpl implements _ComponentChanged {
   }
 }
 
-abstract class _ComponentChanged implements FeatureState {
+abstract class _ComponentChanged implements SignUpState {
   const factory _ComponentChanged() = _$LogoutSuccessImpl;
 }
 
@@ -875,7 +875,7 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements FeatureState {
+abstract class _Error implements SignUpState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;

@@ -10,7 +10,7 @@ abstract class OtpLessService {
 
 class OtpLessServiceImpl extends OtpLessService {
   static final _otpLessFlutterPlugin = Otpless();
-  static const _appId = 'QT1FN12KD5VLLIUZOVZ1';
+  static const _appId = 'QX7X2GAZ83S9UL7110ZX';
 
   @override
   Future<void> signInWithWhatsApp({
