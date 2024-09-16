@@ -355,39 +355,75 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
           ),
           GestureDetector(
             onTap: () {
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return PickImageFromGalleryOrCamera(
-                    onImagePicked: (file) {
-                      panoramaImage = file;
-                      setState(() {
-                        GoRouter.of(context).pop();
-                      });
-                    },
-                  );
-                },
-              );
+              panoramaImage == null
+                  ? showDialog(
+                      context: context,
+                      builder: (context) {
+                        return PickImageFromGalleryOrCamera(
+                          onImagePicked: (file) {
+                            panoramaImage = file;
+                            setState(() {
+                              GoRouter.of(context).pop();
+                            });
+                          },
+                        );
+                      },
+                    )
+                  : null;
             },
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(16.r),
-              child: SizedBox(
-                height: 300.h,
-                width: 300.w,
-                child: PhotoView(
-                  basePosition: Alignment.center,
-                  minScale: PhotoViewComputedScale.covered,
-                  maxScale: PhotoViewComputedScale.covered,
-                  initialScale: PhotoViewComputedScale.covered,
-                  backgroundDecoration: const BoxDecoration(
-                    color: Colors.white,
+            child: panoramaImage == null
+                ? DottedBorder(
+                    color: AppColors.gray,
+                    dashPattern: const [6],
+                    radius: Radius.circular(11.r),
+                    borderType: BorderType.RRect,
+                    child: Container(
+                      height: 111.h,
+                      width: 111.w,
+                      padding: EdgeInsets.symmetric(horizontal: 10.w),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Transform.flip(
+                            flipX: true,
+                            child: Image.asset(
+                              height: 42.h,
+                              width: 42.w,
+                              AppAssets.uploadImagePng,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 6.h,
+                          ),
+                          Text(
+                            LocaleKeys.uploadImage.tr(),
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                : ClipRRect(
+                    borderRadius: BorderRadius.circular(16.r),
+                    child: SizedBox(
+                      height: 300.h,
+                      width: 1.sw,
+                      child: PhotoView(
+                        basePosition: Alignment.center,
+                        minScale: PhotoViewComputedScale.covered,
+                        maxScale: PhotoViewComputedScale.covered,
+                        initialScale: PhotoViewComputedScale.covered,
+                        enableRotation: true,
+                        backgroundDecoration: const BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        imageProvider: FileImage(
+                          panoramaImage!,
+                        ),
+                      ),
+                    ),
                   ),
-                  imageProvider: const AssetImage(
-                    AppAssets.river,
-                  ),
-                ),
-              ),
-            ),
           ),
           SizedBox(
             height: 24.h,
@@ -405,8 +441,10 @@ class _PicturesAndFilesState extends State<PicturesAndFiles> {
               color: const Color(0xffD1D8DB).withOpacity(.34),
               borderRadius: BorderRadius.circular(32.r),
             ),
-            child: Material(color: AppColors.transparent,
-              child: InkWell(splashColor: AppColors.primary.withOpacity(0.5),
+            child: Material(
+              color: AppColors.transparent,
+              child: InkWell(
+                splashColor: AppColors.primary.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(32.r),
                 onTap: () {},
                 child: Row(

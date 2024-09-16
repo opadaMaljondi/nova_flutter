@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_assets.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 
 class OnboardingPage2 extends StatelessWidget {
   const OnboardingPage2({super.key});
@@ -8,6 +10,7 @@ class OnboardingPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.center,
       children: [
         Positioned(
           bottom: 0,
@@ -21,10 +24,15 @@ class OnboardingPage2 extends StatelessWidget {
             SizedBox(
               height: 50.h,
             ),
+            Image.asset(
+              AppAssets.logo,
+              width: 125.w,
+              height: 100.h,
+            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 40.h),
               child: Text(
-                'Welcome to\n the world of distinguished real estate',
+                LocaleKeys.welcom.tr(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
@@ -32,7 +40,7 @@ class OnboardingPage2 extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Text(
-                'Here you can write anything related to this page.',
+                LocaleKeys.youCanTypeAnything.tr(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),

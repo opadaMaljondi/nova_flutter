@@ -10,6 +10,7 @@ class OnboardingPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.center,
       children: [
         Positioned(
           bottom: 0,
@@ -39,7 +40,7 @@ class OnboardingPage1 extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Text(
-            LocaleKeys.youCanTypeAnything.tr(),
+                LocaleKeys.youCanTypeAnything.tr(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
