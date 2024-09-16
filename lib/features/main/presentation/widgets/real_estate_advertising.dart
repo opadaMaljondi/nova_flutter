@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
+import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/youtube_video.dart';
 
 class RealEstateAdvertising extends StatelessWidget {
@@ -41,7 +43,7 @@ class RealEstateAdvertising extends StatelessWidget {
               height: 13.h,
             ),
             Text(
-              'Real estate advertising',
+              LocaleKeys.realEstateAdvertising.tr(),
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: AppColors.primary,
                   ),

@@ -36,7 +36,7 @@ class NewsDetailsScreen extends StatelessWidget {
               SizedBox(
                 height: 18.h,
               ),
-              const RealEstateAdvertising(),
+              // const RealEstateAdvertising(),
               SizedBox(
                 height: 35.h,
               ),

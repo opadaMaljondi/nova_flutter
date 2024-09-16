@@ -61,7 +61,9 @@ class _LanguageFieldState extends State<LanguageField> {
             child: Icon(
               iconDirection == true
                   ? Icons.keyboard_arrow_down_rounded
-                  : Icons.keyboard_arrow_left_rounded,
+                  : context.locale.languageCode == 'ar'
+                      ? Icons.keyboard_arrow_left_rounded
+                      : Icons.keyboard_arrow_right_rounded,
               color: AppColors.primary,
               size: 30.sp,
             ),
@@ -82,7 +84,7 @@ class _LanguageFieldState extends State<LanguageField> {
                 children: [
                   Text(
                     LocaleKeys.arabic.tr(),
-                    style: Theme.of(context).textTheme.titleLarge,
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                   SizedBox(
                     width: 5.w,
@@ -112,7 +114,7 @@ class _LanguageFieldState extends State<LanguageField> {
                 children: [
                   Text(
                     LocaleKeys.english.tr(),
-                    style: Theme.of(context).textTheme.titleLarge,
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                   SizedBox(
                     width: 5.w,
