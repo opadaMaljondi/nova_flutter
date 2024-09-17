@@ -6,11 +6,11 @@ import 'package:real_state/core/enums/general_states.dart';
 import 'package:real_state/features/auth/domain/usecases/sign_up_with_whatsapp_use_case.dart';
 import 'package:real_state/injection_container.dart';
 
-part 'sign_up_cubit.freezed.dart';
-part 'sign_up_state.dart';
+part 'sign_in_cubit.freezed.dart';
+part 'sign_in_state.dart';
 
-class SignUpCubit extends Cubit<SignUpState> {
-  SignUpCubit() : super(const SignUpState.initial());
+class SignInCubit extends Cubit<SignInState> {
+  SignInCubit() : super(const SignInState.initial());
 
   /// Use Cases
   final SignUpWithWhatsappUseCase signUpWithWhatsappUseCase = InjectionContainer.getIt();
@@ -26,17 +26,17 @@ class SignUpCubit extends Cubit<SignUpState> {
   /// functions
   Future<void> signUpWithWhatsapp() async {
     InjectionContainer.getIt<Logger>().i("Start `signUpWithWhatsapp` in |SignUpCubit|");
-    // _update(const SignUpState.loading());
+    _update(const SignInState.loading());
     generalState = GeneralStates.loading;
     await signUpWithWhatsappUseCase(
       onReceiveResult: (user, errorMessage) {
         if (errorMessage != null) {
           //user != null && user.user != null
           generalState = GeneralStates.success;
-          _update(const SignUpState.loaded());
+          _update(const SignInState.loaded());
         } else {
           generalState = GeneralStates.badRequest;
-          _update(SignUpState.error(errorMessage ?? 'Failed'));
+          _update(SignInState.error(errorMessage ?? 'Failed'));
         }
         InjectionContainer.getIt<Logger>().w(
           "End `signUpWithWhatsapp` in |SignUpCubit| General State:$generalState",
@@ -45,7 +45,7 @@ class SignUpCubit extends Cubit<SignUpState> {
     );
   }
 
-  void _update(SignUpState state) {
+  void _update(SignInState state) {
     if (!isClosed) {
       emit(state);
     }

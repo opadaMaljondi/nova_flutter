@@ -21,49 +21,53 @@ class AuthHeaderSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        if (context.canPop())
-          Positioned(
-            top: 35.h,
-            left: context.locale.languageCode != 'ar' ? 20.w : null,
-            right: context.locale.languageCode == 'ar' ? 20.w : null,
-            child: PrimaryIconButton(
-              child: const Icon(
-                Icons.arrow_back_ios_rounded,
+    return SizedBox(
+      width: double.infinity,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          if (context.canPop())
+            Positioned(
+              top: 35.h,
+              left: context.locale.languageCode != 'ar' ? 20.w : null,
+              right: context.locale.languageCode == 'ar' ? 20.w : null,
+              child: PrimaryIconButton(
+                child: const Icon(
+                  Icons.arrow_back_ios_rounded,
+                ),
+                onPressed: () {
+                  if (context.canPop()) {
+                    context.pop();
+                  }
+                },
               ),
-              onPressed: () {
-                if (context.canPop()) {
-                  context.pop();
-                }
-              },
             ),
+          Column(
+            children: [
+              SizedBox(height: isLargeContent ? 35.h : 100.h),
+              SvgPicture.asset(iconPath),
+              SizedBox(height: 25.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30.w),
+                child: Text(
+                  title,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headlineLarge,
+                ),
+              ),
+              SizedBox(height: 5.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                child: Text(
+                  subTitle,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ),
+            ],
           ),
-        Column(
-          children: [
-            SizedBox(height: isLargeContent ? 35.h : 100.h),
-            SvgPicture.asset(iconPath),
-            SizedBox(height: 25.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.w),
-              child: Text(
-                title,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headlineLarge,
-              ),
-            ),
-            SizedBox(height: 5.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.w),
-              child: Text(
-                subTitle,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-            ),
-          ],
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

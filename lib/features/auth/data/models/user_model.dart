@@ -1,3 +1,4 @@
+import 'package:real_state/core/enums/user_role.dart';
 import 'package:real_state/features/auth/domain/entities/user_entity.dart';
 
 class UserModel extends User {
@@ -18,23 +19,21 @@ class UserModel extends User {
       name: json['name'],
       number: json['number'],
       photo: json['photo'],
-      whatsNumber: json['whatsNumber'],
+      whatsNumber: json['whats_number'],
       location: json['location'],
       qrCode: json['qr_code'],
-      role: json['role'],
+      role: UserRole.fromJson(json['type']),
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
       'name': name,
       'number': number,
-      'photo': photo,
-      'whatsNumber': whatsNumber,
+      'whats_number': whatsNumber,
       'password': password,
       'location': location,
-      'role': role,
+      'type': role.toJson(),
       'qr_code': qrCode,
     };
   }

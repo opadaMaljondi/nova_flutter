@@ -3,7 +3,7 @@ import 'package:logger/logger.dart';
 import 'package:otpless_flutter/otpless_flutter.dart';
 
 abstract class OtpLessService {
-  Future<void> signInWithWhatsApp({
+  Future<void> signUpWithWhatsapp({
     required void Function(String? token, String? errorMessage) onReceiveResult,
   });
 }
@@ -13,21 +13,21 @@ class OtpLessServiceImpl extends OtpLessService {
   static const _appId = 'QX7X2GAZ83S9UL7110ZX';
 
   @override
-  Future<void> signInWithWhatsApp({
+  Future<void> signUpWithWhatsapp({
     required void Function(String? token, String? errorMessage) onReceiveResult,
   }) async {
     try {
-      InjectionContainer.getIt<Logger>().i("Start `signInWithWhatsApp` in |OtpLessService|");
+      InjectionContainer.getIt<Logger>().i("Start `signUpWithWhatsapp` in |OtpLessService|");
 
       final arg = {'appId': _appId};
       await _otpLessFlutterPlugin.openLoginPage((result) {
         _onReceiveResult(result, onReceiveSuccessResult: onReceiveResult);
       }, arg);
 
-      InjectionContainer.getIt<Logger>().w("End `signInWithWhatsApp` in |OtpLessService|");
+      InjectionContainer.getIt<Logger>().w("End `signUpWithWhatsapp` in |OtpLessService|");
     } catch (e) {
       InjectionContainer.getIt<Logger>().e(
-        "End `signInWithWhatsApp` in |OtpLessService| Error:$e",
+        "End `signUpWithWhatsapp` in |OtpLessService| Error:$e",
       );
     }
   }

@@ -13,7 +13,7 @@ import 'package:real_state/core/services/status_showing_service.dart';
 import 'package:real_state/features/auth/data/data_sources/auth_remote_data_source.dart';
 import 'package:real_state/features/auth/data/repository/auth_repo_impl.dart';
 import 'package:real_state/features/auth/domain/repository/auth_repo.dart';
-import 'package:real_state/features/auth/domain/usecases/sign_in_with_whatsapp_use_case.dart';
+import 'package:real_state/features/auth/domain/usecases/sign_up_with_whatsapp_use_case.dart';
 import 'package:real_state/features/auth/presentation/cubits/sign_up_cubit/sign_up_cubit.dart';
 import 'package:real_state/features/company/data/data_sources/company_remote_data_source.dart';
 import 'package:real_state/features/company/data/repository/company_repo_impl.dart';
@@ -103,7 +103,7 @@ abstract class InjectionContainer {
 
     /// UseCases
     GetIt.instance.registerLazySingleton(
-      () => SignInWithWhatsappUseCase(authRepo: getIt()),
+      () => SignUpWithWhatsappUseCase(authRepo: getIt()),
     );
 
     /// Cubits and Blocs

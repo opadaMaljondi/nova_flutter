@@ -13,22 +13,22 @@ class AuthRepoImpl implements AuthRepo {
   const AuthRepoImpl({required this.authRemoteDataSource});
 
   @override
-  Future<Either<Failure, Unit>> signInWithWhatsapp({
+  Future<Either<Failure, Unit>> signUpWithWhatsapp({
     required void Function(AuthenticatedUser? user, String? errorMessage) onReceiveResult,
   }) async {
     try {
-      InjectionContainer.getIt<Logger>().i("Start `signInWithWhatsapp` in |AuthRepoImpl|");
-      await authRemoteDataSource.signInWithWhatsapp(
+      InjectionContainer.getIt<Logger>().i("Start `signUpWithWhatsapp` in |AuthRepoImpl|");
+      await authRemoteDataSource.signUpWithWhatsapp(
         onReceiveResult: (user, errorMessage) {
           // authLocalDataSource.setUser(userAuthModel: user);
-          InjectionContainer.getIt<Logger>().w("End `signInWithWhatsapp` in |AuthRepoImpl|");
+          InjectionContainer.getIt<Logger>().w("End `signUpWithWhatsapp` in |AuthRepoImpl|");
           onReceiveResult(user, errorMessage);
         },
       );
       return const Right(unit);
     } catch (e, s) {
       InjectionContainer.getIt<Logger>().e(
-        "End `signInWithWhatsapp` in |AuthRepoImpl| Exception: ${e.runtimeType} $s",
+        "End `signUpWithWhatsapp` in |AuthRepoImpl| Exception: ${e.runtimeType} $s",
       );
       return Left(StateManagerService.getFailureFromException(e));
     }
