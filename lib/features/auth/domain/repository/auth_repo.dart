@@ -6,4 +6,13 @@ abstract class AuthRepo {
   Future<Either<Failure, Unit>> signUpWithWhatsapp({
     required void Function(AuthenticatedUser? user, String? errorMessage) onReceiveResult,
   });
+  Future<Either<Failure, String>> signIn({
+    required String password,
+    required String name,
+  });
+  Future<Either<Failure, String>> resetPassword({
+    required String number,
+    required String password,
+    required String userToken,
+  });
 }

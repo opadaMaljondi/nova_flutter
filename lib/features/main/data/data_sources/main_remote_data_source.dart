@@ -1,13 +1,22 @@
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 import 'package:logger/logger.dart';
 import 'package:real_state/core/constants/app_endpoints.dart';
 import 'package:real_state/core/services/api_service.dart';
+import 'package:real_state/features/auth/data/models/user_model.dart';
 import 'package:real_state/features/main/data/models/notification_model.dart';
 import 'package:real_state/injection_container.dart';
 
 abstract class MainRemoteDataSource {
   Future<List<NotificationModel>> getNotifications();
-  Future<Unit> upgradeToBroker();
+  Future<UserModel> getUser();
+  Future<Unit> logOut();
+
+  Future<UserModel> updateProfile({
+    required UserModel userModel,
+    required File? photo,
+  });
 }
 
 class MainRemoteDataSourceImpl extends MainRemoteDataSource {
@@ -44,23 +53,81 @@ class MainRemoteDataSourceImpl extends MainRemoteDataSource {
   }
 
   @override
-  Future<Unit> upgradeToBroker() async {
+  Future<UserModel> getUser() async {
     try {
       InjectionContainer.getIt<Logger>().i(
-        "Start `upgradeToBroker` in |MainRemoteDataSourceImpl|",
+        "Start `getUser` in |MainRemoteDataSourceImpl|",
+      );
+
+      Map<String, dynamic> mapData = await apiService.get(
+        subUrl: AppEndpoints.getUser,
+      );
+      final user = mapData['user'];
+
+      InjectionContainer.getIt<Logger>().w(
+        "End `getUser` in |MainRemoteDataSourceImpl|",
+      );
+      return Future.value(user);
+    } catch (e, s) {
+      InjectionContainer.getIt<Logger>().e(
+        "End `getUser` in |MainRemoteDataSourceImpl| Exception: ${e.runtimeType} $s",
+      );
+      rethrow;
+    }
+  }
+
+  @override
+  Future<UserModel> updateProfile({
+    required UserModel userModel,
+    required File? photo,
+  }) async {
+    try {
+      InjectionContainer.getIt<Logger>().i(
+        "Start `updateProfile` in |MainRemoteDataSourceImpl|",
+      );
+
+      Map<String, dynamic> mapData = await apiService.post(
+        subUrl: AppEndpoints.updateProfile,
+        data: userModel.toJson(),
+        files: [
+          FileField(
+            name: 'photo',
+            file: photo,
+          ),
+        ],
+      );
+      final user = mapData['data'];
+
+      InjectionContainer.getIt<Logger>().w(
+        "End `updateProfile` in |MainRemoteDataSourceImpl|",
+      );
+      return Future.value(user);
+    } catch (e, s) {
+      InjectionContainer.getIt<Logger>().e(
+        "End `updateProfile` in |MainRemoteDataSourceImpl| Exception: ${e.runtimeType} $s",
+      );
+      rethrow;
+    }
+  }
+
+  @override
+  Future<Unit> logOut() async {
+    try {
+      InjectionContainer.getIt<Logger>().i(
+        "Start `logOut` in |MainRemoteDataSourceImpl|",
       );
 
       await apiService.get(
-        subUrl: AppEndpoints.upgradeToBroker,
+        subUrl: AppEndpoints.logout,
       );
 
       InjectionContainer.getIt<Logger>().w(
-        "End `upgradeToBroker` in |MainRemoteDataSourceImpl|",
+        "End `logOut` in |MainRemoteDataSourceImpl|",
       );
       return Future.value(unit);
     } catch (e, s) {
       InjectionContainer.getIt<Logger>().e(
-        "End `upgradeToBroker` in |MainRemoteDataSourceImpl| Exception: ${e.runtimeType} $s",
+        "End `logOut` in |MainRemoteDataSourceImpl| Exception: ${e.runtimeType} $s",
       );
       rethrow;
     }

@@ -16,6 +16,17 @@ abstract class AuthRemoteDataSource {
     required UserModel user,
     required String token,
   });
+
+  Future<String> signIn({
+    required String password,
+    required String name,
+  });
+
+  Future<String> resetPassword({
+    required String password,
+    required String number,
+    required String userToken,
+  });
 }
 
 class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
@@ -81,6 +92,60 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
     } catch (e, s) {
       InjectionContainer.getIt<Logger>().e(
         "End `signUpWithWhatsapp` in |AuthRemoteDataSourceImpl| Exception: ${e.runtimeType} $s",
+      );
+      rethrow;
+    }
+  }
+
+  @override
+  Future<String> signIn({
+    required String password,
+    required String name,
+  }) async {
+    try {
+      InjectionContainer.getIt<Logger>().i(
+        "Start `signIn` in |AuthRemoteDataSourceImpl|",
+      );
+      final mapData = await apiService.post(
+        subUrl: AppEndpoints.signIn,
+        data: {
+          'name': name,
+          'password': password,
+        },
+      );
+      final token = mapData['token'];
+      return Future.value(token);
+    } catch (e, s) {
+      InjectionContainer.getIt<Logger>().e(
+        "End `signIn` in |AuthRemoteDataSourceImpl| Exception: ${e.runtimeType} $s",
+      );
+      rethrow;
+    }
+  }
+
+  @override
+  Future<String> resetPassword({
+    required String password,
+    required String number,
+    required String userToken,
+  }) async {
+    try {
+      InjectionContainer.getIt<Logger>().i(
+        "Start `resetPassword` in |AuthRemoteDataSourceImpl|",
+      );
+      final mapData = await apiService.put(
+        subUrl: AppEndpoints.resetPassword,
+        data: {
+          'password': password,
+          'number': number,
+          'token': userToken,
+        },
+      );
+      final token = mapData['token'];
+      return Future.value(token);
+    } catch (e, s) {
+      InjectionContainer.getIt<Logger>().e(
+        "End `resetPassword` in |AuthRemoteDataSourceImpl| Exception: ${e.runtimeType} $s",
       );
       rethrow;
     }

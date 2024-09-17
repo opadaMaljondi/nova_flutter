@@ -28,9 +28,61 @@ class AuthRepoImpl implements AuthRepo {
       return const Right(unit);
     } catch (e, s) {
       InjectionContainer.getIt<Logger>().e(
-        "End `signUpWithWhatsapp` in |AuthRepoImpl| Exception: ${e.runtimeType} $s",
+        "End `signInWithWhatsapp` in |AuthRepoImpl| Exception: ${e.runtimeType} $s",
       );
-      return Left(StateManagerService.getFailureFromException(e));
+      return Left(
+        StateManagerService.getFailureFromException(e),
+      );
+    }
+  }
+
+  @override
+  Future<Either<Failure, String>> signIn({
+    required String password,
+    required String name,
+  }) async {
+    try {
+      InjectionContainer.getIt<Logger>().i(
+        "Start `signIn` in |AuthRepoImpl|",
+      );
+      final token = await authRemoteDataSource.signIn(
+        password: password,
+        name: name,
+      );
+      return Right(token);
+    } catch (e, s) {
+      InjectionContainer.getIt<Logger>().e(
+        "End `signIn` in |AuthRepoImpl| Exception: ${e.runtimeType} $s",
+      );
+      return Left(
+        StateManagerService.getFailureFromException(e),
+      );
+    }
+  }
+
+  @override
+  Future<Either<Failure, String>> resetPassword({
+    required String number,
+    required String password,
+    required String userToken,
+  }) async {
+    try {
+      InjectionContainer.getIt<Logger>().i(
+        "Start `resetPassword` in |AuthRepoImpl|",
+      );
+      final token = await authRemoteDataSource.resetPassword(
+        password: password,
+        number: number,
+        userToken: userToken,
+      );
+      return Right(token);
+    } catch (e, s) {
+      InjectionContainer.getIt<Logger>().e(
+        "End `resetPassword` in |AuthRepoImpl| Exception: ${e.runtimeType} $s",
+      );
+      return Left(
+        StateManagerService.getFailureFromException(e),
+      );
     }
   }
 }

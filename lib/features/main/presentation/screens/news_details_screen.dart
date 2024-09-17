@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_state/core/constants/app_colors.dart';
 import 'package:real_state/core/translations/local_keys.g.dart';
 import 'package:real_state/features/main/presentation/widgets/primary_appbar.dart';
-import 'package:real_state/features/main/presentation/widgets/real_estate_advertising.dart';
 import 'package:real_state/features/main/presentation/widgets/real_estate_header.dart';
 import 'package:real_state/features/main/presentation/widgets/rent_a_property.dart';
 import 'package:real_state/features/main/presentation/widgets/review_articles.dart';
@@ -36,7 +35,7 @@ class NewsDetailsScreen extends StatelessWidget {
               SizedBox(
                 height: 18.h,
               ),
-              const RealEstateAdvertising(),
+              // const RealEstateAdvertising(),
               SizedBox(
                 height: 35.h,
               ),

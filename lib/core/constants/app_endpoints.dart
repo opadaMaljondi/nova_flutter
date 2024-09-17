@@ -6,8 +6,9 @@ abstract class AppEndpoints {
   //-------------------------------------------
 
   // Authentication Routes
-  static const String getUser = "$apiVersion/users/personal-information";
   static const String refreshToken = "$apiVersion/users/personal-information";
+  static const String signIn = "$apiVersion/signin";
+  static const String resetPassword = "$apiVersion/resetPassword";
 
   // Companies Routes
   static const String getCompanies =
@@ -23,6 +24,12 @@ abstract class AppEndpoints {
   // Main
   static const String getNotifications = "$apiVersion/user/allNoti";
   static const String upgradeToBroker = "$apiVersion/user/promotionOrder";
+  static const String getUser = "$apiVersion/userInfo";
+  static const String updateProfile = "$apiVersion/updateInfo";
+  static const String logout = "$apiVersion/logout";
+
+  // Brokers
+  static const String getBrokers = "$apiVersion/allUser/office/";
 
 ////-------------------------------------------
 }

@@ -43,7 +43,6 @@ class CodegenLoader extends AssetLoader{
   "whoAreWe": "من نحن",
   "officialNumbers": "الأرقام الرسمية",
   "ceo": ":المدير التنفيذي",
-  "froAdvertising": ":للإعلان",
   "officialWebsites": "المواقع الرسمية",
   "realEstateNews": "أخبار العقارات",
   "realEstateOffice": "دلالين",
@@ -68,7 +67,7 @@ class CodegenLoader extends AssetLoader{
   "search": "إبحث",
   "whatAreYouLooking": "ما الذي تبحث عنه؟",
   "sale": "بيع",
-  "rent": "إيجار",
+  "rent": "إجار",
   "commercial": "تجاري",
   "featuredproperties": "عقارات مميزة",
   "home": "الرئيسية",
@@ -198,7 +197,8 @@ class CodegenLoader extends AssetLoader{
   "youtube": "اليوتيوب",
   "theOffice": "المكتب",
   "english": "الإنجليزية",
-  "arabic": "العربية"
+  "arabic": "العربية",
+  "realEstateAdvertising": "الإعلان العقاري"
 };
 static const Map<String,dynamic> en = {
   "next": "Next",
@@ -384,7 +384,8 @@ static const Map<String,dynamic> en = {
   "youtube": "youtube",
   "theOffice": "The office",
   "english": "English",
-  "arabic": "Arabic"
+  "arabic": "Arabic",
+  "realEstateAdvertising": "Real estate advertising"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }
