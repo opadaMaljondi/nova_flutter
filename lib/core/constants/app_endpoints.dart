@@ -7,6 +7,8 @@ abstract class AppEndpoints {
 
   // Authentication Routes
   static const String refreshToken = "$apiVersion/users/personal-information";
+  static const String signIn = "$apiVersion/signin";
+  static const String resetPassword = "$apiVersion/resetPassword";
 
   // Companies Routes
   static const String getCompanies =
