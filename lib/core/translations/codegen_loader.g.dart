@@ -42,7 +42,7 @@ class CodegenLoader extends AssetLoader{
   "weWillSendYou": "سوف نرسل لك مرة أخرى في غضون ",
   "whoAreWe": "من نحن",
   "officialNumbers": "الأرقام الرسمية",
-  "ceo": ":المدير التنفيذي",
+  "ceo": "المدير التنفيذي:",
   "officialWebsites": "المواقع الرسمية",
   "realEstateNews": "أخبار العقارات",
   "realEstateOffice": "دلالين",
@@ -134,7 +134,7 @@ class CodegenLoader extends AssetLoader{
   "price": "السعر",
   "monthly": "شهري",
   "dollar": "دولار",
-  "value": ": القيمة",
+  "value": "القيمة:",
   "filters": "الفلاتر",
   "ignore": "تجاهل",
   "messaging": "مراسلة",
@@ -198,7 +198,9 @@ class CodegenLoader extends AssetLoader{
   "theOffice": "المكتب",
   "english": "الإنجليزية",
   "arabic": "العربية",
-  "realEstateAdvertising": "الإعلان العقاري"
+  "realEstateAdvertising": "الإعلان العقاري",
+  "w0elcomeToTheFreeTrial": "أهلا بك في التجربة المجانية في هذا التطبيق، سيتم إيقاف ميزة رفع العقارات خلال 30 يوم من تاريخ اليوم 12 - 4 - 2024",
+  "promotion": "ترقية"
 };
 static const Map<String,dynamic> en = {
   "next": "Next",
@@ -385,7 +387,9 @@ static const Map<String,dynamic> en = {
   "theOffice": "The office",
   "english": "English",
   "arabic": "Arabic",
-  "realEstateAdvertising": "Real estate advertising"
+  "realEstateAdvertising": "Real estate advertising",
+  "w0elcomeToTheFreeTrial": "Welcome to the free trial of this application. The real estate upload feature will be stopped within 30 days from today’s date",
+  "promotion": "promotion"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

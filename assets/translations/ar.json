@@ -26,7 +26,7 @@
   "weWillSendYou": "سوف نرسل لك مرة أخرى في غضون ",
   "whoAreWe": "من نحن",
   "officialNumbers": "الأرقام الرسمية",
-  "ceo": ":المدير التنفيذي",
+  "ceo": "المدير التنفيذي:",
   "officialWebsites": "المواقع الرسمية",
   "realEstateNews": "أخبار العقارات",
   "realEstateOffice": "دلالين",
@@ -118,7 +118,7 @@
   "price": "السعر",
   "monthly": "شهري",
   "dollar": "دولار",
-  "value": ": القيمة",
+  "value": "القيمة:",
   "filters": "الفلاتر",
   "ignore": "تجاهل",
   "messaging": "مراسلة",
@@ -182,5 +182,7 @@
   "theOffice": "المكتب",
   "english": "الإنجليزية",
   "arabic": "العربية",
-  "realEstateAdvertising": "الإعلان العقاري"
+  "realEstateAdvertising": "الإعلان العقاري",
+  "w0elcomeToTheFreeTrial": "أهلا بك في التجربة المجانية في هذا التطبيق، سيتم إيقاف ميزة رفع العقارات خلال 30 يوم من تاريخ اليوم 12 - 4 - 2024",
+  "promotion": "ترقية"
 }
