@@ -185,5 +185,7 @@ abstract class  LocaleKeys {
   static const english = 'english';
   static const arabic = 'arabic';
   static const realEstateAdvertising = 'realEstateAdvertising';
+  static const w0elcomeToTheFreeTrial = 'w0elcomeToTheFreeTrial';
+  static const promotion = 'promotion';
 
 }

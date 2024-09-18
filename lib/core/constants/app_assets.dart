@@ -123,5 +123,9 @@ abstract class AppAssets {
   static const String rootSVGImages = "assets/svgs/images";
   static const String backgroundAppbar = "$rootSVGImages/background_appbar.svg";
 
+  // json Images path
+
+  static const String quastionMark = "assets/json/quastion_mark.json";
+
 ////-------------------------------------------
 }
