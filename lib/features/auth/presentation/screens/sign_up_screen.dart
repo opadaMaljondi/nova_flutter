@@ -38,7 +38,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               children: [
                 AuthHeaderSection(
                   title: LocaleKeys.createNewAccount.tr(),
-                  iconPath: AppAssets.signUp,
+
                   subTitle: LocaleKeys.youCanTypeAnything.tr(),
                 ),
                 const ChoseAccountTypeSection(),

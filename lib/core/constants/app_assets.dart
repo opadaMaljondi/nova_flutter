@@ -31,6 +31,9 @@ abstract class AppAssets {
   static const String name = "$rootSVGIcons/name.svg";
   static const String password = "$rootSVGIcons/password.svg";
   static const String phone = "$rootSVGIcons/phone.svg";
+  static const String facebook = "$rootSVGIcons/facebook.svg";
+  static const String google = "$rootSVGIcons/google.svg";
+  static const String apple = "$rootSVGIcons/apple.svg";
   static const String location = "$rootSVGIcons/location.svg";
   static const String calender = "$rootSVGIcons/calender.svg";
   static const String dolar = "$rootSVGIcons/dolar.svg";
@@ -59,7 +62,7 @@ abstract class AppAssets {
   static const String darkMode = "$rootSVGIcons/dark_mode.svg";
   static const String upgradeToOffice = "$rootSVGIcons/upgrade_to_office.svg";
   static const String blackX = "$rootSVGIcons/blackX.svg";
-  static const String facebook = "$rootSVGIcons/facebook.svg";
+
   static const String telegram = "$rootSVGIcons/telegram.svg";
   static const String whatsUp = "$rootSVGIcons/whatsUp.svg";
   static const String notificationsIcon = "$rootSVGIcons/notificationsIcon.svg";

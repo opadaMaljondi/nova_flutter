@@ -134,12 +134,12 @@ class _PrimaryTextFieldState extends State<PrimaryTextField> {
                           },
                           icon: isVisibleText
                               ? const Icon(
-                                  Icons.visibility,
-                                  color: AppColors.gray,
+                                  Icons.visibility_outlined,
+                                  color:  Colors.grey,
                                 )
                               : const Icon(
-                                  Icons.visibility_off,
-                                  color: AppColors.gray,
+                                  Icons.visibility_off_outlined,
+                            color:  Colors.grey,
                                 ),
                         )
                       : null),

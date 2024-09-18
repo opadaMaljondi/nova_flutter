@@ -34,7 +34,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               children: [
                 AuthHeaderSection(
                   title: LocaleKeys.changePasword.tr(),
-                  iconPath: AppAssets.resetPassword,
                   subTitle: LocaleKeys.youCanTypeAnything.tr(),
                   isLargeContent: false,
                 ),

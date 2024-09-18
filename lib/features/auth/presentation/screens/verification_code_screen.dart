@@ -29,7 +29,6 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
             children: [
               AuthHeaderSection(
                 title: LocaleKeys.verificationCode.tr(),
-                iconPath: AppAssets.verificationCode,
                 subTitle: LocaleKeys.youCanTypeAnything.tr(),
                 isLargeContent: false,
               ),

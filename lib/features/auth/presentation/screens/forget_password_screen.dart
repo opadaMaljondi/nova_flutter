@@ -32,7 +32,6 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               children: [
                 AuthHeaderSection(
                   title: LocaleKeys.forgotPassword.tr(),
-                  iconPath: AppAssets.resetPassword,
                   subTitle: LocaleKeys.youCanTypeAnything.tr(),
                   isLargeContent: false,
                 ),

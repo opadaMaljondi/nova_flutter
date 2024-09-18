@@ -3,6 +3,7 @@
 abstract class  LocaleKeys {
   static const next = 'next';
   static const singIn = 'singIn';
+  static const email = 'email';
   static const phoneNumber = 'phoneNumber';
   static const password = 'password';
   static const forgotPassword = 'forgotPassword';

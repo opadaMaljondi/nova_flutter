@@ -5,7 +5,7 @@ import 'package:real_state/core/constants/app_colors.dart';
 
 abstract class AppThemes {
   static ThemeData themeEnglish = ThemeData(
-    fontFamily: 'Switzer',
+    fontFamily: 'Cairo',
     primaryColor: AppColors.materialPrimary,
     scaffoldBackgroundColor: const Color.fromRGBO(243, 243, 243, 1),
     splashColor: AppColors.materialPrimary.shade200,
@@ -105,7 +105,7 @@ abstract class AppThemes {
     ),
   );
   static ThemeData darkThemeEnglish = ThemeData(
-    fontFamily: 'Switzer',
+    fontFamily: 'Cairo',
     primaryColor: AppColors.materialPrimary,
     scaffoldBackgroundColor: AppColors.black5,
     splashColor: AppColors.materialPrimary.shade50,
@@ -141,7 +141,8 @@ abstract class AppThemes {
     textTheme: TextTheme(
       headlineLarge: TextStyle(
         fontSize: 28.sp,
-        color: AppColors.black10,
+        color: AppColors.black,
+        fontWeight: FontWeight.w600
       ),
       headlineMedium: TextStyle(
         fontSize: 26.sp,
@@ -183,7 +184,7 @@ abstract class AppThemes {
       // Text, NavBarItems
       bodySmall: TextStyle(
         fontSize: 13.sp,
-        color: AppColors.white10,
+        color:Color(0xffB4B4B4),
         fontWeight: FontWeight.w400,
       ),
       labelLarge: TextStyle(

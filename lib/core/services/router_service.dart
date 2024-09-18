@@ -4,7 +4,7 @@ import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/constants/app_routes.dart';
 import 'package:real_state/core/services/caching_service.dart';
 import 'package:real_state/features/auth/presentation/screens/forget_password_screen.dart';
-import 'package:real_state/features/auth/presentation/screens/onboarding_screen.dart';
+
 import 'package:real_state/features/auth/presentation/screens/reset_password_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:real_state/features/auth/presentation/screens/sign_up_screen.dart';
@@ -37,7 +37,7 @@ class RouterService {
     String initialLocation = _cacheService.getData<String>(
           key: AppKeys.initialLocationRoute,
         ) ??
-        AppRoutes.onBoardingScreen;
+        AppRoutes.signInScreen;
     router = GoRouter(
       routes: [
         //-------------------------------------------
@@ -102,20 +102,7 @@ class RouterService {
         //-------------------------------------------
         // Authentication Screens
         //-------------------------------------------
-        GoRoute(
-          path: AppRoutes.onBoardingScreen,
-          pageBuilder: (context, state) => CustomTransitionPage(
-            key: state.pageKey,
-            child: const OnboardingScreen(),
-            transitionsBuilder:
-                (context, animation, secondaryAnimation, child) {
-              return FadeTransition(
-                opacity: animation,
-                child: child,
-              );
-            },
-          ),
-        ),
+
         GoRoute(
           path: AppRoutes.signInScreen,
           pageBuilder: (context, state) => CustomTransitionPage(

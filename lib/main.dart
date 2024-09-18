@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
           },
           builder: (context, state) {
             return MaterialApp.router(
-              title: 'APC PRIME',
+              title: 'NOVA',
               localizationsDelegates: [
                 ...context.localizationDelegates,
                 CountryLocalizations.delegate,
@@ -80,6 +80,7 @@ class MyApp extends StatelessWidget {
               // themeMode: context.read<MainCubit>().currentThemeMode,
               theme: AppThemes.themeEnglish,
               themeMode: ThemeMode.light,
+
               darkTheme: AppThemes.darkThemeEnglish,
             );
           },

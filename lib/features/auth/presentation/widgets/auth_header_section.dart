@@ -7,14 +7,12 @@ import 'package:real_state/core/widgets/primary_icon_button.dart';
 
 class AuthHeaderSection extends StatelessWidget {
   final String title;
-  final String iconPath;
   final String subTitle;
   final bool isLargeContent;
 
   const AuthHeaderSection({
     super.key,
     required this.title,
-    required this.iconPath,
     required this.subTitle,
     this.isLargeContent = true,
   });
@@ -45,7 +43,6 @@ class AuthHeaderSection extends StatelessWidget {
           Column(
             children: [
               SizedBox(height: isLargeContent ? 35.h : 100.h),
-              SvgPicture.asset(iconPath),
               SizedBox(height: 25.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.w),
@@ -61,7 +58,7 @@ class AuthHeaderSection extends StatelessWidget {
                 child: Text(
                   subTitle,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
             ],

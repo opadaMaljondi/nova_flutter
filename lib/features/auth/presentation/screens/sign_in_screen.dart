@@ -14,8 +14,12 @@ import 'package:real_state/core/widgets/primary_loader.dart';
 import 'package:real_state/core/widgets/primary_text_field.dart';
 import 'package:real_state/features/auth/presentation/cubits/sign_in_cubit/sign_in_cubit.dart';
 import 'package:real_state/features/auth/presentation/widgets/auth_header_section.dart';
+import 'package:real_state/features/auth/presentation/widgets/or_divider.dart';
 import 'package:real_state/features/auth/presentation/widgets/remember_me_and_forget_password_button.dart';
 import 'package:real_state/injection_container.dart';
+
+import '../widgets/social_register.dart';
+import '../widgets/text_button.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -47,9 +51,11 @@ class _SignInScreenState extends State<SignInScreen> {
                     key: context.read<SignInCubit>().signInFormKey,
                     child: Column(
                       children: [
+                        SizedBox(
+                          height: 40.h,
+                        ),
                         AuthHeaderSection(
                           title: LocaleKeys.singIn.tr(),
-                          iconPath: AppAssets.signIn.tr(),
                           subTitle: LocaleKeys.youCanTypeAnything.tr(),
                         ),
                         SizedBox(
@@ -57,12 +63,15 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                         PrimaryTextField(
                           controller:
-                              context.read<SignInCubit>().phoneNumberController,
-                          labelText: LocaleKeys.phoneNumber.tr(),
-                          inputType: TextInputType.phone,
-                          labelIcon: SvgPicture.asset(AppAssets.phone),
+                              context.read<SignInCubit>().emailController,
+                          labelText: LocaleKeys.email.tr(),
+                          inputType: TextInputType.emailAddress,
+                          suffixIcon: const Icon(
+                            Icons.email_outlined,
+                            color: Colors.grey,
+                          ),
                           validator: (value) =>
-                              RegexValidator.validatePhone(value),
+                              RegexValidator.validateEmail(value),
                         ),
                         SizedBox(
                           height: 25.h,
@@ -71,7 +80,6 @@ class _SignInScreenState extends State<SignInScreen> {
                           controller:
                               context.read<SignInCubit>().passwordController,
                           labelText: LocaleKeys.password.tr(),
-                          labelIcon: SvgPicture.asset(AppAssets.password),
                           validator: (value) =>
                               RegexValidator.validateRequired(value),
                           isObscureText: true,
@@ -92,13 +100,15 @@ class _SignInScreenState extends State<SignInScreen> {
                         SizedBox(
                           height: 20.h,
                         ),
-                        PrimaryButton(
-                          label: LocaleKeys.createNewAccount.tr(),
-                          backgroundColor: AppColors.black,
-                          onPressed: () {
-                            context.push(AppRoutes.signUpScreen);
-                          },
-                        )
+                        const OrDivider(),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        const SocialRegister(),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        const TextButtonAuth()
                       ],
                     ),
                   ),

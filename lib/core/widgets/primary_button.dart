@@ -22,7 +22,7 @@ class PrimaryButton extends StatelessWidget {
     this.width,
     this.prefixIcon,
     this.isOutlined = false,
-    this.backgroundColor = AppColors.primary,
+    this.backgroundColor = AppColors.primary10,
     this.labelColor = AppColors.white,
     this.padding,
     this.margin,

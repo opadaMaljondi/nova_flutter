@@ -21,7 +21,7 @@ class SignInCubit extends Cubit<SignInState> {
   GeneralStates generalState = GeneralStates.init;
 
   /// Controllers
-  final TextEditingController phoneNumberController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> signInFormKey = GlobalKey<FormState>();
 
@@ -36,7 +36,7 @@ class SignInCubit extends Cubit<SignInState> {
     generalState = GeneralStates.loading;
     var resulte = await signInUseCase.call(
       password: passwordController.text,
-      number: phoneNumberController.text,
+      number: emailController.text,
     );
     resulte.fold(
       (l) {
