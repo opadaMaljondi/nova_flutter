@@ -9,11 +9,11 @@ class SignInUseCase {
 
   Future<Either<Failure, String>> call({
     required String password,
-    required String name,
+    required String number,
   }) async {
     return authRepo.signIn(
       password: password,
-      name: name,
+      number: number,
     );
   }
 }

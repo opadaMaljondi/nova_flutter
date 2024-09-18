@@ -4,11 +4,12 @@ import 'package:real_state/features/auth/domain/entities/authenticated_user_enti
 
 abstract class AuthRepo {
   Future<Either<Failure, Unit>> signUpWithWhatsapp({
-    required void Function(AuthenticatedUser? user, String? errorMessage) onReceiveResult,
+    required void Function(AuthenticatedUser? user, String? errorMessage)
+        onReceiveResult,
   });
   Future<Either<Failure, String>> signIn({
     required String password,
-    required String name,
+    required String number,
   });
   Future<Either<Failure, String>> resetPassword({
     required String number,

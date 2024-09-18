@@ -14,14 +14,17 @@ class AuthRepoImpl implements AuthRepo {
 
   @override
   Future<Either<Failure, Unit>> signUpWithWhatsapp({
-    required void Function(AuthenticatedUser? user, String? errorMessage) onReceiveResult,
+    required void Function(AuthenticatedUser? user, String? errorMessage)
+        onReceiveResult,
   }) async {
     try {
-      InjectionContainer.getIt<Logger>().i("Start `signUpWithWhatsapp` in |AuthRepoImpl|");
+      InjectionContainer.getIt<Logger>()
+          .i("Start `signUpWithWhatsapp` in |AuthRepoImpl|");
       await authRemoteDataSource.signUpWithWhatsapp(
         onReceiveResult: (user, errorMessage) {
           // authLocalDataSource.setUser(userAuthModel: user);
-          InjectionContainer.getIt<Logger>().w("End `signUpWithWhatsapp` in |AuthRepoImpl|");
+          InjectionContainer.getIt<Logger>()
+              .w("End `signUpWithWhatsapp` in |AuthRepoImpl|");
           onReceiveResult(user, errorMessage);
         },
       );
@@ -39,7 +42,7 @@ class AuthRepoImpl implements AuthRepo {
   @override
   Future<Either<Failure, String>> signIn({
     required String password,
-    required String name,
+    required String number,
   }) async {
     try {
       InjectionContainer.getIt<Logger>().i(
@@ -47,7 +50,7 @@ class AuthRepoImpl implements AuthRepo {
       );
       final token = await authRemoteDataSource.signIn(
         password: password,
-        name: name,
+        number: number,
       );
       return Right(token);
     } catch (e, s) {

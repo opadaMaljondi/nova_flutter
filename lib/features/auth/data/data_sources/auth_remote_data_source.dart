@@ -9,7 +9,8 @@ import 'package:real_state/injection_container.dart';
 
 abstract class AuthRemoteDataSource {
   Future<Unit> signUpWithWhatsapp({
-    required void Function(AuthenticatedUserModel? user, String? errorMessage) onReceiveResult,
+    required void Function(AuthenticatedUserModel? user, String? errorMessage)
+        onReceiveResult,
   });
 
   Future<Unit> signUp({
@@ -19,7 +20,7 @@ abstract class AuthRemoteDataSource {
 
   Future<String> signIn({
     required String password,
-    required String name,
+    required String number,
   });
 
   Future<String> resetPassword({
@@ -33,11 +34,13 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
   final ApiService apiService;
   final OtpLessService otpLessService;
 
-  AuthRemoteDataSourceImpl({required this.apiService, required this.otpLessService});
+  AuthRemoteDataSourceImpl(
+      {required this.apiService, required this.otpLessService});
 
   @override
   Future<Unit> signUpWithWhatsapp({
-    required void Function(AuthenticatedUserModel? user, String? errorMessage) onReceiveResult,
+    required void Function(AuthenticatedUserModel? user, String? errorMessage)
+        onReceiveResult,
   }) async {
     try {
       InjectionContainer.getIt<Logger>().i(
@@ -100,7 +103,7 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
   @override
   Future<String> signIn({
     required String password,
-    required String name,
+    required String number,
   }) async {
     try {
       InjectionContainer.getIt<Logger>().i(
@@ -109,13 +112,14 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
       final mapData = await apiService.post(
         subUrl: AppEndpoints.signIn,
         data: {
-          'name': name,
+          'number': number,
           'password': password,
         },
       );
       final token = mapData['token'];
       return Future.value(token);
     } catch (e, s) {
+      print('e ===================================================$e');
       InjectionContainer.getIt<Logger>().e(
         "End `signIn` in |AuthRemoteDataSourceImpl| Exception: ${e.runtimeType} $s",
       );

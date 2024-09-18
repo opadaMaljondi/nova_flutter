@@ -102,7 +102,7 @@ class ApiServiceImpl extends ApiService {
         });
       }
       final response = await client.get(
-        Uri.http(
+        Uri.https(
           AppEndpoints.baseUrl,
           subUrl,
           parameters,
@@ -182,7 +182,7 @@ class ApiServiceImpl extends ApiService {
         });
       }
       final response = await client.post(
-        Uri.http(
+        Uri.https(
           AppEndpoints.baseUrl,
           subUrl,
           parameters,
@@ -251,7 +251,7 @@ class ApiServiceImpl extends ApiService {
         });
       }
       final response = await client.put(
-        Uri.http(
+        Uri.https(
           AppEndpoints.baseUrl,
           subUrl,
           parameters,
@@ -320,7 +320,7 @@ class ApiServiceImpl extends ApiService {
         });
       }
       final response = await client.delete(
-        Uri.http(
+        Uri.https(
           AppEndpoints.baseUrl,
           subUrl,
           parameters,
@@ -377,7 +377,7 @@ class ApiServiceImpl extends ApiService {
       );
       http.MultipartRequest request = http.MultipartRequest(
         "POST",
-        Uri.http(
+        Uri.https(
           baseUrl,
           subUrl,
         ),
@@ -464,7 +464,7 @@ class ApiServiceImpl extends ApiService {
         throw OfflineException();
       }
       final response = await client.post(
-        Uri.http(AppEndpoints.baseUrl, AppEndpoints.refreshToken),
+        Uri.https(AppEndpoints.baseUrl, AppEndpoints.refreshToken),
         headers: {
           'Authorization': 'Bearer ${cacheService.getData<String>(
             key: AppKeys.refreshToken,

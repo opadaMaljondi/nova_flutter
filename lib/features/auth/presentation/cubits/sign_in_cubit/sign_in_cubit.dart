@@ -2,8 +2,11 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:logger/logger.dart';
+import 'package:real_state/core/constants/app_keys.dart';
 import 'package:real_state/core/enums/general_states.dart';
-import 'package:real_state/features/auth/domain/usecases/sign_up_with_whatsapp_use_case.dart';
+import 'package:real_state/core/services/caching_service.dart';
+import 'package:real_state/core/services/state_manager_service.dart';
+import 'package:real_state/features/auth/domain/usecases/sign_in_use_case.dart';
 import 'package:real_state/injection_container.dart';
 
 part 'sign_in_cubit.freezed.dart';
@@ -13,35 +16,49 @@ class SignInCubit extends Cubit<SignInState> {
   SignInCubit() : super(const SignInState.initial());
 
   /// Use Cases
-  final SignUpWithWhatsappUseCase signUpWithWhatsappUseCase = InjectionContainer.getIt();
+  final SignInUseCase signInUseCase = InjectionContainer.getIt();
+  final CacheService cacheService = InjectionContainer.getIt();
   GeneralStates generalState = GeneralStates.init;
 
   /// Controllers
-  final TextEditingController searchTextController = TextEditingController();
-
-  /// Data
-
-  /// variables
+  final TextEditingController phoneNumberController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final GlobalKey<FormState> signInFormKey = GlobalKey<FormState>();
 
   /// functions
-  Future<void> signUpWithWhatsapp() async {
-    InjectionContainer.getIt<Logger>().i("Start `signUpWithWhatsapp` in |SignUpCubit|");
-    _update(const SignInState.loading());
+  Future<void> signIn() async {
+    InjectionContainer.getIt<Logger>().i(
+      "Start `signIn` in |SignInCubit|",
+    );
+    _update(
+      const SignInState.loading(),
+    );
     generalState = GeneralStates.loading;
-    await signUpWithWhatsappUseCase(
-      onReceiveResult: (user, errorMessage) {
-        if (errorMessage != null) {
-          //user != null && user.user != null
-          generalState = GeneralStates.success;
-          _update(const SignInState.loaded());
-        } else {
-          generalState = GeneralStates.badRequest;
-          _update(SignInState.error(errorMessage ?? 'Failed'));
-        }
-        InjectionContainer.getIt<Logger>().w(
-          "End `signUpWithWhatsapp` in |SignUpCubit| General State:$generalState",
+    var resulte = await signInUseCase.call(
+      password: passwordController.text,
+      number: phoneNumberController.text,
+    );
+    resulte.fold(
+      (l) {
+        generalState = StateManagerService.getStateFromFailure(l);
+        _update(
+          SignInState.error(l.message),
         );
       },
+      (r) {
+        print('tokeen=======================================$r');
+        generalState = GeneralStates.success;
+        cacheService.setData(
+          key: AppKeys.accessToken,
+          value: r,
+        );
+        _update(
+          const SignInState.loaded(),
+        );
+      },
+    );
+    InjectionContainer.getIt<Logger>().i(
+      "End `signIn` in |SignInCubit|",
     );
   }
 
